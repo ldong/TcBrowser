@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Problem Statement for WordCompositionGame</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for WordCompositionGame</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>Three players are playing a game of word composition in which each player writes down a list of words. After the time expires the scores are calculated using the following rules. Each player gains 3 points for each unique word that only he has, 2 points for each word that is shared with exactly one other player, and 1 point for each word that is shared with both of the other players.</p>
+<p>You will be given String[]s <b>listA</b>, <b>listB</b> and <b>listC</b> - the word lists of playerA, playerB and playerC respectively. Your method should return scores of playerA, playerB and playerC in the form &quot;scoreA/scoreB/scoreC&quot; (quotes for clarity).</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">WordCompositionGame</td></tr><tr><td class="statText">Method:</td><td class="statText">score</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String score(String[] listA, String[] listB, String[] listC)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>listA</b>, <b>listB</b> and <b>listC</b> will have between 1 and 50 elements each, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>listA</b>, <b>listB</b> and <b>listC</b> will contain between 1 and 20 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>listA</b>, <b>listB</b> and <b>listC</b> will contain only lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements in <b>listA</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements in <b>listB</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements in <b>listC</b> will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;cat&quot;, &quot;dog&quot;, &quot;pig&quot;, &quot;mouse&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;cat&quot;, &quot;pig&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;dog&quot;, &quot;cat&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;8/3/3&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;mouse&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;cat&quot;, &quot;pig&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;dog&quot;, &quot;cat&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;3/5/5&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;dog&quot;, &quot;mouse&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;dog&quot;, &quot;pig&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;dog&quot;, &quot;cat&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;4/4/4&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;bcdbb&quot;,&quot;aaccd&quot;,&quot;dacbc&quot;,&quot;bcbda&quot;,&quot;cdedc&quot;,&quot;bbaaa&quot;,&quot;aecae&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;bcdbb&quot;,&quot;ddacb&quot;,&quot;aaccd&quot;,&quot;adcab&quot;,&quot;edbee&quot;,&quot;aecae&quot;,&quot;bcbda&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;dcaab&quot;,&quot;aadbe&quot;,&quot;bbaaa&quot;,&quot;ebeec&quot;,&quot;eaecb&quot;,&quot;bcbba&quot;,&quot;aecae&quot;,&quot;adcab&quot;,&quot;bcbda&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;14/14/21&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7228&pm=4483">Single Round Match 255 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7228&pm=4483">Single Round Match 255 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

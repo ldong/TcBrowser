@@ -1,0 +1,69 @@
+<html>
+<head>
+<title> Problem Statement for CarolsSinging</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for CarolsSinging</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>When the Christmas dinner is over, it's time to sing carols.  Unfortunately, not all the family members know the lyrics to the same carols.  Everybody knows at least one, though.</p>
+<p>
+You are given a String[] <b>lyrics</b>.  The j-th character of the i-th element of <b>lyrics</b> is 'Y' if the i-th person knows the j-th carol, and 'N' if he doesn't.  Return the minimal number of carols that must be sung to allow everyone to sing at least once.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">CarolsSinging</td></tr><tr><td class="statText">Method:</td><td class="statText">choose</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int choose(String[] lyrics)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>lyrics</b> will contain between 1 and 30 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>lyrics</b> will contain between 1 and 10 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>lyrics</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>lyrics</b> will contain only 'Y' and 'N' characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>lyrics</b> will contain at least one 'Y' character.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YN&quot;,&quot;NY&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Both carols need to be sung.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YN&quot;,&quot;YY&quot;,&quot;YN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Everybody knows the first carol, so singing just that one is enough.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YNN&quot;,&quot;YNY&quot;,&quot;YNY&quot;,&quot;NYY&quot;,&quot;NYY&quot;,&quot;NYN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Singing the best known carol is not always the optimal strategy. Here, the optimal way is to pick the first two carols even though four people know the third one.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YNNYYY&quot;,&quot;YYNYYY&quot;,&quot;YNNYYN&quot;,&quot;NYYNNN&quot;,&quot;YYYNNN&quot;,&quot;YYYNNY&quot;,&quot;NYYYYY&quot;,&quot;NYNYYY&quot;,&quot;NNNNYY&quot;,
+ &quot;YYYYYY&quot;,&quot;YNNNNN&quot;,&quot;YYYYNY&quot;,&quot;YYNNNN&quot;,&quot;NNYYYN&quot;,&quot;NNNNYY&quot;,&quot;YYYNNN&quot;,&quot;NYNNYN&quot;,&quot;YNNYYN&quot;,
+ &quot;YYNNNY&quot;,&quot;NYYNNY&quot;,&quot;NNYYYN&quot;,&quot;YNYYYN&quot;,&quot;NNNYNY&quot;,&quot;YYYYNN&quot;,&quot;YYNYNN&quot;,&quot;NYYNYY&quot;,&quot;YYNYYN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10011&pm=7280">Single Round Match 331 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10011&pm=7280">Single Round Match 331 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

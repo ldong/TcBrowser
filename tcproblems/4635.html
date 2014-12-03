@@ -1,0 +1,116 @@
+<html>
+<head>
+<title> Problem Statement for PartyGame</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for PartyGame</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You are playing a one-player game. The board for the game consists of several red and green cells ordered in a row. Initially you are located at the first cell.
+On each move, you roll an <b>N</b>-sided die with numbers from 1 to <b>N</b> on its sides and move the corresponding number of cells ahead. If you stop on a red cell, you jump back to the cell you started the move from. If you stop at green, you stay there. You win the game when you jump on the last cell or pass it by.
+<br><br>
+Given a String[] <b>field</b>, return the expected number of moves you will need to win the game (return -1 if you will never win). All characters in all elements of <b>field</b> will be either 'G' or 'R', for green and red cells respectively. The first character of the first element of <b>field</b> represents the cell where you are located at the start of the game. The last character of the last element of <b>field</b> represents the last cell. You should concatenate all Strings from <b>field</b> to get the complete game field. </td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">PartyGame</td></tr><tr><td class="statText">Method:</td><td class="statText">numberOfMoves</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int</td></tr><tr><td class="statText">Returns:</td><td class="statText">double</td></tr><tr><td class="statText">Method signature:</td><td class="statText">double numberOfMoves(String[] field, int N)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>field</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>field</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The total number of characters in the <b>field</b> must be at least 2.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>field</b> will contain only 'R' and 'G' characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The first character of the first element of <b>field</b> and the last character of the last element of <b>field</b> will both be 'G'. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>N</b> will be between 1 and 20, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;GRG&quot;}</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2.0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;GRRG&quot;}</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1.0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG&quot;}</pre></td></tr><tr><td class="statText"><pre>6</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 14.47619043642061</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;GGRRRGRGRRGRRRGRRRRRRRRRRRGRRGRRRRRRRGRRRRRR&quot;,
+ &quot;RRRRRRRRRRRRRRRRRGRRRRRRRRRRRRGRRRRGRRRRRGRGR&quot;,
+ &quot;RRRGRRRRRRGGRRRRRRRRRRRRRRGRRRGRRRRRRGRRRRRRGR&quot;,
+ &quot;RRGRRRRGRRRRGRGRRRRRRRGRRGRRRRRRRRRRRRRRGRRRGGG&quot;,
+ &quot;RRRRRRRRRRRRRRRGRRGRRRRRRGRRRRRRRRGRRRRRRRRRRGRR&quot;,
+ &quot;GRRRRRGGGRRRRRGRRRRRRRRRRRGRRRRRRRGRRGRRRRRRRRRRR&quot;,
+ &quot;RRRRRRRRGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRRGGGGGGG&quot;,
+ &quot;GGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRRRRRRRRRRRRGRRR&quot;,
+ &quot;RRRRRGRGRRRRRRRRRRRRRRRGRRRRRRRRRRRGRRRRRRRRRRRRRG&quot;,
+ &quot;GRRRRRRRRRRRRRRRRRRGRRRRRRRRRRRRRRRGRRRGRRRRRRRRGR&quot;,
+ &quot;RRRRRRGRRGRRRRRRGRRRRRRRRRRRRRRRRGRGRGRRRRRRGRRRRG&quot;,
+ &quot;RGRRRRRRRRRGRRGRRRRRRGRRRRRRRGRRGRRGRGGGGGGGGRRRRR&quot;,
+ &quot;RRRRRRRRRRRRRGRRRRRRRRRGRRRRRRRRRRGRRRRRRGGGGGGGGG&quot;,
+ &quot;GGGGGGGGGGGGGGGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGGGG&quot;,
+ &quot;GRRRRRRRRRRRRRRRRRRGRRRGGGGGGGGGGRRRRRRRRRRRRRRRRR&quot;,
+ &quot;RGGGGGGGGGGGGGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRR&quot;,
+ &quot;RRRGRRRRRRRRRGRRRRRRRRRRRGRRRRRRRRRRRRRRGRRRRRRRGG&quot;,
+ &quot;RRRRGGGGGGGGGGRRRRRRRRRRRRRRRRRRGGRRRGRGRRRRRRRRRR&quot;,
+ &quot;RRRRRGRRRRRRRRRGRGRRGRRGRRRRRRRRRRRRRRRRGGRRGRRRRR&quot;,
+ &quot;RRRRRRGRRRRRRRRRGGRRRRRGRRRRGRRRRRRRRGGRRRRRRRRRGR&quot;,
+ &quot;RRRGRRRRRRRRRRRRRRGGGRRRRRRRGRRRRRRRRRRRRRRRRGGGGG&quot;,
+ &quot;GGGGGGGRRRRRRRRRRRRRRRRRRGRRRGRRRRRRRRRRRRRGGRRRRG&quot;,
+ &quot;GRRRRRRRRRRRGRRRRRRRRRRRRRGGGGGGGGGGGGGGGGGGGGGGGG&quot;,
+ &quot;GGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRGGGGGGGGGGGR&quot;,
+ &quot;RRRRRRRRRRRRRRRRRGRRGRRGRRRRRGRRGRRRRRRRRRGRRRRRRR&quot;,
+ &quot;RRRRRRGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRRRRG&quot;,
+ &quot;RRRRRRRRRGRRRRRRRRRRRRRRRRGRGRRRRRRRRRRGRRRRRRGRRR&quot;,
+ &quot;RRRRRRRRRGGRRRRRRRRRRRRRRRRRRGRRRRRGRRRRGRRRRRGRRR&quot;,
+ &quot;RRRGRRGRRRGRRRRRRRRRRGRRRRRRRRRRGGRRRRRRGGRRRRRRRR&quot;,
+ &quot;RRGRRRRRRRRRRRRGRGRRRGGRGRRGRRRGRRRRRRRRRRRGRRRRRR&quot;,
+ &quot;RGRRRRRRRRRRRRRGGRRRRRRRRRGRRRGRRRRRRRRRGRRRRGGRRR&quot;,
+ &quot;RRRRRRRRRRRRRRRGRRRRRRRRRGRGRRRRGGGGGGGGGRRRRRRRRR&quot;,
+ &quot;RRRRRRRRRGRRRRRRGRRRRRRRRRRGRRRRRRRGRRRRRRRRRRRRRR&quot;,
+ &quot;RRGRRRRRRRRRRRRRRRRRRGRRRRRRRRGRRRRGRGRRRRRRRRRRRG&quot;,
+ &quot;RGRRGRRRGRRRRRGRRRRRRRRRGRRRRRRRRRRGRRGRRRRRRRGRGG&quot;,
+ &quot;GRRRRRRRRRRRRRRRRRRGRRRRRRRRRRRRRRRRRGRRRRRRRGRRRR&quot;,
+ &quot;RRRRRGRRRRRRRGRGRRRRRRRRGGRRRRRRGRRRRRRRRRRRRGRRRR&quot;,
+ &quot;RRGRRRRRRRRRRRGRRGRRRRRRRRRRGRRRRRRRRRGRRRGRGRRGRR&quot;,
+ &quot;RRRRGRRRRRRRRRRGRRRRRRRRRRRRRRRGRRRRRRRGRRGGGGGGGG&quot;,
+ &quot;GGGGGGGGGGGGGGGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRGRRR&quot;,
+ &quot;RGGRGGGGRRRRRRRRRRRRRRRRRRGRGRRRGGRRRRRRGGRRRRRRRG&quot;,
+ &quot;RRRRGRRRRRRRRRRRRGGGGGGRRRRRRRRRRRRRRRRRRGRRRRRRRR&quot;,
+ &quot;RRRRRRRGRRRRRRRRRRGRRGGGGGGGGGGGGGRRRRRRRRRRRRRRRR&quot;,
+ &quot;RRGRRRRRRRRRRRRRRRGGRRGRRRRGRRRRGRRRRRRRRRRRRGRGRG&quot;,
+ &quot;RGRRRRRRRGRRRRRRRGRRRGGRRRRRRRRGRRRRRRRRRGGGRRRRRR&quot;,
+ &quot;GGGGGGRRRRRRRRRRRRRRRRRRGRGRRRRRRRRRRRGRRRRRRGRRRR&quot;,
+ &quot;RRRRRRRGRRRRRRRRGRRRRRRRRRRRRRGGRRRRRRRRRRRRRRRRGR&quot;,
+ &quot;RRRRRRRRRRRRRGRRRRRRRRRRRRRRRRRGRRRRGRRRRRRRRRRGRR&quot;,
+ &quot;RRRRGRGRRRRRRRRGRRRRRGRRRRRRRRRRRRRRRGRRRRRRGRRRRR&quot;,
+ &quot;RRGRRGRRRRRRRGGRRGRRRRRRGRRRRRRRRRRRRRRRRRGRGRRRRG&quot;}</pre></td></tr><tr><td class="statText"><pre>19</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1.0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8017&pm=4635">2005 TCO Online Round 2 - Division I, Level Two</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8057&pm=4635">2005 TCO Sponsor Track Round 2 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

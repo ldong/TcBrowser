@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Problem Statement for PresentationComp</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for PresentationComp</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">In algebra, a presentation is a convenient way to describe a set.  The presentation includes what the atomic elements of the set are, and what relations are used to simplify strings of atoms.  These atoms are usually called generators.  In this problem we will be looking at a set whose generators are <i>x</i> and <i>y</i>.  You will be given a String <b>expression</b> consisting of <i>x</i>'s and <i>y</i>'s.  The simplifying rules are:
+<ul>
+<li> 1) Any occurrence of <i>yyyyyy</i> can be deleted from the string. </li>
+<li> 2) Any occurrence of <i>xxxxxxxx</i> can be deleted from the string. </li>
+<li> 3) Any occurrence of <i>xy</i> can be replaced by <i>yyyyyx</i>.</li>
+</ul>
+Two strings A and B are equivalent if there is a string C such that A can be simplified into C and B can be simplified into C by applying the rules above 0 or more times.  Return the shortest string equivalent to <b>expression</b>.  If there are multiple possible solutions, return the one that comes first alphabetically.  </td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">PresentationComp</td></tr><tr><td class="statText">Method:</td><td class="statText">simplify</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String simplify(String expression)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>expression</b> will contain between 1 and 50 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>expression</b> will be x or y.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;xxxxxxxxyyyyyy&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Simplifies greatly.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;xy&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;xy&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Doesn't get much simpler.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;yyxx&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;xxyy&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Use the one that comes first alphabetically.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5867&pm=2332">Single Round Match 221 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

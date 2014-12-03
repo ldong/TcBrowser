@@ -1,0 +1,107 @@
+<html>
+<head>
+<title> Problem Statement for Execution</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Execution</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+When solving TopCoder problems, it is always important to make sure that a solution will not exceed the 8 second time limit.  Sometimes this is as simple as just looking at the loops in the code and figuring out the maximum number of iterations through the inner most loop.  If this number is sufficiently small, then it is obvious that the code will execute in time.  However, for other cases, we must consider what the code is doing in the loops, as well as the number of times the loop is executed, to determine whether it will run in the given time frame..
+</p><p>
+You will be given a String[] containing loops and basic instructions.  Loops will be represented as &quot;for(&lt;x&gt;)&quot; where &lt;x&gt; represents an integer and is the number of times the loop is executed.  Basic instructions will be represented by the word &quot;BASIC&quot; followed by a semicolon.  Loops will always have an accompanying set of braces, '{' and '}', to signify their scope.  Thus &quot;for(100){BASIC;BASIC;}&quot; represents a loop which is executed 100 times, and contains two basic instructions.  Your method should determine the total number of basic instruction executions in the program.  So, for the above example, you would return 200.
+</p><p>
+Additionally, loops may be nested, just like they are in actual code.  In the
+code, &quot;for(100){BASIC;for(12){BASIC;}}&quot;, the outer loop is executed 100 times,
+and the inner loop is executed 12 times for each execution of the outer loop.  Thus, the basic instruction in the
+inner loop is executed 1200 times, and the basic instruction in the outer
+loop is executed 100 times, for a total of 1300 basic instructions.
+</p><p>
+More formally, the input String[] will be a &lt;statement&gt; following the rules below.  Note that these rules ignore spaces and line breaks because spaces and line breaks do not effect the semantics of the input.
+</p><pre>
+&lt;statement&gt; ::= &lt;statement&gt;&lt;statement&gt; | &lt;for-loop&gt; | &lt;basic&gt; | &quot;&quot;
+&lt;for-loop&gt; ::= for(&lt;iter&gt;){&lt;statement&gt;}
+&lt;basic&gt; ::= BASIC;
+&lt;iter&gt; ::= &lt;non-negative integer&gt;
+</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Execution</td></tr><tr><td class="statText">Method:</td><td class="statText">analyze</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">long</td></tr><tr><td class="statText">Method signature:</td><td class="statText">long analyze(String[] code)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The code may have extra spaces in it, but they will not be within &quot;BASIC;&quot;,&quot;for&quot;, or any numbers.  Thus &quot;f or&quot; and &quot;for(1 3)&quot; are invalid, but &quot;for ( 12 ) { }&quot; is valid.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Elements of <b>code</b> should be treated as lines of code.  Thus, element 0 is the first line, element 1 is the second line, and so on.  Line breaks (between two elements) should be treated the same way as spaces.  Thus {&quot;for(&quot;,&quot;10&quot;,&quot;)&quot;,&quot;{&quot;,&quot;BASIC;&quot;,&quot;}&quot;} is the same as {&quot;for( 10 ) { BASIC; }&quot;}.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The simplified version &quot;for(10)BASIC;&quot; (without braces) which works in many programming languages, will not be allowed.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>code</b> will have between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>code</b> will be between 1 and 50 characters in length, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The code will be well-formed similar to what it would have to be in Java, C++, or C#, meaning that every &quot;for(&lt;x&gt;)&quot; will be followed by optional spaces and then a '{'. &lt;x&gt; will be an integer, there will be an equal number of '{' and '}', and aside from the numbers it will be formed solely out of the tokens from: {&quot;BASIC;&quot;,&quot;for&quot;,&quot;(&quot;,&quot;)&quot;,&quot;{&quot;,&quot;}&quot;,&quot; &quot;}.  In other words, it will conform to the grammar given above.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All the numbers in the loops will be non-negative integers less than or equal to (2^63)-1 (9223372036854775807)</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The total number of BASIC; operations will be less than or equal to (2^63)-1.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BASIC;for(10){BASIC;}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 11</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The first BASIC; element gets executed once, and the second one gets executed 10 times.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BASIC;&quot;
+,&quot;for(10){&quot;
+,&quot;  for(100){}&quot;
+,&quot;  BASIC;&quot;
+,&quot;  for(20){&quot;
+,&quot;    BASIC;&quot;
+,&quot;    BASIC;&quot;
+,&quot;  }&quot;
+,&quot;  BASIC;&quot; ,&quot;}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 421</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The BASIC; in element 0 gets executed once.  The BASIC; in element 3 gets executed 10 times.  The ones in elements 5 and 6 each get executed 200 times.  The one in element 8 gets executed 10 times.
+<br>
+For a total of 1+10+200+200+10 = 421</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;for(0){}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;for(10900){}BASIC;&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;for(2){for(2){for(2){for(2){for(2){for(2){for(2){&quot;
+,&quot;BASIC;&quot;
+,&quot;}}}}}}}}}}}}}}}}}}}}}}}}}}}}&quot;
+,&quot;}}}}}}}}}}}}}}}}}}}}}}}}}}}}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 72057594037927936</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are 7*8 = 56 for(2) statements at the beginning of the this test case.
+2^56 = 72057594037927936</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;for(0){}&quot;
+,&quot;for(1)&quot;
+,&quot;{BASIC;&quot;
+,&quot;for(5){BASIC;}&quot;
+,&quot;for(2){BASIC;}&quot;
+,&quot;BASIC;&quot;
+,&quot;  for&quot;
+,&quot;( 3 ){BASIC;}}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 12</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BASIC;for(7){for(3){}for(0){BASIC;}}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">7)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;for(9223372036854775807){BASIC;}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 9223372036854775807</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4325&pm=1053">2002 TopCoder Invitational Round 1 B - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+<title> Problem Statement for GameOfLifeDivTwo</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for GameOfLifeDivTwo</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Cat Taro and Rabbit Hanako invented a new variation of <i>"Game Of Life"</i>.
+<br>
+<br>
+N cells are arranged around a circle. The cells are numbered from 0 to N-1. For each i between 0 and N-2, inclusive, the i-th cell and the (i+1)-th cell are adjacent to each other. The (N-1)-th cell and the 0-th cell are adjacent to each other. Each cell has exactly two adjacent cells. Each cell has a state: "live" or "die".
+<br>
+<br>
+Taro and Hanako can decide the states of the cells at time 0. For time t > 0, the states are determined as follows:
+<ul>
+<li>Consider three cells: the i-th cell and the two cells that are adjacent to the i-th cell.</li>
+<li>If at least two of the three cells are "live" at time t-1, the state of the i-th cell at time t will be "live".</li>
+<li>If at least two of the three cells are "die" at time t-1, the state of the i-th cell at time t will be "die".</li>
+</ul>
+You are given a String <b>init</b>. The number of cells in the game (N) is equal to the number of characters in <b>init</b>. The i-th character of <b>init</b> represents the state they assign to the i-th cell at time 0. '1' means "live" and '0' means "die". Return a string that describes the states at time <b>T</b> using the same encoding.
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">GameOfLifeDivTwo</td></tr><tr><td class="statText">Method:</td><td class="statText">theSimulation</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, int</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String theSimulation(String init, int T)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>init</b> will contain between 3 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>init</b> will be '0' (zero) or '1' (one).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>T</b> will be between 0 and 1,000, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;01010&quot;</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;00000&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">At time 0, Taro and Hanako set the state to "01010".
+<br>
+At time 1, the state becomes "00100".
+<br>
+At time 2, the state becomes "00000".</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;010101&quot;</pre></td></tr><tr><td class="statText"><pre>5</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;101010&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The state alternates between "010101" and "101010" repeatedly.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;111010&quot;</pre></td></tr><tr><td class="statText"><pre>58</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;111111&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;111111111&quot;</pre></td></tr><tr><td class="statText"><pre>511</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;111111111&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The state never changes.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;110010000010111110010100001001&quot;</pre></td></tr><tr><td class="statText"><pre>1000</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;110000000001111110000000000001&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;00101110011&quot;</pre></td></tr><tr><td class="statText"><pre>0</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;00101110011&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14536&pm=11483">Single Round Match 511 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<head>
+<title> Problem Statement for LetterRange</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for LetterRange</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><pre>PROBLEM STATEMENT
+
+A letter range is a set of alphabetically consecutive letters taken from the
+lowercase alphabetic characters 'a' through 'z'. The lowest and highest letters
+of the range, separated by a colon (the character ':'), are used to represent a
+letter range. For example, the range &quot;a:c&quot; represents the consecutive letters
+'a', 'b', and 'c'. (quotes are not part of the range). The range &quot;w:z&quot;
+represents the letters 'w', 'x', 'y', and 'z'. The range &quot;m:m&quot; respresents the
+single letter 'm'.  
+
+Given an input String, return the letter ranges ordered alphabetically by the
+low value of each range. Letter ranges contained in the result must represent
+the largest possible sequences of increasing consecutive letters found in the
+input text. The letters of the input do not have to appear in alphabetical
+order. Ignore space characters and duplicate letters contained in the input.
+For example, the text &quot;fb xee ac&quot; has three letter ranges, &quot;a:c&quot; (the letters
+a, b, and c), &quot;e:f&quot; (the letters e and f) and &quot;x:x&quot; (the letter x). Please
+refer to the examples.
+
+DEFINITION
+Class: LetterRange
+Parameters: String
+Returns: String[]
+Method signature: String[] ranges(String text);
+
+(be sure your method is public)
+
+TopCoder will ensure the validity of the inputs.  Inputs are valid if all of
+the following criteria are met:
+
+* text may only contain lowercase letters (a-z) and the space character, ' '.
+* text will contain between 0 and 50 characters, inclusive.
+
+NOTES
+- When determining a letter range, please keep in mind that the alphabet ends
+with 'z' and does not wrap (i.e. 'a' does not come after 'z'). Since the range
+must be increasing you cannot have a range that begins with a letter located
+near or at end of the alphabet and ends with a letter at or near the beginning
+of the alphabet.
+
+EXAMPLES
+(Note that the quote characters are for clarity only.)
+E1: &quot;&quot; ==&gt; {}      
+E2: &quot;  &quot; ==&gt; {}    
+E3: &quot;aha&quot; ==&gt; {&quot;a:a&quot;,&quot;h:h&quot;}
+E4: &quot;xyzzy&quot; ==&gt; {&quot;x:z&quot;}
+E5: &quot;and toto too&quot; ==&gt; {&quot;a:a&quot;,&quot;d:d&quot;,&quot;n:o&quot;,&quot;t:t&quot;}
+E6: &quot;topcoder quiz&quot; ==&gt; {&quot;c:e&quot;,&quot;i:i&quot;,&quot;o:r&quot;,&quot;t:u&quot;,&quot;z:z&quot;}
+E7: &quot;the quick brown fox jumps over the lazy dog&quot; ==&gt; {&quot;a:z&quot;}
+
+</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">LetterRange</td></tr><tr><td class="statText">Method:</td><td class="statText">ranges</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] ranges(String param0)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=61&pm=443">Sun Microsystems / TopCoder Collegiate Challenge Regional Quarterfinal W/MW - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Problem Statement for BlackWhitePlane</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for BlackWhitePlane</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">There are some circles on the plane. Circles may lie completely inside other circles, but may not touch or intersect other circles in any other way. Initially, the plane is entirely black. Then circles are drawn in order of non-increasing radii. If a circle is drawn on a black background, it is filled with the color white. If it is drawn on a white background, it is filled black. Your task is to compute the total white area on the plane after drawing all the circles.
+<br><br>
+You are given a String[] <b>circles</b> containing the circles on the plane. Each element will be formatted as &quot;X Y R&quot;, where (X, Y) are the coordinates of the center of the circle, and R is the radius.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">BlackWhitePlane</td></tr><tr><td class="statText">Method:</td><td class="statText">area</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">double</td></tr><tr><td class="statText">Method signature:</td><td class="statText">double area(String[] circles)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A circle can lie completely inside another circle only if it has a smaller radius than the outer circle.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The returned value must be accurate to 1e-9 relative or absolute.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>circles</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>circles</b> will be formatted as &quot;X Y R&quot;, where X, Y, and R are integers with no leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each X and Y will be between 0 and 10000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each R will be between 1 and 100, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">No two circles in <b>circles</b> will touch or intersect (unless one lies completely inside the other).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3.141592653589793</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The only circle is drawn on the black plane, so it is white. Its area is pi*R<sup>2</sup>.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;4 3 1&quot;, &quot;3 2 3&quot;, &quot;8 1 1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 28.274333882308138</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"><p>The first circle is drawn inside of the second, so it is black. 
+The total white area is pi*3<sup>2</sup> + pi*1<sup>2</sup> - pi*1<sup>2</sup> = pi*9.</p><p><img src="http://www.topcoder.com/contest/problem/BlackWhitePlane/BlackWhite1.png"> 
+</p></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;15 15 4&quot;, &quot;15 25 4&quot;, &quot;25 25 4&quot;, &quot;25 15 4&quot;, &quot;25 25 100&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 31214.86460606818</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The first four circles are all inside the fifth one.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;2549 8482 11&quot;, &quot;9175 5927 35&quot;, &quot;2747 6177 93&quot;, &quot;5512 8791 81&quot;, &quot;4487 8456 60&quot;,
+ &quot;6899 610 77&quot;, &quot;9716 2202 3&quot;, &quot;9312 5625 79&quot;, &quot;4020 9851 85&quot;, &quot;1640 7179 54&quot;, 
+ &quot;5761 4348 51&quot;,&quot;5917 3436 88&quot;,&quot;6547 386 33&quot;,&quot;182 7676 1&quot;,&quot;6329 4496 89&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 194250.95695676407</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8068&pm=4497">Single Round Match 271 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+<title> Problem Statement for CompressedStringSearch</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for CompressedStringSearch</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+One form of data compression is to use a dictionary of symbols and
+their expansions, which can contain other dictionary symbols.  Thus
+if we have the dictionary
+</p>
+<pre>
+   A=bCc
+   c=123
+   b=c119
+</pre>
+<p>
+then an occurrence of c119 in the original text could be represented by
+the string b instead (which would require that b not occur in the original
+text).  This substitution by dictionary entries can repeat, and uncompression
+is just the reverse of compression, looking up each character to see if it occurs
+in the dictionary and if so expanding it.  For instance, the compressed text aAa
+uses a dictionary entry for A, and so expands to abCca, and then to ac119C123a, then to
+a123119C123a, at which point expansion would stop because no remaining
+symbols have corresponding dictionary entries.  (Note that we are
+not restricting dictionary symbols to be upper case or letters; any
+character a-z A-Z 0-9 and _ can be a dictionary symbol.)
+</p><p>
+Given a dictionary <b>dictionary</b>, a compressed string <b>haystack</b> to search,
+and a literal string (not compressed) <b>needle</b> to search for, return the earliest 
+0-based position of the literal string in the expanded, uncompressed original string.
+Return -1 if the literal string does not occur in the uncompressed string.
+
+The dictionary is formatted as &quot;X=abcde&quot;, where X is the compressed representation of
+the string &quot;abcde&quot; (which itself may be compressed using other dictionary entries).
+
+For instance, if the
+compressed string is abCca, with the dictionary above, and the string
+to search for is 9C1, then the result is 6.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">CompressedStringSearch</td></tr><tr><td class="statText">Method:</td><td class="statText">indexOf</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String, String</td></tr><tr><td class="statText">Returns:</td><td class="statText">long</td></tr><tr><td class="statText">Method signature:</td><td class="statText">long indexOf(String[] dictionary, String haystack, String needle)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Dictionary will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of dictionary will contain between 2 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Strings in dictionary are composed of the characters a-z, A-Z, 0-9, _, and =.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of dictionary will have a second character of '=', and no other character of '='.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The dictionary must not be recursive; every symbol should resolve to some finite string.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of dictionary will have a distinct first character.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Haystack for will have between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Haystack will be composed of the characters a-z, A-Z, 0-9, and _.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Needle will have between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Needle will be composed of the characters a-z, A-Z, 0-9, and _.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Needle will not contain any characters that occur in the first position in any string in dictionary.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The length of a fully uncompressed dictionary entry will be less than 2^50.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A=bCc&quot;,&quot;c=123&quot;,&quot;b=c119&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;abCca&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;9C1&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The string &quot;abCca&quot; expands to &quot;ac119C123a&quot; which expands to &quot;a123119C123a&quot;.  At this point no more characters exist in the string that have corresponding entries in the dictionary, so we have the full uncompressed string.  The first occurrence of &quot;9C1&quot; is at position 6.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{}</pre></td></tr><tr><td class="statText"><pre>&quot;nowisthetimeforallgoodmen&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;time&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 8</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{}</pre></td></tr><tr><td class="statText"><pre>&quot;time&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;nowisthetimeforallgoodmen&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A=BBB&quot;,&quot;B=CCC&quot;,&quot;C=DDD&quot;,&quot;D=EEE&quot;,&quot;E=FFF&quot;,&quot;F=GGG&quot;,&quot;G=HHH&quot;,&quot;H=III&quot;,&quot;I=JJJ&quot;,
+ &quot;J=KKK&quot;,&quot;K=LLL&quot;,&quot;L=MMM&quot;,&quot;M=NNN&quot;,&quot;N=OOO&quot;,&quot;O=PPP&quot;,&quot;P=QQQ&quot;,&quot;Q=RRR&quot;,&quot;R=SSS&quot;,
+ &quot;S=TTT&quot;,&quot;T=UUU&quot;,&quot;U=VVV&quot;,&quot;V=WWW&quot;,&quot;W=XXX&quot;,&quot;X=YYY&quot;,&quot;Y=ZZZ&quot;,&quot;Z=000&quot;,&quot;0=111&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;Atime&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;1time&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 7625597484986</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A=three_blind_mice&quot;,&quot;B=_the&quot;,&quot;C=By_&quot;,&quot;D=_see_&quot;,&quot;E=_a_&quot;,&quot;F=ife_&quot;,&quot;G=_you&quot;,&quot;H=DhowCrun&quot;,&quot;I=all_ran_after&quot;,
+ &quot;J=_farmers_w&quot;,&quot;K=who_cut_offBir_tails_withEcarvingknF&quot;,&quot;L=didG_everDsuchEthing_in&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;A_AHHCIBJFKLGr_lFas_A&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;your_life_as_three&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 181</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">A compressed nursery rhyme.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9982&pm=6234">TCO 06 Semifinal Room 3 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

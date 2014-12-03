@@ -1,0 +1,108 @@
+<html>
+<head>
+<title> Problem Statement for RevealTriangle</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for RevealTriangle</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+	Suppose there is a triangle of digits like the following:
+</p>
+<pre>74932
+1325
+457
+92
+1</pre>
+<p>
+	Each digit, with the exception of those in the top row, is equal to the last digit of the sum of 
+	its upper and upper-right neighboring digits.
+</p>
+<p>
+	You will be given a String[] <b>questionMarkTriangle</b> containing a triangle where 
+	only one digit in each row is known and all others are represented by '?'s 
+	(see example 0 for clarification).
+	Each element of <b>questionMarkTriangle</b> represents a row of the triangle, and the rows are given 
+	from top to bottom. Each element contains exactly one digit ('0'-'9') and 
+	the remaining characters are all '?'s. Restore the triangle and return it as a 
+	String[] without '?'s.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">RevealTriangle</td></tr><tr><td class="statText">Method:</td><td class="statText">calcTriangle</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] calcTriangle(String[] questionMarkTriangle)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>questionMarkTriangle</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Element i (0 indexed) of <b>questionMarkTriangle</b> will contain exactly n-i characters, where n is the number of elements in <b>questionMarkTriangle</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>questionMarkTriangle</b> will contain exactly one digit ('0'-'9') and all others characters will be '?'s.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;4??&quot;, 
+ &quot;?2&quot;, 
+ &quot;1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;457&quot;, &quot;92&quot;, &quot;1&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Let's substitute '?'s with unknown variables:
+<pre>
+4ab 
+c2 
+1
+</pre>
+
+Having done that, we start solving for the variables from the bottom to the top. First, we know that the last digit of (c + 2) is 1. Therefore, c must be 9:
+
+<pre>
+4ab 
+92 
+1
+</pre>
+Now we know that the last digit of (4 + a) is 9, which means a is 5:
+<pre>
+45b 
+92 
+1
+</pre>
+
+And, finally, the last digit of (5 + b) is 2, so b is 7.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;1&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;???2&quot;, &quot;??2&quot;, &quot;?2&quot;, &quot;2&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;0002&quot;, &quot;002&quot;, &quot;02&quot;, &quot;2&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;??5?&quot;, &quot;??9&quot;, &quot;?4&quot;, &quot;6&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;7054&quot;, &quot;759&quot;, &quot;24&quot;, &quot;6&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=12176&pm=8215">Single Round Match 404 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=12176&pm=8215">Single Round Match 404 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

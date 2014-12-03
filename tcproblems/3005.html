@@ -1,0 +1,202 @@
+<html>
+<head>
+<title> Problem Statement for LargestCircle</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for LargestCircle</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><i>
+NOTE: This problem statement contains images that may not display properly if viewed outside of the applet.
+</i>
+
+<p>
+Given a regular square grid, with some number of squares marked, find
+the largest circle you can draw on the grid that does not pass through
+any of the marked squares.  The circle must be centered on a grid point
+(the corner of a square) and the radius must be an integer.
+Return the radius of the circle.
+</p>
+<p>
+The grid will be given as a String[], with each character
+representing a square.  A '.' represents an empty square, and a '#'
+represents a marked square.
+</p>
+<p>
+The circle may intersect the corner of a marked square, but may not pass
+through the interior.  For example, given the grid:
+</p>
+<pre>
+
+  { &quot;############&quot;,
+    &quot;###......###&quot;,
+    &quot;##.######.##&quot;,
+    &quot;#.########.#&quot;,
+    &quot;#.##..####.#&quot;,
+    &quot;#.##..####.#&quot;,
+    &quot;#.########.#&quot;,
+    &quot;#.########.#&quot;,
+    &quot;#.########.#&quot;,
+    &quot;##.######.##&quot;,
+    &quot;###......###&quot;,
+    &quot;############&quot; }
+</pre>
+<p>
+two circles can be drawn with radii 1 and 5, as shown below:
+</p>
+<p>
+<center>
+<img src="http://www.topcoder.com/contest/problem/LargestCircle/circles_figure1.gif">
+</center>
+</p>
+<p>
+Therefore, your method should return 5.
+</p>
+<p>
+Circles may not extend outside of the grid, and must have a radius of
+at least 1.  If no such circle exists, return 0.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">LargestCircle</td></tr><tr><td class="statText">Method:</td><td class="statText">radius</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int radius(String[] grid)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>grid</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>grid</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>grid</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>grid</b> will contain only the characters '.' and '#'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;####&quot;,
+  &quot;#..#&quot;,
+  &quot;#..#&quot;,
+  &quot;####&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Only one circle fits in this grid -- a circle of radius 1, in the center of the grid.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;############&quot;,
+  &quot;###......###&quot;,
+  &quot;##.######.##&quot;,
+  &quot;#.########.#&quot;,
+  &quot;#.##..####.#&quot;,
+  &quot;#.##..####.#&quot;,
+  &quot;#.########.#&quot;,
+  &quot;#.########.#&quot;,
+  &quot;#.########.#&quot;,
+  &quot;##.######.##&quot;,
+  &quot;###......###&quot;,
+  &quot;############&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 5</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This is the example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;..........&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The grid must be at least two squares wide and tall in order for any circles to fit.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;#######&quot;,
+  &quot;#######&quot;,
+  &quot;#######&quot;,
+  &quot;#######&quot;,
+  &quot;#######&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;#####.......&quot;,
+  &quot;#####.......&quot;,
+  &quot;#####.......&quot;,
+  &quot;............&quot;,
+  &quot;............&quot;,
+  &quot;............&quot;,
+  &quot;............&quot;,
+  &quot;............&quot;,
+  &quot;............&quot;,
+  &quot;............&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">A circle of radius 4 fits in this grid, as shown here:
+<center>
+<img src="http://www.topcoder.com/contest/problem/LargestCircle/circles_figure2.gif">
+</center></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.&quot;,
+  &quot;...#...#...#...#...#...#...#...#...#...#...#...#..&quot;,
+  &quot;#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.&quot;,
+  &quot;.#...#...#...#...#...#...#...#...#...#...#...#...#&quot;,
+  &quot;#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.&quot;,
+  &quot;...#...#...#...#...#...#...#...#...#...#...#...#..&quot;,
+  &quot;#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.&quot;,
+  &quot;.#...#...#...#...#...#...#...#...#...#...#...#...#&quot;,
+  &quot;#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.&quot;,
+  &quot;...#...#...#...#...#...#...#...#...#...#...#...#.#&quot;,
+  &quot;#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;.........................#........................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot;,
+  &quot;..................................................&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 24</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5858&pm=3005">Single Round Match 212 Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

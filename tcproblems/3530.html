@@ -1,0 +1,106 @@
+<html>
+<head>
+<title> Problem Statement for Parking</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Parking</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">In a parking lot there are a lot of cars and parking spots and all cars want to drive to a parking spot. Due to the traffic regulations cars may only drive parallel to the boundaries of the parking lot and only at the speed of one square per unit of time.
+
+<br><br>
+
+Usually all cars drive to the nearest available parking spot, but that might turn out badly for some cars. Consider for example the following car park
+<pre>
+.C.....P.X...
+XX.......X..P
+XX.....C.....
+</pre>
+(here 'C' stands for car, 'P' for parking spot, 'X' for wall and '.' for empty spot)
+
+<br><br>
+
+If the car on the bottom drives to its nearest parking spot, the upper left car must drive all the way to the right, taking 13 units of time. If, however, the car on the bottom drives to the parking spot on the right, it will take 6 units of time for both cars to find a parking spot.
+
+<br><br>
+
+Return the minimal amount of time it takes before every car can have a parking spot (assuming that the cars act socially like above). All cars start on an empty spot. Cars are small and any number of them can drive on the same square simultaneously. They can drive over empty spots and parking spots, but not through walls. Each car has to end on a separate parking spot.
+
+<br><br>
+
+If it is impossible for each car to drive to a parking place, return -1.
+
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Parking</td></tr><tr><td class="statText">Method:</td><td class="statText">minTime</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int minTime(String[] park)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>park</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>park</b> have equal length.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>park</b> has length between 1 and 50, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>park</b> is either 'C', 'P', 'X' or '.'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will be no more than 100 cars and 100 parking places in <b>park</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;C.....P&quot;,
+ &quot;C.....P&quot;,
+ &quot;C.....P&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Every car just drives to the opposite parking spot.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;C.X.....&quot;,
+ &quot;..X..X..&quot;,
+ &quot;..X..X..&quot;,
+ &quot;.....X.P&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 16</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The slalom takes the car 16 units of time.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;XXXXXXXXXXX&quot;,
+ &quot;X......XPPX&quot;,
+ &quot;XC...P.XPPX&quot;,
+ &quot;X......X..X&quot;,
+ &quot;X....C....X&quot;,
+ &quot;XXXXXXXXXXX&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 5</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This would take 11 instead of 5 units of time if the car on the bottom drove to its nearest parking spot. </td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.C.&quot;,
+ &quot;...&quot;,
+ &quot;C.C&quot;,
+ &quot;X.X&quot;,
+ &quot;PPP&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">While driving, the cars can be on the same empty spot or parking spot, but they have to finish on different parking spots.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;CCCCC&quot;,
+ &quot;.....&quot;,
+ &quot;PXPXP&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are not enough parking spots for all the cars.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;..X..&quot;,
+ &quot;C.X.P&quot;,
+ &quot;..X..&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The car can't reach the parking spot.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6535&pm=3530">Single Round Match 236 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> Problem Statement for PizzaDivision</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for PizzaDivision</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>You want to divide a round pizza (represented by a circle) into two equal halves with one straight cut. The pizza contains several toppings, represented by points strictly inside the circle. The cut is called <i>beautiful</i> if the two halves of the pizza are mirror images of each other: for every topping in one half there is a topping in the other half in the symmetric point (we don't care about the toppings that are exactly on the cut).</p>
+
+<p>For example, the cut represented by the red line in the following picture is the only beautiful cut for that pizza (black dots are toppings):<br>
+<img src="http://www.topcoder.com/contest/problem/PizzaDivision/pizza1.gif"></p>
+
+<p>This pizza has four different beautiful cuts, all shown by red lines:<br>
+<img src="http://www.topcoder.com/contest/problem/PizzaDivision/pizza2.gif"></p>
+
+<p>You are to count the number of different beautiful cuts for a given pizza. You are given a String[] <b>toppings</b>, each element representing a topping in the form "x y", where x and y are the coordinates of that topping. You may assume that the pizza is large enough to have all those toppings inside. The point of origin coincides with the center of the pizza (that is, the center of the pizza has the coordinates "0 0"). Return the number of different beautiful cuts, or -1 if there are infinitely many of them.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">PizzaDivision</td></tr><tr><td class="statText">Method:</td><td class="statText">howMany</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int howMany(String[] toppings)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Two points A and B are symmetric with respect to line L, if and only if either A and B coincide and lie on L or L is perpendicular to AB and crosses it in its middle point.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>toppings</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>toppings</b> will be formatted as "x y" (quotes for clarity only), where x and y are integers between -500 and 500, inclusive, with no extra leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>toppings</b> will be different.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 110&quot;, &quot;0 70&quot;, &quot;-75 20&quot;, &quot;75 20&quot;, &quot;-25 -50&quot;, &quot;25 -50&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The first example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 70&quot;, &quot;70 0&quot;, &quot;0 -70&quot;, &quot;-70 0&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The second example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Any cut passing through the center suffices.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;3 -4&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;3 -4&quot;, &quot;-3 4&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 2&quot;, &quot;3 4&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;-300 100&quot;, &quot;-200 100&quot;, &quot;-100 100&quot;, &quot;100 100&quot;, 
+&quot;200 100&quot;, &quot;300 100&quot;, &quot;-300 -100&quot;, &quot;-200 -100&quot;, 
+&quot;-100 -100&quot;, &quot;100 -100&quot;, &quot;200 -100&quot;, &quot;300 -100&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">7)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;-54 -83&quot;, &quot;-46 54&quot;, &quot;-5 -44&quot;, &quot;-1 -31&quot;, &quot;-14 47&quot;, 
+&quot;7 -5&quot;, &quot;-45 -63&quot;, &quot;-88 47&quot;, &quot;-17 -9&quot;, &quot;-26 -66&quot;, 
+&quot;40 56&quot;, &quot;-67 69&quot;, &quot;-49 -2&quot;, &quot;2 62&quot;, &quot;61 78&quot;, 
+&quot;-81 -32&quot;, &quot;87 33&quot;, &quot;-22 -53&quot;, &quot;-43 -38&quot;, &quot;57 28&quot;, 
+&quot;35 12&quot;, &quot;-53 -15&quot;, &quot;52 -16&quot;, &quot;32 -44&quot;, &quot;-73 68&quot;, 
+&quot;79 44&quot;, &quot;3 56&quot;, &quot;-66 26&quot;, &quot;-87 41&quot;, &quot;4 87&quot;, 
+&quot;22 53&quot;, &quot;59 16&quot;, &quot;-3 55&quot;, &quot;3 19&quot;, &quot;-26 8&quot;, 
+&quot;43 38&quot;, &quot;54 46&quot;, &quot;-16 22&quot;, &quot;-3 -93&quot;, &quot;45 63&quot;, 
+&quot;0 -37&quot;, &quot;-7 5&quot;, &quot;-40 -56&quot;, &quot;40 19&quot;, &quot;-8 -63&quot;, 
+&quot;-16 -89&quot;, &quot;29 11&quot;, &quot;-52 -21&quot;, &quot;-58 -22&quot;, &quot;4 -61&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9992&pm=6493">Single Round Match 312 Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<title> Problem Statement for NameCheck</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for NameCheck</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">A user has entered a list of Strings. We must check each String to see if it
+meets our criteria for a &quot;customer&quot;, and either reject the String or
+recapitalize and respace it to meet our standards.
+<p>
+Our formatting manual states:<ol><li> 
+A well-formed customer consists of either 2 or 3 parts. The parts are separated by
+one or more spaces, but there are no leading spaces or trailing spaces.
+Each part must be a name or an initial, but the last part may not be an initial.
+    An initial is a letter ('a-z' or 'A-'Z') followed by a period ('.')
+    A name is a sequence of two or more letters ('a-z' or 'A'-'Z').
+</li></ol></p><p>
+Our standard for recapitalizing a well-formed customer is that each name or initial 
+should start with an uppercase letter and all other letters should be lowercase.
+Our standard for respacing a well-formed customer is that any extra spaces
+between parts should be removed leaving 
+exactly one space between adjacent parts.
+</p><p>
+Create a class NameCheck that contains a method formatList that is given a
+String[] <b>namelist</b> and that returns a String[] that includes all the well-formed customers,
+properly recapitalized and respaced. They should appear in the same order as in
+the original <b>namelist</b>.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">NameCheck</td></tr><tr><td class="statText">Method:</td><td class="statText">formatList</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] formatList(String[] namelist)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>namelist</b> will contain between 1 and 50 elements inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>namelist</b> will contain between 1 and 50 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in each element of <b>namelist</b> will be an ASCII character (32-126).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;Doug#as good&quot;,&quot;bArneY R.&quot;, &quot;bArneY   Rubble&quot;,&quot; Bob Stone&quot;, &quot;Bob B. J. Toms&quot;,&quot;J. Lo&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;Barney Rubble&quot;,  &quot;J. Lo&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+   &quot;Doug#as good&quot; is not well-formed because Doug#as is not a name or initial.
+   &quot;bArneY R.&quot; is not well-formed because it does not end with a name.
+   &quot; Bob Stone&quot; is not well-formed because it starts with a space.
+   &quot;Bob B. J. Toms&quot; is not well-formed because it has 2 names and 2 initials.
+   &quot;bArneY   Rubble&quot; is well-formed, being a first name followed by a last name.
+   &quot;J. Lo&quot; is well-formed, being a first initial followed by a last name.
+ </td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;Doug G.&quot;,&quot;GG WALNUT DOUG&quot;, &quot;AB. JONES&quot;, &quot;A. BOB J.&quot;, &quot;Gg DouG&quot;, &quot;GG DOUG&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;Gg Walnut Doug&quot;,  &quot;Gg Doug&quot;,  &quot;Gg Doug&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A BIG Mess&quot;, &quot;A. Big Mess.Mess&quot;, &quot;ABig&quot;,&quot;M.MESS&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4715&pm=1855">Single Round Match 179 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

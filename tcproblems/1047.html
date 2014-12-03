@@ -1,0 +1,130 @@
+<html>
+<head>
+<title> Problem Statement for Lexer</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Lexer</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">A lexer (lexical analyzer) is used in compilers to break input text into pieces
+called tokens.  In this problem you will be given a list of  valid tokens.  For example: <br>
+tokens = {&quot;ab&quot;,&quot;aba&quot;,&quot;A&quot;}  <br> <br>
+
+Given a list of valid tokens and an input string your lexer will work as follows: <br>
+1) a) If the input doesn't begin with one of the valid tokens, remove the first
+character from the string. <br>
+   b) If the input does begin with a valid token, 
+determine the longest valid token the input starts with and remove it from the string.  
+The removed portion is considered CONSUMED. <br>
+2) Repeat 1 until there are no characters left in the input. <br> <br>
+
+The lexer is CASE-SENSITIVE so a token must exactly match the beginning of the
+string. <br> <br>
+
+Given a list of valid tokens and an input string your method will return a list
+containing the CONSUMED valid tokens in the order they were CONSUMED.
+
+For example: <br>
+tokens = {&quot;ab&quot;,&quot;aba&quot;,&quot;A&quot;} <br>
+input = &quot;ababbbaAab&quot; <br>
+<br>
+&quot;ab&quot; and &quot;aba&quot; are found at the beginning of the input but &quot;aba&quot; is longest so
+it is consumed.  Now: <br>
+consumed = {&quot;aba&quot;} <br>
+input = &quot;bbbaAab&quot; <br>
+<br>
+There are no tokens that start with 'b' so the lexer will remove the first 3
+characters from the string. <br>
+consumed = {&quot;aba&quot;} <br>
+input = &quot;aAab&quot; <br>
+<br>
+The 'a' doesn't match the token &quot;A&quot; due to CASE-SENSITIVITY.  The lexer removes the 'a' from the beginning of the string.<br>
+consumed = {&quot;aba&quot;}<br>
+input = &quot;Aab&quot;<br>
+<br>
+The lexer consumes the &quot;A&quot; token.<br>
+consumed = {&quot;aba&quot;,&quot;A&quot;}<br>
+input = &quot;ab&quot;<br>
+<br>             
+Finally the lexer consumes the &quot;ab&quot; token and completes the process.<br>
+consumed = {&quot;aba&quot;,&quot;A&quot;,&quot;ab&quot;}<br>
+input = &quot;&quot;<br>
+The returned list is {&quot;aba&quot;,&quot;A&quot;,&quot;ab&quot;}.<br>
+<br>
+Create a class Lexer that contains the method tokenize, which takes a String[]
+tokens, and a String input, and returns a String[] in the form specified above.  
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Lexer</td></tr><tr><td class="statText">Method:</td><td class="statText">tokenize</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] tokenize(String[] tokens, String input)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">tokens will contain between 0 and 50 elements inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of tokens will have length between 1 and 50 inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of tokens will only consist of letters (A-Z,a-z)</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">input will have length between 0 and 50 inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">input will only consist of letters (A-Z,a-z)</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ab&quot;,&quot;aba&quot;,&quot;A&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;ababbbaAab&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;aba&quot;,
+  &quot;A&quot;,
+  &quot;ab&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Same as above</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;,&quot;a&quot;,&quot;aa&quot;,&quot;aaa&quot;,&quot;aaaa&quot;,&quot;aaaaa&quot;,&quot;aa&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;aaaaaaaaaaaaaaaaaaaaaaaaa&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;aaaaa&quot;,
+  &quot;aaaaa&quot;,
+  &quot;aaaaa&quot;,
+  &quot;aaaaa&quot;,
+  &quot;aaaaa&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Make sure to use the longest valid starting token</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;wow&quot;,&quot;wo&quot;,&quot;w&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;awofwwofowwowowowwwooo&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;wo&quot;,
+  &quot;w&quot;,
+  &quot;wo&quot;,
+  &quot;w&quot;,
+  &quot;wow&quot;,
+  &quot;wow&quot;,
+  &quot;w&quot;,
+  &quot;wo&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;int&quot;,&quot;double&quot;,&quot;long&quot;,&quot;char&quot;,&quot;boolean&quot;,&quot;byte&quot;,&quot;float&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;intlongdoublecharintintboolean&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;int&quot;,
+  &quot;long&quot;,
+  &quot;double&quot;,
+  &quot;char&quot;,
+  &quot;int&quot;,
+  &quot;int&quot;,
+  &quot;boolean&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{}</pre></td></tr><tr><td class="statText"><pre>&quot;Great&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">No valid tokens, so nothing is CONSUMED</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AbCd&quot;,&quot;dEfG&quot;,&quot;GhIj&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;abCdEfGhIjAbCdEfGhIj&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;dEfG&quot;,
+  &quot;AbCd&quot;,
+  &quot;GhIj&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Remember CASE-SENSITIVITY</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4324&pm=1047">2002 TopCoder Invitational Round 1 A - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

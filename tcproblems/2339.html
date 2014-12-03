@@ -1,0 +1,98 @@
+<html>
+<head>
+<title> Problem Statement for TennisSet</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for TennisSet</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">In tennis, the two players play games, alternating which player is the server
+in each game.  When a player has won at least 4 points and has won at least 2 more points 
+than his opponent, he has won the game.
+When a player has won at least 6 games and has won at least 2 more games than
+his opponent, he has won the set. 
+<p>
+We have a String[] <b>points</b> that tells us the result 
+of each point in a recent tennis match.  Each character is either 'S' indicating
+that the server won that point, or an 'R' indicating that the returner (the non-server)
+won that point.  There is no significance to the breaks between individual Strings
+in <b>points</b>. All together they represent one sequence of points played in the match.
+</p><p>
+Call the player who serves in the first game Player A and his opponent Player B. We want to know the score in the first set, with the number of
+games won by Player A, then a hyphen ('-'), 
+then the number of
+games won by Player B. The data in
+<b>points</b> may go beyond the end of the first set, in which case the extra data can 
+be ignored. The first set may not yet be completed,
+in which case we want the score to include only the completed games.
+</p><p>
+Create a class TennisSet that contains a method firstSet that is given 
+String[] <b>points</b> and returns the score of the first set as a String. The
+returned String must not contain any extra characters (such as spaces or leading zeros).  
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">TennisSet</td></tr><tr><td class="statText">Method:</td><td class="statText">firstSet</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String firstSet(String[] points)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">We are NOT using the tiebreaker which is sometimes used when a set reaches 6-6.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>points</b> will contain between 1 and 50 elements inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>points</b> will contain between 1 and 50 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>points</b> will contain only 'S' and 'R'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;SSSSSSSSSSSSSSS&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;2-1&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+
+   The first game was won by Player A in four points. Then B served the second game
+   and won it in four points. Then A served again and won 4 points in a row.
+   The fourth game is still in progress (with B ahead by 3 points).
+
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;SS&quot;,&quot;SRSS&quot;,&quot;RRRRR&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;2-0&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+
+   Player A won the first game 4 to 1. As receiver in the second game, A also won
+   4 points to 1 point.  Only one point has been played in the third set so far.
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;SSSSRRRRSSSSRR&quot;,&quot;RRSSSSRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR&quot;,&quot;R&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;6-0&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+   Player A won all the games without losing a single point. There is a lot of extra
+   data that applies to other sets and is ignored.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4735&pm=2339">Single Round Match 183 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

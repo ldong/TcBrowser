@@ -1,0 +1,120 @@
+<html>
+<head>
+<title> Problem Statement for SmartWordToy</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for SmartWordToy</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">The toy company &quot;I Can't Believe It Works!&quot; has hired you to help develop educational toys.  The current project is a  word toy that displays four letters at all times.  Below each letter are two buttons that cause the letter above to change to the previous or next letter in alphabetical order.  So, with one click of a button the letter 'c' can be changed to a 'b' or a 'd'.  The alphabet is circular, so for example an 'a' can become a 'z' or a 'b' with one click.
+<br>
+<br>
+In order to test the toy, you would like to know if  a word can be reached from some starting word, given one or more constraints.  A constraint defines a set of forbidden words that can never be displayed by the toy.  Each constraint is formatted like &quot;X X X X&quot;, where each X is a string of lowercase letters.  A word is defined by a constraint if the ith letter of the word is contained in the ith X of the contraint.  For example, the constraint &quot;lf a tc e&quot; defines the words &quot;late&quot;, &quot;fate&quot;, &quot;lace&quot; and &quot;face&quot;.
+<br>
+<br>
+You will be given a String <b>start</b>, a String <b>finish</b>, and a String[] <b>forbid</b>. Calculate and return the minimum number of button presses required for the toy to show the word <b>finish</b> if the toy was originally showing the word <b>start</b>.  Remember, the toy must never show a forbidden word.  If it is impossible for the toy to ever show the desired word, return -1.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">SmartWordToy</td></tr><tr><td class="statText">Method:</td><td class="statText">minPresses</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int minPresses(String start, String finish, String[] forbid)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>start</b> and <b>finish</b> will contain exactly four characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>start</b> and <b>finish</b> will contain only lowercase letters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>forbid</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>forbid</b> will contain between 1 and 50 characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>forbid</b> will contain lowercase letters and exactly three spaces.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>forbid</b> will not contain leading, trailing or double spaces.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each letter within a group of letters in each element of forbid will be distinct.  Thus &quot;aa a a a&quot; is not allowed.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>start</b> will not be a forbidden word.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;aaaa&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;zzzz&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;a a a z&quot;, &quot;a a z a&quot;, &quot;a z a a&quot;, &quot;z a a a&quot;, &quot;a z z z&quot;, &quot;z a z z&quot;, &quot;z z a z&quot;, &quot;z z z a&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 8</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;aaaa&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;bbbb&quot;</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Simply change each letter one by one to the following letter in the alphabet.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;aaaa&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;mmnn&quot;</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 50</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Just as in the previous example, we have no forbidden words.  Simply apply the correct number of button presses for each letter and you're there.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;aaaa&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;zzzz&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;bz a a a&quot;, &quot;a bz a a&quot;, &quot;a a bz a&quot;, &quot;a a a bz&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here is an example where it is impossible to go to any word from &quot;aaaa&quot;.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;aaaa&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;zzzz&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;cdefghijklmnopqrstuvwxyz a a a&quot;, 
+ &quot;a cdefghijklmnopqrstuvwxyz a a&quot;, 
+ &quot;a a cdefghijklmnopqrstuvwxyz a&quot;, 
+ &quot;a a a cdefghijklmnopqrstuvwxyz&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;aaaa&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;bbbb&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;b b b b&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;zzzz&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;aaaa&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;,
+ &quot;abcdefghijkl abcdefghijkl abcdefghijkl abcdefghijk&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6532&pm=3935">Single Round Match 233 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

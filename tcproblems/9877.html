@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> Problem Statement for AlienDictionary</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for AlienDictionary</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Some alien civilization has a quite strange language. Each word has length <b>wordLength</b> and consists of only 'A' and 'B' characters. Some sequences of A's and B's are forbidden (by ancient tradition), and do not appear as a substring of any valid word. Any word that does not contain a forbidden substring is valid. The set of forbidden substrings is given in the String[] <b>forbiddenSubstrings</b>. Each element of <b>forbiddenSubstrings</b> contains 'A', 'B' or '?' characters, where '?' means any single character. For example, if <b>forbiddenSubstrings</b> contains the element "ABB?B", then both "ABBAB" and "ABBBB" are forbidden substrings.
+<br> The alien dictionary contains all valid alien words in alphabetical order.
+Each page of the dictionary contains exactly one word. Pages are numbered starting from 0. Given a int[] <b>wordNumbers</b>, return a String[] containing the same number of elements as <b>wordNumbers</b>, where the i-th element is the word written on page <b>wordNumbers</b>[i] of the dictionary or "NO PAGE" (quotes for clarity) if there is no such page in the dictionary.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">AlienDictionary</td></tr><tr><td class="statText">Method:</td><td class="statText">getWords</td></tr><tr><td class="statText">Parameters:</td><td class="statText">int, String[], int[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] getWords(int wordLength, String[] forbiddenSubstrings, int[] wordNumbers)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>wordLength</b> will be between 1 and 50, inclusive. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>wordNumbers</b> will contain between 1 and 50 elements, inclusive. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>wordNumbers</b> will be between 0 and 1,000,000,000, inclusive. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>forbiddenSubstrings</b> will contain between 0 and 50 elements, inclusive. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>forbiddenSubstrings</b> will contain between 1 and 17 characters, inclusive. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>forbiddenSubstrings</b> will contain only characters 'A', 'B' or '?'. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>forbiddenSubstrings</b> will contain the same number of characters. <br></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>5</pre></td></tr><tr><td class="statText"><pre>{&quot;?AA&quot;,&quot;ABB&quot;}</pre></td></tr><tr><td class="statText"><pre>{4,12,0,6,9}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;BBBAB&quot;, &quot;NO PAGE&quot;, &quot;AABAB&quot;, &quot;BBBBB&quot;, &quot;NO PAGE&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Invalid combinations are "AAA", "BAA" and "ABB".</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr><tr><td class="statText"><pre>{1,4,7,5,1}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;AAB&quot;, &quot;BAA&quot;, &quot;BBB&quot;, &quot;BAB&quot;, &quot;AAB&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">No invalid combinations.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>4</pre></td></tr><tr><td class="statText"><pre>{&quot;AA&quot;}</pre></td></tr><tr><td class="statText"><pre>{2,6,11,4,8}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;ABBB&quot;, &quot;BBBA&quot;, &quot;NO PAGE&quot;, &quot;BABB&quot;, &quot;NO PAGE&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>10</pre></td></tr><tr><td class="statText"><pre>{&quot;BABB?&quot;,&quot;??A?B&quot;,&quot;A?AAA&quot;,&quot;A??AB&quot;,&quot;?A??A&quot;}</pre></td></tr><tr><td class="statText"><pre>{0,1}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;AABBBABABA&quot;, &quot;AABBBBABAB&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13506&pm=9877">Single Round Match 415 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

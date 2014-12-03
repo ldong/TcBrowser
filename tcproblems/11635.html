@@ -1,0 +1,92 @@
+<html>
+<head>
+<title> Problem Statement for RainyRoad</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for RainyRoad</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Fox Ciel is going to take a path to meet her friends. The path is tiled with 1x1 square tiles. It is N tiles long and 2 tiles wide. If we imagine that the path is going from the left to the right, we can view it as a rectangle with 2 rows and N columns of tiles.
+The rows of the path are numbered 0 to 1 from top to bottom, and the columns of the path are numbered 0 to N-1 from left to right. Ciel starts at the tile in row 0, column 0. She has to reach the tile in row 0, column N-1.
+<p>
+In each step, Ciel can move to an adjacent tile. Two tiles are adjacent if they share at least one point (a side or a corner).
+<p>
+Because it rained yesterday, some tiles are covered by puddles of water. Ciel will not step on these tiles. You are given a String[] <b>road</b>. The j-th character of i-th element is 'W' if a tile at i-th row of j-th column is covered by  water, and '.' otherwise.
+<p>
+Return the String "YES" if she can move to her destination without entering a tile which is filled with water. Otherwise, return "NO".</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">RainyRoad</td></tr><tr><td class="statText">Method:</td><td class="statText">isReachable</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String isReachable(String[] road)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The constraints guarantee that the starting tile and the destination tile are never covered by water.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>road</b> will contain exactly 2 elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each elements of <b>road</b> will contain between 2 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>road</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character of <b>road</b> will be either '.' or 'W'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The first character and the last character of 0-th element of <b>road</b> will be '.'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.W..&quot;
+,&quot;....&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;YES&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">One of the possible ways is as follows. Here, 'F' is the tile occupied by Fox Ciel.
+<pre>
+"FW.."
+"...." 
+
+".W.."
+"F..." 
+
+".W.."
+".F.."
+
+".W.."
+"..F."
+
+".W.F"
+"...."
+</pre></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.W..&quot;
+,&quot;..W.&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;YES&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.W..W..&quot;
+,&quot;...WWW.&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;NO&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;..&quot;
+,&quot;WW&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;YES&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.WWWW.&quot;
+,&quot;WWWWWW&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;NO&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.W.W.W.&quot;
+,&quot;W.W.W.W&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;YES&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.............................................W.&quot;
+,&quot;.............................................W.&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;NO&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14550&pm=11635">Single Round Match 525 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

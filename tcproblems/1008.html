@@ -1,0 +1,91 @@
+<html>
+<head>
+<title> Problem Statement for Mirrors</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Mirrors</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+A hall of mirrors is a large room with many mirrors throughout it.  When you
+look at one of these mirrors, often you end up seeing an object that is far
+away and has been reflected off many mirrors.  To aid in the design of halls of
+mirrors, you are to write a class Mirrors with a method seen, which will tell
+you what object is seen, given a particular configuration of mirrors and
+objects, and the location and direction being looked.
+</p><p>
+Your method will take a String[], mirrors, another String[], objects, and a
+int[], start.  Each element of mirrors will be formatted as &quot;&lt;x1&gt; &lt;y1&gt; &lt;x2&gt;
+&lt;y2&gt;&quot;, representing a mirror that starts at point (x1,y1) and ends at point
+(x2,y2).  All mirrors are double sided.  objects, will repesent all of the
+objects that are in the hall of mirrors and might be seen.  Each element of
+objects will be formatted as &quot;&lt;name&gt; &lt;x&gt; &lt;y&gt;&quot;, representing a circular object
+named &lt;name&gt;, centered at point (x,y) and with radius 1.  
+</p><p>
+Finally, start will represent the location and direction that a person is
+looking from.  The first element will be the x coordinate, the second element
+will be the y coordinate, and the third element will be the heading that they
+are looking in.  The heading will be in the range 0 to 359, representing the
+number of degrees in a counter-clockwise direction, starting from straight right (positive x), that the person is looking.  Thus a heading of 0 means the person
+is looking in the positive x direction, a heading of 90 indicates the positive
+y direction, and a heading of 45 indicates that the person is looking half way
+between the positive x and positive y directions.
+</p><p>
+Your method must determine what is seen when a person stands at the given
+coordinates and looks in the given direction.  If the person sees himself,
+return &quot;me&quot;.  If the person doesn't see any object or himself, return &quot;space&quot;.
+Otherwise return the name of the object the person sees.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Mirrors</td></tr><tr><td class="statText">Method:</td><td class="statText">seen</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], int[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String seen(String[] mirrors, String[] objects, int[] start)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All mirrors are double sided, and should be treated as line segments.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All objects, and the person, are perfect circles and have a radius of 1.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A mirror reflects light such that the angle formed between the mirror and the incoming light is the same as the angle formed between the mirror and the outgoing light.  Thus the angle between the incoming and outgoing light is 180-2*(angle between mirror and light).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">If you look along a mirror, the mirror has no effect.  (see examples).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of mirrors will be formatted exactly as &quot;&lt;x1&gt; &lt;y1&gt; &lt;x2&gt; &lt;y2&gt;&quot;, with no extra spaces.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of objects will be formatted exactly as &quot;&lt;name&gt; &lt;x&gt; &lt;y&gt;&quot;, with no extra spaces or leading 0's.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">mirrors will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">objects will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">start will contain exactly three elements, the first two representing x and y, respectively, and the third representing the heading the person is looking in.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All coordinates will be integers in the range 0 to 1000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The heading (3rd element of start) will be in the range 0 to 359, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">No objects or mirrors will overlap other objects, mirrors, or the person (this includes touching at one point).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">No element of mirrors will represent a point. (x1==x2 and y1==y2)</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each object will have a unique &lt;name&gt; other than &quot;me&quot; or &quot;space&quot;.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;name&gt; will contain only lowercase characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">To avoid cumulative rounding errors, the object (or &quot;me&quot; or &quot;space&quot;) seen will be seen in 50 mirrors or less.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">To avoid rounding errors, the object seen will be seen definatively.  This means that no objects will be barely seen, or almost seen, and there will never be any question about which mirror is seen.  This is ensured by checking that the path to the object seen does not pass within 0.001 of any other object, mirror, or the person.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of mirrors, and objects will contain between 1 and 50 characters, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 100 100&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;a 15 10&quot;}</pre></td></tr><tr><td class="statText"><pre>{10,5,90}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The one mirror is at a 45 degree angle</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 100 100&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;a 15 10&quot;}</pre></td></tr><tr><td class="statText"><pre>{10,5,180}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;space&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 100 100&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;a 15 10&quot;}</pre></td></tr><tr><td class="statText"><pre>{20,5,135}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 0 1000&quot;,&quot;1000 0 999 1000&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;a 500 152&quot;}</pre></td></tr><tr><td class="statText"><pre>{2,0,1}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;10 0 20 0&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;a 30 0&quot;}</pre></td></tr><tr><td class="statText"><pre>{0,0,0}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4375&pm=1008">2002 TopCoder Invitational Championship Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

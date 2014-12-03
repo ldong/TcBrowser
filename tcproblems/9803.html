@@ -1,0 +1,94 @@
+<html>
+<head>
+<title> Problem Statement for LockedDoors</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for LockedDoors</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You are placed in a maze represented by a rectangular board. Each cell of the board can be one of the following:
+<ul><li>
+empty: is always passable (represented by a '.')
+</li><li>
+a wall: is never passable (a '#')
+</li><li>
+a key: is always passable; when you enter it for the first time, you pick up the key (a lowercase letter 'a'-'f')
+</li><li>
+a door: is passable only if you have a corresponding key (an uppercase letter 'A'-'F')
+</li><li>
+your starting position: an empty cell where you are placed at the beginning (a '0' digit)
+</li><li>
+exit point: an empty cell you must enter to get out of the maze (a '1' digit).
+</li></ul>
+You must get out of the maze using a minimal number of moves. In one move you can get to a cell which is adjacent to your current position vertically or horizontally.
+<br>
+You will be given a String[] <b>maze</b>. Each character in <b>maze</b> will represent a single cell of the maze. A key denoted with a certain lowercase letter opens the door denoted with the corresponding uppercase letter only. Return the minimal number of moves that will bring you to an exit point. There can be several exit points, in which case you can get to any of them. If you can't get to any exit point, return -1.
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">LockedDoors</td></tr><tr><td class="statText">Method:</td><td class="statText">pathOutside</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int pathOutside(String[] maze)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">It is possible to have several keys or several doors of the same type on the map.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">It is possible to have a door without the corresponding key, and vice versa.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Once you have picked up a key, you can use it multiple times.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>maze</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>maze</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>maze</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>maze</b> will be '.', '#', '0' (digit), '1' (digit), 'A'-'F' or 'a'-'f'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will be exactly one '0' character and at least one '1' character in <b>maze</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1..0&quot;,
+ &quot;###.&quot;,
+ &quot;1...&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are no keys or doors in the maze.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;..0..&quot;,
+ &quot;.###.&quot;,
+ &quot;..1.A&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We can get to the exit without opening the door.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;f0.F..1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 7</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0....&quot;,
+ &quot;.#B#A&quot;,
+ &quot;.#.#.&quot;,
+ &quot;b#a#1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 19</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You have to get the 'b' key first, open the 'B' door, get the 'a' key and open the 'A' door to get to the exit.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;c.0.C.C.C.1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 12</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The 'c' key opens all 'C' doors.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;###...&quot;,
+ &quot;#0A.1a&quot;,
+ &quot;###...&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a#c#eF.1&quot;,
+ &quot;.#.#.#..&quot;,
+ &quot;.#B#D###&quot;,
+ &quot;0....F.1&quot;,
+ &quot;C#E#A###&quot;,
+ &quot;.#.#.#..&quot;,
+ &quot;d#f#bF.1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 55</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You have to get all 6 keys in the correct order to open the 'F' door.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">7)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0abcdef.FEDCBA1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 14</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You can carry several types of keys at once.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13486&pm=9803">TCHS Single Round Match 53 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

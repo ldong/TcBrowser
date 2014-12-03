@@ -1,0 +1,97 @@
+<html>
+<head>
+<title> Problem Statement for Ambigram</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Ambigram</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">An ambigram is a (non-blank) symbol that looks unchanged when the paper on which it is 
+written is rotated 180 degrees about the axis perpendicular to the surface
+of the paper. We are given a word and want to change it
+into an ambigram, by modifying or removing its letters.
+<p>
+We will restrict our word to uppercase letters. In the font we are using,</p><ol><li>
+
+        H I N O S X Z    look unchanged after rotation</li><li>
+        M W              look like each other after rotation</li></ol>
+<p>
+Some examples of ambigrams are  &quot;MOW&quot;, &quot;XXXXXXXXXXX&quot;, &quot;XMIWX&quot;, &quot;HXHXHXHXHXH&quot;.
+</p><p>
+We want to make minimal changes to the given word to produce an ambigram. We will measure the cost of
+changing by distance within the alphabet, so changing an 'F' to an 'H' would incur
+a cost of 2, and changing an 'I' to an 'F' would cost 3. If we 
+keep changing a letter until we run off either end of the alphabet, the
+letter disappears. (When a letter disappears, letters around it slide together.) So we can make a C disappear at a cost of 3, and can make
+a 'T' disappear at a cost of 7.
+</p><p>  
+Create a class Ambigram that contains a method ambiword that is given a String 
+<b>word</b> and that returns the ambigram that is the cheapest to construct from <b>word</b>.
+Among equally cheap ambigrams, return the longest. If a tie still exists, return the contender that comes earliest alphabetically. A String with no characters is NOT an ambigram.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Ambigram</td></tr><tr><td class="statText">Method:</td><td class="statText">ambiword</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String ambiword(String word)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>word</b> will contain between 1 and 50 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>word</b> will be an uppercase letter 'A'-'Z'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;BXC&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;X&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+
+    We can remove the 'B' at a cost of 2 and the 'C' at a cost of 3. Total cost = 5.
+    Note that &quot;BXB&quot; is NOT an ambigram.
+
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;XIXHZMOAOSHXIX&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;XIXHMOOWHXIX&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+ 
+    This can be done at a cost of 6 (make the 'A' disappear, make the 
+    'Z' disappear, change 'S' to 'W' at a cost of 4).</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;C&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;H&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+
+    We could make the 'C' disappear at a cost of 3, but the result would be the
+    empty String, which is not an ambigram. At a cost of 5 we can change the 'C' into an 'H'.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;AMWZ&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;MW&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Note that we cannot change the 'A' to 'Z' cheaply by treating the alphabet as a circle.
+&quot;ZMWZ&quot; would be a longer ambigram than &quot;MW&quot; but it would cost 25.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4735&pm=2277">Single Round Match 183 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

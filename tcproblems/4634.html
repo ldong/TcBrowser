@@ -1,0 +1,79 @@
+<html>
+<head>
+<title> Problem Statement for TestingCar</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for TestingCar</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+A test driver in a car company tests a new prototype. For each test drive, he is given a list of restrictions, limiting his speed at certain moments in time. The test driver wants to reach as fast a speed as possible. You should write a program which will find the maximal speed he can reach without violating the restrictions.
+</p>
+<p>
+You will be given a String[] <b>restrictions</b>, giving you the restrictions for the test-drive. Each element of <b>restrictions</b> will contain three integers S, T and D separated by single spaces. The restriction becomes active T seconds after the start of the test-drive and stays active for D seconds. While the restriction is active the car can not go faster than S meters per second. If two or more restrictions are applicable at the same time, the restriction with the minimal speed should be taken into account.
+</p>
+<p>
+At the start of the test drive, the car is motionless. Given two ints, <b>duration</b>, the total duration of the test drive in seconds, and <b>acceleration</b>, the maximal possible acceleration of the car in meters per second squared, return the maximal speed allowed by the test-drive restrictions. Please note that <b>acceleration</b> applies both to increasing and decreasing speed (braking).
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">TestingCar</td></tr><tr><td class="statText">Method:</td><td class="statText">maximalSpeed</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int, int</td></tr><tr><td class="statText">Returns:</td><td class="statText">double</td></tr><tr><td class="statText">Method signature:</td><td class="statText">double maximalSpeed(String[] restrictions, int duration, int acceleration)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The car does not have to come to a complete stop at the final moment of the test drive.  It can still be moving.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">For the purposes of the problem you may assume the car has no speed limit at all.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Your return value must have an absolute or relative error less than 1e-9.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>restrictions</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>restrictions</b> will be formatted as &quot;S T D&quot;.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>restrictions</b>, S, T and D will be separated by single spaces and contain no leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>restrictions</b>, S will be an integer between 0 and 100, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>restrictions</b>, T will be an integer between 0 and <b>duration</b>, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>restrictions</b>, D will be an integer between 0 and 1000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>duration</b> will be between 1 and 1000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>acceleration</b> will be between 1 and 25, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;30 0 200&quot;}</pre></td></tr><tr><td class="statText"><pre>100</pre></td></tr><tr><td class="statText"><pre>25</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 30.0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The restriction doesn't allow us to go faster than 30 meters per second.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;30 0 200&quot;}</pre></td></tr><tr><td class="statText"><pre>4</pre></td></tr><tr><td class="statText"><pre>5</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 20.0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We only have enough time to reach 20 meters per second.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;50 0 40&quot;, &quot;50 60 50&quot;}</pre></td></tr><tr><td class="statText"><pre>100</pre></td></tr><tr><td class="statText"><pre>10</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 150.0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The car can go above 50 meters per second only between the 40th and 60th second. Accelerating from the 40th to 50th second, and braking from the 50th to 60th allows you to reach 150 meters per second.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;50 30 10&quot;, &quot;50 60 50&quot;}</pre></td></tr><tr><td class="statText"><pre>100</pre></td></tr><tr><td class="statText"><pre>10</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 175.0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 100&quot;, &quot;0 200 100&quot;, &quot;0 400 100&quot;, &quot;0 600 100&quot;, &quot;0 800 100&quot;}</pre></td></tr><tr><td class="statText"><pre>1000</pre></td></tr><tr><td class="statText"><pre>20</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2000.0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 100&quot;, &quot;0 200 100&quot;, &quot;0 400 100&quot;, &quot;0 600 100&quot;, &quot;0 800 100&quot;, &quot;0 1000 100&quot;}</pre></td></tr><tr><td class="statText"><pre>1000</pre></td></tr><tr><td class="statText"><pre>20</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1000.0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;44 422 129&quot;, &quot;45 1 29&quot;, &quot;72 290 80&quot;, &quot;2 1 331&quot;, &quot;76 445 16&quot;, 
+&quot;76 204 429&quot;, &quot;8 372 737&quot;, &quot;21 159 538&quot;, &quot;71 266 707&quot;, &quot;99 73 933&quot;,
+ &quot;38 457 879&quot;, &quot;42 24 299&quot;, &quot;54 349 882&quot;, &quot;6 352 909&quot;, &quot;26 419 428&quot;,
+ &quot;51 327 311&quot;, &quot;10 52 898&quot;, &quot;75 10 702&quot;, &quot;54 263 762&quot;, &quot;75 404 223&quot;,
+ &quot;43 383 127&quot;, &quot;86 433 521&quot;, &quot;58 394 306&quot;, &quot;33 379 514&quot;, &quot;58 239 973&quot;,
+ &quot;89 301 765&quot;, &quot;47 235 777&quot;, &quot;75 355 190&quot;, &quot;52 425 38&quot;, &quot;59 140 347&quot;,
+ &quot;89 220 810&quot;, &quot;47 72 724&quot;, &quot;3 398 283&quot;, &quot;0 224 266&quot;, &quot;88 222 615&quot;,
+ &quot;25 149 85&quot;, &quot;59 221 838&quot;, &quot;14 87 86&quot;, &quot;44 227 252&quot;, &quot;73 330 936&quot;,
+ &quot;71 198 138&quot;, &quot;54 186 141&quot;, &quot;6 128 454&quot;, &quot;5 123 719&quot;, &quot;7 442 930&quot;,
+ &quot;59 174 505&quot;, &quot;37 0 581&quot;, &quot;9 198 168&quot;, &quot;40 391 692&quot;, &quot;49 320 419&quot;}</pre></td></tr><tr><td class="statText"><pre>462</pre></td></tr><tr><td class="statText"><pre>13</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 7.5</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8073&pm=4634">Single Round Match 276 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

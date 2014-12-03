@@ -1,0 +1,104 @@
+<html>
+<head>
+<title> Problem Statement for SRMSystemTestPhase</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for SRMSystemTestPhase</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Mr. Dengklek introduced you to an online programming contest called SRM (Special Round Match)!
+<br><br>
+You are now in the system test phase of the contest. There were N coders in the contest. There were 3 problems in the contest. The system has tested all submitted solutions in the contest. For each submitted solution, there are 3 possible outcomes: 'passed', 'failed', and 'challenged'.
+<br><br>
+The contest has a division summary containing a scoreboard of all coders in the contest. For each coder, the scoreboard shows the outcome of the submitted solution of each problem, or an 'X' if the coder didn't submit a solution to the problem. The coders in the scoreboard are sorted in descending order of the number of passed solutions. If there is a tie, then they are sorted in ascending order of the number of challenged solutions. If there is still a tie, the scoreboard may show them in arbitrary order.
+<br><br>
+Unfortunately, you lose your internet connection in this system test phase. So, you ask your friend how the scoreboard is currently like. However, your friend only tells you the solutions submitted by each coder. This is given in <b>description</b>. The j-th character of the i-th element of <b>description</b> will be 'Y' if the i-th coder submitted a solution to the j-th problem, or 'N' otherwise. <b>description</b> describes the scoreboard from top to bottom, i.e., <b>description</b>[0] describes the coder in the first position, <b>description</b>[1] (if any) describes the coder in the second position, and so on.
+<br><br>
+Return the number of different possible scoreboards that match your friend's description, modulo 1,000,000,007.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">SRMSystemTestPhase</td></tr><tr><td class="statText">Method:</td><td class="statText">countWays</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int countWays(String[] description)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>description</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>description</b> will contain exactly 3 characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>description</b> will be 'Y' or 'N'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YYY&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 27</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are 3 possible outcomes for each solution, so there are 3^3 = 27 different possible scoreboards.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YNN&quot;,
+ &quot;NYN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here are the 6 different scoreboards:
+<br><br>
+<pre>
++----------------------------------+----------------------------------+
+| passed     X          X          | passed     X          X          |
+| X          passed     X          | X          failed     X          |
++----------------------------------+----------------------------------+
+| passed     X          X          | failed     X          X          |
+| X          challenged X          | X          failed     X          |
++----------------------------------+----------------------------------+
+| failed     X          X          | challenged X          X          |
+| X          challenged X          | X          challenged X          |
++----------------------------------+----------------------------------+
+</pre></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YNN&quot;,
+ &quot;NNN&quot;,
+ &quot;NNY&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here are the 4 different scoreboards:
+<br><br>
+<pre>
++----------------------------------+----------------------------------+
+| passed     X          X          | passed     X          X          |
+| X          X          X          | X          X          X          |
+| X          X          failed     | X          X          challenged |
++----------------------------------+----------------------------------+
+| failed     X          X          | failed     X          X          |
+| X          X          X          | X          X          X          |
+| X          X          failed     | X          X          challenged |
++----------------------------------+----------------------------------+
+</pre></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NNN&quot;,
+ &quot;NNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YYY&quot;,
+ &quot;YNY&quot;,
+ &quot;NYY&quot;,
+ &quot;YYN&quot;,
+ &quot;YYY&quot;,
+ &quot;YNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 15176</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14545&pm=11511">Single Round Match 520 Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

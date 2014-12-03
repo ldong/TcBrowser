@@ -1,0 +1,70 @@
+<html>
+<head>
+<title> Problem Statement for RecipeFraction</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for RecipeFraction</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Each element of <b>recipe</b> has the form (quotes for clarity) &quot;Amount Ingredient&quot; where Amount is a positive integer.  For example, &quot;4 SUGAR&quot; means the recipe calls for 4 units of SUGAR.  Return what fraction of the total recipe is accounted for by the elements of <b>ingredients</b> (see examples for further clarifications).  </td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">RecipeFraction</td></tr><tr><td class="statText">Method:</td><td class="statText">getFraction</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">double</td></tr><tr><td class="statText">Method signature:</td><td class="statText">double getFraction(String[] recipe, String[] ingredients)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The return value must be within 1e-9 absolute or relative error of the actual result.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>ingredients</b> will contain between 1 and 50 elements inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>ingredients</b> will contain between 1 and 50 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>ingredients</b> will contain only uppercase letters ('A'-'Z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>ingredients</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>recipe</b> will contain between 1 and 50 elements inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>recipe</b> will contain between 3 and 50 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>recipe</b> will have the format (quotes for clarity) &quot;Amount Ingredient&quot; where Amount is an integer with no leading zeros between 1 and 10 inclusive, and Ingredient is a positive length string of uppercase letters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each Ingredient in <b>recipe</b> will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;2 GRAPES&quot;,
+ &quot;1 APPLES&quot;,
+ &quot;3 STRAWBERRIES&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;APPLES&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0.16666666666666666</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The recipe requires 2+1+3 = 6 total units.  APPLES account for 1/6 of the total.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;2 GRAPES&quot;,
+ &quot;1 APPLES&quot;,
+ &quot;3 STRAWBERRIES&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;GRAPES&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0.3333333333333333</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">GRAPES account for 2/6 of the total recipe.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;2 GRAPES&quot;,
+ &quot;1 APPLES&quot;,
+ &quot;3 STRAWBERRIES&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;FROGS&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0.0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are no FROGS in our recipe.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 A&quot;,&quot;1 B&quot;,&quot;1 C&quot;,&quot;5 D&quot;,&quot;4 E&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;A&quot;,&quot;E&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0.4166666666666667</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The recipe requires 1+1+1+5+4=12 total units.  A and E account for 1+4=5 of these 12.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;9 A&quot;,&quot;1 B&quot;,&quot;10 C&quot;,&quot;5 D&quot;,&quot;4 E&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;A&quot;,&quot;B&quot;,&quot;F&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0.3448275862068966</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8026&pm=4638">2005 TCO Qualification Set 7/8 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8033&pm=4638">2005 TCO Sponsor Track Set 4 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

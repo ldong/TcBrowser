@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> Problem Statement for HowManyBirthdays</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for HowManyBirthdays</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+You have several friends and you want to know which of them are celebrating their birthdays today.  You are given a String[] <b>friends</b>, each element of which is formatted as "NAME DAY MONTH" (quotes for clarity), where NAME is a friend's name, and DAY and MONTH are integers representing the day and month, respectively, of that friend's birthday.  Today's date is given in the String <b>today</b>, formatted as "DAY MONTH" (quotes for clarity).  Return a String[] containing the names of all your friends who have birthdays today, sorted in alphabetical order. If none of your friends have a birthday today, return an empty String[].
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">HowManyBirthdays</td></tr><tr><td class="statText">Method:</td><td class="statText">getList</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] getList(String[] friends, String today)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In this problem, all months have exactly 31 days.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>friends</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>friends</b> will be formatted as "NAME DAY MONTH" (quotes for clarity).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>today</b> will be formatted as "DAY MONTH" (quotes for clarity).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>friends</b>, NAME will contain between 1 and 20 lowercase letters ('a'-'z'), inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each DAY in <b>friends</b> and <b>today</b> will be an integer between 1 and 31, inclusive, with no leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each MONTH in <b>friends</b> and <b>today</b> will be an integer between 1 and 12, inclusive, with no leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">No two elements of <b>friends</b> will contain the same NAMEs.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;igor 13 6&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;14 6&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You have only one friend and he celebrated his birthday yesterday. So, your method should return an empty String[].</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;sasha 12 5&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;12 5&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;sasha&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">sasha celebrates his birthday today, so your method should return {"sasha"}.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;larisa 27 3&quot;, &quot;kira 7 4&quot;, &quot;max 12 3&quot;, &quot;kirill 27 3&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;27 3&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;kirill&quot;, &quot;larisa&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;zoro 31 2&quot;, &quot;pokemon 16 12&quot;, &quot;spiderman 31 12&quot;, &quot;dragon 13 7&quot;, &quot;elf 31 12&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;31 12&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;elf&quot;, &quot;spiderman&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ann 6 6&quot;, &quot;tanya 6 6&quot;, &quot;gudi 6 6&quot;, &quot;ruslik 6 6&quot;, &quot;alla 6 6&quot;, &quot;serge 10 10&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;6 6&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;alla&quot;, &quot;ann&quot;, &quot;gudi&quot;, &quot;ruslik&quot;, &quot;tanya&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ahdjakdd 31 12&quot;, &quot;fhdfjha 1 1&quot;, &quot;wefhjks 13 6&quot;, &quot;fkajahsdaaajj 6 7&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;5 12&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10654&pm=7429">TCHS Single Round Match 30 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

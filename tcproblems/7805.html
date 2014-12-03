@@ -1,0 +1,95 @@
+<html>
+<head>
+<title> Problem Statement for SimpleTextProcessor</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for SimpleTextProcessor</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+You are given a String[] <b>words</b> containing an even number of elements <i>n</i>.  You want to place the words into two columns.  The first <i>n</i>/2 elements of words must be placed in the first column, and the last <i>n</i>/2 elements of words must be in the second column.  The order of the words in the input must be preserved.  You are to return a String[] containing the words aligned into columns as described below.
+</p>
+<p>
+The first element of the resulting String[] must contain the first elements of each of the two columns, the second element of the result must contain the second elements of both columns and so on. Each of the columns must be as narrow as possible; in other words, the width of each of the columns must be equal to the length of the longest word it contains. 
+For each column, the width of each row must be the same (but the widths of the rows in the first and in the second columns may differ).
+If some words in a column are narrower than the width of the column, they must be padded with spaces. The words in the first column must be aligned to the left (so, all  spaces will be added to the right side of words that require them), and the words in the second column must be aligned to the right. The columns must be separated by a single character column containing only '*'.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">SimpleTextProcessor</td></tr><tr><td class="statText">Method:</td><td class="statText">makeColumns</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] makeColumns(String[] words)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>words</b> will contain between 2 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>words</b> will contain an even number of elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>words</b> will contain only lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>words</b> will contain between 1 and 20 characters, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;a*c&quot;, &quot;b*d&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;very&quot;, &quot;exciting&quot;, &quot;programming&quot;, &quot;competition&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;very    *programming&quot;, &quot;exciting*competition&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;simple&quot;, &quot;test&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;simple*test&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;this&quot;, &quot;software&quot;, &quot;includes&quot;, &quot;a&quot;, &quot;number&quot;, &quot;of&quot;, &quot;subcomponents&quot;, &quot;with&quot;,
+&quot;separate&quot;, &quot;copyright&quot;, &quot;notices&quot;, &quot;and&quot;, &quot;license&quot;, &quot;terms&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;this         *     with&quot;,
+&quot;software     * separate&quot;,
+&quot;includes     *copyright&quot;,
+&quot;a            *  notices&quot;,
+&quot;number       *      and&quot;,
+&quot;of           *  license&quot;,
+&quot;subcomponents*    terms&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;, 
+&quot;abcdeabcdeabcdeabcde&quot;, &quot;abcdeabcdeabcdeabcde&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot;,
+&quot;abcdeabcdeabcdeabcde*abcdeabcdeabcdeabcde&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10764&pm=7805">2007 TCHS Tournament Championship Round - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

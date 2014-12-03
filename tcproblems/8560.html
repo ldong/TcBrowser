@@ -1,0 +1,113 @@
+<html>
+<head>
+<title> Problem Statement for SpecificPolyominoCovering</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for SpecificPolyominoCovering</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>You have an infinite number of the following two polyominoes:</p>
+<br>
+<pre>
+A  A
+AAAA
+</pre>
+<br>
+and<br>
+<br>
+<pre>
+BB
+</pre>
+<br>
+<p>You are NOT allowed to rotate them.</p>
+
+<p>You are given a String[] <b>region</b> that represents a rectangular table filled with characters '.' and 'X'. The j-th character of the i-th element of <b>region</b> represents the cell at row i, column j of the table.</p>
+
+<p>You need to cover (without overlapping) all the 'X' characters with the given polyominoes. Return a String[] that contains the same area with cells marked '.' left untouched, and cells marked 'X' changed to 'A' or 'B', according to the polyomino that covers the cell.</p>
+
+<p>If there is no solution, return an empty String[].</p>
+
+<p>If there are multiple solutions, return the one among them that comes first lexicographically. That is, you must minimize the first string, if there are still several solutions, minimize the second one, and so on.</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">SpecificPolyominoCovering</td></tr><tr><td class="statText">Method:</td><td class="statText">findCovering</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] findCovering(String[] region)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A string S is greater than a string T lexicographically if T is a proper prefix of S, or if S has a greater character at the first position where the strings differ.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>region</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>region</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>region</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in each element of <b>region</b> will be either '.' or uppercase 'X'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;XXXX&quot;,
+ &quot;XXXX&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;ABBA&quot;, &quot;AAAA&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are two possible coverings of the region:
+<pre>
+BBBB
+BBBB
+</pre>
+and
+<pre>
+ABBA
+AAAA
+</pre>
+
+The answer is the second covering since it is lexicographically smaller.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;X..XXXX..X&quot;,
+ &quot;XXXX..XXXX&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;A..ABBA..A&quot;, &quot;AAAA..AAAA&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There's only one way to cover this region.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;XXXXXX&quot;,
+ &quot;XXXXXX&quot;,
+ &quot;XXXXXX&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;ABBABB&quot;, &quot;AAAABB&quot;, &quot;BBBBBB&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There's only room for one A-polyomino, and it is optimal to place it in the upper left corner.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;X..XX&quot;,
+ &quot;XXXXX&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The upper left 'X' must be covered with an A-polyomino (there is no room for a B-polyomino), but then there's no way to cover the rightmost cells.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;XXXXXXXXXX&quot;,
+ &quot;XXXXXXXXXX&quot;,
+ &quot;XXXXXXXXXX&quot;,
+ &quot;XXXXX..XXX&quot;,
+ &quot;XXXXXXXXXX&quot;,
+ &quot;XXXXXXXXXX&quot;,
+ &quot;XXXXXXXXXX&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;ABBAABBABB&quot;,
+&quot;AAAAAAAABB&quot;,
+&quot;ABBABBBBBB&quot;,
+&quot;AAAAA..ABB&quot;,
+&quot;ABBAAAAABB&quot;,
+&quot;AAAAABBABB&quot;,
+&quot;BBBBAAAABB&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13520&pm=8560">Single Round Match 429 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

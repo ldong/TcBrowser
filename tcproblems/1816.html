@@ -1,0 +1,83 @@
+<html>
+<head>
+<title> Problem Statement for Logger</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Logger</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Most large software packages have some logging options built in to them.  Many times there are different logging 
+levels that can be set.  Your task is to write a class to perform this logging.  Your class will be given a number 
+of messages, each associated with some priority.  If the priority of a message is equal to or higher 
+than the logging priority, then you should log that message, otherwise it should be ignored.  You will be given a 
+String[], <b>messages</b>, each of whose elements represents a single message, a String[], <b>priorities</b>, each of whose elements represents the priority of the message with the 
+same index, and a String[], <b>precedence</b>, giving the order of the priorities.  
+Element 0 of <b>precedence</b> represents the lowest priority, element 1 the next lowest, and so on.  Lastly, you 
+will be given a String, <b>loggingPriority</b>, representing the lowest priority of messages to log.
+<b>loggingPriority</b> and each element of <b>priorities</b> will be formatted as &quot;&lt;priority&gt;&quot;, or &quot;&lt;priority&gt; &lt;num&gt;&quot;, where &lt;priority&gt; is an element of <b>precedence</b> and &lt;num&gt; is an integer between 0 and 100, inclusive.  If &lt;num&gt; is not present, it is the same as if it were a 0.
+<br><br>
+You should return a String[] containing all of 
+the messages with sufficiently high priority to be logged, in the order they were given to you.  A message has sufficiently high priority to be logged if the corresponding &lt;priority&gt; is higher than that in <b>loggingPriority</b>, or if the corresponding &lt;priority&gt; is the same, and &lt;num&gt; is greater than or equal to that in <b>loggingPriority</b>.  Additionally, priorities are case insensitive.
+<br><br>
+So, if <b>precedence</b> is {&quot;info&quot;,&quot;DEBUG&quot;,&quot;error&quot;,&quot;fatal&quot;}, and <b>loggingPriority</b> is &quot;debug 1&quot;, then messages with priorities of &quot;debug 1&quot;, &quot;debug 43&quot;, &quot;Error&quot;, and &quot;fatal 1&quot; would all be logged.  Messages with priorities of &quot;debug 0&quot;, &quot;debug&quot;, &quot;info&quot;, and &quot;info 100&quot; would not be logged.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Logger</td></tr><tr><td class="statText">Method:</td><td class="statText">log</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], String[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] log(String[] messages, String[] priorities, String[] precedence, String loggingPriority)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>loggingPriority</b> and each element of <b>priorities</b> will be formatted as &quot;&lt;priority&gt;&quot; or &quot;&lt;priority&gt; &lt;num&gt;&quot;</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;priority&gt; in <b>priorities</b> and <b>loggingPriority</b> will be an element of <b>precedence</b>, ignoring case.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;num&gt; in <b>priorities</b> and <b>loggingPriority</b> will be between 0 and 100, inclusive, with no extraneous leading 0's.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>precedence</b> will contain no repeated elements, ignoring case.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>precedence</b> will contain between 1 and 40 letters ('a'-'z' and 'A'-'Z'), inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>messages</b> will contain between 0 and 50 characters, inclusive, each of which will be between ASCII 32 and 126, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>priorities</b> and <b>messages</b> will contain the same number of elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>priorities</b>, <b>messages</b>, and <b>precedence</b> will each contain between 1 and 50 elements, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;in doit()...&quot;,&quot;n=9&quot;,&quot;n=13&quot;,&quot;x=-3&quot;,&quot;divide by 0&quot;,
+ &quot;index out of bounds&quot;,&quot;n=-1&quot;,&quot;this shouldn't happen&quot;,&quot;bailing out&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;info 3&quot;,&quot;debug&quot;,&quot;debug&quot;,&quot;debug 3&quot;,&quot;error&quot;,&quot;ERROR 5&quot;,&quot;debug 2&quot;,&quot;critical&quot;,&quot;fatal 100&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;info&quot;,&quot;debug&quot;,&quot;exceptional&quot;,&quot;error&quot;,&quot;critical&quot;,&quot;fatal&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;error 1&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;index out of bounds&quot;,  &quot;this shouldn't happen&quot;,  &quot;bailing out&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">All of the messages with logging level of &quot;error 1&quot; or higher should be logged.  Note that the logging level is case insensitive, so &quot;ERROR 5&quot; is the same as &quot;error 5&quot;</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;in doit()...&quot;,&quot;n=9&quot;,&quot;n=13&quot;,&quot;x=-3&quot;,&quot;divide by 0&quot;,
+ &quot;index out of bounds&quot;,&quot;n=-1&quot;,&quot;this shouldn't happen&quot;,&quot;bailing out&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;info 3&quot;,&quot;debug&quot;,&quot;debug&quot;,&quot;debug 3&quot;,&quot;error&quot;,&quot;ERROR 5&quot;,&quot;debug 2&quot;,&quot;critical&quot;,&quot;fatal 100&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;info&quot;,&quot;debug&quot;,&quot;exceptional&quot;,&quot;error&quot;,&quot;critical&quot;,&quot;fatal&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;debug 2&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;x=-3&quot;,
+ &quot;divide by 0&quot;,
+ &quot;index out of bounds&quot;,
+ &quot;n=-1&quot;,
+ &quot;this shouldn't happen&quot;,
+ &quot;bailing out&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;A&quot;,&quot;b&quot;,&quot;C&quot;,&quot;d&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;D&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;C&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;3&quot;,  &quot;&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4702&pm=1816">2003 TCO Online Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

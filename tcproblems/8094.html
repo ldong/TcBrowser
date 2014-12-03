@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> Problem Statement for JoshString</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for JoshString</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Josh said every string with a certain property is his string. The property that Josh is talking about is that the sum of the letters of the string has to be a prime number. The string will contain only lowercase letters ('a'-'z'). For each letter you add to the sum the 1-based position of the letter in the alphabet. For 'a' you add 1, for 'b' you add '2', and so on. For example, the sum of the letters in "bad" is 2 + 1 + 4 = 7, and 7 is prime, so therefore, "bad" is Josh's string. Given a String <b>s</b>, return "YES" if it is Josh's string or "NO" otherwise (all quotes for clarity only).
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">JoshString</td></tr><tr><td class="statText">Method:</td><td class="statText">isJoshString</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String isJoshString(String s)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>s</b> will contain only lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>s</b> will contain between 2 and 50 characters, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;bad&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;YES&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;badbad&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;NO&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">"bad" two times. The sum is 7 * 2 = 14. 14 is not a prime number.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;abcdefghijklmnopqrstuvwxyz&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;NO&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The whole alphabet. The sum will be 1 + 2 + 3 + .. + 26 = 351. 351 is not a prime number because it is divisible by 3.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;abcdefghijklmnopqrstuvwxyzaa&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;YES&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Same string but contains 2 extra 'a's. The sum will be 351 + 2 = 353 which is a prime number.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;asdjkhqwaieyajhdjsahjquawyhasdhwauyashjzxdf&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;YES&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10779&pm=8094">TCHS Single Round Match 38 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Problem Statement for Gauss</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Gauss</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Carl Friedrich Gauss (1777-1855) is considered to be one of the greatest mathematicians ever. There is a nice story about him being at elementary school: The teacher wanted to keep the class busy and assigned to them the task of adding all whole numbers from 1 to 100. While the other kids were just about to start their additions, Gauss already presented the result, 5050. He noticed that the numbers can be grouped into 50 pairs of value 101 (1+100, 2+99, ...), and from this he deduced that the sum of all natural numbers from 1 to n equals n(n+1)/2.<br>
+<br>
+Now let's consider adding consecutive numbers not only starting at 1 but at any natural number. E.g. if you start at 13 and add three consecutive numbers, you get 13+14+15 = 42. Now can 42 also be achieved by adding two or more consecutive numbers starting at a different number? Yes, it can: 3+4+5+6+7+8+9 = 9+10+11+12 = 42.<br>
+<br>
+Given a number <b>target</b>, return all intervals representing a sequence of two or more consecutive natural numbers (positive integers) that add up to <b>target</b>.
+The intervals have to be sorted by ascending lower interval limits.
+The interval representing the sequence a + (a+1) + ... + (b-1) + b is the String <tt>&quot;[a, b]&quot;</tt> (quotes for clarity; there is a single space between the comma and <tt>b</tt>).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Gauss</td></tr><tr><td class="statText">Method:</td><td class="statText">whichSums</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] whichSums(String target)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The value of <b>target</b> fits into a long.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>target</b> represents a natural number between 1 and 10^11, inclusive, without leading zeros.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;42&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;[3, 9]&quot;,  &quot;[9, 12]&quot;,  &quot;[13, 15]&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This is the example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;4&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are no 2 or more consecutive natural numbers that add up to 4.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;17&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;[8, 9]&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;55&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;[1, 10]&quot;,  &quot;[9, 13]&quot;,  &quot;[27, 28]&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4560&pm=1745">Single Round Match 151 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

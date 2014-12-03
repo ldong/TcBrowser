@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> Problem Statement for StrangeDictionary</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for StrangeDictionary</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>A standard way of ordering words in a dictionary involves comparison of two words character by character, from left to right, until some two characters disagree. Jim thinks it's pretty boring, so he introduced a more complicated and less predictable scheme.</p>
+<p>
+<p>Given is a String[] <b>words</b> that contains N distinct words and each element is a single word. The length of each word is the same -- exactly L characters. To order words according to his scheme, Jim first generates a random permutation p[0], p[1], ..., p[L-1] of integers between 0 and L-1, inclusive. This permutation is generated only once and then considered to be fixed for the rest of the procedure. Using the permutation p, Jim can compare any two words as follows:</p>
+<p>
+<pre>
+// returns -1, if A&lt;B, 0, if A=B, and 1, if A&gt;B
+function Compare(Word A, Word B):
+	for i = 0, 1, ..., L-1:
+		a := character at position p[i] (0-based) in A
+		b := character at position p[i] (0-based) in B
+		if (a &lt; b), return -1
+		if (b &lt; a), return 1
+
+	return 0
+</pre>
+<p>
+<p>Let <i>Sorted</i> be the list of the given <b>words</b> ordered according to Compare operator defined above. In other words, Compare(<i>Sorted</i>[i], <i>Sorted</i>[j]) = -1, for any i, j, 0 &lt;= i &lt; j &lt; N. Let <i>pos</i>[i] be the 0-based position of <b>words</b>[i] within <i>Sorted</i>.</p>
+<p>
+<p>Obviously, the value <i>pos</i>[i] depends on the choice of the random permutation p. Assume that p is chosen uniformly at random. Return a double[] that contains N elements. Element i of the return value must be the expected value of <i>pos</i>[i].</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">StrangeDictionary</td></tr><tr><td class="statText">Method:</td><td class="statText">getExpectedPositions</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">double[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">double[] getExpectedPositions(String[] words)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of the return value must have an absolute or relative error of less than 1e-9.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>words</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>words</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>words</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in each element of <b>words</b> will be a lowercase letter ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>words</b> will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;hardesttestever&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {0.0 }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">One word will always be at position 0 regardless of the permutation p.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ab&quot;, &quot;ba&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {0.5, 0.5 }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">If p = {0, 1}, then "ab" &lt; "ba". If p = {1, 0}, then "ba" &lt; "ab".</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;aza&quot;, &quot;aab&quot;, &quot;bba&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {1.0, 0.8333333333333333, 1.1666666666666665 }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"><pre>
+p		<i>Sorted</i>
+{0,1,2}		aab, aza, bba
+{0,2,1}		aza, aab, bba
+{1,0,2}		aab, bba, aza
+{1,2,0}		aab, bba, aza
+{2,0,1}		aza, bba, aab
+{2,1,0}		bba, aza, aab
+</pre></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;abababab&quot;, &quot;babababa&quot;, &quot;acacacac&quot;, &quot;cacacaca&quot;, &quot;bcbcbcbc&quot;, &quot;cbcbcbcb&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {1.0, 1.0, 2.5, 2.5, 4.0, 4.0 }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14734&pm=11929">Single Round Match 542 Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

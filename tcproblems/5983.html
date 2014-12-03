@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Problem Statement for RunLengthEncoding</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for RunLengthEncoding</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>Run-length encoding is a simple compression technique which compresses strings of letters by replacing repeated consecutive letters (called <i>runs</i>) by the number of occurrences of the letter, followed by that letter. For example, <tt>AAAABBBCDDE</tt> compresses to <tt>4A3BC2DE</tt>. The number 1 may be omitted in runs consisting of a single letter, as with letters '<tt>C</tt>' and '<tt>E</tt>' in the previous example.</p>
+
+<p>Any string consisting of uppercase letters where each letter is optionally preceded by a positive integer is called a <i>properly encoded string</i>. Given a properly encoded string <b>text</b>, return the decoded string. If the decoded string would be more than 50 characters long, return &quot;<tt>TOO LONG</tt>&quot; (without the quotes).</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">RunLengthEncoding</td></tr><tr><td class="statText">Method:</td><td class="statText">decode</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String decode(String text)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>text</b> will contain between 0 and 50 characters ('0'-'9', 'A'-'Z'), inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>text</b> will be a properly encoded string: all numbers contained will be positive integers with no leading zeros and each number will precede a letter.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;4A3BC2DE&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;AAAABBBCDDE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This is the example in the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;1A1B1C1D1E&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ABCDE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">1's can be omitted, but also may appear in the input. This input is valid, although we'd doubled the size of the string by &quot;compressing&quot; it.
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;1A3A5A4BCCCC&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;AAAAAAAAABBBBCCCC&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Although it isn't the best possible, this is also a properly encoded string.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;50A&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;21Z13S9A8M&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;TOO LONG&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;123456789012345678901234567890B&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;TOO LONG&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The decoded string would be more than 10^30 characters long, which is more than 50.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8078&pm=5983">Single Round Match 281 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

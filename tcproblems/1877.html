@@ -1,0 +1,121 @@
+<html>
+<head>
+<title> Problem Statement for MineField</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for MineField</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Bob wants to program a game where a player tries to reveal all the squares on a minefield that do not contain mines.  He has created an algorithm to generate random locations for mines.  He wants to take these locations and use them to create a 9x9 board. The board needs to indicate the locations of the mines, as well as indicate how many mines border the spaces without mines.  A mine borders a space if it is horizontally, vertically, or diagonally adjacent to that space.<br>
+<br>
+Write a class MineField, which contains a method getMineField. getMineField takes a String <b>mineLocations</b> representing the locations of mines in the 9x9 field. getMineField returns a String[] representing the entire board.  The <i>i</i>th element of the returned String[] corresponds to row <i>i</i> of the board.  Each element of the returned String[] should be 9 characters in length, where each character is either 'M' (symbolizing a mine) or a digit, d, between '0' and '8' inclusive (symbolizing an empty space bordering d mines.)<br>
+<br>
+The String passed to the method will be in the following format (quotes added for clarity):
+<ol><li>&quot;(r0,c0)(r1,c1)...(rN,cN)&quot;</li></ol>
+<br>
+Each pair of parentheses holds the coordinates of a mine in (row, column) format.  Counting begins at 0, not 1.  Therefore, (0,0) represents the upper-left corner, and (8,8) represents the bottom-right corner.  For example, suppose Bob randomly generated the following locations:<br>
+<ol><li>&quot;(0,0)(1,0)(2,0)(3,0)(4,0)&quot;</li></ol>
+
+The board he would want to return would look like:
+<pre>
+{ &quot;M20000000&quot;,
+  &quot;M30000000&quot;,
+  &quot;M30000000&quot;,
+  &quot;M30000000&quot;,
+  &quot;M20000000&quot;,
+  &quot;110000000&quot;,
+  &quot;000000000&quot;,
+  &quot;000000000&quot;,
+  &quot;000000000&quot; }
+</pre>
+
+There are 5 mines (symbolized by &quot;M&quot;) located straight down the first column.  Two spots on the board border 1 mine; two spots border 2 mines; and three spots border 3 mines.  All other spots on the board border no mines.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">MineField</td></tr><tr><td class="statText">Method:</td><td class="statText">getMineField</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] getMineField(String mineLocations)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>mineLocations</b> will contain between 0 and 50 characters, inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>mineLocations</b> will contain between 0 and 10 mines, inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>mineLocations</b> will be in the format &quot;(r0,c0)(r1,c1)...(rN,cN)&quot; where each r# and c# is a digit between '0' and '8', inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>mineLocations</b> will not contain duplicate locations</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;(0,0)(1,0)(2,0)(3,0)(4,0)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;M20000000&quot;,
+ &quot;M30000000&quot;,
+ &quot;M30000000&quot;,
+ &quot;M30000000&quot;,
+ &quot;M20000000&quot;,
+ &quot;110000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This is the example from above.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;(0,0)(0,8)(8,0)(8,8)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;M1000001M&quot;,
+ &quot;110000011&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;110000011&quot;,
+ &quot;M1000001M&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There is a mine in each corner of the board.  There are twelve spots that border exactly 1 mine.  All other spots border no mines.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;(3,2)(3,3)(3,4)(4,2)(4,4)(5,2)(5,3)(5,4)(7,4)(6,7)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;012321000&quot;,
+ &quot;02MMM2000&quot;,
+ &quot;03M8M3000&quot;,
+ &quot;02MMM2111&quot;,
+ &quot;0124321M1&quot;,
+ &quot;0001M1111&quot;,
+ &quot;000111000&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot;,
+ &quot;000000000&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Don't forget the empty case.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4650&pm=1877">Single Round Match 169 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

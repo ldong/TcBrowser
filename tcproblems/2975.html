@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> Problem Statement for FileFilter</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for FileFilter</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You are working on the backend of a system that allows people to upload files.  For security reasons, you want to restrict the file extensions of the files they upload.  You will be given a String[], <b>extensions</b>, containing a list of allowed extensions.  You will also be given a String[], <b>files</b>, containing the names of a number of files.  Your task is to return a String[], each element of which is either &quot;ALLOW&quot; or &quot;DENY&quot;, corresponding to the elements of <b>files</b> with the same indices.  If a filename ends with a period ('.') followed by an allowed extension, ignoring case, then it is to be allowed, otherwise it should be denied.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">FileFilter</td></tr><tr><td class="statText">Method:</td><td class="statText">filter</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] filter(String[] files, String[] extensions)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>files</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>extensions</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>files</b> will contain between 2 and 50 letters ('a'-'z' and 'A'-'Z') and periods.  </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The last character of each element of <b>files</b> will be a letter. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>files</b> will contain at least one period.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>extensions</b> will contain between 1 and 50 lowercase letters ('a'-'z').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;algorithm.txt&quot;,&quot;algorithms.html&quot;,&quot;wingl.exe&quot;,&quot;yourDoc.PIF&quot;,&quot;graph.gIf&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;txt&quot;,&quot;html&quot;,&quot;gif&quot;,&quot;doc&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;ALLOW&quot;,  &quot;ALLOW&quot;,  &quot;DENY&quot;,  &quot;DENY&quot;,  &quot;ALLOW&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{}</pre></td></tr><tr><td class="statText"><pre>{&quot;exe&quot;,&quot;pif&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.bashrc&quot;,&quot;bash.rc&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;rc&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;DENY&quot;,  &quot;ALLOW&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5874&pm=2975">2004 TCO Qualification Round Set 2 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

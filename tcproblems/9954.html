@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> Problem Statement for ThreePhotos</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for ThreePhotos</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">A cube of size NxNxN was divided into small cubes of size 1x1x1.  Then, some of the small cubes were removed, and three photos of the large cube were taken.  You are given these three photos in the String[]s <b>A</b>, <b>B</b> and <b>C</b>.  Character y of element x of <b>A</b> will be 'Y' if at least one small cube with x-coordinate x and y-coordinate y wasn't removed, or 'N' otherwise.  Character z of element x of <b>B</b> will be 'Y' if at least one small cube with x-coordinate x and z-coordinate z wasn't removed, or 'N' otherwise.  Character z of element y of <b>C</b> will be 'Y' if at least one small cube with y-coordinate y and z-coordinate z wasn't removed, or 'N' otherwise.  Return the minimal number of small cubes which could've been removed to result in those three photos.  If there is no way the three photos can be valid, return -1 instead.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">ThreePhotos</td></tr><tr><td class="statText">Method:</td><td class="statText">removeCubes</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int removeCubes(String[] A, String[] B, String[] C)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">N will be between 1 and 50, inclusive. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>A</b>,  <b>B</b> and <b>C</b> will each contain exactly N elements. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>A</b>,  <b>B</b> and <b>C</b> will contain exactly N characters. <br></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>A</b>,  <b>B</b> and <b>C</b> will contain only 'Y' or 'N' characters. <br></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YY&quot;,&quot;YY&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;YY&quot;,&quot;YY&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;YY&quot;,&quot;YY&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Remove no cubes.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NNN&quot;,&quot;NNN&quot;,&quot;NNN&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;NNN&quot;,&quot;NNN&quot;,&quot;NNN&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;NNN&quot;,&quot;NNN&quot;,&quot;NNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 27</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You will have to remove all cubes.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NNNNN&quot;,&quot;NNNNN&quot;,&quot;NNNNN&quot;,&quot;YYNNN&quot;,&quot;NNNNN&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;NNNNN&quot;,&quot;NNNNN&quot;,&quot;NNNNN&quot;,&quot;NNYNY&quot;,&quot;NNNNN&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;NNYNN&quot;,&quot;NNNNY&quot;,&quot;NNNNN&quot;,&quot;NNNNN&quot;,&quot;NNNNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 123</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YY&quot;,&quot;YY&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;YY&quot;,&quot;YY&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;YN&quot;,&quot;YN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13506&pm=9954">Single Round Match 415 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+<head>
+<title> Problem Statement for Library</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Library</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Mr. Agent has entered a government library where secret documents are stored.  Documents are stored in different rooms, and each document has a list of user groups that can access it.  In order to access a document, a person must have access to the room in which the document is stored and also be a member of at least one user group with access to the document.  Your task is to determine the number of documents Mr. Agent can access.
+<br><br>
+You are given a String[] <b>userGroups</b>, each element of which is the name of a user group in which Mr. Agent is a member.  You are also given a String[] <b>roomRights</b>, each element of which is the name of a room to which Mr. Agent has access.  The documents are given in the String[] <b>records</b>.  Each element of records is formatted "document_name room user_group" (quotes for clarity), where document_name is the name of a document, room is the name of the room where the document is located, and user_group is the name of a user group that has access to the document.  If multiple user groups have access to a document, there will be an entry in <b>records</b> for each group.  All documents have distinct names, all rooms have distinct names, and all user groups have distinct names.  Return the number of documents Mr. Agent can access.
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Library</td></tr><tr><td class="statText">Method:</td><td class="statText">documentAccess</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int documentAccess(String[] records, String[] userGroups, String[] roomRights)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>records</b>, <b>userGroups</b> and <b>roomRights</b> will each contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>userGroups</b> and <b>roomRights</b> will contain between 1 and 15 lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>records</b> will be formatted as "document_name room user_group" (quotes for clarity), where document_name, room and user_group each contain between 1 and 15 lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>records</b> with the same document_name will contain the same room.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>records</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>userGroups</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>roomRights</b> will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;diary computers editor&quot;,&quot;fairytale gardening editor&quot;,&quot;comix cars author&quot;,&quot;comix cars librarian&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;employee&quot;,&quot;editor&quot;,&quot;author&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;history&quot;,&quot;cars&quot;,&quot;computers&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Mr. Agent only has access to the documents "diary" and "comix".</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;diary computers editor&quot;,&quot;fairytale gardening editor&quot;,&quot;comix cars author&quot;,&quot;comix cars librarian&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;employee&quot;,&quot;editor&quot;,&quot;author&quot;,&quot;librarian&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;history&quot;,&quot;cars&quot;,&quot;computers&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Three elements of <b>records</b> satisfy the conditions, but two of them are for the same document (comix).</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;diary computers editor&quot;,&quot;fairytale gardening editor&quot;,&quot;comix cars author&quot;,&quot;comix cars librarian&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;employee&quot;,&quot;editor&quot;,&quot;author&quot;,&quot;librarian&quot;}</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Mr. Agent can not access any rooms.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a b c&quot;,&quot;a b d&quot;,&quot;b b c&quot;,&quot;b b d&quot;,&quot;e c d&quot;,&quot;e c b&quot;,&quot;e c c&quot;,&quot;t d e&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;c&quot;,&quot;d&quot;,&quot;x&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10808&pm=7659">Single Round Match 384 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10808&pm=7659">Single Round Match 384 Round 1 - Division II, Level Two</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=11140&pm=7659">TopCoder College Tour SRM 384 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

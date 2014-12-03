@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Problem Statement for Postnet</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Postnet</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">5, 9 and 11 digit zip codes on presorted US mail are generally encoded using Postnet barcodes.  Each digit is represented by a sequence of 5 bars, where each bar is either high or low.  The barcode representations for the digits 0 - 9 are as follows:<br><br>
+<pre>  0      1     2     3     4     5     6     7     8     9   </pre>
+<pre> HHLLL LLLHH LLHLH LLHHL LHLLH LHLHL LHHLL HLLLH HLLHL HLHLL </pre><br>
+
+The format of a Postnet barcode is as follows: a single high bar followed by the barcode digits of the zip code, followed by a barcode checksum digit, followed by a single high bar.  To calculate the checksum, first add up all the digits of the zip code.  The checksum is the digit that must be added to that sum to make it an even multiple of 10.  For example, if the digits of a zip code summed to 33, the checksum would be 7.<br><br>
+
+Given a String <b>zipCode</b> return its Postnet barcode representation.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Postnet</td></tr><tr><td class="statText">Method:</td><td class="statText">barcode</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String barcode(String zipCode)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>zipCode</b> will contain exactly 5, 9 or 11 digits ('0'-'9').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;12345&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;HLLLHHLLHLHLLHHLLHLLHLHLHLLHLHLH&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Notice, the barcode starts and ends with a high bar.  The return also includes the checksum digit as the final barcode digit before the closing high bar.  The checksum is 5 (1 + 2 + 3 + 4 + 5 = 15)  5 must be added to 15 to make it an even multiple of 10.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;94070&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;HHLHLLLHLLHHHLLLHLLLHHHLLLHHLLLH&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;11111&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;HLLLHHLLLHHLLLHHLLLHHLLLHHLHLHLH&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;12348&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;HLLLHHLLHLHLLHHLLHLLHHLLHLLLHLHH&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10072&pm=6859">TCHS Single Round Match 20 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

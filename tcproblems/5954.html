@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> Problem Statement for StickedWords</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for StickedWords</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>We have a dictionary of words <b>dict</b>, and we are writing words down in a single line using the following rules.  The first written word can be any word from <b>dict</b>. Each subsequent written word must start with the same letter as the last letter of the previous written word, and that shared letter is only written once (see examples).  Only words from <b>dict</b> can be used, but each word can be used an unlimited number of times.</p>
+<p>Using the rules above, construct the lexicographically earliest line with length greater than or equal to <b>len</b> characters.  Return an empty String (&quot;&quot;) if such a line cannot be constructed.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">StickedWords</td></tr><tr><td class="statText">Method:</td><td class="statText">constructLine</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String constructLine(String[] dict, int len)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>dict</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>dict</b> will contain between 2 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>dict</b> will contain only lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>len</b> will be between 1 and 2500, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;salad&quot;, &quot;sandwich&quot;, &quot;hamburger&quot;, &quot;rings&quot;}</pre></td></tr><tr><td class="statText"><pre>35</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;hamburgeringsandwichamburgeringsalad&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The first word in the line is &quot;hamburger&quot;.  The next word must start with the letter 'r', so we write &quot;rings&quot;.  Notice that we only write the shared 'r' once, so at this point, the line is &quot;hamburgerings&quot;.  The rest of the words, in order, are: &quot;sandwich&quot;, &quot;hamburger&quot;, &quot;rings&quot;, and &quot;salad&quot;.  The resulting line is 36 characters long, and is the lexicographically earliest possible line containing at least 35 characters.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;salad&quot;, &quot;hamburger&quot;, &quot;rings&quot;}</pre></td></tr><tr><td class="statText"><pre>35</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;aba&quot;, &quot;aac&quot;, &quot;czz&quot;}</pre></td></tr><tr><td class="statText"><pre>10</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;abababaaczz&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;aarb&quot;, &quot;bcb&quot;, &quot;bbd&quot;, &quot;dzz&quot;}</pre></td></tr><tr><td class="statText"><pre>15</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;aarbcbcbcbcbbdzz&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;abd&quot;, &quot;dgga&quot;, &quot;abdg&quot;, &quot;gga&quot;, &quot;gg&quot;, &quot;gaader&quot;}</pre></td></tr><tr><td class="statText"><pre>22</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;abdggabdggabdggabdgaader&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9812&pm=5954">Single Round Match 291 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

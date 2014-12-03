@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Problem Statement for SalePitch</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for SalePitch</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>Recently, your boss decided that all sales that your company makes should be in the form of "BUY X GET Y FREE", where X and Y are integers.  For example, rather than advertising that your latest product is on sale for $4.00, when it normally sells for $6.00, he wants you to advertise it as a "BUY 2 GET 1 FREE" sale.
+</p><p>
+Given <b>regular</b>, the normal price of the item, and <b>sale</b>, the sale price of the item
+, return a String formatted as "BUY X GET Y FREE" (quotes for clarity only), where X and Y are positive integers with no leading zeroes. X and Y must be as small as possible (for example, return "BUY 2 GET 1 FREE" instead of "BUY 4 GET 2 FREE").
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">SalePitch</td></tr><tr><td class="statText">Method:</td><td class="statText">buyXGetY</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String buyXGetY(String regular, String sale)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>regular</b> and <b>sale</b> will be formatted as "$X.YZ", where X represents an integer between 0 and 9999, inclusive, with no extra leading zeroes, and Y and Z are each between '0' and '9', inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The value represented by <b>sale</b> will be less than that represented by <b>regular</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Neither <b>regular</b> nor <b>sale</b> will be "0.00".</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;$6.00&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;$4.00&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BUY 2 GET 1 FREE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;$100.00&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;$0.50&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BUY 1 GET 199 FREE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;$12.34&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;$5.67&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BUY 567 GET 667 FREE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;$12.34&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;$8.64&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BUY 432 GET 185 FREE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;$9069.96&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;$4972.81&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BUY 497281 GET 409715 FREE&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;$1000.00&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;$65.50&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BUY 131 GET 1869 FREE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10071&pm=6825">TCHS Single Round Match 19 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

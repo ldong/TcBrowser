@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> Problem Statement for CommonSubsequence</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for CommonSubsequence</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+A subsequence of a string <i>s</i> is a string that can be obtained by erasing zero or more characters from <i>s</i>.  For example, "aacb", "c", "", and "abacaba" are subsequences of "abacaba", but "bbc" is not.
+</p>
+<p>
+Common subsequences of strings <i>s</i><sub>1</sub> and <i>s</i><sub>2</sub> are strings that are subsequences of both <i>s</i><sub>1</sub> and <i>s</i><sub>2</sub>.
+</p>
+<p>
+A string <i>s</i><sub>1</sub> is called a cyclic shift of string <i>s</i> if <i>s</i><sub>1</sub> can be obtained by removing zero or more characters from the beginning of string <i>s</i> and appending them to the end of string <i>s</i> in the same order. For example, strings "abcde", "bcdea" and "eabcd" are cyclic shifts of string "abcde", but "cdeba" is not.
+</p> 
+<p>
+You are given two String[]s <b>a</b> and <b>b</b>. 
+Construct a string <i>A</i> by concatenating all the elements of <b>a</b>, and construct a string <i>B</i> by concatening all the elements of <b>b</b>.
+</p>
+<p>
+Consider all common subsequences for all pairs (<i>x</i>, <i>y</i>), where <i>x</i> is any cyclic shift of string <i>A</i>, and <i>y</i> is any cyclic shift of string <i>B</i>.  There are length(<i>A</i>) * length(<i>B</i>) such pairs. Find the common subsequence among all of these that comes last alphabetically, and return the last
+<b>suffixLength</b> characters of that subsequence. If the subsequence contains less than <b>suffixLength</b> characters, then return the whole subsequence.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">CommonSubsequence</td></tr><tr><td class="statText">Method:</td><td class="statText">maxLex</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], int</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String maxLex(String[] a, String[] b, int suffixLength)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>a</b> and <b>b</b> will each contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>a</b> and <b>b</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>a</b> and <b>b</b> will contain only characters with ASCII value between 35 and 126, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>suffixLength</b> will be between 1 and 100, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;baab&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;aaabb&quot;}</pre></td></tr><tr><td class="statText"><pre>10</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;bbaa&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The answer is the one of the common subsequences for the pair ("bbaa", "bbaaa").</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;, &quot;cb&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;bc&quot;, &quot;a&quot;}</pre></td></tr><tr><td class="statText"><pre>100</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;cb&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The answer is one of the common subsequences for the pair ("acb", "cab") (there exist more such pairs).</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;xzzzzzzzzzzzzzzzzzzx&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;xxxxzzzzzzzzzzz&quot;}</pre></td></tr><tr><td class="statText"><pre>10</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;zzzzzzzzxx&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ichhbca&quot;, &quot;aghafbbgbaehi&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;jdhccgeiaaijbddh&quot;}</pre></td></tr><tr><td class="statText"><pre>6</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;iihhge&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10924&pm=8151">2007 TopCoder Collegiate Challenge Online Round 4 - Division I, Level Three</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10934&pm=8151">2007 TopCoder Collegiate Challenge Sponsor Track Round 4 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

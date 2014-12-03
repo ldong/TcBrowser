@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Problem Statement for AbsSequence</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for AbsSequence</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>Let's consider an infinite sequence S of non-negative integers defined as follows:</p>
+<p>S<sub>0</sub> = <b>first</b>;<br>
+S<sub>1</sub> = <b>second</b>;<br>
+S<sub>i</sub> = |S<sub>i-2</sub> - S<sub>i-1</sub>| for all i >= 2.</p>
+<p>You will be given Strings <b>first</b> and <b>second</b>, representing the 0-th and the 1-st elements of the sequence S, and a String[] <b>indices</b>, each element of which represents a non-negative integer without extra leading zeros. Return a String[] containing as many elements as <b>indices</b>, where the i-th element is equal to the <b>indices</b>[i]-th element of the sequence S (index is 0-based). No element of the return should contain extra leading zeros.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">AbsSequence</td></tr><tr><td class="statText">Method:</td><td class="statText">getElements</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] getElements(String first, String second, String[] indices)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>first</b> will represent an integer between 0 and 10^18, inclusive, with no extra leading zeros.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>second</b> will represent an integer between 0 and 10^18, inclusive, with no extra leading zeros.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>indices</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>indices</b> will represent an integer between 0 and 10^18, inclusive, with no extra leading zeros.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;21&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;12&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;21&quot;, &quot;12&quot;, &quot;9&quot;, &quot;3&quot;, &quot;6&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here S<sub>0</sub>=21 and S<sub>1</sub>=12. The next three sequence elements are S<sub>2</sub> = |21 - 12| = 9, S<sub>3</sub> = |12 - 9| = 3 and S<sub>4</sub> = |9 - 3| = 6.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;0&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;0&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;1000000000000000000&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;0&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here we get the sequence consisting of only zeros.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;823&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;470&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;3&quot;,&quot;1&quot;,&quot;31&quot;,&quot;0&quot;,&quot;8&quot;,&quot;29&quot;,&quot;57&quot;,&quot;75&quot;,&quot;8&quot;,&quot;77&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;117&quot;, &quot;470&quot;, &quot;2&quot;, &quot;823&quot;, &quot;115&quot;, &quot;87&quot;, &quot;49&quot;, &quot;25&quot;, &quot;115&quot;, &quot;23&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;710370&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;177300&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;5&quot;,&quot;95&quot;,&quot;164721&quot;,&quot;418&quot;,&quot;3387&quot;,&quot;710&quot;,&quot;0&quot;,&quot;1197&quot;,&quot;19507&quot;,&quot;5848&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;178470&quot;, &quot;108270&quot;, &quot;90&quot;, &quot;0&quot;, &quot;90&quot;, &quot;90&quot;, &quot;710370&quot;, &quot;90&quot;, &quot;0&quot;, &quot;0&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10785&pm=8178">Single Round Match 369 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<html>
+<head>
+<title> Problem Statement for MeetInTheMaze</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for MeetInTheMaze</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Lecette and her friends Fox and Rabbit are going to explore a strange maze. 
+The maze is rectangle-shaped and the layout of maze is in the String[] <b>maze</b>, 
+where the j-th character of the i-th element is the cell at row i, column j. 
+The following types of cells exist in the maze: 
+<ul>
+	<li>'#' - <i>Wall</i>. They cannot enter these cells. </li>
+	<li>'.' - <i>Empty cell</i>. They can walk freely into these cells. </li>
+	<li>'L', 'F' or 'R' - <i>Empty cell with Entrance</i>. They can walk freely into these cells. </li>
+</ul>
+<br>
+To enter the maze, Lecette chooses a cell marked as 'L' randomly and uniformly. 
+Fox does the same with a cell marked as 'F', and Rabbit does the same with a cell marked as 'R'. 
+They will each warp to the chosen cell. 
+Then, they decide on a meeting cell such that the total walking distance from the entrances to the meeting cell is minimized. 
+When walking, they can only move in the four cardinal directions. 
+They cannot move diagonally. 
+The walking distance to a neighboring cell is 1. 
+<br><br>
+Calculate the expected total walking distance, 
+and return it as a String of the form "<i>X</i>/<i>Y</i>" (quotes for clarity), 
+where <i>X</i> and <i>Y</i> are positive integers with no common factor greater than 1. 
+In case there is a non-zero probability that they cannot meet, return an empty String instead. 
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">MeetInTheMaze</td></tr><tr><td class="statText">Method:</td><td class="statText">getExpected</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String getExpected(String[] maze)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>maze</b> will contain between 1 and 50 elements, inclusive. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>maze</b> will contain between 1 and 50 characters, inclusive. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>maze</b> will contain the same number of characters. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>maze</b> will be one of '#', '.', 'L', 'F' and 'R'. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>maze</b> will contain at least 1 'L'. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>maze</b> will contain between 1 and 20 'F's, inclusive. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>maze</b> will contain between 1 and 20 'R's, inclusive. </td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;#########&quot;, 
+  &quot;####F####&quot;, 
+  &quot;##L...R##&quot;, 
+  &quot;####L####&quot;, 
+  &quot;#########&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;9/2&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are two possible entrances for Lecette, one for Fox and one for Rabbit. 
+For both entrances of Lecette, the meeting cell should be the center of the maze. 
+The total walking distance will be 4 or 5 with the same probability. 
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;LR&quot;, 
+  &quot;RF&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;2/1&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;..F.#...&quot;, 
+  &quot;L.F.#..L&quot;, 
+  &quot;..F.#...&quot;, 
+  &quot;.R.#..L.&quot;, 
+  &quot;...#....&quot;, 
+  &quot;..R#.L..&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;.L..L..L..&quot;, 
+  &quot;..........&quot;, 
+  &quot;..........&quot;, 
+  &quot;..........&quot;, 
+  &quot;........R.&quot;, 
+  &quot;...R......&quot;, 
+  &quot;..........&quot;, 
+  &quot;..........&quot;, 
+  &quot;..........&quot;, 
+  &quot;.......F..&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;40/3&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;#.#....#...#.#&quot;, 
+  &quot;#...#..#......&quot;, 
+  &quot;.L#...#R#..#F.&quot;, 
+  &quot;#...#......#..&quot;, 
+  &quot;#......#.....#&quot;, 
+  &quot;.R.....F....L.&quot;, 
+  &quot;##..#.......#.&quot;, 
+  &quot;#........##...&quot;, 
+  &quot;.F...##L#..#R#&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;362/27&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLFLLLLLLLLLFLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLFFLLLLLLLLLLRLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLRLLLLLFLLLLLLLLLLLLLLF&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLF&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLFLLL&quot;, 
+  &quot;LLLLLLLLLLLRLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRRL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLR&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLRLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLRLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLFFLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;FLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLRLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLFLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLFLLLLLLLLLRLLLLLLLLLLLLLLLLLLLRLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLFLLLLLLLLLLLLLLLLRLLLLLLLLLRLLLLLLLLLLLLRLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLRLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLFLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLFLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLFLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;FLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLRLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLFLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;, 
+  &quot;LLLLLLLLLLLLLLLLLLLLLLLLLLLFLLLLLLLLLLLLLLLLLLLLLL&quot; }
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;210623/4100&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14540&pm=11507">Single Round Match 515 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

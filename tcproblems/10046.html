@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> Problem Statement for LoveCalculator</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for LoveCalculator</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>A girl would like to go out with one of her favorite boys, but she does not know which one to choose.  Fortunately, she has a Love Calculator which can calculate the probability of love between two people.  Love Calculator takes two people's names and uses the following algorithm to calculate the probability of love between them:</p>
+<br>
+L := the total number of occurrences of the letter 'L' in both names.<br>
+O := the total number of occurrences of the letter 'O' in both names.<br>
+V := the total number of occurrences of the letter 'V' in both names.<br>
+E := the total number of occurrences of the letter 'E' in both names.<br>
+<br>
+The percent probability of love is equal to ((L+O)*(L+V)*(L+E)*(O+V)*(O+E)*(V+E))%100, where % is the modulo operator.
+
+You are given a String <b>girl</b> containing the girl's name, and a String[] <b>boys</b> containing her favorite boys' names.  Return the name of the boy with which the girl has the highest probability of love.  If there is more than one such boy, return the one among them that comes earliest alphabetically.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">LoveCalculator</td></tr><tr><td class="statText">Method:</td><td class="statText">findBoy</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String findBoy(String girl, String[] boys)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>girl</b> will contain between 1 and 20 uppercase letters ('A'-'Z'), inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>boys</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>boys</b> will contain between 1 and 20 uppercase letters ('A'-'Z'), inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;LOVE&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;JACOB&quot;,&quot;FRANK&quot;,&quot;DANO&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;FRANK&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The highest probability is 64 percent, and it is achieved with FRANK.  The probabilities for JACOB and DANO are both 16 percent.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;JANE&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;THOMAS&quot;,&quot;MICHAEL&quot;,&quot;INDY&quot;,&quot;LIU&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;INDY&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The probability of love is 0 percent for all the boys.  Among them, INDY comes first alphabetically.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;LILLY&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;PIERRE&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;PIERRE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;MERYLOV&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;JOHN&quot;,&quot;DAVE&quot;,&quot;STEVE&quot;,&quot;JOHN&quot;,&quot;DAVE&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;DAVE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;LLOL&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;BVERON&quot;,&quot;CVERON&quot;,&quot;AVERON&quot;,&quot;DVERON&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;AVERON&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;VELYLEOCEVE&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;YVXHOVE&quot;,&quot;LCOKO&quot;,&quot;OGWSJVEVEDLE&quot;,&quot;WGFVSJEL&quot;,&quot;VLOLUVCBLLQVESWHEEKC&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;VLOLUVCBLLQVESWHEEKC&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13518&pm=10046">Single Round Match 427 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

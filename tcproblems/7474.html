@@ -1,0 +1,76 @@
+<html>
+<head>
+<title> Problem Statement for ChangeReport</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for ChangeReport</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>As a sales manager, you want to see how each of your staff members performed this year as compared to last year.  For each staff member i, you are given their name (in the i-th element of <b>names</b>), their total sales for last year (in the i-th element of <b>lastYearSales</b>), and their total sales from the current year (in the i-th element of <b>thisYearSales</b>).  From this data, produce a report that has one element for each person formatted as follows: the difference in sales, a space, and then that staff member's name.  Here is a sample report output:</p>
+<pre>
+5 SAM
+4 ALICE
+4 BOB
+-2 SUE
+-18 ADAM
+0 DAVE
+0 FRED
+0 XANDER
+</pre>
+
+<p>According to this data, SAM sold 5 more units this year than last year, and ADAM sold 18 less.  The other thing to notice is how the report is sorted.  At the top of the report is data for all staff whose performance has changed.  These are sorted based on that staff member's change in sales, from largest gain down to largest drop.  After this, list all the staff who had no change in sales.  In the case of a tie in sales figures, sort the tied elements alphabetically by name.  All names will be given uppercase only, with no spaces, and no name will occur more than once.  Your return will have the same number of elements as there are staff in the input; return each line of the report as one element with no line breaks or extra spaces.</p>
+<p>&nbsp;</p>
+<p>Return the sales change report for the given input, with formatting and sorting as specified.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">ChangeReport</td></tr><tr><td class="statText">Method:</td><td class="statText">produceReport</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int[], int[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] produceReport(String[] names, int[] lastYearSales, int[] thisYearSales)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>names</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>names</b>, <b>lastYearSales</b>, and <b>thisYearSales</b> will each contain the same number of elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>lastYearSales</b> will be between 0 and 1000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>thisYearSales</b> will be between 0 and 1000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>names</b> will contain between 1 and 10 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>names</b> will contain only uppercase letters ('A'-'Z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>names</b> will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;PAT&quot;}</pre></td></tr><tr><td class="statText"><pre>{100}</pre></td></tr><tr><td class="statText"><pre>{110}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;10 PAT&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">PAT's sales figures went up by 10.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ANNE&quot;,&quot;ZACHARY&quot;,&quot;ZAC&quot;,&quot;ZEKE&quot;,&quot;ANDREW&quot;}</pre></td></tr><tr><td class="statText"><pre>{0,0,0,0,0}</pre></td></tr><tr><td class="statText"><pre>{0,0,0,0,0}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;0 ANDREW&quot;, &quot;0 ANNE&quot;, &quot;0 ZAC&quot;, &quot;0 ZACHARY&quot;, &quot;0 ZEKE&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;DAVE&quot;,&quot;JULIE&quot;,&quot;PETER&quot;,&quot;WENDY&quot;,&quot;DWIGHT&quot;}</pre></td></tr><tr><td class="statText"><pre>{100,200,150,50,9}</pre></td></tr><tr><td class="statText"><pre>{120,240,140,10,9}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;40 JULIE&quot;, &quot;20 DAVE&quot;, &quot;-10 PETER&quot;, &quot;-40 WENDY&quot;, &quot;0 DWIGHT&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10949&pm=7474">TopCoder College Tour Sichuan Province - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

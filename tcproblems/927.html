@@ -1,0 +1,86 @@
+<html>
+<head>
+<title> Problem Statement for Inserter</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Inserter</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+A common task in text editing is inserting one sequence of characters before
+another one.  For example, in the String &quot;10 10 bills&quot;, we might want to insert a dollar sign ('$') before the second occurrence of the number &quot;10&quot;.  Thus, the original string would become &quot;10 $10 bills&quot;.  You are to write a
+method which takes an original String and a series of insert instructions and
+performs the instructions, in the order they are given.  You should return the modified String.
+</p><p>
+Instructions will be of the form <tt>&quot;#&lt;insert&gt;# #&lt;before&gt;# &lt;index&gt;&quot;</tt>, where
+&lt;insert&gt; is the sequence of characters to be inserted, &lt;before&gt; is the sequence
+of characters before which to insert &lt;insert&gt;, and &lt;index&gt; is the index of the
+occurrence of &lt;before&gt; (starting from 1), before which to insert &lt;insert&gt;.  In order
+to facilitate spaces in &lt;insert&gt; and &lt;before&gt;, both sequences will be
+surrounded by '#'.  Thus the command &quot;#insert this# #before this# 3&quot; would
+insert &quot;insert this&quot; before the third occurrence of &quot;before this&quot;.
+</p><p>
+If, for some command, there are less than &lt;index&gt; occurrences of &lt;before&gt;, then do nothing.  For example, in the String &quot;$100
+$100&quot;, there is no third occurrence of &quot;$&quot;, so a command that inserts before
+the third occurrence of &quot;$&quot; should be ignored.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Inserter</td></tr><tr><td class="statText">Method:</td><td class="statText">insert</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String insert(String[] commands, String original)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All of the instructions are performed on the String as it changes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Searching for occurrences of &lt;before&gt; should be case sensitive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Note that the i<sup>th</sup> occurrence of &lt;before&gt; may overlap with the (i+1)<sup>st</sup> occurrence of &lt;before&gt;.  See example 5.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>original</b> and each element of <b>commands</b> will have between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>commands</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in the input will have ASCII value between 32 and 126, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>commands</b> will be formatted as described in the problem statement as &quot;#&lt;insert&gt;# #&lt;before&gt;# &lt;index&gt;&quot;.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The character '#' will not exist within either &lt;before&gt; or &lt;insert&gt;.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Both &lt;before&gt; and &lt;insert&gt; will contain at least one character.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;index&gt; in command will be between 1 and 2^31-1, inclusive, with no extra leading zeros.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The return will have at most 999 characters.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;#&lt;B&gt;# #$# 2&quot;,&quot;#comes # #before this# 1&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;$100 before this $300&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;$100 comes before this &lt;B&gt;$300&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The first command tells us to insert the sequence &quot;&lt;B&gt;&quot; before the second
+occurrence of &quot;$&quot;.  Doing this gives us: &quot;$100 before this &lt;B&gt;$300&quot;<br>
+The second command tells us to insert &quot;comes &quot; before &quot;before this&quot;.  Doing
+this gives us &quot;$100 comes before this &lt;B&gt;$300&quot;
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;#,# # and# 1&quot;,&quot;#,# # and# 2&quot;,&quot;#,# # and# 3&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;lions and tigers and bears&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;lions, and tigers, and bears&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Each command says to insert &quot;,&quot; before &quot; and&quot;.  The first command says to
+insert before the 1st occurrence, the 2nd command says to insert before the 2nd
+occurrence, and the 3rd command says to insert before the 3rd occurrence (which
+does not exist).</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;#import java.util.*; # #public class # 1&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;public class Inserter&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;import java.util.*; public class Inserter&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;# # # # 1&quot;,&quot;# # # # 2&quot;,&quot;# # # # 3&quot;,&quot;# # # # 4&quot;,&quot;# # # # 5&quot;,&quot;# # # # 6&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;add lots of spaces&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;add       lots of spaces&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;# # # # 6&quot;,&quot;# # # # 5&quot;,&quot;# # # # 4&quot;,&quot;# # # # 3&quot;,&quot;# # # # 2&quot;,&quot;# # # # 1&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;order matters quite a bit&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;order  matters  quite  a  bit&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;#A# #..# 2&quot;,&quot;#A# #..# 5&quot;,&quot;#A# #..# 123456789&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;....&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;.A...&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4700&pm=927">2003 TCO Qualification Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

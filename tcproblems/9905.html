@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> Problem Statement for MostCommonLetters</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for MostCommonLetters</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>It is commonly known that in a typical English text, some letters occur more frequently than others. For example, in a long text, approximately 12.31% of the letters will be 'e'. Your friend from the linguistics department has asked you to help him find the most common letters in a given text.</p>
+
+<p>The text is given to you in the String[] <b>text</b>. Return the letter that occurs most frequently in <b>text</b>. If there are multiple letters that occur most frequently, return all of them in alphabetical order. See examples for further clarification.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">MostCommonLetters</td></tr><tr><td class="statText">Method:</td><td class="statText">listMostCommon</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String listMostCommon(String[] text)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>text</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>text</b> will contain between 0 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character of <b>text</b> will be either a space (' ') or a lowercase letter ('a' - 'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>text</b> will contain at least one letter.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;abc a&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The letter 'a' is the most common letter here. It appears twice, while all other letters appear only once.
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;abc&quot;, &quot;ab&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ab&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Now letters 'a' and 'b' are most common: they appear twice, more than letter 'c' does.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;qwerty&quot;, &quot;abc&quot;, &quot;qwe&quot;, &quot;a&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;aeqw&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Don't forget to return letters in alphabetical order.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;english is a west germanic language originating&quot;,
+ &quot;in england and is the first language for most&quot;,
+ &quot;people in the united kingdom the united&quot;,
+ &quot;states canada australia new zealand ireland&quot;,
+ &quot;and the anglophone caribbean it is used&quot;,
+ &quot;extensively as a second language and as an&quot;,
+ &quot;official language throughout the world&quot;,
+ &quot;especially in commonwealth countries and in&quot;,
+ &quot;many international organizations&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This is a short extract from wikipedia about the English language. All punctuations are omitted. This text is too short, so the letter 'e' is not the most common one. There are 41 occurrences of the letter 'a', 39 occurrences of 'n' and only 33 occurrences of 'e'.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;amanda forsaken bloomer meditated gauging knolls&quot;,
+ &quot;betas neurons integrative expender commonalities&quot;,
+ &quot;latins antidotes crutched bandwidths begetting&quot;,
+ &quot;prompting dog association athenians christian ires&quot;,
+ &quot;pompousness percolating figured bagatelles bursted&quot;,
+ &quot;ninth boyfriends longingly muddlers prudence puns&quot;,
+ &quot;groove deliberators charter collectively yorks&quot;,
+ &quot;daringly antithesis inaptness aerosol carolinas&quot;,
+ &quot;payoffs chumps chirps gentler inexpressive morales&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;e&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Random words.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13507&pm=9905">Single Round Match 416 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

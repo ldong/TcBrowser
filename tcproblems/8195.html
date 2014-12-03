@@ -1,0 +1,126 @@
+<html>
+<head>
+<title> Problem Statement for StudentEnrollment</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for StudentEnrollment</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>You are working as an intern at Talilulu University. Your task is to make a program that will help people to enroll in classes at the university. You are given a String[] <b>names</b> containing the names of the classes and a int[] <b>spaces</b> containing the number of spaces currently available in each class. The i-th element of <b>names</b> corresponds to the i-th element of <b>spaces</b>. You are also given a String[] <b>queries</b> containing the sequence of enrollment requests. Each element of <b>queries</b> is the name of the class in which a student wants to enroll.</p>
+
+<p>Go through the elements of <b>queries</b> in order, and for each one, enroll the student in the class if there's room, or reject the request if the class does not exist or does not have any space available. Return a String[] containing the responses for each request. The i-th element of the String[] is the response to the i-th query. It should be "GOOD" if the enrollment is accepted, "NOT GOOD" if there is no available space in the requested class, or "DOES NOT EXIST" if the class does not exist (all quotes for clarity).</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">StudentEnrollment</td></tr><tr><td class="statText">Method:</td><td class="statText">checkClasses</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] checkClasses(String[] names, int[] spaces, String[] queries)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>names</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>names</b> and <b>spaces</b> will contain the same number of elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>names</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>names</b> will contain only uppercase letters ('A'-'Z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>spaces</b> will be between 0 and 100, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>queries</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>queries</b> will contain only uppercase letters ('A'-'Z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>queries</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>names</b> will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;MATH&quot;, &quot;ENGLISH&quot;}</pre></td></tr><tr><td class="statText"><pre>{1, 2}</pre></td></tr><tr><td class="statText"><pre>{&quot;ENGLISH&quot;, &quot;MATH&quot;, &quot;MATH&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;GOOD&quot;, &quot;GOOD&quot;, &quot;NOT GOOD&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There is only one space available in MATH.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;MATH&quot;, &quot;ENGLISH&quot;}</pre></td></tr><tr><td class="statText"><pre>{2, 0}</pre></td></tr><tr><td class="statText"><pre>{&quot;ENGLISH&quot;, &quot;MATH&quot;, &quot;MATH&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;NOT GOOD&quot;, &quot;GOOD&quot;, &quot;GOOD&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;MATH&quot;, &quot;ENGLISH&quot;}</pre></td></tr><tr><td class="statText"><pre>{2, 0}</pre></td></tr><tr><td class="statText"><pre>{&quot;ENGLISH&quot;, &quot;FRENCH&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;NOT GOOD&quot;, &quot;DOES NOT EXIST&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;QCDTBCZICBJGQCCKIWXN&quot;,
+ &quot;LFAYDMBGLNXWNNDLHARQLYLWYJWMWOZ&quot;,
+ &quot;KPYATSAMTTKX&quot;,
+ &quot;HCNJGXTYCLPRENVMJPFEPVOYMTHXACMKTLGPQSEUJONXNZAVMR&quot;,
+ &quot;QADJYGPJ&quot;,
+ &quot;WVAGAZUCBG&quot;,
+ &quot;NHCKOMRNBSYRCKLNLCEOM&quot;,
+ &quot;SXXHKMNERPHPEQE&quot;,
+ &quot;JJUOCTOLFRJLJERFIXTCE&quot;,
+ &quot;SHQHEJGLUEWJIWPTSKTOPZTBVFFL&quot;} </pre></td></tr><tr><td class="statText"><pre>{2, 1, 41, 5, 1, 0, 1, 13, 11, 9} </pre></td></tr><tr><td class="statText"><pre>{&quot;NHCKOMRNBSYRCKLNLCEOM&quot;,
+ &quot;MTLRHPNKFNEXQQOWYERECRZXT&quot;,
+ &quot;QADJYGPJ&quot;,
+ &quot;WVAGAZUCBG&quot;,
+ &quot;EWWVWQZQNXEJGZJGZEVHKE&quot;,
+ &quot;QADJYGPJ&quot;,
+ &quot;IBQEMIBIGLVZLAOAYVPOMWZI&quot;,
+ &quot;JTFOEIPGOAHSGLYMQSCTVVMDINGURUWEZTHJFWUYAWBLAD&quot;,
+ &quot;ZRVMTHVAXCXJQPN&quot;,
+ &quot;QCDTBCZICBJGQCCKIWXN&quot;,
+ &quot;BVYUCAHSOBCBEFDEXWXFTKURXTIFDXXIDNBUPOPAWCBZHQY&quot;,
+ &quot;WVAGAZUCBG&quot;,
+ &quot;RVEJYNRBCOWRJBZHRTNQXROHWQOODMVDMVJDRNKWRGLXWWGPPW&quot;,
+ &quot;QADJYGPJ&quot;,
+ &quot;TYOMTKEVXMAVJBFBFDFOWARMZXSBUEMMQUWUNPSW&quot;,
+ &quot;SXXHKMNERPHPEQE&quot;,
+ &quot;JJUOCTOLFRJLJERFIXTCE&quot;,
+ &quot;SXXHKMNERPHPEQE&quot;,
+ &quot;SHQHEJGLUEWJIWPTSKTOPZTBVFFL&quot;,
+ &quot;JJUOCTOLFRJLJERFIXTCE&quot;,
+ &quot;QCDTBCZICBJGQCCKIWXN&quot;,
+ &quot;SXXHKMNERPHPEQE&quot;,
+ &quot;JJUOCTOLFRJLJERFIXTCE&quot;,
+ &quot;NJQBVNXCZZNLWM&quot;,
+ &quot;JJUOCTOLFRJLJERFIXTCE&quot;,
+ &quot;QADJYGPJ&quot;,
+ &quot;LFAYDMBGLNXWNNDLHARQLYLWYJWMWOZ&quot;} </pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;GOOD&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;GOOD&quot;,
+&quot;NOT GOOD&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;NOT GOOD&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;GOOD&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;NOT GOOD&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;NOT GOOD&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;GOOD&quot;,
+&quot;GOOD&quot;,
+&quot;GOOD&quot;,
+&quot;GOOD&quot;,
+&quot;GOOD&quot;,
+&quot;GOOD&quot;,
+&quot;GOOD&quot;,
+&quot;GOOD&quot;,
+&quot;DOES NOT EXIST&quot;,
+&quot;GOOD&quot;,
+&quot;NOT GOOD&quot;,
+&quot;GOOD&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=11153&pm=8195">2008 TopCoder High School Online Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

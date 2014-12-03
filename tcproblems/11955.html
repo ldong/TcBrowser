@@ -1,0 +1,116 @@
+<html>
+<head>
+<title> Problem Statement for OrderOfTheHats</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for OrderOfTheHats</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">The Order of the Hats is a magical organization. One of their duties is to teach students how to cast spells. There are N spells numbered from 0 to N-1. As an aid for the students, the teachers have prepared a spell chart. The chart lists suggestions on the order in which to study the spells. (This is explained in more detail below.)<br><br>
+
+
+
+Recently, some changelings broke into the Order's spell archive and messed up the spell chart. You are given a String[] <b>spellChart</b> containing the new, messed-up state of the spell chart. Each character of each element of <b>spellChart</b> is either 'Y' or 'N'. The students will come to study soon. They will interpret the chart in the following way: If <b>spellChart</b>[i][j] is 'Y' then spell i must be learned before spell j. <br><br>
+
+As the chart is now messed up, it may be impossible to learn all the spells in the chart because of cycles in the requirements. Your task is to repair the given chart. Determine the minimum number of changes needed to remove all the cycles in the requirements. In a single change, you may either change some character <b>spellChart</b>[i][j] from 'Y' to 'N', or change some character from 'N' to 'Y'. <br><br></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">OrderOfTheHats</td></tr><tr><td class="statText">Method:</td><td class="statText">minChanged</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int minChanged(String[] spellChart)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>spellChart</b> will contain between 1 and 20 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>spellChart</b> will contain N characters, where N is the number of elements in <b>spellChart</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in each element of <b>spellChart</b> will be either 'Y' or 'N'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;Y&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This spell chart contains a spell that should be learned before itself. The students would never be able to learn such a spell.
+We can remove this cyclic dependency by changing the 'Y' to 'N'.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NYN&quot;,
+ &quot;NNY&quot;,
+ &quot;NNN&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This spell chart is already OK.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NYN&quot;,
+ &quot;NNY&quot;,
+ &quot;YNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Changing any single 'Y' to a 'N' will fix this spell chart.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NYYYYYY&quot;,
+ &quot;YNYYYYY&quot;,
+ &quot;YYNYYYY&quot;,
+ &quot;YYYNYYY&quot;,
+ &quot;YYYYNYY&quot;,
+ &quot;YYYYYNY&quot;,
+ &quot;YYYYYYN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 21</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NNNY&quot;,
+ &quot;YNYN&quot;,
+ &quot;YNNN&quot;,
+ &quot;YYYN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YYYYYNNYYYNYNNNNYNNY&quot;,
+ &quot;NYNNNYYNNYNYYYNYYYYY&quot;,
+ &quot;NNYNNNYYNNNNNNYYYYNY&quot;,
+ &quot;YYNYNYYNNYYYNYNNNYYY&quot;,
+ &quot;NYYNNYNYNYNNNNYYYNYN&quot;,
+ &quot;NNNNNYYNYNNYYYYNYYYN&quot;,
+ &quot;YNYNYYNNNYNNNNNYNNYY&quot;,
+ &quot;NYYYYNYNYNNYNNYNNNNY&quot;,
+ &quot;YYYYNYYNNYYYNNYNNYNY&quot;,
+ &quot;YYYYYYNYNYNYNNNNNNYN&quot;,
+ &quot;NNYYYYYNNNYNNNYNNNNY&quot;,
+ &quot;YYNNNYNYYNYYNYYNYNYN&quot;,
+ &quot;NNYNYYNYYNYYNYNYNYYN&quot;,
+ &quot;YNYNYYNYNNNYNYNYYNYY&quot;,
+ &quot;NNYNNNYYYYYYYYYYYNYY&quot;,
+ &quot;YYYYYNYYNYYYYYNNYNNN&quot;,
+ &quot;NYYYYYYYYNNNNNYYNNYN&quot;,
+ &quot;YNNYNNNYYNYYYNYNYYYY&quot;,
+ &quot;YYNNYNYYYNYYNNNYYNNY&quot;,
+ &quot;NNYNYNYYYNYYNYNNYNNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 79</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;YYNYNN&quot;,
+ &quot;YNYNNY&quot;,
+ &quot;YYYYNN&quot;,
+ &quot;NNNYNN&quot;,
+ &quot;NNNYNN&quot;,
+ &quot;YNYNYN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 5</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">7)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NNNNNNNNNN&quot;,
+ &quot;NNNNNNNNNN&quot;,
+ &quot;NNNYNNYNNN&quot;,
+ &quot;NNNYNNYNNN&quot;,
+ &quot;NNNYNNYNNN&quot;,
+ &quot;NNNNNNNNNN&quot;,
+ &quot;NNYYYYYYNN&quot;,
+ &quot;NNYNNNNYNN&quot;,
+ &quot;NNNYYYYNNN&quot;,
+ &quot;NNNNNNNNNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=15171&pm=11955">Single Round Match 549 Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

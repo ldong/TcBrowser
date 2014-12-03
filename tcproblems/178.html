@@ -1,0 +1,173 @@
+<html>
+<head>
+<title> Problem Statement for EndOfContest</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for EndOfContest</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><pre>Class Name: EndOfContest
+Method Name: calcEarnings
+Parameters: String[], int[]
+Returns: String[]
+
+Implement a class EndOfContest, which contains a method calcEarnings:
+
+The method signature is (be sure your method is public):
+String[] calcEarnings(String[] scores, int[] money)
+
+TopCoder will check the following to be sure input is valid:
+* scores - a String[] of between 1 and 20 (inclusive) elements of the form
+&quot;NAME: SCORE&quot;.  NAME has length between 1 and 20 (inclusive) and may only
+contain letters (a-z and A-Z, inclusive).  No duplicate NAMEs can appear in the
+String[] scores. SCORE is a floating point value with 2 places after the
+decimal point.  NOTE: SCORE must always have 2 places after the decimal point.
+SCORE is between -1000.00 and 10000.00 (inclusive).
+* money - an int[] of between 1 and 20 (inclusive) elements.  The 0th element
+is the earnings of the first place (highest score) winner, the 1st element is
+the earnings of the second place winner.  The elements of money[] are between 1
+and 100000 (inclusive).
+
+The return value is a String[] of the form &quot;NAME: PLACE, EARNINGS&quot; where PLACE
+is an int representing the place (final standing) the person came in and
+EARNINGS is a floating point value truncated to an int.
+
+The PLACE rules are:
+*The person with the highest score comes in 1st place, second highest score
+comes in 2nd, et cetera.
+*If p people have the same score and there are x scores higher than that score,
+all p people come in (x+1)th place.  The person(s) with the next score less
+than the p peoples score, comes in (x+1+p)th place.
+
+The money winning rules are:
+*If there are no ties, the person with the highest score gets the first place
+prize (element 0 of the money int[]), the person with the second highest score
+gets the second place prize (element 1 of the money int[]), et cetera.
+*If p people are tied for xth place, they equally split the sum of the prize
+money of places x through p+x-1, inclusive.
+*All winnings are truncated to ints. NOTE: The cents are removed, they are not
+added to any other winnings.
+*No one with a score less than or equal to zero can earn any money at all.
+This rule has first precedence, so even if someone with 0 points comes in first
+place, they can earn no money.
+
+The order of names in the returned String[] should be the same as the order of
+the names in the scores String[].
+If there are more elements in scores than in money, it should be assumed the
+earnings are 0 for places that do not have elements in money.
+
+Examples:
+If scores=
+   {&quot;ads: 550.34&quot;,
+    &quot;talub: 2102.98&quot;,
+    &quot;romana: 1123.21&quot;,
+    &quot;mike: -1000.00&quot;,
+    &quot;td: 1123.21&quot;,
+    &quot;dok: 1123.21&quot;,
+    &quot;dwarfsleepy: 812.12&quot;}
+and
+  money=
+  {300,
+   150,
+   75}
+Then talub came in first place alone and won 300 dollars
+romana, td, and dok tied for second so they equally split the sum of 2nd, 3rd,
+and 4th places (150 + 75 + 0 = 225) so they win 225/3 = 75 dollars.
+no one else won any money.
+
+The returned String[] should be:
+{&quot;ads: 6, 0&quot;,
+ &quot;talub: 1, 300&quot;,
+ &quot;romana: 2, 75&quot;,
+ &quot;mike: 7, 0&quot;,
+ &quot;td: 2, 75&quot;,
+ &quot;dok: 2, 75&quot;,
+ &quot;dwarfsleepy: 5, 0&quot;
+}
+If scores=
+   {&quot;buddy: 100.00&quot;,
+    &quot;carl: 0.00&quot;,
+   }
+and
+   money=
+   {10,20,30}
+
+Then buddy came in first place and won 10 dollars and no one else got a
+positive score so no one else won money and the returned String[] should be:
+  {&quot;buddy: 1, 10&quot;,
+   &quot;carl: 2, 0&quot;}
+---------------------------------------------------------
+If scores=
+   {&quot;a: 100.00&quot;,
+    &quot;b: 100.00&quot;,
+    &quot;c: 100.00&quot;,
+    &quot;d: 100.00&quot;,
+    &quot;e: 100.00&quot;,
+    &quot;f: 100.00&quot;,
+    &quot;g: 100.00&quot;}
+and
+   money=
+   {1000,500}
+Then everyone tied for first place, so they all win (1000+500)/7= 214 dollars
+(remember to truncate to an int) and the returned String[] should be:
+  {&quot;a: 1, 214&quot;,
+   &quot;b: 1, 214&quot;,
+   &quot;c: 1, 214&quot;,
+   &quot;d: 1, 214&quot;,
+   &quot;e: 1, 214&quot;,
+   &quot;f: 1, 214&quot;,
+   &quot;g: 1, 214&quot;}
+</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">EndOfContest</td></tr><tr><td class="statText">Method:</td><td class="statText">calcEarnings</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] calcEarnings(String[] param0, int[] param1)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=51&pm=178">2001 Invitational Round 2 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+<title> Problem Statement for CompanyName</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for CompanyName</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+You are choosing the name for your company. You have several proposals, and you want to choose the easiest to remember. Thus you calculate a special <i>remembering value</i> for each word, and choose the word with the smallest <i>remembering value</i>. 
+</p>
+<p>
+You can calculate the <i>remembering value</i> of the word in two steps. First, you should find all maximal groups of consecutive vowels (if the word is &quot;DoUble&quot;, &quot;oU&quot; and &quot;e&quot; are the two groups). Each such group adds 1 point to the <i>remembering value</i>. Second, you should find all maximal groups of consecutive consonants. Each such group adds (2*(Length of the group) - 1) points to the <i>remembering value</i>.
+</p>
+<p>
+Given a list of all proposals, return the one with the smallest <i>remembering value</i>. In case of a tie, return the proposal which comes first in the input.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">CompanyName</td></tr><tr><td class="statText">Method:</td><td class="statText">shortestProposal</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String shortestProposal(String[] proposals)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">For the purposes of this problem, we are always considering 'Y' to be a consonant. The vowels are only 'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U' and 'u'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>proposals</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>proposals</b> will contain between 3 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>proposals</b> will contain only letters ('a'-'z' and 'A'-'Z').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;Top&quot;, &quot;Coder&quot;, &quot;SRM&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Top&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The <i>remembering value</i> of &quot;Top&quot; is 3, for &quot;Coder&quot; and &quot;SRM&quot; it is 5.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;SRM&quot;, &quot;TCO&quot;, &quot;TCCC&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;TCO&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;java&quot;, &quot;CPP&quot;, &quot;CSharp&quot;, &quot;VBasic&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;java&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;aaa&quot;, &quot;AAa&quot;, &quot;aaA&quot;, &quot;AAA&quot;, &quot;AaA&quot;, &quot;Aaa&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;aaa&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The <i>remembering value</i> of all proposals is 1. You should return the first one.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;bIwuZFsHVQUWIABhgXYiyBmUgwSFvUfJKcGrKUb&quot;, &quot;CbjspPBtuDwlyxNMaJBIEzVDPipR&quot;, &quot;wGiqORBPEaKOYVwtiCmKHLkBS&quot;,
+ &quot;aBpRqKPBtxYNuGMhtXmgWxT&quot;, &quot;sALonbrAMgOESizcTNhgBeAT&quot;, &quot;PpnecUCIPdyyeOvZwVHygGgjthT&quot;, &quot;jsiAzTEiBiXqgeSGd&quot;,
+ &quot;fxUtmmfbpQoYMPenNaTtKKoCYaIhwHBJePAFtvhVPDQHiLjDcr&quot;, &quot;jIIOwgKw&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;jIIOwgKw&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8023&pm=4563">2005 TCO Qualification Set 4/6 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8032&pm=4563">2005 TCO Sponsor Track Set 3 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

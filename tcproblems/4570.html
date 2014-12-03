@@ -1,0 +1,84 @@
+<html>
+<head>
+<title> Problem Statement for LanguageRecognition</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for LanguageRecognition</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+For computers it can be hard to determine in which language a given <b>text</b> is written. A simple way to try to determine the language is the following: for the given text and for some sample texts, for which we know the languages, we determine the letter frequencies and compare these.
+</p>
+
+<p>
+The frequency of a letter is the total number of occurrences of that letter divided by the total number of letters in the text. To determine this, we ignore case and non-letter characters.
+</p>
+
+<p>
+Once the letter frequencies of the text and of a language are known, we can calculate the <i>difference</i> between the two. This difference we define by the sum of the squared differences of the frequencies:
+</p>
+
+<img src="http://www.topcoder.com/contest/problem/LanguageRecognition/eq.gif">
+<p>
+The lesser this value, the closer <b>text</b> resembles that language. Compare <b>text</b> with each element of <b>languages</b> and return the (0-based) index of the language that has the smallest difference with <b>text</b>. In case of a tie, return the smallest index.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">LanguageRecognition</td></tr><tr><td class="statText">Method:</td><td class="statText">whichLanguage</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int whichLanguage(String[] languages, String text)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>languages</b> contains between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>languages</b> has length between 1 and 50, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>text</b> has length between 1 and 50, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>languages</b> and <b>text</b> consists only of characters with ASCII value between 32 and 127, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>languages</b> and <b>text</b> contains at least one letter ('A'-'Z' and 'a'-'z').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;This is an English sentence.&quot;,
+ &quot;Dieser ist ein Deutscher Satz.&quot;,
+ &quot;C'est une phrase Francaise.&quot;,
+ &quot;Dit is een Nederlandse zin.&quot;
+}</pre></td></tr><tr><td class="statText"><pre>&quot;In welke taal is deze zin geschreven?&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The differences are 0.0385, 0.0377, 0.0430 and 0.0276, so the sentence is written in language 3, Dutch. Note that Dutch is somewhat similar to German, somewhat less similar to English and not similar to French.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;aaaaa&quot;,&quot;bbbb&quot;,&quot;ccc&quot;,&quot;dd&quot;,&quot;e&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;xxx&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">In case of a tie, return the language with the smallest index.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AABB&quot;,&quot;AaBb&quot;,&quot;A? B!&quot;,&quot;ab!@#$%&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;ab&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Ignore case and the non-letter characters.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7225&pm=4570">Single Round Match 250 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7225&pm=4570">Single Round Match 250 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

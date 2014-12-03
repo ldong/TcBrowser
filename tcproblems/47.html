@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> Problem Statement for WordFilter</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for WordFilter</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><pre>This program takes as input two strings. The first of which is the search
+string and the second is the buffer to search. The object of the program is to
+remove all traces of the search string in the search buffer. The program will
+perform the search starting at the beginning of the buffer and continue until
+either the end of the buffer is reached or the search string is found. If the
+search string is found, the string should be removed, and the search should
+restart again from the beginning of the buffer. This process should repeat
+until a full search through the buffer produces no more matches.
+
+Requirements :
+
+1. the search should be completely case-insensitive
+       (ie &quot;StRinG&quot; should remove the phrase &quot;sTrINg&quot;)
+2. it should be a multi-pass filter
+       (ie &quot;string&quot; should remove the phrase &quot;strSTRINGing&quot;
+
+Here is the method signature :
+
+public String strip(String str, String buf);
+
+We will check to make sure the input to this problem is valid.
+
+Here are some examples assuming the search string is &quot;StRinG&quot; :
+
+&quot;ccccstring ssssssssss&quot; -&gt; &quot;cccc ssssssssss&quot;
+&quot;ccccstrinstringgsssssssssss&quot; -&gt; &quot;ccccsssssssssss&quot;
+&quot;ccccstring stringssssssssss&quot; -&gt; &quot;cccc ssssssssss&quot;</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">WordFilter</td></tr><tr><td class="statText">Method:</td><td class="statText">strip</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String strip(String param0, String param1)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=2002&pm=47">Collegiate Challenge Round 3 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

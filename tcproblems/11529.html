@@ -1,0 +1,94 @@
+<html>
+<head>
+<title> Problem Statement for EllysDirectoryListing</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for EllysDirectoryListing</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Elly wants to write a program that lists all the files in a given directory.
+She already has the list of all the files.
+You will be given this list as a String[] <b>files</b>.
+
+In addition to the names of files, the variable <b>files</b> will contain exactly two additional elements:
+the current directory (the String "."), and the parent directory (the String "..").
+These two elements may be anywhere in <b>files</b>.
+However, Elly wants them to be the last two elements.
+
+In order to move the two directories to the last two positions in <b>files</b>, she wants you to
+perform the following steps:
+
+<ol>
+<li>If "." and ".." are the last two elements of <b>files</b> (in any order), you are done.</li>
+<li>Find the first element of <b>files</b> that is either "." or "..". Swap it with the last element of <b>files</b>.</li>
+<li>If "." and ".." are now the last two elements of <b>files</b> (in any order), you are done.</li>
+<li>Find the first element of <b>files</b> that is either "." or "..". Swap it with the element of <b>files</b> that is one position before the last one.</li>
+</ol>
+
+Your method must perform the above steps and return a String[] containing the modified
+order of elements in <b>files</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">EllysDirectoryListing</td></tr><tr><td class="statText">Method:</td><td class="statText">getFiles</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] getFiles(String[] files)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Swapping elements at positions i and j means that the element at position i is moved to the position j and vice versa.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>files</b> will contain between 2 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>files</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Exactly one element of <b>files</b> will be ".".</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Exactly one element of <b>files</b> will be "..".</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>files</b> will contain between 1 and 20 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>files</b> will contain only uppercase and lowercase letters and dots ('A'-'Z', 'a'-'z', '.').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ContestApplet.jnlp&quot;, &quot;.&quot;, &quot;Image.jpg&quot;, &quot;..&quot;, &quot;Book.pdf&quot;, &quot;Movie.avi&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;ContestApplet.jnlp&quot;, &quot;Movie.avi&quot;, &quot;Image.jpg&quot;, &quot;Book.pdf&quot;, &quot;..&quot;, &quot;.&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The directories are not the last two elements, so we search for the first one (in this case "."), and swap it with the last element (in this case "Movie.avi"). As "." and ".." are still not the last two elements, we search for the second one (in  this case "..") and swap it with "Book.pdf".</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;Image.jpg&quot;, &quot;..&quot;, &quot;.&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;Image.jpg&quot;, &quot;..&quot;, &quot;.&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">In this case the directories are already the last two elements, so we do nothing.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;..&quot;, &quot;.&quot;, &quot;Image.jpg&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;Image.jpg&quot;, &quot;.&quot;, &quot;..&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">After swapping ".." with "Image.jpg", the directories are already the last two elements, so we are done.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;No&quot;, &quot;..&quot;, &quot;Zaphod&quot;, &quot;.&quot;, &quot;Just&quot;, &quot;very&quot;, &quot;very...&quot;, &quot;Improbable&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;No&quot;, &quot;Improbable&quot;, &quot;Zaphod&quot;, &quot;very...&quot;, &quot;Just&quot;, &quot;very&quot;, &quot;.&quot;, &quot;..&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;www.topcoder.com&quot;, &quot;Ever.tried&quot;, &quot;.&quot;, &quot;Ever.failed&quot;, &quot;..&quot;, &quot;No&quot;, &quot;Matter.&quot;, &quot;Try&quot;, &quot;Again.&quot;, &quot;Fail&quot;, &quot;Again..&quot;, &quot;Fail.Better&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;www.topcoder.com&quot;,
+&quot;Ever.tried&quot;,
+&quot;Fail.Better&quot;,
+&quot;Ever.failed&quot;,
+&quot;Again..&quot;,
+&quot;No&quot;,
+&quot;Matter.&quot;,
+&quot;Try&quot;,
+&quot;Again.&quot;,
+&quot;Fail&quot;,
+&quot;..&quot;,
+&quot;.&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;This&quot;, &quot;.&quot;, &quot;is&quot;, &quot;tricky&quot;, &quot;test&quot;, &quot;..&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;This&quot;, &quot;test&quot;, &quot;is&quot;, &quot;tricky&quot;, &quot;..&quot;, &quot;.&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The first swap moves ".." to position 1, so we need to move it again to index 4 (indexed from zero).</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14727&pm=11529">Single Round Match 534 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

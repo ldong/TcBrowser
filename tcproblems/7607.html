@@ -1,0 +1,130 @@
+<html>
+<head>
+<title> Problem Statement for Kings</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Kings</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+You are given a String[] <b>names</b> where each element is the name of a king who ruled the country.  The kings are given in chronological order.  Return a String[] containing the kings in the same order, but with their names changed as follows.  If the name of a king is unique in the given list, leave his name unchanged.  Otherwise, add a single space followed by the king's chronological number among all kings with the same name.  The numbering should start from 1, and numbers must have no leading zeroes.  For example, if there are two "William"s, the first one in the list would be "William 1" and the second would be "William 2".
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Kings</td></tr><tr><td class="statText">Method:</td><td class="statText">enumerate</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] enumerate(String[] names)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>names</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>names</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>names</b> will contain only uppercase letters ('A'-'Z').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;WILLIAM&quot;, &quot;GEORGE&quot;, &quot;PAUL&quot;, &quot;GEORGE&quot;, &quot;GEORGE&quot;, &quot;WILLIAM&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;WILLIAM 1&quot;, &quot;GEORGE 1&quot;, &quot;PAUL&quot;, &quot;GEORGE 2&quot;, &quot;GEORGE 3&quot;, &quot;WILLIAM 2&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;OLE&quot;, &quot;BJORN&quot;, &quot;OLE&quot;, &quot;GUNNAR&quot;, &quot;LUDVIG&quot;, &quot;CHRISTIAN&quot;, &quot;LUDWIG&quot;,
+&quot;KARL&quot;, &quot;CHRISTIAN&quot;, &quot;LUDWIG&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;OLE 1&quot;,
+&quot;BJORN&quot;,
+&quot;OLE 2&quot;,
+&quot;GUNNAR&quot;,
+&quot;LUDVIG&quot;,
+&quot;CHRISTIAN 1&quot;,
+&quot;LUDWIG 1&quot;,
+&quot;KARL&quot;,
+&quot;CHRISTIAN 2&quot;,
+&quot;LUDWIG 2&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;,
+&quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;,
+&quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;,
+&quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;,
+&quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;,
+&quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;, &quot;BOB&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;BOB 1&quot;,
+&quot;BOB 2&quot;,
+&quot;BOB 3&quot;,
+&quot;BOB 4&quot;,
+&quot;BOB 5&quot;,
+&quot;BOB 6&quot;,
+&quot;BOB 7&quot;,
+&quot;BOB 8&quot;,
+&quot;BOB 9&quot;,
+&quot;BOB 10&quot;,
+&quot;BOB 11&quot;,
+&quot;BOB 12&quot;,
+&quot;BOB 13&quot;,
+&quot;BOB 14&quot;,
+&quot;BOB 15&quot;,
+&quot;BOB 16&quot;,
+&quot;BOB 17&quot;,
+&quot;BOB 18&quot;,
+&quot;BOB 19&quot;,
+&quot;BOB 20&quot;,
+&quot;BOB 21&quot;,
+&quot;BOB 22&quot;,
+&quot;BOB 23&quot;,
+&quot;BOB 24&quot;,
+&quot;BOB 25&quot;,
+&quot;BOB 26&quot;,
+&quot;BOB 27&quot;,
+&quot;BOB 28&quot;,
+&quot;BOB 29&quot;,
+&quot;BOB 30&quot;,
+&quot;BOB 31&quot;,
+&quot;BOB 32&quot;,
+&quot;BOB 33&quot;,
+&quot;BOB 34&quot;,
+&quot;BOB 35&quot;,
+&quot;BOB 36&quot;,
+&quot;BOB 37&quot;,
+&quot;BOB 38&quot;,
+&quot;BOB 39&quot;,
+&quot;BOB 40&quot;,
+&quot;BOB 41&quot;,
+&quot;BOB 42&quot;,
+&quot;BOB 43&quot;,
+&quot;BOB 44&quot;,
+&quot;BOB 45&quot;,
+&quot;BOB 46&quot;,
+&quot;BOB 47&quot;,
+&quot;BOB 48&quot;,
+&quot;BOB 49&quot;,
+&quot;BOB 50&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;SEAN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;SEAN&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;IAMUNIQUE&quot;, &quot;METOO&quot;, &quot;ANDME&quot;, &quot;ANDMETOO&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;IAMUNIQUE&quot;, &quot;METOO&quot;, &quot;ANDME&quot;, &quot;ANDMETOO&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10729&pm=7607">2007 TCHS Tournament Alpha Round 3 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

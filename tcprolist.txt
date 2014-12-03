@@ -1,0 +1,2933 @@
+40	StringDup	String Manipulation	Div1	L1	50
+41	Syntax	String Manipulation	Div1	L2	45.68
+42	Football	Dynamic Programming	Div1	L3	63.46
+46	Weekday	Math	Div1	L1	59.62
+47	WordFilter	String Manipulation	Div1	L2	60.38
+48	Matrix	String Manipulation	Div1	L3	41.67
+64	Series	Simple Search,  Iteration	Div1	L1	50
+65	IntSplit	Brute Force	Div1	L2	75
+66	Nails	Dynamic Programming,  Graph Theory	Div1	L3	33.33
+67	Vigenere	Encryption/Compression	Div1	L1	50
+68	TriTravel	Dynamic Programming	Div1	L2	50
+69	Connected	Graph Theory	Div1	L3	0
+71	Area	Geometry	Div1	L3	50
+72	Camper	Dynamic Programming	Div1	L2	50
+73	Race	Simple Math	Div1	L1	75
+162	HowEasy	String Parsing	Div1	L1	43.48
+163	SquareDigits	Brute Force,  Math	Div1	L2	89.23
+164	Prerequisites	Graph Theory,  String Parsing	Div1	L3	82.46
+177	TCMLParser	String Parsing	Div1	L1	81.36
+178	EndOfContest	Math,  String Parsing	Div1	L2	57.89
+179	FSM	Graph Theory,  String Manipulation	Div1	L3	80
+180	Parachuter	Geometry	Div1	L3	22.22
+182	BitChecker	Simple Math,  Simulation	Div1	L2	80.65
+189	Clock	Math	Div1	L1	62.5
+202	ChessCover	Brute Force,  Search	Div1	L3	75
+203	Tothello	Brute Force,  Search	Div1	L2	50
+204	Checkers	Simulation	Div1	L1	75
+205	ArgParser	String Parsing	Div1	L2	66.67
+207	UserListSorter	Sorting,  String Parsing	Div1	L1	75
+208	NTicTacToe	Simulation	Div1	L2	100
+209	Networking	Dynamic Programming,  Graph Theory,  Math	Div1	L3	66.67
+210	MatchMaker	Simple Search,  Iteration,  String Parsing	Div1	L1	50
+212	LongCalc	Math,  String Parsing	Div1	L3	100
+330	Birds	Simple Math,  Simple Search,  Iteration,  Sorting	Div1	L2	15.38
+343	Multiples	Brute Force,  Simple Math	Div2	L1	83.46
+352	RuleEngine	Advanced Math,  Brute Force,  String Parsing	Div1	L3	76.47
+355	DiceChecker	Math,  Simple Search,  Iteration	Div1	L1	87.5
+358	Checker	String Manipulation,  String Parsing	Div1	L2	47.13
+389	Solver	Dynamic Programming,  Graph Theory	Div1	L3	60
+407	Chooser	Brute Force,  Simple Search,  Iteration	Div1	L1	95.32
+443	LetterRange	String Manipulation,  String Parsing	Div1	L1	82.1
+444	Intervals	Math,  String Parsing	Div1	L2	31.58
+445	AlephNull	Advanced Math	Div1	L3	63.49
+511	MatArith	Math	Div1	L2	39.27
+515	SameGame	Recursion,  Search	Div1	L2	20.66
+520	Bits	Simple Math	Div2	L1	88.51
+577	TopPilot	Graph Theory	Div1	L2	75
+586	Traffic	Simulation	Div1	L1	100
+590	Resort	Graph Theory,  String Manipulation	Div1	L2	46.48
+595	PairwiseSums	Brute Force,  Math	Div1	L3	59.26
+608	Billboard	String Manipulation	Div1	L1	90
+648	TopCraft	Recursion,  Search	Div1	L3	-1
+665	Bullets	Simple Search,  Iteration,  String Manipulation	Div1	L1	96.73
+759	RiverHill	Graph Theory,  Search	Div1	L3	47.06
+762	StockSales	Advanced Math	Div1	L3	24
+818	Average	Simple Math,  Simple Search,  Iteration	Div2	L1	95.32
+838	Robbery	Graph Theory,  Simulation	Div1	L3	-1
+875	WordTrain	Graph Theory,  Sorting,  String Manipulation	Div1	L2	28
+884	Criminal	Graph Theory	Div1	L2	100
+890	TupleLine	Math,  Search	Div1	L3	60
+893	QuadraticRoots	Brute Force,  Simple Math	Div1	L1	83.84
+903	UGroupOrder	Advanced Math	Div1	L2	78.31
+911	SolidArea	Geometry	Div1	L3	79.59
+914	BankingArray	Simple Search,  Iteration	Div1	L1	90.43
+920	TicSolver	Recursion,  Search	Div1	L2	100
+921	TCU	Dynamic Programming,  Simulation	Div1	L1	75
+924	Symmetry	Geometry	Div1	L3	14.29
+926	LawnMower	Brute Force,  Graph Theory	Div1	L3	62.5
+927	Inserter	String Manipulation,  String Parsing	Div1	L2	79.3
+932	MagicBoxes	Search	Div1	L3	17.46
+939	GameOfLife	Simulation	Div1	L1	84.13
+945	BlueMoons	Math,  Simulation	Div1	L3	26.47
+961	LetterStrings	String Manipulation	Div2	L1	98.12
+964	Hexagons	Brute Force,  Recursion,  Search	Div1	L2	100
+979	Doorknobs	Graph Theory,  Search	Div1	L3	50.94
+987	GardenHose	Simple Math	Div2	L1	72.03
+996	Travel	Brute Force,  Geometry,  Graph Theory	Div1	L1	100
+1008	Mirrors	Geometry	Div1	L3	0
+1011	Socialize	Graph Theory,  Search	Div1	L2	54
+1016	Decimal	Advanced Math	Div1	L3	61.11
+1017	DNAsynth	Recursion,  Search,  String Manipulation	Div1	L3	0
+1018	Comment	String Manipulation,  String Parsing	Div1	L2	75
+1019	Calculate	String Parsing	Div1	L3	67.86
+1044	WordSpaces	Simple Search,  Iteration,  String Manipulation	Div2	L3	41.51
+1046	StringMult	String Manipulation	Div2	L1	94.38
+1047	Lexer	String Parsing	Div1	L1	89.8
+1053	Execution	String Manipulation,  String Parsing	Div1	L2	58.47
+1075	SumSort	Advanced Math,  Search,  Sorting	Div1	L3	50
+1095	Rooms	Graph Theory	Div1	L3	69.26
+1099	Regions	Advanced Math	Div2	L3	12.9
+1106	Coherence	Advanced Math	Div1	L2	6.78
+1107	NoZero	Advanced Math	Div1	L2	22.54
+1110	PathFinding	Graph Theory,  Search	Div1	L3	50
+1119	SchoolAssembly	Brute Force,  Greedy	Div1	L1	57.14
+1124	Wireless	Geometry,  Graph Theory	Div1	L3	25
+1125	Choosers	Simulation	Div1	L1	75
+1130	VendingMachine	Simulation	Div2	L3	55.56
+1131	HigherMaze	Graph Theory	Div1	L3	100
+1135	Permutation	Graph Theory,  Math,  String Manipulation	Div1	L3	43.75
+1138	NENE	Geometry	Div1	L3	85.71
+1140	Warehouse	Geometry	Div1	L3	20
+1142	Tether	Geometry	Div1	L3	28.57
+1144	FleasFleas	Recursion,  Simple Math	Div1	L1	85.29
+1147	Whisper	String Parsing	Div1	L1	52.2
+1157	Jumper	Search	Div1	L3	61.54
+1158	HillHike	Dynamic Programming	Div1	L3	61.9
+1165	RoadTrip	Brute Force,  Simulation	Div1	L1	75
+1166	Jewelry	Dynamic Programming	Div1	L2	71.43
+1168	GraphPaths	Dynamic Programming,  Graph Theory	Div1	L2	66.67
+1169	Isoceles	Brute Force,  Geometry	Div1	L1	100
+1170	Escape	Graph Theory,  Search	Div1	L2	66.67
+1172	Mandelbrot	Math,  Simulation	Div1	L2	82.71
+1206	Flags	Dynamic Programming	Div1	L3	92.31
+1212	ShipBoxes	Brute Force,  Geometry	Div1	L1	100
+1215	StripePainter	Dynamic Programming,  Recursion	Div1	L2	43.48
+1221	DecodeMoveToFront	Encryption/Compression	Div1	L2	100
+1225	PeopleCircle	Simulation,  String Manipulation	Div2	L2	50
+1249	UniqueTriangles	Brute Force,  Geometry	Div1	L2	35.09
+1256	TimeSlicing	Advanced Math,  Dynamic Programming	Div1	L3	100
+1259	ZigZag	Dynamic Programming	Div1	L1	75
+1270	TileMatch	Brute Force,  Simple Search,  Iteration	Div1	L2	53.85
+1283	Assemble	Dynamic Programming	Div1	L2	84.81
+1287	Ordered	Math	Div1	L1	87.4
+1289	Spirals	Simulation	Div1	L1	70.56
+1307	RoadWork	Math,  Sorting	Div1	L2	51.69
+1313	FormatAmt	String Manipulation	Div2	L1	77.01
+1315	BalancedTrees	Recursion	Div1	L1	100
+1318	SkewHeaps	Search	Div1	L3	100
+1326	TreeTraversals	Recursion	Div1	L3	50
+1328	LongestRun	String Manipulation	Div1	L2	37.35
+1331	MessageMess	Dynamic Programming,  Encryption/Compression	Div1	L2	12.82
+1332	Pareto	Simple Search,  Iteration,  String Manipulation	Div1	L1	92.86
+1333	Substitute	String Manipulation	Div2	L1	95.74
+1336	NameSort	Sorting,  String Parsing	Div1	L1	61.25
+1346	WidgetRepairs	Simulation	Div2	L1	79.79
+1348	BenfordsLaw	Math,  Simulation	Div2	L2	80.77
+1355	GoldenChain	Advanced Math	Div2	L3	64.06
+1356	Intersect	Geometry	Div2	L2	76.54
+1358	AntiMatter	Dynamic Programming	Div1	L3	53.66
+1359	Surveyor	Geometry	Div1	L2	79.03
+1361	WordParts	Dynamic Programming	Div2	L3	37.5
+1517	FryingHamburgers	Math	Div1	L1	43.1
+1519	BinaryCardinality	Simple Math,  Sorting	Div2	L2	83.41
+1520	Dragons	Math,  Simulation	Div1	L2	47.76
+1522	Planets	Simulation,  String Manipulation	Div1	L3	52.29
+1523	InterestingDigits	Math	Div2	L2	80
+1524	Marketing	Graph Theory	Div1	L2	66.67
+1525	Champagne	Dynamic Programming,  Simulation	Div1	L1	59.52
+1526	Macros	Dynamic Programming	Div1	L3	46.15
+1541	Masterbrain	Brute Force	Div1	L2	94.44
+1555	CircleBugs	Simulation	Div1	L2	67.97
+1570	DesertWind	Dynamic Programming,  Graph Theory	Div1	L3	60
+1574	Optimizer	Math,  String Manipulation,  String Parsing	Div1	L3	20
+1579	GreedyChange	Advanced Math,  Dynamic Programming	Div1	L2	63.01
+1583	Robot	Dynamic Programming,  Simulation	Div1	L2	100
+1585	BusinessTasks	String Manipulation,  String Parsing	Div2	L2	79.78
+1586	JarBox	Geometry	Div1	L2	84.15
+1587	GForce	Geometry,  Search	Div1	L3	26.67
+1589	RectangularGrid	Math	Div2	L2	79.12
+1592	ChessMetric	Dynamic Programming,  Graph Theory	Div1	L1	89.36
+1593	Circuits	Graph Theory	Div1	L1	100
+1599	BridgeCrossing	Brute Force,  Recursion,  Search	Div2	L3	18.75
+1600	Pricing	Brute Force,  Simple Math	Div2	L3	72.73
+1605	Roundabout	Simulation	Div1	L3	26.09
+1608	Quilting	Simulation	Div2	L3	54.55
+1609	TickTick	Math,  Search	Div1	L1	44.87
+1610	MissingLetters	Simple Search,  Iteration,  String Manipulation	Div1	L1	91.85
+1614	TeamPhoto	Advanced Math,  Sorting	Div1	L2	27.93
+1625	SuperRot	Encryption/Compression,  String Manipulation	Div2	L2	94.71
+1630	ContinuedFractions	Advanced Math	Div1	L2	92.94
+1632	RPN	Simulation,  String Parsing	Div1	L1	100
+1636	SetComparison	String Parsing	Div1	L3	57.14
+1639	TelephoneGame	Graph Theory	Div1	L3	0
+1640	HardwareOptimize	Dynamic Programming,  Math,  String Manipulation,  String Parsing	Div1	L3	0
+1641	SkewTree	Dynamic Programming	Div1	L3	100
+1643	PossibleOrders	Dynamic Programming	Div1	L3	77.78
+1647	Iditarod	String Parsing	Div1	L1	90.32
+1648	BigBurger	Simulation	Div2	L2	83.55
+1649	PenLift	Geometry,  Graph Theory	Div1	L3	66.67
+1650	Soccer	Simple Math	Div2	L1	99.45
+1657	FaceFinder	Geometry	Div1	L2	100
+1659	Lottery	Advanced Math	Div1	L2	86.54
+1660	ConvexPolygon	Geometry	Div2	L3	79.69
+1663	DQuads	Brute Force	Div1	L1	100
+1667	CCipher	Encryption/Compression,  String Manipulation	Div2	L1	89.95
+1669	PaternityTest	Brute Force	Div2	L3	74.29
+1670	PointsOnAxis	Brute Force,  Recursion	Div1	L3	40.62
+1675	ExerciseMachine	Math,  String Parsing	Div2	L2	77.27
+1676	StampPads	Brute Force	Div1	L2	58.33
+1677	Bonuses	Simple Math,  Simulation	Div1	L1	88.89
+1678	ParkingLot	Search	Div1	L3	37.5
+1684	Posters	Brute Force,  Geometry	Div1	L3	0
+1685	Sets	Math	Div2	L2	78.1
+1686	Quipu	String Parsing	Div2	L1	92.39
+1692	YahtzeeScore	Simple Math,  Simple Search,  Iteration	Div2	L1	93.33
+1693	Archimedes	Math,  Simulation	Div1	L1	94.57
+1694	QuipuReader	String Parsing	Div1	L2	68.37
+1697	PowerOutage	Graph Theory	Div2	L3	37.5
+1700	PrefixCode	String Manipulation	Div2	L1	61.58
+1704	BinaryCode	Encryption/Compression,  Simulation	Div2	L2	23.4
+1705	MergeSort	Simulation,  Sorting	Div2	L3	60
+1706	CaseysArt	Brute Force,  Dynamic Programming	Div1	L3	46.67
+1708	Time	Simple Math,  String Manipulation	Div2	L1	90.6
+1716	LeaguePicks	Simulation	Div2	L2	74.86
+1728	ImageDithering	Simple Search,  Iteration,  String Manipulation	Div2	L1	97.13
+1729	TopCan	Geometry,  Math	Div1	L2	91.25
+1735	CircleGame	Simulation,  String Manipulation	Div1	L1	72.73
+1739	Birthday	Simple Math,  String Parsing	Div2	L2	45.34
+1740	CeyKaps	Simulation	Div2	L2	88.82
+1741	DivisorDigits	Simple Math,  String Manipulation	Div2	L1	89.81
+1744	MNS	Brute Force,  Recursion,  Search	Div2	L3	69.23
+1745	Gauss	Advanced Math,  Search	Div1	L3	59.72
+1747	NumberGuessing	Brute Force,  Recursion,  Search	Div1	L3	41.67
+1748	RedBlack	Recursion	Div1	L3	80
+1749	RoboCourier	Search	Div1	L3	57.14
+1750	EyeDrops	Math	Div2	L1	50.27
+1751	BrickByBrick	Geometry,  Simulation	Div2	L3	33.33
+1752	PermutationCounter	Advanced Math,  Recursion,  Search	Div1	L3	81.48
+1753	StreetParking	Simple Search,  Iteration,  String Manipulation	Div2	L1	76.58
+1754	UserId	Simulation,  String Manipulation	Div1	L1	53.85
+1757	Justifier	String Manipulation	Div2	L1	97
+1758	ASeries	Brute Force,  Sorting	Div1	L1	54.72
+1760	ContestScore	Sorting,  String Parsing	Div2	L3	12.9
+1761	AlphaDice	Geometry	Div1	L3	42.5
+1762	DotNotation	String Parsing	Div1	L3	61.54
+1763	ProblemWriting	String Parsing	Div2	L3	16.16
+1764	QuiningTopCoder	Simulation	Div1	L2	62.34
+1765	FixedPointTheorem	Simple Math,  Simulation	Div2	L1	93.78
+1767	Gems	Simple Search,  Iteration,  String Manipulation	Div2	L3	63.64
+1768	ProfitCalculator	Simple Math	Div2	L1	89.86
+1770	GasStations	Search	Div1	L3	61.11
+1771	Collision	Advanced Math	Div1	L2	68.85
+1772	Inventory	Math	Div2	L2	60.67
+1773	PickTeam	Brute Force	Div2	L3	19.23
+1774	MostProfitable	Simple Math	Div2	L1	87.37
+1776	DequeSort	Dynamic Programming,  Sorting	Div2	L3	52.27
+1777	DiskSpace	Simple Math,  Sorting	Div2	L1	66.24
+1778	BombSweeper	Simple Math,  Simple Search,  Iteration	Div2	L2	77.78
+1779	CheatCode	String Manipulation	Div1	L1	64.04
+1781	Table	String Manipulation	Div1	L2	89.32
+1782	MazeImprovement	Simulation,  String Manipulation	Div1	L2	100
+1784	ThePriceIsRight	Dynamic Programming	Div2	L3	19.05
+1786	Salary	Math,  String Parsing	Div2	L2	47.56
+1787	HourGlass	Brute Force,  Recursion,  Search	Div2	L3	35.29
+1788	SmartElevator	Brute Force	Div1	L2	85.07
+1789	BaseMystery	Simple Search,  Iteration,  String Parsing	Div2	L2	66.13
+1790	GuessTheNumber	Search,  Simulation	Div2	L1	90.36
+1791	TireRotation	Simple Search,  Iteration,  String Manipulation	Div2	L1	97.91
+1792	LCMRange	Brute Force,  Math	Div2	L1	77.42
+1799	Inchworm	Simple Math,  Simulation	Div2	L1	82.91
+1800	CardCount	String Manipulation	Div2	L1	82.24
+1801	StringTrain	String Manipulation	Div2	L2	66.04
+1802	TennisRallies	Brute Force	Div2	L3	65.52
+1807	IsHomomorphism	Brute Force,  String Parsing	Div1	L1	98.33
+1808	PermutationValues	Advanced Math,  Recursion,  Search	Div1	L3	16.67
+1809	Pool	Sorting	Div2	L3	71.43
+1810	Rochambo	Simulation	Div1	L1	99.33
+1811	CalendarISO	Search	Div1	L3	50
+1812	Satellites	Geometry	Div1	L3	50
+1814	Amoebae	String Manipulation,  String Parsing	Div1	L3	88.24
+1815	Cubism	Brute Force,  Search	Div2	L3	75
+1816	Logger	String Manipulation	Div1	L2	85.06
+1821	PowSum	Simple Math	Div1	L1	91.85
+1822	LetterFreq	String Manipulation	Div1	L1	94.68
+1833	Equity	Advanced Math	Div1	L3	100
+1835	Poetry	String Manipulation	Div2	L3	28.21
+1836	Clue	Brute Force	Div1	L3	0
+1841	SMBus	Simple Math,  Simulation	Div2	L3	95.65
+1845	HardDequeSort	Brute Force,  Greedy,  Sorting	Div1	L2	45.36
+1846	PaperFold	Brute Force,  Simple Math	Div2	L2	54.74
+1847	CalendarRecycle	Math,  Simple Search,  Iteration	Div2	L2	64.18
+1848	BirthdayOdds	Math	Div2	L2	69.83
+1849	PointSystem	Advanced Math	Div1	L3	70
+1850	Fifteen	Recursion,  Search	Div1	L2	74.36
+1852	Polynomials	Search	Div1	L3	22.5
+1854	PartySeats	Simple Search,  Iteration,  Simulation	Div2	L2	66.88
+1855	NameCheck	String Manipulation,  String Parsing	Div1	L1	67.36
+1856	WhatSort	Sorting	Div2	L3	56.36
+1859	Orchard	Simple Math,  Simple Search,  Iteration	Div2	L3	37.78
+1861	ShortPalindromes	Dynamic Programming,  Recursion	Div2	L3	9.09
+1862	BritishCoins	Simple Math	Div2	L1	95.83
+1863	LongNumber	Advanced Math	Div1	L3	55.88
+1864	CityLink	Graph Theory	Div1	L2	68.32
+1866	ParallelSpeedup	Brute Force,  Simple Search,  Iteration	Div2	L2	48.88
+1869	NumberGuesser	Math,  Simulation	Div2	L2	75.86
+1871	ShuffleMethod	Graph Theory	Div1	L3	36.36
+1872	BadSubstring	Dynamic Programming	Div2	L3	50
+1874	DirectoryTree	String Manipulation,  String Parsing	Div1	L2	79.44
+1875	TreeDrawing	String Manipulation	Div1	L3	0
+1876	Twain	String Manipulation	Div2	L2	20.91
+1877	MineField	String Manipulation	Div1	L1	97.79
+1879	Scheduling	Brute Force,  Recursion,  Search	Div1	L3	53.85
+1880	Workshop	Brute Force,  Simple Math	Div2	L1	84.39
+1882	BitmapToGraph	Simulation,  String Parsing	Div1	L3	20.63
+1888	Swimmers	Simple Math	Div2	L1	75.38
+1889	AvoidRoads	Dynamic Programming	Div1	L1	75
+1901	FairWorkload	Brute Force	Div2	L3	57.89
+1905	MakeUnique	Dynamic Programming,  String Manipulation	Div1	L1	100
+1907	WaterPressure	Simulation	Div1	L2	71.83
+1910	DiamondLogo	String Manipulation	Div1	L1	82.46
+1911	Hyphenated	String Parsing	Div2	L2	20.8
+1912	NoMo	Brute Force	Div1	L2	100
+1913	OldestOne	String Parsing	Div2	L2	86.52
+1914	Animation	Simulation,  String Manipulation	Div2	L2	72.96
+1915	RecurrenceRelation	Simple Math,  Simulation	Div2	L2	37.27
+1916	Carbon14	Math	Div1	L1	99.49
+1918	FlowerGarden	Dynamic Programming	Div1	L2	47.39
+1919	WindowWasher	Dynamic Programming	Div2	L3	34.78
+1924	TerribleEncryption	Math	Div1	L1	94.85
+1929	FullMonitor	Brute Force,  String Parsing	Div1	L1	100
+1930	LevelUp	Simple Search,  Iteration	Div2	L1	88.43
+1931	RookAttack	Graph Theory	Div1	L3	25
+1933	WhichData	Brute Force,  Math	Div1	L1	71.11
+1934	AustrianLotto	Sorting	Div1	L1	100
+1935	RoomSummary	String Manipulation,  String Parsing	Div1	L2	47.69
+1936	CongruenceLock	Search	Div1	L3	56.82
+1937	StairClimb	Simple Math	Div2	L1	92.86
+1939	UndergroundVault	Graph Theory	Div1	L3	63.89
+1941	ResistorCombinations	Brute Force	Div1	L2	51.52
+1942	TextEditor	String Manipulation	Div2	L3	27.5
+1944	RPG	Simple Math,  String Manipulation	Div2	L1	87.11
+1945	CombinationLock	Math,  Simulation	Div2	L2	88.75
+1946	AlgoHill	Graph Theory,  Search	Div1	L2	50
+1948	TwoTurtledoves	Simple Search,  Iteration	Div2	L2	81.41
+1950	CrossCountry	Simple Math,  String Manipulation	Div2	L2	30.4
+1954	RockSkipping	Dynamic Programming	Div1	L3	88.81
+1955	Centipede	Simulation,  String Manipulation	Div2	L3	22.22
+1956	ScriptLanguage	String Manipulation,  String Parsing	Div1	L3	18.18
+1957	GoldMine	Greedy,  Math	Div1	L3	69.64
+1958	TreasureHunt	Simple Search,  Iteration,  Simulation	Div1	L2	52.74
+1960	ElectronicScarecrows	Dynamic Programming,  Geometry	Div1	L3	19.23
+1961	ImmutableTrees	Simulation	Div1	L2	100
+1962	PassingGrade	Simple Math	Div2	L1	57.94
+1963	NCushion	Brute Force,  Geometry	Div1	L3	100
+1965	ElevatorLimit	Brute Force,  Simulation	Div2	L2	49.41
+1966	T9Input	Simple Search,  Iteration,  String Manipulation	Div1	L1	100
+1968	SkipRope	Simple Search,  Iteration	Div2	L1	41.67
+1969	BadClock	Math	Div2	L2	42.61
+1972	BaseballLineup	Advanced Math,  Dynamic Programming	Div1	L2	100
+1973	Removal	Simulation	Div2	L3	4.92
+1974	OpenBlackjack	Recursion,  Simulation	Div1	L3	-1
+1975	ProgressBar	Simple Math,  String Manipulation	Div2	L1	91.3
+1981	PokerDeck	Brute Force,  Math	Div1	L3	14.29
+1986	Nestable	Sorting	Div1	L3	33.33
+1993	ScheduleStrength	Math,  Sorting,  String Parsing	Div2	L2	71.37
+1994	PipePath	Graph Theory	Div1	L2	75
+1995	BadParser	Simple Math,  String Parsing	Div1	L2	78.29
+1996	MiniPaint	Dynamic Programming	Div1	L3	69.23
+1998	Find3Cheaters	Dynamic Programming,  String Manipulation	Div1	L3	67.06
+2000	FontSize	Simple Search,  Iteration	Div2	L1	93.09
+2001	PipePuzzle	Recursion,  Search	Div2	L3	76.19
+2002	WordForm	String Manipulation	Div2	L2	79.72
+2003	StackMachine	Recursion	Div1	L2	75
+2004	RepeatedSubstrings	Encryption/Compression,  String Manipulation	Div1	L1	100
+2006	Computers	Dynamic Programming,  Recursion	Div1	L3	59.38
+2007	ShortPath	Graph Theory	Div1	L3	0
+2008	LogCabin	Brute Force	Div1	L3	46.59
+2010	DataFilter	Graph Theory	Div1	L3	0
+2011	Stairs	Brute Force	Div2	L1	81.17
+2012	ConvexPoly	Brute Force,  Geometry	Div1	L2	100
+2013	Deranged	Advanced Math	Div1	L2	97.37
+2014	Watchtower	Geometry	Div1	L3	25
+2015	Harmony	Brute Force,  Math	Div2	L3	37.14
+2016	Rounder	Math	Div2	L1	80.68
+2017	EngineersPrimes	Advanced Math	Div2	L3	31.25
+2224	DNAMultiMatcher	Dynamic Programming	Div1	L3	44
+2226	LongPipes	Brute Force,  Search	Div1	L3	30.77
+2229	SpamDetector	String Manipulation	Div2	L2	49.04
+2232	CrossWord	String Manipulation	Div2	L1	87.91
+2233	RangeGame	Math,  String Parsing	Div1	L2	62.26
+2234	ProbabilityTree	Math	Div2	L3	64.18
+2235	FanFailure	Greedy	Div2	L2	88.79
+2236	MLBRecord	Brute Force,  Greedy,  Simple Search,  Iteration	Div1	L3	34.78
+2239	BinaryQuipu	Graph Theory	Div1	L3	75
+2240	Books	Brute Force,  Dynamic Programming	Div2	L3	0
+2241	ClockWalk	Simple Math	Div2	L1	56.98
+2242	CodeRed	Simple Search,  Iteration,  String Manipulation	Div1	L1	72
+2243	Foobar	Search,  String Manipulation	Div1	L2	60.98
+2244	InstantRunoff	Simulation	Div2	L2	45.68
+2245	Piglets	Dynamic Programming,  Greedy	Div2	L3	13.48
+2246	SelfCatalogue	Brute Force,  Recursion	Div1	L3	80.95
+2247	TurfRoller	Geometry	Div1	L3	0
+2249	Matching	Simple Search,  Iteration	Div2	L2	91.55
+2250	RaceCalculator	Brute Force,  Simple Math,  Simulation	Div1	L1	91.3
+2251	RGBColor	Simple Math	Div2	L1	66.27
+2253	TrueFalse	Brute Force	Div1	L2	69.47
+2258	RussianDolls	Advanced Math	Div1	L2	60
+2259	Packhorses	Brute Force	Div2	L2	17.02
+2260	TVTower	Geometry	Div1	L2	24.49
+2263	WaterLevel	Math	Div2	L3	23.26
+2264	OnLineRank	Simulation	Div2	L1	72.63
+2267	Measures	Brute Force	Div2	L2	46.63
+2268	KiloMan	Simulation	Div2	L1	98.31
+2271	TeXLeX	String Parsing	Div2	L2	28.75
+2272	SimpleCalculator	String Parsing	Div2	L1	97.2
+2274	BombMan	Graph Theory,  Search	Div1	L2	75.61
+2275	TextColumns	String Manipulation,  String Parsing	Div1	L1	62.5
+2277	Ambigram	Dynamic Programming	Div1	L3	47.83
+2278	Mhing	Brute Force	Div1	L3	-1
+2287	RandomFA	Dynamic Programming,  Graph Theory,  Math	Div1	L2	82.69
+2288	KiloManX	Dynamic Programming	Div1	L3	87.5
+2289	Fences	Brute Force,  Geometry	Div1	L1	97.14
+2290	Solid	Geometry	Div1	L1	98.84
+2292	NumberofFiboCalls	Dynamic Programming	Div2	L2	85.76
+2293	Commission	Math	Div1	L1	95.24
+2294	Scale	Math,  String Manipulation	Div1	L2	57.69
+2295	Display	Math	Div2	L2	62.75
+2296	AWordGame	Recursion,  Search	Div1	L3	88.68
+2297	BettingMoney	Simple Math,  Simulation	Div2	L1	96.86
+2298	WordPuzzle	Dynamic Programming,  Recursion,  Search	Div1	L1	50
+2299	BagOfDevouring	Brute Force,  Dynamic Programming,  Recursion	Div1	L2	75
+2300	DinkyFish	Simulation	Div2	L1	74.5
+2301	PulseRadar	Geometry,  Search	Div2	L3	0
+2303	SquareCode	Encryption/Compression,  String Manipulation	Div1	L2	87.7
+2306	IBEvaluator	Simple Math	Div2	L1	93.02
+2308	SlayingDeer	Math,  Simulation	Div2	L2	43.86
+2309	LunchScheduler	Brute Force	Div1	L2	58
+2310	RSABreaker	Encryption/Compression	Div2	L3	68.63
+2312	Apothecary	Greedy,  Math	Div2	L3	57.58
+2313	Spamatronic	String Manipulation,  String Parsing	Div2	L2	16.49
+2314	Reppity	Brute Force	Div2	L1	56.92
+2321	QuickTableau	Brute Force,  Math,  Sorting	Div1	L3	34.04
+2322	BorelSets	Math,  Search	Div1	L2	37.7
+2323	TurretDefense	Simple Math,  Simulation	Div1	L1	84.92
+2324	MoneyRun	Brute Force,  Dynamic Programming,  Recursion,  Search	Div1	L2	51.72
+2326	ImageCompress	Dynamic Programming,  Recursion,  String Manipulation	Div1	L2	58
+2327	TeamBuilding	Graph Theory	Div1	L3	2.5
+2329	CuboidJoin	Geometry,  Math	Div2	L3	23.53
+2330	VolumeGuess	Brute Force	Div2	L2	59.79
+2331	PolicePair	Brute Force	Div1	L2	76.83
+2332	PresentationComp	Encryption/Compression,  Math,  String Manipulation	Div1	L3	38.6
+2334	FunctionIter	Simulation	Div1	L1	90.4
+2336	BridgeSort	Sorting	Div2	L2	77.12
+2337	CountGame	Simple Math,  Simulation	Div2	L1	63.8
+2339	TennisSet	Simulation	Div1	L1	77.84
+2340	ClapLight	Brute Force	Div2	L2	31.06
+2341	ScoringEfficiency	Simple Math,  Simulation	Div2	L1	94.87
+2342	SquareFree	Advanced Math	Div1	L3	37.5
+2343	Hangman	String Manipulation	Div2	L2	68.03
+2344	AlienMultiplication	Recursion,  Search	Div1	L2	40
+2346	MagicianTour	Dynamic Programming,  Graph Theory	Div1	L3	50
+2347	Rationalization	Brute Force,  Greedy	Div1	L2	16.67
+2348	BagOfHolding	Brute Force,  Math	Div2	L2	37.74
+2349	DNASingleMatcher	Brute Force,  String Manipulation	Div2	L2	75.29
+2353	RaceApproximator	Simple Math	Div2	L1	80.17
+2355	CantorSet	Advanced Math	Div1	L3	64.06
+2356	TeamBuilder	Graph Theory	Div2	L3	73.17
+2357	TVAntenna	Geometry,  Simple Search,  Iteration	Div2	L3	56.12
+2358	Hawaiian	String Manipulation,  String Parsing	Div1	L1	93.39
+2360	Transpose	Graph Theory	Div2	L3	73.08
+2361	Partial	String Parsing	Div1	L2	63.38
+2363	Homomorphism	Brute Force,  String Manipulation	Div2	L3	41.67
+2364	LinePlotter	Brute Force,  Dynamic Programming,  Geometry,  Graph Theory,  Search,  String Parsing	Div1	L2	86.49
+2365	RecursiveGraph	Graph Theory	Div1	L3	37.5
+2366	MagicSquare	Simple Math	Div2	L1	90.48
+2367	RecoverWords	String Parsing	Div1	L2	66.67
+2369	ScheduleResources	Dynamic Programming	Div1	L2	28.21
+2371	CounterfeitCoin	Recursion,  Search	Div1	L3	40
+2373	EulerianRace	Graph Theory,  Simulation	Div1	L2	87.72
+2375	NumericalIntegral	Advanced Math,  String Manipulation	Div1	L2	83.12
+2376	Hilbert	Recursion	Div2	L3	55
+2377	TandemRepeats	Brute Force,  String Manipulation	Div2	L2	67.79
+2383	SimpleIO	Graph Theory	Div1	L2	65.09
+2384	PointInPolygon	Geometry	Div2	L3	26.19
+2386	Percents	Brute Force,  Math	Div2	L2	20.54
+2387	DiskScheduler	Brute Force	Div2	L3	12
+2394	OddsAndEvens	Math	Div1	L2	85.8
+2396	Cyberline	String Parsing	Div1	L1	89.14
+2397	AutoFix	String Manipulation	Div1	L1	100
+2400	OfficeParking	Simulation	Div2	L1	80.84
+2401	Decaffeinated	Recursion,  Search	Div1	L3	0
+2402	BadNeighbors	Dynamic Programming	Div1	L1	93.18
+2403	BoxLoader	Simple Math	Div2	L1	84.06
+2404	CutoffRounder	Math	Div2	L1	68.99
+2405	GolfScore	Simple Math,  String Manipulation	Div2	L1	90.39
+2407	MusicalChairs	Simple Math	Div1	L2	86.15
+2409	CrimeLab	Brute Force,  Geometry	Div1	L3	77.05
+2410	LumberjackHack	Graph Theory,  Search,  String Parsing	Div2	L3	0
+2411	PuckShot	Geometry	Div1	L3	55.56
+2412	CircularSequence	Search	Div1	L3	-1
+2413	WordWrap	String Manipulation	Div2	L2	62.42
+2415	WindowManager	String Manipulation	Div2	L3	52.83
+2416	NCMultiplication	Advanced Math,  Search	Div1	L2	51.52
+2417	GravityBomb	Simulation,  String Manipulation	Div2	L2	62.07
+2418	PolynomialMultiplier	Math,  String Parsing	Div2	L3	73.08
+2420	WorldPeace	Advanced Math,  Math,  Sorting	Div1	L3	57.14
+2422	ThirtyOne	String Parsing	Div2	L2	61.84
+2423	EigenVector	Brute Force,  Math	Div2	L3	0
+2425	CoinWeight	Dynamic Programming	Div1	L1	87.5
+2427	Mortgage	Math,  Search	Div2	L3	28.57
+2428	WaterBot	Graph Theory	Div1	L3	11.11
+2430	GeneralChess	Simple Search,  Iteration	Div2	L2	71.08
+2431	Paths	Graph Theory	Div1	L2	50
+2432	MnemonicMemory	Brute Force,  Simple Search,  Iteration,  String Parsing	Div2	L1	92.36
+2434	TablePartitions	Advanced Math	Div1	L2	66.67
+2435	OmahaLow	Brute Force,  Sorting,  String Manipulation	Div2	L2	51.49
+2436	ChipRace	Advanced Math	Div1	L2	75.53
+2437	IslandFerries	Graph Theory	Div1	L3	69.57
+2439	ComplexIntegers	Advanced Math	Div2	L3	47.54
+2442	ChangePurse	Advanced Math	Div2	L3	66.67
+2445	PointClustering	Brute Force,  Simulation	Div1	L1	66.67
+2449	DungeonEscape	Graph Theory	Div1	L2	60.47
+2450	DigitMultiples	Brute Force,  Simple Math	Div1	L1	73.49
+2451	SquarePoints	Geometry	Div1	L3	0
+2823	BigCube	Math	Div2	L2	36.25
+2824	Soma	Brute Force,  Geometry	Div1	L3	0
+2825	Lister	Dynamic Programming,  String Manipulation	Div1	L3	53.85
+2826	Education	Math	Div2	L1	74.85
+2827	ChangeOptimizer	Advanced Math	Div1	L3	50
+2829	QuickSums	Dynamic Programming	Div2	L3	73.08
+2842	Sortitaire	Dynamic Programming,  Sorting	Div1	L2	70
+2848	ShoelaceLength	Geometry,  Math	Div2	L2	66.95
+2850	Chivalry	String Manipulation	Div2	L1	80.09
+2852	Graduation	Graph Theory	Div1	L3	33.33
+2854	Aaagmnrs	Sorting,  String Manipulation	Div2	L2	70.18
+2859	Taxicab	Simulation	Div1	L1	41.46
+2866	RegularSeason	Brute Force,  Simple Math,  Sorting	Div2	L2	54.22
+2867	ShortCut	Dynamic Programming,  Geometry	Div1	L3	0
+2868	NoOrderOfOperations	String Parsing	Div2	L1	93.05
+2873	ChartError	Brute Force,  Search	Div1	L3	60
+2874	Histogram	String Manipulation	Div1	L2	76.81
+2876	SimplePath	Geometry,  Search	Div2	L3	15.69
+2884	Mailbox	Simple Search,  Iteration,  String Manipulation	Div2	L2	89.29
+2887	DogWoods	Geometry	Div1	L3	50
+2888	RPGRobot	Brute Force,  Simulation	Div1	L2	62.07
+2889	TriangleCount	Math	Div2	L2	88.37
+2890	ClosestPoints	Geometry	Div1	L3	11.11
+2891	RedSquare	Simple Search,  Iteration	Div2	L2	87.6
+2893	Uptime	Math,  String Parsing	Div2	L3	17.95
+2894	TCSocks	Brute Force,  Greedy,  Recursion	Div1	L2	77.5
+2897	TCMinMin	Simple Search,  Iteration,  Simulation,  String Parsing	Div1	L3	0
+2906	SensorGrid	Recursion,  Simple Math	Div1	L2	51.81
+2910	TinSoldiers	Advanced Math	Div1	L2	72.46
+2911	MatchMaking	Simulation,  Sorting	Div2	L2	72.88
+2912	UnLinker	String Manipulation	Div2	L3	33.33
+2913	UserName	Simple Search,  Iteration,  String Manipulation	Div2	L1	87
+2915	CaptureThemAll	Brute Force,  Search	Div2	L3	42.42
+2916	Medici	Simple Search,  Iteration,  Simulation	Div2	L1	83.69
+2919	Untypeset	Recursion,  Simple Math,  String Manipulation	Div2	L3	60
+2920	HexagonIntersections	Geometry	Div1	L3	33.33
+2921	HexagonalSums	Search,  Simple Math	Div2	L3	29.41
+2922	MedalTable	Sorting	Div2	L2	81.31
+2923	TallPeople	Simple Search,  Iteration,  Sorting	Div1	L1	94.89
+2924	MovingAverages	Simple Math	Div2	L1	95.83
+2926	GetThemAll	Brute Force,  Math	Div1	L3	50
+2928	TransportCounting	Brute Force,  Simple Math	Div2	L1	70.22
+2929	Crossings	Geometry,  Math,  Simulation	Div1	L2	15.87
+2930	HierarchicalTree	Graph Theory,  Recursion,  Sorting,  String Parsing	Div1	L2	41.1
+2931	CampLunches	Simple Math,  Simple Search,  Iteration	Div1	L1	75
+2932	TopographicalImage	Graph Theory,  Recursion,  Sorting	Div2	L3	87.5
+2935	QueenInterference	Simple Search,  Iteration,  Simulation	Div2	L3	75
+2936	DrivingDirections	String Manipulation,  String Parsing	Div2	L2	67.66
+2937	IPConverter	Recursion,  Search,  Sorting	Div1	L1	82.87
+2939	PseudoPrimeTest	Math,  Simple Search,  Iteration	Div2	L2	81.74
+2940	StarAdventure	Dynamic Programming,  Recursion	Div1	L3	31.58
+2941	NinePatch	Simple Search,  Iteration	Div1	L1	93.16
+2942	PaperThickness	Brute Force,  Geometry	Div1	L2	25
+2943	SumOfSquareRoots	Math,  Simple Search,  Iteration	Div1	L2	91.3
+2944	Arcs	Geometry,  Search,  Simple Math	Div1	L3	63.64
+2945	Unblur	Greedy,  Simple Math	Div1	L1	83.33
+2946	NegativePhotoresist	Graph Theory,  Math,  Search,  String Parsing	Div1	L3	97.3
+2947	LoadBalancing	Dynamic Programming	Div2	L3	25.42
+2958	BikeRace	Simple Math,  Simple Search,  Iteration,  Simulation,  Sorting	Div2	L2	0
+2959	Volleyball	Math,  Recursion	Div1	L2	78.08
+2960	Diving	Brute Force,  Simple Math,  String Parsing	Div1	L1	72.84
+2966	MitchellMovement	Simulation	Div1	L1	93.88
+2967	BridgeArrangement	Dynamic Programming	Div1	L3	11.11
+2969	TheThe	Simple Search,  Iteration	Div1	L1	84.42
+2970	NumberChanger	Brute Force	Div2	L3	22.22
+2971	BadMazeStrategy	Simulation	Div1	L1	63.55
+2973	Genetics	String Manipulation	Div1	L1	97.12
+2974	GeneticCrossover	Advanced Math	Div1	L3	75.53
+2975	FileFilter	String Manipulation	Div1	L1	74.63
+2976	Answer	Dynamic Programming	Div1	L3	24.32
+2977	Boxing	Greedy,  Sorting	Div1	L1	70.1
+2978	ResultsTable	Sorting,  String Parsing	Div1	L3	48
+2979	FewestTurns	Search	Div1	L3	42.39
+2980	FuelConsumption	Brute Force,  Simple Math	Div2	L1	95.7
+2982	HeatDeath	Greedy	Div1	L2	100
+2983	CultureShock	Simple Search,  Iteration,  String Parsing	Div2	L1	67.55
+2984	RockStar	Greedy	Div2	L2	50
+2985	TournamentRanker	Recursion,  Sorting	Div2	L3	56.52
+2986	Refactoring	Brute Force,  Simple Math	Div1	L2	80.56
+2987	Roxor	Advanced Math,  Dynamic Programming	Div1	L3	75
+2988	TitleString	String Manipulation,  String Parsing	Div2	L1	89.85
+2989	QuizShow	Brute Force,  Simple Math	Div1	L1	69.54
+2990	Rank	Simple Math	Div1	L1	87.71
+2994	PhoneSearch	Search	Div1	L3	19.05
+2996	grafixClick	Simple Math	Div2	L1	93.85
+2997	grafixCorrupt	Simple Search,  Iteration	Div2	L2	90.91
+2998	grafixMask	Recursion	Div1	L2	77.94
+2999	grafixGlobs	Search,  Simulation,  String Manipulation	Div2	L3	67
+3000	grafixDither	Geometry,  Recursion	Div1	L3	93.62
+3001	SureThing	Dynamic Programming,  Math	Div1	L3	100
+3002	PlayGame	Brute Force,  Greedy,  Simple Math	Div2	L2	84.51
+3003	WinningRecord	Brute Force,  Simple Math	Div2	L2	56.56
+3004	TeleportAndLoader	Dynamic Programming	Div1	L3	28.57
+3005	LargestCircle	Brute Force,  Geometry,  Simple Math	Div2	L3	30.77
+3006	StringOfPowers	Dynamic Programming,  Simple Math	Div1	L3	100
+3019	bloggoHyphenate	Search,  String Manipulation	Div2	L2	68.48
+3020	bloggoShortcuts	String Manipulation	Div2	L1	91.2
+3023	bloggoSequenceSearch	Search,  String Manipulation,  String Parsing	Div2	L3	0
+3025	bloggoDocStructure	Recursion,  String Parsing	Div1	L2	63.64
+3026	bloggoProximitySearch	Search,  String Manipulation,  String Parsing	Div1	L3	0
+3035	ParenReduction	String Manipulation,  String Parsing	Div2	L3	20
+3037	Thesaurus	Sorting,  String Manipulation	Div2	L3	61.54
+3038	BioScore	Greedy	Div1	L2	50
+3040	DamagedTree	Brute Force	Div1	L2	50
+3041	BadXML	String Manipulation,  String Parsing	Div1	L1	42.86
+3042	Crossroads	Geometry,  Greedy,  Simple Math	Div2	L3	76
+3043	Generators	Brute Force,  Simple Math	Div2	L2	63
+3046	MultiReplacer	Math	Div1	L3	82.46
+3049	FractionCounting	Simple Math	Div1	L1	92.91
+3050	SquareLanguage	Math,  String Manipulation	Div1	L3	56.25
+3051	LeftmostDerivation	String Parsing	Div1	L2	33.33
+3053	GetSubsequence	Dynamic Programming	Div1	L3	87.5
+3054	Hex	Recursion,  String Manipulation,  String Parsing	Div1	L1	83.33
+3055	FractionSplit	Simple Math,  Simulation	Div2	L2	62.74
+3057	Reconstruct	Brute Force,  Recursion	Div1	L2	46.15
+3064	RevolvingDoors	Search	Div1	L3	45.45
+3068	Hangman42	Math,  Recursion,  Simulation	Div1	L3	44
+3069	WinningProbability	Advanced Math	Div1	L3	12.5
+3070	TaglishTranslator	String Manipulation,  String Parsing	Div2	L3	34.48
+3073	HeartsGame	Simulation,  String Parsing	Div1	L2	68.12
+3074	RectangleDivision	Brute Force	Div1	L2	100
+3075	HiddenNumbers	Simple Search,  Iteration,  String Manipulation,  String Parsing	Div2	L2	46.6
+3076	RearrangeFurniture	Greedy,  Math	Div1	L3	30
+3077	SignatureDecorator	String Manipulation	Div2	L1	81.61
+3078	BusinessPlan	Dynamic Programming	Div1	L2	52.27
+3080	Cafeteria	Brute Force,  Simulation	Div2	L2	54.55
+3082	Supply	Graph Theory	Div1	L3	0
+3083	CubeSum	Math	Div1	L1	100
+3091	LeapAge	Simple Search,  Iteration	Div2	L1	93.4
+3092	ParameterSubstitution	String Manipulation,  String Parsing	Div2	L2	20.72
+3093	PermissionTree	Recursion,  Search	Div2	L3	52.63
+3094	ImageSteganography	Encryption/Compression,  Simple Math,  String Manipulation	Div2	L3	76.19
+3098	ComboBoxKeystrokes	Dynamic Programming	Div1	L2	68.5
+3099	Spanning	Brute Force,  Graph Theory	Div1	L2	85.71
+3100	AccessLevel	Simple Search,  Iteration,  String Manipulation	Div2	L1	96.3
+3101	LakeDepth	Graph Theory	Div1	L1	100
+3102	FolderSize	Simple Math,  Simple Search,  Iteration	Div2	L2	42.11
+3111	WaiterTipping	Simple Math,  String Parsing	Div2	L1	66.34
+3114	PayBill	Dynamic Programming	Div2	L3	26.32
+3115	OrderFood	Brute Force,  Search,  Sorting	Div1	L3	27.27
+3117	TurntableService	Search,  Simulation,  Sorting	Div1	L2	39.76
+3118	HealthFood	Recursion,  Sorting,  String Parsing	Div2	L2	77.27
+3436	NthFraction	Advanced Math,  Sorting	Div1	L2	81.45
+3439	YahtzeeRoll	Advanced Math,  Brute Force,  Simulation	Div2	L3	33.33
+3440	KingOfTheCourt	Advanced Math,  Simulation,  Sorting	Div1	L3	40
+3441	DFAReversal	Brute Force	Div1	L3	66.67
+3442	TextCompressor	Encryption/Compression,  String Manipulation	Div2	L1	50.94
+3443	OneArmedBandit	Math,  Simulation	Div1	L2	36.89
+3444	WalkingHome	Graph Theory	Div1	L2	53.33
+3446	EqualSubstrings	Brute Force	Div2	L1	53.79
+3447	PointLifeGame	Simulation,  Sorting	Div2	L2	15.38
+3448	DeserializeSequence	Dynamic Programming	Div2	L3	46.43
+3449	Triptych	Graph Theory	Div1	L2	65
+3450	GroceryBagger	Greedy,  Simple Search,  Iteration,  Sorting	Div2	L2	82.28
+3452	InsideOut	String Manipulation	Div2	L1	98.42
+3453	ScrabFortune	Greedy,  Sorting	Div1	L2	26
+3454	MinePut	Brute Force,  Recursion	Div1	L3	80.95
+3455	ArithSeq	Math	Div1	L3	40
+3457	BlackAndRed	Brute Force,  Simple Search,  Iteration	Div2	L2	92.93
+3458	PrimeAnagrams	Brute Force,  Simple Math	Div2	L3	32.35
+3467	MusicLicenses	Greedy	Div1	L1	71.74
+3468	SantaClaus	Graph Theory,  Search	Div1	L3	75.44
+3471	CableWoes	Dynamic Programming,  Geometry	Div1	L3	-1
+3473	LandMines	Recursion,  Search	Div1	L2	81.97
+3475	CalendarHTML	String Manipulation	Div1	L1	91.21
+3476	Conference	Greedy,  String Parsing	Div1	L2	23.08
+3477	Fairness	Simple Math,  Sorting	Div1	L1	75.68
+3478	ChessTournament	Simulation,  Sorting	Div1	L1	89.75
+3480	ChessMatch	Dynamic Programming,  Search	Div1	L3	27.71
+3481	PackageShipping	Dynamic Programming,  Graph Theory	Div1	L2	37.1
+3483	AutoAdjust	Brute Force,  Simple Math	Div1	L1	33.33
+3485	Triangulation	Geometry	Div1	L3	33.33
+3486	TestScores	Advanced Math,  Dynamic Programming	Div1	L3	95.24
+3487	Necklaces	Dynamic Programming	Div1	L3	65.38
+3488	WordNumber	Math	Div2	L3	27.62
+3489	VLNString	String Manipulation,  String Parsing	Div2	L1	79.87
+3490	CmpdWords	Brute Force,  String Manipulation	Div2	L2	69.92
+3491	BagsOfGold	Dynamic Programming,  Recursion	Div1	L2	78.26
+3492	Inversions	Sorting	Div1	L3	36.13
+3493	ExperimentalAnalyzer	Simple Math,  String Parsing	Div2	L2	75.9
+3494	BridgePts	Simple Math,  Simple Search,  Iteration	Div2	L2	79.73
+3495	MovingAvg	Simple Math,  Simple Search,  Iteration	Div2	L2	93.46
+3496	Predicting	Brute Force,  Recursion	Div1	L1	71.25
+3497	Hiking	Simple Search,  Iteration	Div1	L1	89.17
+3498	ManhattanMovement	Geometry,  Simple Math	Div2	L3	23.33
+3499	Symbolic	Advanced Math,  Simple Search,  Iteration	Div1	L2	33.33
+3501	Driving	Math,  Search	Div1	L3	50
+3502	TimeAnalysis	Simple Math,  String Parsing	Div1	L3	66.67
+3504	Justify	Dynamic Programming	Div1	L3	21.54
+3505	DictionarySorter	Sorting	Div1	L1	73.23
+3506	ImageEnlarger	String Manipulation	Div1	L1	88.73
+3507	TimeOfPossession	Simple Math,  String Parsing	Div1	L1	54.42
+3509	ChessKnight	Dynamic Programming	Div1	L2	93.49
+3510	NestedRandomness	Dynamic Programming,  Math	Div1	L3	59.82
+3514	QuadrilateralSearch	Advanced Math,  Geometry,  Search,  Simple Search,  Iteration	Div1	L3	31.33
+3515	TreePlanting	Dynamic Programming,  Recursion,  Simple Math	Div2	L3	35.71
+3516	DeadCode	Recursion,  Search	Div2	L3	9.38
+3517	Loopy	Graph Theory,  Recursion,  String Parsing	Div1	L3	33.33
+3518	TreeSpreading	Dynamic Programming,  Simple Math,  Simple Search,  Iteration	Div1	L2	46.37
+3520	ClientsList	Sorting,  String Manipulation,  String Parsing	Div2	L2	82.18
+3521	SnowClearing	Graph Theory	Div2	L3	50
+3522	HanoiDistance	Recursion	Div1	L3	60
+3523	WordPattern	Simple Search,  Iteration	Div2	L2	51.02
+3524	SyllableCounter	String Manipulation	Div2	L1	86.69
+3525	ContractWork	Dynamic Programming	Div1	L2	74.78
+3526	MultiRead	Simple Math	Div2	L1	91.58
+3527	Pronunciation	Brute Force,  Simple Search,  Iteration,  String Manipulation	Div2	L1	46.25
+3529	MoneyExchange	Dynamic Programming	Div2	L3	5.88
+3530	Parking	Graph Theory	Div1	L3	33.33
+3531	HingedDoor	Simple Math,  Simulation	Div2	L1	69.01
+3532	StringCompare	Simple Search,  Iteration,  String Manipulation	Div2	L1	89.63
+3539	Highscore	Sorting	Div2	L1	27.06
+3543	ATaleOfThreeCities	Brute Force,  Simple Math	Div2	L2	77.78
+3545	BitStrings	Dynamic Programming	Div2	L3	47.01
+3555	MatchCounting	Simulation	Div1	L2	52.98
+3556	Barbecue	Simple Search,  Iteration	Div2	L1	71.88
+3560	InequalityChecker	Brute Force	Div2	L1	96.32
+3561	SortEstimate	Math,  Search	Div2	L2	31.34
+3563	Disaster	Advanced Math,  Dynamic Programming	Div1	L3	80
+3564	PascalCount	Math	Div1	L2	44.64
+3565	LocalMax	Advanced Math,  Search	Div1	L3	-1
+3923	SalesPromotion	Dynamic Programming,  Math,  Simulation	Div1	L3	21.95
+3924	CommunicableDisease	Brute Force,  Recursion,  Search	Div1	L2	38.89
+3925	CommentNest	Recursion,  String Parsing	Div1	L3	18.18
+3932	Buoyancy	Geometry,  Math	Div1	L1	85.71
+3933	Switching	Dynamic Programming,  Greedy	Div1	L2	87.5
+3935	SmartWordToy	Graph Theory	Div1	L2	77.11
+3936	DiskCut	Dynamic Programming,  Simple Math	Div1	L3	61.7
+3937	AutoMarket	Dynamic Programming,  Graph Theory,  Sorting	Div2	L3	31.68
+3942	Mixture	Advanced Math,  Brute Force	Div1	L3	0
+3943	LargeSignTest	Advanced Math	Div1	L2	47.66
+3944	CakeDivision	Dynamic Programming,  Simple Math	Div1	L2	91.55
+3945	ProgramSchedule	Greedy,  Sorting	Div2	L3	58.33
+3946	Stitch	Simple Math,  String Manipulation	Div2	L2	82.7
+3950	Shouting	Brute Force,  Graph Theory	Div1	L1	100
+3957	Indivisible	Greedy	Div1	L2	66.67
+3961	RunLengthPlus	Dynamic Programming,  Encryption/Compression,  String Manipulation	Div1	L1	100
+3968	HowUnsorted	Sorting	Div1	L3	40.62
+3970	AutoLoan	Advanced Math,  Search	Div2	L2	27.87
+3971	StockHistory	Greedy,  Math,  Simulation	Div2	L3	46.88
+3972	WordFind	Brute Force,  Search,  String Manipulation	Div2	L2	55.73
+3978	ConnectingPoints	Brute Force,  Greedy,  Search	Div1	L3	50
+3992	CheckerPolygon	Geometry,  Math	Div1	L2	100
+3994	PipeCuts	Simple Math,  Simulation	Div2	L2	78.99
+3995	ComboLength	Simple Search,  Iteration	Div2	L1	83.7
+3996	CultureGrowth	Geometry	Div1	L3	53.85
+3998	WeirdRooks	Brute Force,  Recursion	Div1	L2	58.18
+3999	VariableDeclaration	Brute Force,  Recursion,  String Parsing	Div1	L1	75
+4004	FastSpider	Brute Force,  Math	Div2	L3	50
+4005	BasicSorting	Graph Theory,  Recursion,  Search,  Sorting	Div1	L2	-1
+4013	OptimalTax	Math	Div1	L2	32.97
+4017	JustifyText	String Manipulation	Div2	L1	94.58
+4018	BadSubstrings	Dynamic Programming	Div1	L1	66.67
+4019	NoisySensor	Simple Math	Div2	L1	68.08
+4020	AcademicJournal	Graph Theory,  Sorting,  String Parsing	Div2	L3	17.39
+4021	DerivationDisplay	String Parsing	Div2	L3	38.78
+4022	RemoteRover	Geometry,  Math,  Search	Div1	L3	29.17
+4425	PatternCutting	Geometry,  Search	Div1	L3	39.13
+4427	StepperMotor	Simple Math,  Simple Search,  Iteration	Div2	L2	5.83
+4431	CircleOrder	Greedy	Div2	L3	33.33
+4432	CircleCount	Graph Theory,  Sorting	Div1	L3	23.91
+4434	LongBlob	Graph Theory,  Search	Div1	L3	76.77
+4435	SnakeCount	Recursion	Div2	L3	14.29
+4436	PerforatedSheet	Geometry,  Math	Div1	L2	56.56
+4439	HiddenTriangles	Geometry	Div1	L3	33.33
+4440	AntiChess	Recursion	Div1	L3	21.43
+4442	SetMetric	Dynamic Programming	Div2	L3	22.73
+4445	PolygonDecomposition	Dynamic Programming	Div1	L3	37.5
+4446	Synchro	Math	Div1	L3	25.16
+4448	MassiveNumbers	Simple Math,  String Parsing	Div2	L1	91.8
+4450	DiceThrows	Dynamic Programming,  Math	Div1	L2	79
+4451	NumberSplit	Dynamic Programming,  Graph Theory,  Simple Math	Div2	L3	41.67
+4452	DiscCover	Dynamic Programming,  Geometry,  Math	Div1	L3	100
+4453	TopFive	Advanced Math,  Brute Force,  Simulation	Div1	L2	73.68
+4455	TravellingByTrain	Brute Force	Div2	L2	20.93
+4457	MailArchiving	Dynamic Programming	Div1	L3	44.9
+4459	HammingNumbers	Advanced Math,  Search	Div1	L2	60.82
+4460	ComputerExpert	Simple Math,  String Parsing	Div2	L3	65.12
+4461	MirrorPlacement	Geometry,  Search	Div1	L3	78.57
+4462	MirrorPath	Geometry,  Simple Math,  Simple Search,  Iteration	Div2	L3	54.84
+4463	BoxUnion	Geometry,  Simple Math	Div2	L2	52.73
+4464	PhonePad	Simple Search,  Iteration,  Simulation	Div2	L2	89.29
+4465	ConnectFour	Search,  Simulation	Div1	L3	12.07
+4468	CardRemover	Dynamic Programming	Div1	L3	31.25
+4469	CalcTest	String Manipulation	Div2	L1	86.01
+4470	PiCalculator	String Manipulation	Div1	L1	83.41
+4471	UnsealTheSafe	Dynamic Programming	Div2	L3	89.73
+4472	CalcButton	Brute Force	Div2	L3	9.88
+4473	PluCodeGenerator	Dynamic Programming	Div1	L2	77.97
+4475	PrimePolynom	Brute Force	Div2	L2	25.58
+4481	DivisibilityCriteria	Math,  Simulation	Div2	L3	65.91
+4483	WordCompositionGame	Simple Search,  Iteration,  Sorting	Div2	L2	93.26
+4484	Cards	String Manipulation	Div2	L1	78.76
+4485	ReportAccess	Search,  Sorting,  String Manipulation,  String Parsing	Div2	L2	46.26
+4487	Flush	Brute Force,  Math	Div2	L2	69.23
+4489	PolyominoCut	Graph Theory,  Recursion,  Simple Math	Div1	L3	100
+4490	GuessCard	Simple Search,  Iteration,  Simulation	Div2	L2	64.44
+4495	Musical	Math	Div1	L1	77.27
+4496	Elections	Brute Force	Div2	L1	57.58
+4497	BlackWhitePlane	Simulation,  Sorting	Div2	L2	41.91
+4499	Bingo	Simulation	Div2	L3	29.41
+4500	BlackjackWinner	Math	Div2	L1	25.86
+4501	AirTravel	Advanced Math,  Geometry,  Graph Theory,  Search	Div2	L3	40
+4502	CardCosts	Dynamic Programming,  Greedy	Div2	L3	23.08
+4503	ArrayHash	Brute Force,  Simple Search,  Iteration	Div2	L1	97.94
+4504	PrintScheduler	Simulation	Div2	L2	88.89
+4505	RedundantStrings	Recursion,  Simple Math	Div2	L3	79.1
+4506	SequenceSync	Dynamic Programming,  Search	Div1	L2	51.33
+4507	CircleDance	Greedy	Div2	L3	71.95
+4509	Polyline	Geometry	Div1	L2	96.12
+4510	ComputationalComplexity	Simple Math,  Simple Search,  Iteration	Div2	L1	57.14
+4511	TaxTable	Math	Div2	L1	42.86
+4512	Abacus	Simple Math,  String Manipulation	Div2	L2	70.18
+4513	SysFailure	Brute Force	Div2	L3	51.85
+4514	Dating	Simulation	Div2	L2	32.11
+4515	PowerDigit	Math	Div1	L1	55.16
+4516	Popularity	Sorting	Div1	L1	90.32
+4517	Runway	Simple Search,  Iteration	Div1	L1	42.44
+4518	OneFight	Simulation,  Sorting	Div2	L3	55.17
+4519	CalcRoot	Brute Force,  Math	Div1	L3	36.18
+4520	TimeCard	Simple Math,  String Manipulation	Div2	L3	23.74
+4521	Speller	String Manipulation	Div2	L3	64.86
+4522	FracCount	Brute Force,  Simple Math	Div2	L2	79.45
+4526	PrisonCells	Search,  Simple Math	Div2	L3	51.28
+4527	OddDigitable	Graph Theory,  Math	Div1	L3	8
+4556	DivToZero	Simple Math	Div2	L1	90.07
+4557	SortBooks	Search,  String Parsing	Div2	L2	62.16
+4559	ConvexPolygons	Geometry	Div1	L3	72
+4561	Straights	Simple Math	Div2	L1	95.12
+4562	Conglutination	Brute Force,  Simple Math,  String Manipulation	Div2	L2	39.46
+4563	CompanyName	Simple Search,  Iteration,  String Manipulation	Div1	L1	67.82
+4564	TeamSplit	Simulation,  Sorting	Div2	L1	93.21
+4565	Postman	Dynamic Programming	Div1	L2	30
+4566	ColorCode	Simple Math	Div2	L1	91.32
+4567	WatchTower	Geometry	Div1	L2	25
+4570	LanguageRecognition	Brute Force	Div2	L2	13.66
+4571	TVWatching	Dynamic Programming	Div1	L2	38.76
+4572	BikeLock	Dynamic Programming	Div1	L2	64.29
+4573	DominoesGame	Brute Force,  Recursion,  Simulation	Div1	L2	79.25
+4574	BrokenCalculator	Search,  Simple Math	Div1	L2	53.78
+4582	TwoKings	Simulation	Div1	L3	31.82
+4585	BoggleScore	Dynamic Programming,  Math,  Search	Div2	L3	8.7
+4587	SandTimers	Graph Theory	Div1	L3	14.29
+4588	Grader	Simple Math	Div2	L1	92.92
+4589	Acronyms	Search,  String Manipulation,  String Parsing	Div2	L3	50
+4590	OneMoreRectangle	Brute Force	Div2	L3	15.87
+4593	ChipArea	Geometry,  Recursion,  Sorting	Div1	L3	50
+4597	GameEnding	Brute Force,  Recursion	Div1	L2	78.26
+4608	GradingGridIns	Simple Math,  Simple Search,  Iteration,  String Parsing	Div1	L2	40.35
+4610	TriangleType	Simple Math	Div2	L1	77.78
+4612	ClockManagement	Dynamic Programming,  Recursion	Div1	L3	61.64
+4613	ChatTranscript	Simple Search,  Iteration	Div2	L1	73.16
+4614	ChatExit	Greedy	Div1	L2	49.52
+4615	FieldPairParse	String Parsing	Div2	L2	83.8
+4616	TableSeating	Dynamic Programming,  Math,  Recursion	Div2	L3	0
+4617	BalancedGame	Simple Math,  Simple Search,  Iteration	Div2	L1	76.03
+4619	NumericalSequence	Greedy	Div2	L3	74.49
+4620	PieSharing	Dynamic Programming	Div1	L3	27.59
+4622	KthElement	Math,  Search	Div2	L3	49.37
+4624	SMS	Brute Force,  Simple Search,  Iteration,  String Manipulation	Div2	L2	32.45
+4625	MusicCompilation	Greedy,  Sorting	Div1	L3	90.48
+4628	TheCoderMan	Brute Force,  Simple Math,  String Manipulation	Div1	L3	74
+4629	FibonacciSum	Dynamic Programming,  Greedy	Div1	L2	84.16
+4630	RectangleError	Geometry	Div1	L1	77.01
+4634	TestingCar	Brute Force,  Math	Div1	L2	44.96
+4635	PartyGame	Dynamic Programming,  Math	Div1	L2	54.75
+4636	DriveOrder	Simulation	Div1	L1	95.65
+4637	DayPlanner	Simple Search,  Iteration	Div1	L1	87.76
+4638	RecipeFraction	Simple Search,  Iteration	Div1	L1	94.79
+4639	ProseFlip	Simple Search,  Iteration	Div1	L1	97.64
+4641	TriangleRooks	Graph Theory	Div1	L2	28.57
+4643	ModeProbability	Advanced Math	Div1	L1	100
+4645	TokenGrid	Brute Force	Div1	L2	29.63
+4648	SplitSubgraphs	Graph Theory,  Recursion	Div1	L3	64.52
+4649	TheTournament	String Parsing	Div2	L2	62.58
+4650	SecurityBunker	Graph Theory	Div1	L2	43.15
+4651	SpreadsheetColumn	Simple Math,  String Manipulation	Div2	L1	61.77
+4652	GomokuBoardChecker	Brute Force,  Simple Search,  Iteration	Div2	L3	3.17
+4658	CountriesRanklist	Simple Math,  Sorting	Div2	L3	76.09
+4659	SequenceOfNumbers	Sorting	Div2	L1	95.04
+4660	StackingBoxes	Dynamic Programming,  Greedy	Div1	L3	32.5
+4661	PrimeStatistics	Simple Math,  Simple Search,  Iteration	Div2	L2	25.83
+4662	DigitFiller	Dynamic Programming,  Simple Math	Div1	L3	50.75
+4667	Pitches	Dynamic Programming,  Math	Div1	L3	37.84
+4668	AlphabetCount	Dynamic Programming	Div1	L2	72.84
+4670	ListeningIn	Recursion	Div2	L2	49.11
+4673	CheatABit	Recursion,  Simple Math	Div1	L3	82.61
+4674	Decipher	Sorting,  String Manipulation	Div2	L2	76.12
+4675	ObjectPacking	Simple Math,  Simple Search,  Iteration	Div2	L1	79.94
+4677	MaxTrip	Graph Theory	Div1	L2	41.36
+4678	ABCPath	Search	Div2	L3	31.73
+4679	ValetParking	Math	Div1	L2	36.84
+4680	VideoEncode	Simple Math,  String Parsing	Div1	L1	95.73
+4687	CliqueCount	Brute Force,  Graph Theory	Div1	L2	73.29
+4688	GridGenerator	Simple Math	Div2	L1	98.28
+4690	GraphLabel	Brute Force	Div2	L3	90.36
+4692	ImageRepeat	Search	Div1	L3	38.89
+4696	CompanyMessages	Dynamic Programming	Div1	L1	69.41
+4697	ProductSet	Brute Force	Div1	L1	96.15
+4698	MagicCube	Simple Math	Div2	L2	81.33
+4699	TriArea	Brute Force	Div2	L3	34.62
+4700	EncodingTrees	Recursion	Div1	L2	83.94
+4701	ChutesAndLadders	Dynamic Programming,  Math,  Simple Search,  Iteration,  Simulation	Div1	L3	64.71
+4703	CompressionText	Brute Force,  Encryption/Compression,  String Manipulation	Div1	L2	38.58
+4705	MissileTarget	Math,  Search	Div2	L3	51.61
+4706	StockQuotes	Simple Math	Div1	L2	32.97
+4708	Recipe	Simple Math,  String Manipulation,  String Parsing	Div1	L2	60.74
+4709	FloorTiling	Math	Div1	L1	90.14
+4710	ClassScores	Simple Math,  Simple Search,  Iteration	Div2	L1	74.41
+4712	GridGame	Brute Force,  Recursion	Div1	L3	81.77
+4713	SubstitutionCode	String Manipulation	Div2	L1	92.38
+4715	VariableSolve	Math	Div1	L3	14.67
+4716	CompetitionStatistics	Brute Force	Div2	L1	80.83
+4717	PatternOptimizer	String Manipulation	Div2	L2	73.4
+4718	SuperString	Dynamic Programming,  String Manipulation	Div1	L2	27.04
+4720	Airways	Geometry	Div2	L2	40.74
+4721	HairCuts	Math,  Simulation,  String Parsing	Div1	L3	76.36
+4723	VariableAddition	String Manipulation	Div1	L1	93.46
+4725	Fuses	Brute Force,  Recursion	Div1	L3	51.31
+4731	PlayingCubes	Brute Force	Div1	L1	87.7
+4745	TippingWaiters	Brute Force,  Simple Math	Div2	L2	26.18
+4746	IsingModel	Simple Math	Div2	L1	93.18
+4748	AreaSplit	Brute Force,  Simple Search,  Iteration	Div1	L2	77.78
+4749	RollingBlock	Dynamic Programming	Div2	L3	25
+4750	FrogAndFly	Advanced Math,  Geometry	Div1	L3	60
+4751	PackingShapes	Geometry	Div1	L3	21.05
+4753	CheapestFlights	Recursion	Div1	L3	64.45
+4754	BuyingCheap	Sorting	Div2	L1	83.7
+4755	SalesmansDilemma	Dynamic Programming,  Graph Theory	Div1	L2	10.48
+4765	SlowDigitalClock	Recursion,  Simple Search,  Iteration,  Simulation,  String Parsing	Div1	L2	46.19
+4766	GridPointsOnCircle	Brute Force,  Geometry,  Simple Math	Div2	L2	48.27
+4769	Springs	Advanced Math,  Geometry	Div1	L3	31.82
+4772	Party	Brute Force,  Simulation	Div2	L1	82.81
+4778	RobotRace	Greedy,  Search,  Simulation	Div1	L3	0
+4779	RingCount	Graph Theory,  Recursion	Div1	L1	64.29
+4781	DVDPlayer	Brute Force,  Simulation	Div2	L2	73.24
+4782	GradingSystem	Sorting	Div2	L1	78.8
+4786	NearBirthdays	Dynamic Programming,  Math	Div1	L2	66.67
+4787	ConvexHull	Brute Force,  Dynamic Programming	Div1	L3	66.67
+4788	CheckFunction	Brute Force	Div2	L1	99.62
+4797	BestYahtzeeScore	Brute Force,  Dynamic Programming,  Recursion,  Search	Div1	L2	35.62
+4798	MatchCounts	Recursion	Div1	L1	96.24
+4800	YahtzeeBestScore	Brute Force	Div2	L3	16.67
+4804	ShortTaps	Dynamic Programming,  Greedy	Div1	L3	100
+4806	SandwichBar	Simple Search,  Iteration,  String Parsing	Div2	L1	81.55
+4808	ZCurve	Recursion,  Simple Math	Div2	L3	65.22
+4809	ExploringEuropa	Simple Search,  Iteration	Div2	L2	24.14
+4810	BedroomFloor	Greedy,  Math	Div1	L2	26.14
+4811	TriCount	Math	Div1	L1	93.8
+4816	DivisibilityRules	Math	Div2	L2	30.39
+4818	CaterpillarTree	Graph Theory,  Recursion	Div1	L1	77.78
+4819	RandomChoice	Math	Div1	L3	-1
+4820	BinaryBoard	Simple Search,  Iteration	Div1	L2	77.78
+4821	SwimmersDelight	Search	Div2	L1	30.33
+4822	ThirstyGroup	Search,  Simulation	Div1	L1	26.67
+4823	UnionOfIntervals	Search,  Sorting	Div2	L3	12.5
+4825	InverseSoundex	String Manipulation	Div1	L3	0
+4828	AirlinerSeats	Greedy	Div1	L2	51.36
+4829	XORing	Brute Force	Div1	L3	50
+4830	AccessChanger	String Manipulation	Div2	L1	62.61
+4831	RegimentArming	Brute Force	Div2	L3	46.08
+4833	WordGrid	Brute Force	Div1	L1	41.67
+4834	SackJourney	Search	Div1	L3	0
+4835	RoundTable	Dynamic Programming,  Math	Div1	L2	51.88
+4836	Superking	Math	Div1	L1	100
+4838	DivisiblePermutations	Dynamic Programming	Div1	L2	72.92
+4839	RingImposition	Math,  Recursion	Div1	L3	60.76
+4841	CoinPiles	Brute Force	Div2	L3	45.07
+4842	SimpleDuplicateRemover	Brute Force	Div2	L1	89.87
+4844	InsertSort	Dynamic Programming	Div2	L3	38.46
+4845	AmountApproximation	Simple Math	Div2	L3	8.27
+4846	DrawPlanar	Brute Force,  Graph Theory,  Recursion	Div1	L3	18.75
+4847	Smooshing	String Parsing	Div1	L2	48
+4848	JumpyNum	Dynamic Programming	Div1	L2	68.75
+5867	CrossWordPuzzle	String Manipulation	Div2	L1	86.45
+5869	BinarySearchable	Dynamic Programming,  Search	Div2	L3	81
+5870	RogersPhenomenon	Simple Math	Div2	L2	77.61
+5874	SwapSorter	Graph Theory	Div1	L3	12.24
+5877	CirclesOfDestruction	Geometry,  Search	Div1	L3	66.67
+5878	RobotCollision	Simple Math,  Simple Search,  Iteration,  Simulation	Div1	L3	50.63
+5879	AimToTen	Simple Search,  Iteration	Div2	L1	92.36
+5881	PalindromeMaker	Brute Force,  Sorting	Div2	L2	58.23
+5883	ManhattanDistance	Dynamic Programming,  Geometry	Div1	L3	47.5
+5884	HammingDistance	Brute Force,  String Parsing	Div2	L1	87.71
+5885	VectorPolygon	Brute Force,  Geometry	Div2	L3	41.67
+5886	FewestFactors	Brute Force,  Simple Math	Div2	L2	61.54
+5887	DyckwordUniformer	Brute Force,  Recursion,  Sorting	Div1	L2	44.27
+5891	ExtraBall	Simple Math	Div2	L2	78.5
+5893	SnakeTurbo	Dynamic Programming	Div1	L2	28.42
+5894	Haar1D	Recursion,  Simulation	Div2	L2	84.91
+5895	FallingCoconuts	Simulation,  String Manipulation	Div2	L2	53.47
+5896	InverseHaar1D	Recursion,  Simulation	Div1	L1	98.02
+5898	MonomorphicTyper	Recursion,  String Parsing	Div2	L3	10.87
+5899	RectangleGroups	Brute Force	Div2	L1	88.09
+5902	SymbolFrequency	Simple Math,  String Manipulation	Div1	L2	90.91
+5903	CMajor	Dynamic Programming,  Search	Div1	L2	67.62
+5904	ShrinkingPills	Search	Div1	L3	16.67
+5905	CuttingPoles	Simple Math,  Simulation	Div2	L1	77.78
+5908	BallGift	Dynamic Programming,  Recursion	Div1	L2	38.26
+5909	Horoscope	Dynamic Programming	Div1	L2	52.51
+5910	GreedyGovernment	Graph Theory,  Recursion,  Search,  String Manipulation	Div2	L3	60.71
+5911	FallingBall	Simple Math	Div2	L2	27.38
+5913	StringBeads	Dynamic Programming	Div1	L3	47.5
+5915	ObjectFall	Simulation	Div2	L1	77.59
+5918	SafeJourney	Geometry,  Graph Theory	Div1	L3	41.67
+5919	BallBouncing	Simulation	Div1	L2	40.23
+5920	GreenWave	Brute Force,  Simulation	Div2	L3	33.33
+5921	UnitsMoving	Graph Theory	Div1	L3	67
+5922	IntegerSequence	Dynamic Programming	Div2	L3	46.59
+5923	BestTriangulation	Brute Force,  Geometry	Div2	L2	88.24
+5924	OneMorePoint	Brute Force	Div1	L2	59.89
+5927	TestCurve	Math	Div2	L1	76.79
+5931	FowlRoad	Simple Search,  Iteration	Div2	L1	78.92
+5934	ForceTest	Dynamic Programming,  Math,  Search,  Simulation	Div1	L3	18.92
+5936	GridCut	Brute Force,  Geometry	Div1	L2	34.19
+5937	GroupingNumbers	Greedy	Div2	L3	29.03
+5942	FunctionDependency	Sorting	Div2	L3	55.77
+5943	FindTriangle	Brute Force,  Geometry,  Math	Div2	L2	16.97
+5945	VolumeDiscount	Brute Force,  Recursion	Div2	L2	28.33
+5949	Equidistance	Math	Div1	L3	33.82
+5950	DancingSentence	String Manipulation	Div2	L1	85.52
+5951	Distincter	Graph Theory	Div1	L3	73.33
+5952	OperationsArrangement	Brute Force,  Dynamic Programming,  Math	Div2	L3	19.7
+5953	RobotTesting	Brute Force,  Math	Div1	L2	72.93
+5954	StickedWords	Dynamic Programming,  Graph Theory	Div1	L3	6.82
+5955	LogCutter	Greedy,  Search,  Sorting	Div1	L2	63.64
+5961	FactorialTower	Math,  Simple Search,  Iteration	Div1	L2	26.47
+5962	BrokenClock	Simple Math,  Simple Search,  Iteration	Div2	L2	54.69
+5963	FactorialGCD	Math,  Simple Search,  Iteration	Div2	L3	6.98
+5966	SuspiciousStrings	Dynamic Programming,  String Manipulation	Div1	L3	55.56
+5968	SnailRace	Search,  Simple Math	Div1	L2	84.62
+5969	PowerSupply	Brute Force,  Geometry	Div2	L2	20
+5973	MooresLaw	Math,  Search	Div1	L2	46.96
+5975	CustomerStatistics	Sorting	Div2	L1	83.02
+5977	CompletingBrackets	Simple Search,  Iteration	Div2	L2	58.8
+5980	GalaxyTrip	Brute Force,  Graph Theory	Div2	L3	21.31
+5981	GalaxyExpedition	Graph Theory	Div1	L3	19.35
+5982	SpeedTyper	Simple Search,  Iteration	Div2	L1	94.88
+5983	RunLengthEncoding	String Manipulation	Div2	L1	52.1
+5984	IntegerGenerator	Simple Math,  String Manipulation	Div2	L2	17.87
+5987	BestDecomposition	Greedy,  Math	Div1	L3	71.43
+5988	UniqueDigits	Brute Force	Div2	L1	95.45
+5989	KidsWordGame	Simple Search,  Iteration,  String Manipulation	Div1	L2	70
+5991	SwitchingBits	Greedy	Div1	L3	87.5
+5995	EnclosingRectangle	Brute Force,  Simple Search,  Iteration	Div1	L3	38.89
+5996	PaperRockScisQuals	Simulation	Div2	L1	50.28
+5997	StraightArray	Simple Search,  Iteration	Div1	L2	86.36
+6002	TextProcessor	Simple Search,  Iteration	Div1	L1	95.97
+6003	DiagonalDisproportion	Simple Search,  Iteration	Div2	L1	98.95
+6005	CoinGame	Math	Div1	L3	44.44
+6006	BasketsWithApples	Brute Force,  Simple Math	Div2	L1	80.2
+6007	SentenceSplitting	Brute Force,  Simple Search,  Iteration	Div2	L2	34.07
+6010	ProbabilisticTranslator	Dynamic Programming,  String Parsing	Div2	L3	26.09
+6011	Truckloads	Recursion,  Simple Math	Div2	L1	89.76
+6013	TwoEquations	Brute Force,  Simple Math,  String Parsing	Div2	L2	0
+6015	FixedSizeSums	Dynamic Programming,  Math,  Sorting	Div2	L3	11.11
+6016	BobTrouble	Graph Theory	Div1	L2	39.89
+6017	InfiniteSoup	Brute Force,  Greedy,  Search	Div1	L3	7.06
+6022	DigitByDigit	Dynamic Programming,  Simple Math	Div1	L3	66.67
+6025	CageTheMonster	Search	Div1	L2	40.38
+6029	FamilyTree	Graph Theory	Div1	L2	8.99
+6030	TurnOffLights	Brute Force,  Math,  Simple Search,  Iteration	Div2	L3	6.12
+6033	CannonBalls	Dynamic Programming,  Math	Div1	L2	82.04
+6036	AccountBalance	Simple Math,  String Parsing	Div2	L1	98.06
+6038	TemperatureScales	Simple Math	Div2	L1	90.36
+6039	Wizards	Graph Theory	Div1	L3	40.54
+6040	StrangeParticles	Graph Theory	Div2	L3	4.17
+6041	Projections	Simple Math	Div2	L2	73.14
+6043	PalindromePartition	Dynamic Programming,  String Manipulation	Div1	L2	64.95
+6044	BlindMazeSolve	Dynamic Programming,  Search	Div1	L3	76.79
+6045	CheapestTabComplete	Dynamic Programming	Div1	L2	46.52
+6047	InverseCollatz	Math,  Simulation	Div1	L2	82.86
+6048	MaxKTrace	Dynamic Programming	Div1	L3	28.46
+6049	NumJordanForms	Dynamic Programming	Div1	L3	52.46
+6051	VectorCostSequence	Brute Force,  Simple Math	Div1	L3	27.08
+6052	NumPermutationOrders	Math	Div1	L3	79
+6054	FirstToLast	Math	Div1	L2	27.27
+6062	FourBears	Brute Force,  Dynamic Programming,  Search	Div1	L3	46.15
+6063	PrimePalindromic	Brute Force,  Recursion	Div2	L3	44.44
+6066	PendingTasks	Dynamic Programming,  Graph Theory	Div1	L3	18.18
+6067	LastMarble	Advanced Math,  Dynamic Programming	Div1	L3	2.31
+6068	CountryWar	Dynamic Programming,  Graph Theory,  Search	Div1	L3	66.67
+6070	Knights	Graph Theory	Div1	L2	12.5
+6071	CrazySwitches	Brute Force,  Graph Theory	Div2	L3	27.27
+6072	Snowflakes	Brute Force,  Simulation	Div2	L2	92.24
+6073	NotchedWoodBarsPuzzle	Brute Force	Div1	L2	50
+6074	FarFromPrimes	Brute Force,  Math	Div2	L1	62.9
+6076	TakeBus	Dynamic Programming	Div1	L3	53.03
+6077	BigFibonacci	Math	Div1	L3	43.06
+6081	BootsExchange	Greedy	Div2	L1	67.03
+6082	DollSets	Greedy,  Simple Search,  Iteration	Div2	L2	40.08
+6083	PreprimeNumbers	Search,  Simple Math	Div2	L3	1.85
+6084	EratosthenSieve2	Brute Force	Div2	L1	87.42
+6085	NewAlbum	Brute Force,  Dynamic Programming	Div2	L3	8.64
+6086	StringReplacements	Recursion	Div1	L2	47.7
+6090	VowelLatin	String Manipulation	Div2	L1	96.06
+6093	SpiralNumbers	Simple Math,  Simple Search,  Iteration	Div2	L2	28.48
+6094	TribbloTrouble	Math,  Recursion,  Simulation,  String Parsing	Div1	L3	18.29
+6095	SeparateConnections	Graph Theory	Div1	L1	56.96
+6102	JimmyLightning	Dynamic Programming	Div2	L3	10.91
+6103	Regulars	Dynamic Programming,  Math	Div1	L3	0
+6104	Taxi	Math	Div2	L1	49.76
+6105	SlowKeyboard	Simple Math,  Simple Search,  Iteration	Div1	L1	84.56
+6107	PScores	Simple Search,  Iteration,  Simulation	Div1	L1	85.62
+6109	ThreeCardMonte	Simulation	Div2	L1	95.32
+6110	TreeReconstruct	Graph Theory	Div1	L3	36.36
+6114	Shuffling	Simulation	Div2	L2	67.81
+6115	Palindromist	Dynamic Programming,  String Manipulation	Div2	L3	6
+6116	ScrabbleBet	Brute Force,  Math	Div2	L2	74.6
+6122	BuildBridge	Math,  Simple Search,  Iteration	Div2	L2	82.2
+6124	Aquarium	Simple Math,  Simple Search,  Iteration	Div2	L1	84.29
+6125	ApproximateDivision	Math	Div2	L2	70.23
+6127	LastStone	Dynamic Programming	Div1	L1	89.06
+6135	RandomizedQuickSort	Dynamic Programming	Div2	L3	51.4
+6136	DrawTree	String Manipulation	Div1	L1	98.96
+6137	TheXGame	Brute Force,  Math	Div1	L3	53.33
+6139	PackingParts	Greedy	Div2	L1	85.76
+6142	MonotoneSEMin	Math	Div1	L2	67.86
+6149	Manhattan	Simple Math	Div1	L3	43
+6150	PhoneNetwork	Graph Theory	Div1	L3	25
+6151	SkewSymmetric	Brute Force,  Simple Math	Div2	L1	88.08
+6157	OrderDoesMatter	Graph Theory,  Greedy,  Simple Search,  Iteration	Div1	L2	30.51
+6158	CountingCommonSubsequences	Dynamic Programming,  Recursion	Div1	L3	83.33
+6159	CyclesInPermutations	Simple Search,  Iteration,  Simulation	Div2	L1	88.1
+6160	FibonacciPositioning	Search,  Simple Math,  Sorting	Div2	L2	83.15
+6161	DominoesFinding	Brute Force,  Recursion,  Search	Div1	L2	100
+6163	MixedUpPrimes	Dynamic Programming,  Math,  Recursion,  String Parsing	Div1	L3	29.58
+6165	TrafficMonitor	Graph Theory	Div1	L1	91.67
+6168	DynamiteBoxes	Dynamic Programming,  Math	Div1	L3	40
+6169	OptimalQueues	Greedy	Div2	L2	48.87
+6172	IndicatorMotionReverse	Greedy,  Simulation	Div2	L2	16.88
+6173	IndicatorMotion	Simulation,  String Manipulation	Div2	L1	69.17
+6175	LadderPermutation	Greedy,  Search	Div1	L3	50.82
+6177	JobPlanner	Graph Theory	Div1	L3	31.03
+6179	MapFolder	Geometry,  Recursion,  Simulation	Div1	L3	33.33
+6181	Wardrobe	Brute Force,  Greedy	Div1	L3	1.69
+6183	IndicatorMotionDrawing	Dynamic Programming,  Graph Theory,  Simulation	Div2	L3	0
+6184	IntegerPalindrome	Math	Div1	L2	79.44
+6185	SymmetricalTree	Dynamic Programming	Div1	L3	-1
+6186	DivisorInc	Graph Theory,  Math	Div2	L3	39.13
+6190	PolyMove	Dynamic Programming,  Geometry	Div2	L3	16.24
+6191	ColoredBricks	Brute Force,  Recursion,  Search	Div1	L3	37.88
+6194	AllWoundUp	Geometry	Div1	L3	42.86
+6195	RugSizes	Brute Force,  Simple Math	Div2	L1	54.04
+6197	ProductsMatrix	Search	Div1	L3	21.28
+6201	FactCount	Graph Theory	Div1	L2	54.55
+6208	MislabeledWeights	Brute Force,  Dynamic Programming,  Greedy,  Math,  Simple Search,  Iteration	Div1	L3	78.89
+6210	ContextFreeGrammars	Dynamic Programming,  Recursion,  Simulation,  String Parsing	Div1	L3	19.44
+6212	BishopOnTheBoard	Brute Force	Div1	L2	16.67
+6215	JoinedString	Dynamic Programming,  String Manipulation	Div1	L3	26.09
+6216	CyclicGame	Brute Force,  Math	Div1	L2	76.3
+6221	CorrectingParenthesization	Dynamic Programming,  Recursion,  String Manipulation	Div2	L3	2.7
+6222	EscapingJail	Dynamic Programming,  Graph Theory	Div1	L2	76.25
+6224	InsertionSortCount	Simple Search,  Iteration,  Sorting	Div2	L1	81.65
+6226	OrderParser	String Parsing	Div1	L2	73.68
+6234	CompressedStringSearch	Encryption/Compression,  Search	Div1	L3	-1
+6235	TaylorAlgebra	String Parsing	Div1	L1	81.25
+6238	SingleElimination	Math	Div1	L2	0
+6239	StoneGameStrategist	Math	Div1	L3	30.77
+6241	ScoreRecomposition	Greedy,  Simple Search,  Iteration	Div2	L2	64.35
+6242	SynchronizingGuideposts	Search	Div2	L3	23.81
+6243	ContestCoordinator	Simple Search,  Iteration	Div2	L1	55.84
+6244	ModelRailroad	Math	Div1	L2	50
+6249	Alignment	Dynamic Programming	Div1	L1	100
+6250	Wizarding	Brute Force,  Recursion	Div1	L3	31.58
+6251	Segments	Geometry	Div2	L1	18.41
+6252	FountainOfLife	Math,  Simulation	Div1	L1	73.4
+6254	Hotel	Simple Search,  Iteration	Div2	L2	32.68
+6259	FussySleeper	Simple Search,  Iteration	Div1	L1	61.06
+6375	NounReform	String Manipulation	Div2	L1	80.25
+6381	BlockCounter	Dynamic Programming,  String Parsing	Div1	L3	62.5
+6386	TourCounting	Advanced Math,  Dynamic Programming,  Graph Theory,  Recursion	Div1	L3	43.33
+6387	XBallGame	Brute Force,  String Manipulation	Div2	L2	84.15
+6388	CityBuses	Brute Force,  Simple Math,  Simple Search,  Iteration	Div1	L1	80.18
+6398	ExtraordinarilyLarge	Simple Math	Div2	L2	12.65
+6400	SeatingPlan	Dynamic Programming,  Math	Div1	L3	72.55
+6402	RestoringPolygon	Brute Force,  Simple Search,  Iteration	Div1	L2	11.11
+6406	WebsiteRank	Recursion,  Search	Div2	L3	6.98
+6407	LightSwitches	Greedy,  Math	Div1	L2	56.67
+6408	PowerCollector	Advanced Math,  Recursion	Div1	L3	50
+6409	UnfairDivision	Brute Force	Div2	L2	30.3
+6410	Cannibals	Search	Div2	L3	37.5
+6412	Conditional	Dynamic Programming,  Math	Div1	L2	70.92
+6413	SortMachine	Greedy,  Sorting	Div2	L1	66.83
+6414	Monopolies	Brute Force,  Simulation	Div1	L3	40
+6415	BifidSortMachine	Greedy,  Simple Search,  Iteration,  Sorting	Div2	L2	34.85
+6417	BlockDistance	Dynamic Programming	Div2	L3	9.68
+6421	WinningTrick	Simple Math,  Simple Search,  Iteration	Div1	L1	75.23
+6423	CompositionTimeSignature	Simple Math,  Simple Search,  Iteration	Div1	L2	27.94
+6430	SumThemAll	Dynamic Programming	Div1	L2	84.21
+6431	MatrixTransforming	Greedy	Div2	L3	53.57
+6433	ApocalypseSomeday	Simple Search,  Iteration	Div1	L2	79.22
+6435	InterleavePal	Dynamic Programming,  Search	Div1	L2	53.57
+6440	BestSeller	Simple Search,  Iteration	Div1	L1	89.09
+6441	TroytownKeeper	Simple Math	Div1	L3	75.51
+6442	StringSegment	String Manipulation	Div2	L1	94.91
+6447	PartSorting	Greedy,  Sorting	Div2	L2	14.98
+6448	TrainRobber	Greedy,  Search,  Simple Math	Div1	L2	9.62
+6449	SplitAndMergeGame	Search	Div1	L3	13.64
+6458	CalculatorDisplay	Simple Math	Div1	L3	58.82
+6461	OlympicsBroadcasting	Greedy,  Sorting	Div1	L1	75
+6463	MooingCows	Brute Force	Div2	L1	75.39
+6464	MonthlyPayment	Greedy,  Simple Math	Div1	L3	26.32
+6465	CrazyRunning	Math,  Simulation	Div1	L2	89.47
+6467	GrasslandFencer	Search	Div2	L3	29.82
+6474	SpeedRadar	Simple Math,  Simple Search,  Iteration	Div1	L1	92.31
+6475	CornersGame	Graph Theory	Div1	L2	92.86
+6476	TreasuresPacking	Dynamic Programming,  String Parsing	Div2	L3	9.17
+6477	HuffmanDecoding	String Manipulation	Div2	L2	96.48
+6479	Shopping	Greedy	Div1	L2	59.22
+6482	CheapestIsland	Dynamic Programming	Div1	L3	3.7
+6486	TVSize	Simple Math	Div1	L1	31.51
+6490	BracketMaze	Dynamic Programming,  String Manipulation	Div1	L3	35.42
+6492	DigitalDisplay	Brute Force,  Simple Search,  Iteration,  String Manipulation	Div1	L1	68.14
+6493	PizzaDivision	Geometry,  Simple Math,  Simple Search,  Iteration	Div2	L3	28
+6494	RiverCrossing	Dynamic Programming,  Greedy,  Search,  Simple Search,  Iteration,  Simulation,  String Manipulation,  String Parsing	Div1	L3	50
+6495	WildCardMatch	Dynamic Programming,  String Manipulation	Div1	L2	39.13
+6498	ParallelepipedUnion	Geometry,  Simple Math	Div2	L2	79.76
+6501	AntarcticaPolice	Graph Theory,  Simple Math	Div1	L2	28.27
+6502	WallRepair	Simple Search,  Iteration,  String Parsing	Div1	L1	98.92
+6505	StudentsOrdering	Sorting,  String Manipulation	Div1	L2	47.96
+6509	CommutePlan	Recursion,  Simple Math	Div1	L2	81.58
+6512	DistinctDice	Simulation,  Sorting	Div1	L2	34
+6515	IndictDates	Brute Force,  Math	Div1	L1	98.77
+6516	KMonotonic	Dynamic Programming	Div1	L2	23.53
+6517	ParallelProgramming	Dynamic Programming,  Graph Theory	Div2	L3	55
+6520	FracSum	Math	Div1	L2	81.25
+6528	MedianOfNumbers	Simple Math	Div2	L1	97.34
+6532	LatticeCrossword	Brute Force	Div1	L3	86.49
+6533	MatchNumbersEasy	Dynamic Programming,  Greedy	Div2	L2	27.38
+6538	SpreadingNews	Graph Theory,  Greedy,  Recursion	Div2	L3	56.44
+6539	RPSTournament	Graph Theory,  Greedy,  Search	Div1	L3	81.82
+6540	PlacingPieces	Dynamic Programming,  Search	Div1	L2	18.4
+6541	CircuitBoard	Greedy,  Search	Div1	L3	32.56
+6542	InputBoxChecker	Greedy,  Simple Math	Div2	L2	13.37
+6546	BasketballStrategy	Geometry,  Graph Theory,  Math	Div1	L3	71.21
+6551	FloatingMedian	Sorting	Div2	L3	5.26
+6552	Fractile	Simple Search,  Iteration	Div1	L1	80
+6553	MeasuringTemperature	Simple Search,  Iteration	Div2	L1	44.68
+6555	Trainyard	Search,  Simulation	Div1	L2	53.85
+6557	ReverseSums	Simple Math,  String Manipulation	Div1	L1	98.19
+6558	EscapeFromRectangle	Simple Math	Div2	L1	96.8
+6562	ProductionOptimization	Dynamic Programming	Div1	L3	15.38
+6568	SuperSort	Sorting,  String Manipulation,  String Parsing	Div1	L2	68.97
+6569	PrefixFreeSets	Simulation	Div2	L2	64.5
+6571	TextEditorNavigation	Graph Theory,  Simulation	Div1	L3	32
+6572	WordMath	Simple Math	Div1	L2	80.33
+6576	BoxTower	Brute Force,  Dynamic Programming,  Sorting	Div1	L3	53.57
+6577	PyramidOfCubes	Simple Math,  Simulation	Div1	L1	53.99
+6580	RestoreExpression	Brute Force	Div1	L3	20.83
+6581	DessertMaker	Math	Div1	L2	90
+6583	FiveStarPatterns	Dynamic Programming,  Greedy	Div1	L3	27.27
+6584	EsperantoNumbers	String Manipulation	Div2	L1	76.41
+6586	LuckyFives	Math	Div1	L2	89.39
+6587	TheEquation	Brute Force	Div1	L1	78.72
+6588	ShootingGallery	Brute Force	Div1	L2	95.83
+6589	Cannons	Greedy,  Simple Search,  Iteration	Div1	L2	91.43
+6591	MatchNumbersHard	Greedy	Div1	L3	35.94
+6596	SetOfBoxes	Geometry,  Graph Theory,  String Parsing	Div1	L3	61.7
+6597	BerryPacker	Brute Force,  Greedy	Div1	L3	50
+6598	Chocolate	Simple Search,  Iteration	Div2	L2	14.63
+6599	SimpleCompressor	Recursion	Div1	L2	70.67
+6600	IQTest	Simple Math	Div2	L2	14.51
+6603	UnrepeatableWords	Brute Force,  Search	Div2	L3	46.67
+6608	MarriageProblemRevised	Graph Theory,  Math	Div1	L2	31.76
+6615	LineOfSight	Brute Force,  Simple Search,  Iteration	Div1	L2	69.7
+6618	HiddenMessage	Simple Search,  Iteration,  String Parsing	Div2	L1	91.33
+6619	InboxCleanup	Greedy,  Simple Search,  Iteration	Div2	L2	45.33
+6620	BackyardTrees	Dynamic Programming,  Recursion,  Simple Math,  Simple Search,  Iteration	Div1	L3	29.41
+6621	RoboRace	Dynamic Programming,  Graph Theory,  Search	Div1	L3	59.8
+6624	FastGossip	Dynamic Programming,  Graph Theory	Div1	L3	66.67
+6625	ThreeMines	Dynamic Programming	Div1	L3	74.07
+6628	KidsGame	Recursion,  Simple Search,  Iteration	Div2	L3	34.04
+6629	SillySudoku	Brute Force	Div1	L2	77.56
+6630	DigitsSum	Brute Force	Div2	L2	90.74
+6631	StandInLine	Greedy,  Simple Math	Div2	L2	87.79
+6633	ExcitingGame	Simulation	Div1	L1	91.36
+6635	RosePetals	Simple Search,  Iteration	Div2	L1	98.17
+6640	PickupBed	Geometry	Div1	L2	65.89
+6641	MemorizingPi	Dynamic Programming,  Simple Math	Div1	L2	44.78
+6646	StrawberryFieldsOnFire	Search	Div1	L3	65.05
+6648	TopologicalEquivalence	Brute Force,  Graph Theory	Div1	L3	53.85
+6649	SpiralConstruction	Dynamic Programming	Div1	L3	46.43
+6658	Divisibility	Math	Div1	L3	22.22
+6665	DerivativeSequence	Recursion,  Simulation	Div2	L1	96.11
+6667	PenPuzzle	Graph Theory	Div1	L3	0
+6668	Curvy	Geometry	Div1	L1	50
+6674	RoadsAndFools	Greedy,  Simple Search,  Iteration	Div2	L2	32
+6677	BiggestRectangleEasy	Geometry	Div2	L1	95.67
+6678	BiggestRectangleHard	Dynamic Programming	Div1	L3	64.42
+6679	DominoesLines	Graph Theory	Div1	L3	26.32
+6680	RGBStreet	Dynamic Programming	Div2	L2	78.11
+6682	CheckersBoard	Brute Force	Div1	L2	30.16
+6684	ReturnToHome	Geometry	Div2	L2	39.37
+6685	SimplifiedDarts	Dynamic Programming	Div2	L3	45.28
+6692	TransformArray	Simple Math	Div1	L1	77.05
+6693	Repeat	Dynamic Programming	Div1	L2	44.34
+6694	Dragon	Dynamic Programming,  Simple Math	Div1	L3	29.63
+6695	SnowStorm	Brute Force,  Dynamic Programming	Div1	L3	33.33
+6698	MedianProcess	Simple Search,  Iteration	Div1	L1	93.27
+6708	ContestSchedule	Dynamic Programming	Div2	L3	67.19
+6713	IncompleteBST	Brute Force,  Recursion	Div2	L3	14.29
+6714	ConstructBST	Advanced Math,  Recursion	Div1	L2	76.1
+6715	BusSeating	Brute Force,  Geometry,  Simple Math	Div2	L2	86.59
+6718	WordGuessingGame	Dynamic Programming,  Recursion	Div1	L2	33.33
+6719	UsingStats	Simple Math	Div1	L1	91.7
+6720	Xox	Simple Search,  Iteration	Div1	L1	61.44
+6721	FriendsTrouble	Graph Theory	Div1	L2	62.6
+6722	TournamentSchedule	Brute Force	Div1	L3	57.89
+6723	QueenCovering	Brute Force	Div1	L2	82.93
+6725	FactoryCounting	Brute Force,  Simple Search,  Iteration	Div1	L2	81.94
+6726	StringSquares	Brute Force	Div1	L1	91.22
+6729	NumbersLine	Brute Force,  String Parsing	Div1	L1	84.56
+6730	InscribedTriangles	Geometry	Div1	L2	37.93
+6731	PoolFiller	Simulation	Div2	L3	23.88
+6734	Collector	Dynamic Programming	Div1	L3	12.62
+6736	AdditionCycles	Simple Math	Div2	L1	93.27
+6740	Apportionment	Simple Math	Div1	L2	54.55
+6742	KnapsackProblem	Brute Force	Div1	L3	18.92
+6744	CoolNumbers	Dynamic Programming	Div1	L3	50
+6745	ThirdBuyDiscount	Greedy,  Sorting	Div1	L1	85.86
+6750	FriendlySequences	Brute Force	Div1	L1	86.13
+6755	WeirdSort	Sorting	Div1	L2	33.52
+6757	KDoubleSubstrings	String Manipulation	Div2	L1	86.27
+6758	MergingGraph	Dynamic Programming,  Graph Theory	Div1	L3	13.73
+6760	MatrixPainting	Graph Theory	Div1	L2	73.91
+6761	ConstitutiveNumbers	Math	Div1	L1	93.16
+6762	DominoesFalling	Dynamic Programming	Div1	L3	46.67
+6763	BikeRiding	Dynamic Programming,  Graph Theory	Div2	L3	5.56
+6764	RoomNumber	Simple Math,  String Manipulation	Div2	L1	66.39
+6765	ModularInequality	Geometry,  Math	Div2	L3	6.78
+6766	PalindromeEncoding	Dynamic Programming,  Encryption/Compression,  Recursion	Div1	L3	25.53
+6767	PalindromeDecoding	String Manipulation	Div2	L2	93.59
+6768	WarehouseJob	Dynamic Programming	Div1	L3	55.56
+6771	LexStringWriter	Dynamic Programming	Div2	L3	6.59
+6772	ApplePie	Geometry,  Sorting	Div1	L1	87.84
+6777	BComputation	Simple Math	Div1	L1	90.32
+6778	CauchyProduct	Brute Force,  Math	Div1	L1	75
+6779	ExtendedDominoes	Graph Theory,  Math	Div1	L2	41.41
+6782	Survived	Geometry,  Simple Math	Div1	L2	18.6
+6783	MissedCall	Simulation	Div1	L1	40.3
+6784	RefactorableNumber	Brute Force,  Math	Div1	L3	82.88
+6786	DartThrow	Math	Div1	L1	90.91
+6790	Diamonds	Brute Force	Div1	L1	77.17
+6791	BisquareSums	Brute Force,  Simple Math,  Simple Search,  Iteration	Div1	L1	80.77
+6794	PostOffice	String Manipulation	Div1	L1	76.74
+6795	FixedPoint	Simple Math	Div1	L2	89.69
+6796	ElectiveSystem	Dynamic Programming	Div1	L3	53.85
+6800	BattleshipChecker	Search	Div2	L3	51.64
+6802	MoneyGame	Dynamic Programming,  Search	Div1	L2	68.49
+6803	PositiveID	Simple Math,  String Parsing	Div2	L2	60.22
+6804	GroupWork	Greedy,  Sorting	Div2	L2	59.38
+6807	TournamentPlan	Sorting	Div1	L2	70.13
+6808	Alliteration	Simple Search,  Iteration	Div2	L1	67.89
+6809	RubeGoldberg	Dynamic Programming,  Search	Div1	L3	50
+6810	CodeSet	Dynamic Programming	Div1	L1	100
+6811	ProductBundling	Greedy,  Simple Search,  Iteration	Div2	L3	78.74
+6813	IrreducibleNumber	Simple Search,  Iteration	Div2	L1	64.87
+6817	BrokenElevator	Search,  String Parsing	Div1	L2	87.72
+6819	Triominoes	Brute Force,  Search	Div1	L1	87.5
+6820	AlmostBipartiteMatching	Graph Theory	Div1	L1	81.82
+6822	SalaryCalculator	Simple Math	Div2	L1	91.05
+6823	LicensePlate	Greedy,  String Parsing	Div1	L3	34.12
+6825	SalePitch	Math	Div1	L2	80.2
+6827	FenceRepairing	Dynamic Programming	Div1	L1	69.75
+6828	NewMoneySystem	Dynamic Programming	Div1	L3	81.82
+6829	FrogDerby	Math,  Simple Search,  Iteration	Div1	L2	30.93
+6830	BuffetLine	Dynamic Programming	Div1	L3	0
+6831	Coherency	Search,  Sorting	Div1	L1	62.5
+6832	QuadraticEquations	Math	Div1	L2	11.11
+6834	PostfixRLE	Dynamic Programming,  Encryption/Compression,  Graph Theory,  String Parsing	Div1	L3	0
+6835	Multifactorial	Simple Math,  Simple Search,  Iteration	Div2	L2	22.19
+6844	RepeatedAddition	Math	Div1	L3	40
+6845	RPSChamps	Dynamic Programming,  Math	Div1	L3	89.55
+6851	Chomp	Dynamic Programming	Div1	L2	83.83
+6852	BlockEnemy	Dynamic Programming,  Graph Theory,  Greedy,  Search,  String Parsing	Div1	L2	70.59
+6854	ScoreDifference	Dynamic Programming,  Recursion,  String Parsing	Div2	L3	46.67
+6855	MarbleNecklace	Simple Search,  Iteration,  Sorting,  String Manipulation	Div2	L1	69.39
+6856	LongLongNim	Math,  Search	Div1	L3	44.66
+6859	Postnet	Simulation	Div1	L2	82.35
+6860	CCWTurning	Geometry,  Recursion	Div1	L2	23.08
+6861	Amazing	Brute Force,  Search	Div1	L3	66.67
+6865	Architects	Search	Div1	L2	0
+6866	ChessTraining	Advanced Math,  Dynamic Programming	Div1	L3	39.34
+6867	Touchdown	Dynamic Programming	Div1	L3	16.67
+6868	SuperPasture	Brute Force,  Search,  String Parsing	Div1	L3	33.33
+6871	NiceOrUgly	Dynamic Programming	Div2	L3	6.67
+6872	FunnyFence	Simple Search,  Iteration,  String Manipulation	Div2	L1	85.24
+6873	Surname	Brute Force,  Simple Search,  Iteration	Div1	L1	96.23
+6874	NextBetter	Search,  Sorting	Div1	L3	0
+6876	ValidPlates	Dynamic Programming,  Geometry,  Math	Div1	L3	11.11
+6877	TurtleGraphics	Brute Force,  Geometry	Div1	L2	66.67
+6879	PaperRacing	Geometry,  Search	Div1	L3	5.56
+6882	SwappingMarbles	Brute Force,  Simple Search,  Iteration	Div1	L1	96.97
+6883	ForestGarbage	Dynamic Programming	Div1	L3	80.65
+7237	BoulderRace	Simulation	Div1	L1	92.41
+7238	StoneGame	Math,  Sorting	Div1	L2	43.07
+7239	ByteLand	Graph Theory,  Greedy	Div1	L3	5
+7241	Staircase	Dynamic Programming	Div1	L3	78.69
+7243	RailroadSeatNumeration	Simple Math,  Simple Search,  Iteration	Div2	L2	29.22
+7244	ExtendedHappyNumbers	Dynamic Programming,  Math	Div2	L3	15.79
+7245	KnightTour	Simple Math,  Simulation	Div2	L2	84.41
+7246	Terrorists	Graph Theory	Div1	L3	68.46
+7247	NewMagicSquare	Math	Div1	L3	50.68
+7248	RemissiveSwaps	Brute Force,  Graph Theory	Div1	L2	44.64
+7249	EncodedSum	Math	Div1	L1	58.4
+7250	LightsCube	Brute Force,  Simple Math,  Simple Search,  Iteration,  Simulation	Div2	L2	82.05
+7252	VolleyballTournament	Simple Math	Div1	L1	61.23
+7255	PrefixFreeSubsets	Dynamic Programming,  Sorting	Div1	L2	77.53
+7256	Arrows	Search,  String Manipulation	Div2	L2	51.82
+7257	NextPalindromicNumber	Simple Math,  String Manipulation	Div2	L3	25.44
+7258	CarParking	Brute Force,  Search,  Simulation	Div1	L2	41.25
+7259	ChessboardPattern	Simple Search,  Iteration,  String Manipulation	Div2	L1	93.61
+7260	TableLabel	String Manipulation	Div1	L2	43.64
+7261	ChristmasTree	Brute Force	Div2	L3	55.77
+7262	FibonacciSequence	Brute Force,  Recursion	Div1	L1	88.83
+7263	Sortness	Search	Div2	L1	98.57
+7265	HiddenSquares	Geometry	Div1	L3	86.32
+7266	SantaGifts	Simulation,  String Manipulation	Div2	L1	84.32
+7270	SwampyLands	Search	Div1	L3	61.9
+7271	AnagramCompletion	Greedy,  Simple Search,  Iteration,  String Manipulation	Div1	L2	79.17
+7272	AnswerEvaluation	Simple Search,  Iteration,  String Manipulation,  String Parsing	Div1	L1	59.57
+7276	ManyNumbers	Brute Force	Div1	L1	96.4
+7277	TextStatistics	Brute Force,  Simple Math	Div2	L1	55.79
+7278	GoodExhibition	Simple Search,  Iteration,  Sorting	Div1	L1	92.95
+7279	Palindromize	Greedy,  Search	Div2	L1	81.9
+7280	CarolsSinging	Brute Force,  Graph Theory	Div2	L2	57.14
+7288	GoodAndBadPostmen	Simulation	Div1	L2	45.64
+7289	RandomSwaps	Dynamic Programming,  Math	Div1	L2	86.24
+7290	VowelEncryptor	String Manipulation	Div2	L1	88.02
+7291	BirthNumbersValidator	Simple Math	Div2	L2	33.64
+7294	RepeatedPatterns	Greedy	Div2	L3	0
+7295	ThreeBuses	Geometry,  Math	Div1	L3	25
+7296	DifDif	Math	Div1	L1	97.58
+7305	DirPattern	String Manipulation	Div1	L1	93.4
+7306	TooManyBugs	Greedy	Div1	L3	89.25
+7308	MoreBlack	Graph Theory,  Greedy,  String Parsing	Div1	L3	81.82
+7309	CreatePairs	Greedy,  Simple Math,  Sorting	Div2	L2	35.88
+7310	KingMovement	Simulation	Div1	L2	72.03
+7312	Prefixes	Sorting,  String Manipulation	Div1	L2	82.51
+7313	ServiceNames	Sorting,  String Manipulation	Div2	L2	55.04
+7316	Destruction	Dynamic Programming,  Math	Div1	L3	83.16
+7318	ProdCalc	Simple Math,  Simulation	Div1	L2	69.23
+7321	CompressedString	Recursion	Div1	L2	54.17
+7323	Squares	Search,  Simple Math	Div2	L3	17.27
+7329	AdaptiveRouting	Graph Theory,  Simulation	Div1	L3	29.41
+7330	Armies	Simulation,  Sorting	Div1	L2	57.62
+7331	BrickMystery	String Manipulation	Div1	L1	93.03
+7332	FairTournament	Dynamic Programming	Div1	L3	84.62
+7335	VotingBloc	Graph Theory	Div1	L3	36.63
+7336	Shadow	Geometry	Div1	L3	27.78
+7337	ExpensiveTravel	Graph Theory	Div1	L2	41.34
+7342	BadExam	Simple Math,  Simulation	Div1	L1	98.25
+7343	ZenoDivision	Math,  Simple Search,  Iteration	Div1	L1	75.09
+7347	WordSplit	Dynamic Programming	Div1	L2	50.46
+7350	MostLikely	Simple Math,  Simple Search,  Iteration	Div2	L3	15.28
+7351	LikelyWord	Math,  Search,  Sorting	Div1	L2	22.52
+7352	Neaten	Math,  Search,  String Manipulation	Div1	L3	20
+7353	EscapeTheJail	Math	Div1	L3	11.96
+7357	Overhang	Geometry	Div1	L2	100
+7358	SupermarketDiscount	Brute Force	Div2	L1	67.52
+7363	MinimumVariancePartition	Dynamic Programming,  Math,  Sorting	Div2	L3	47.06
+7374	HighwayJam	Simulation	Div1	L2	66.94
+7375	YankeeSwap	Search	Div1	L3	92.5
+7384	RandomFights	Math,  Sorting	Div1	L3	70.91
+7385	BinaryIncrementation	Simple Math,  String Manipulation	Div2	L1	95.5
+7386	ImprovingStatistics	Brute Force,  Simple Math,  Simple Search,  Iteration	Div2	L2	19.04
+7387	NewOperator	Brute Force,  Search	Div2	L3	0
+7388	AcidRain	Dynamic Programming	Div1	L3	25
+7397	KLastNonZeroDigits	Simple Math	Div2	L2	83.42
+7406	Palindromize2	Greedy,  Search	Div2	L1	93.49
+7407	AnagramList	Math,  Recursion	Div2	L3	55.77
+7408	CommonMultiples	Simple Math	Div2	L2	25.26
+7410	DegreesToRadians	Simple Math	Div2	L1	95.14
+7411	TagalogDictionary	Sorting,  String Manipulation	Div2	L2	75.96
+7412	DrivingAround	Graph Theory,  Simulation	Div1	L3	48.39
+7413	ReverseUnnaturalBaseConversion	Math	Div2	L3	75.71
+7415	ReverseResources	Dynamic Programming,  String Parsing	Div1	L2	55.74
+7417	CardStraights	Search,  Sorting	Div2	L2	24.2
+7418	CountPalindromes	Dynamic Programming	Div1	L3	40.74
+7420	BusTrip	Simple Search,  Iteration,  Simulation,  String Parsing	Div2	L2	62.35
+7421	BettingStrategy	Simple Search,  Iteration,  Simulation	Div2	L1	57.75
+7422	TestBettingStrategy	Dynamic Programming,  Recursion,  Simple Math	Div1	L2	81.67
+7423	OnTime	Dynamic Programming,  Search,  String Parsing	Div2	L3	52.38
+7424	CakeParty	Greedy,  Math	Div1	L3	44.23
+7425	TrafficReport	String Parsing	Div1	L1	92.65
+7428	SpecialDay	Simulation	Div1	L2	66.28
+7429	HowManyBirthdays	Simulation	Div1	L1	86.89
+7473	BuildingAdvertise	Search,  Sorting	Div1	L2	60.62
+7474	ChangeReport	Sorting	Div1	L2	56.36
+7476	CDPlayer	Brute Force	Div2	L2	45.6
+7479	Alarmed	Geometry,  Search	Div1	L3	26.32
+7481	FibonacciKnapsack	Dynamic Programming,  Math	Div1	L2	12.77
+7494	TwoTrains	Simple Search,  Iteration	Div1	L2	88.64
+7495	WordConnect	Graph Theory	Div1	L3	38.46
+7496	Provinces	Search,  String Parsing	Div1	L3	80
+7500	SortingPhotos	Simple Search,  Iteration	Div1	L2	76.92
+7501	LongestSubanagramChain	Greedy,  Search,  Sorting	Div1	L2	77.12
+7502	MultiprocessorProgramming	Math	Div1	L3	31.03
+7503	CssPropertyConverter	String Manipulation	Div2	L1	95.9
+7504	ProblemsToSolve	Dynamic Programming	Div2	L2	14.13
+7505	CsCourses	Graph Theory	Div2	L3	4.17
+7506	MedievalCity	Graph Theory	Div1	L3	52.63
+7507	VegetableGarden	Graph Theory	Div1	L3	66.67
+7509	Mafia	Brute Force	Div2	L3	12.96
+7512	LandAndSea	Graph Theory,  Search	Div2	L3	3.85
+7514	FamilyTravel	Dynamic Programming,  Graph Theory	Div1	L3	61.9
+7515	CountingCrowds	Simple Search,  Iteration,  Simulation	Div1	L2	93.41
+7518	DigitMask	String Manipulation	Div1	L2	60.87
+7520	NavalBattle	Dynamic Programming	Div1	L2	21.03
+7521	RoadCrossing	Simple Math,  Simulation	Div1	L2	37.89
+7522	CrazyCompetition	Search	Div1	L3	30.3
+7523	TriangleConstruction	Simple Math,  Simple Search,  Iteration	Div1	L1	97.37
+7525	SearchDisks	Simple Search,  Iteration,  String Parsing	Div1	L1	100
+7528	StringOfNumbers	Greedy,  String Manipulation	Div1	L2	65.62
+7533	PersistentNumber	Simple Search,  Iteration	Div2	L1	83.89
+7534	PipePatcher	Greedy	Div1	L2	89.47
+7535	LargestCountry	Simple Search,  Iteration	Div1	L1	86.27
+7536	ChangingSeats	Simple Search,  Iteration	Div1	L2	92.5
+7537	GamesSchedule	Dynamic Programming	Div1	L3	50
+7538	BasketballStandings	Math	Div1	L2	90.67
+7539	Tetrahedron	Geometry,  Math	Div1	L2	39.26
+7540	QuantumAlchemy	Simulation	Div2	L3	9.64
+7541	MetroNetwork	Dynamic Programming,  Graph Theory	Div1	L3	25
+7544	SortMaterials	Simple Math,  String Parsing	Div1	L1	92.71
+7546	CellularPhoneTarif	Simple Math	Div1	L1	93.33
+7547	PulseDial	String Parsing	Div1	L2	73.81
+7549	FireSimulation	Simulation	Div1	L3	75
+7552	EntertainingSegment	Sorting	Div1	L2	64.04
+7553	DigramAnalysis	Simple Search,  Iteration,  String Manipulation	Div1	L2	35.71
+7554	PowerOfInteger	Math,  Search,  Simple Math	Div1	L1	70.16
+7555	BrokenKeyboardRepair	Simple Search,  Iteration	Div1	L1	97.06
+7556	ColorfulDisks	Search,  Sorting,  String Parsing	Div1	L2	86.21
+7557	AlmostPerfectNumber	Simple Math,  Simple Search,  Iteration	Div1	L1	85.21
+7558	AdvertisingAgency	Simple Search,  Iteration	Div1	L1	100
+7563	YahtzeeAdversary	Brute Force,  Math	Div1	L3	33.33
+7565	FractionPoints	Advanced Math,  Recursion,  Sorting	Div1	L2	52
+7570	ItemizedList	Simple Search,  Iteration	Div1	L1	94.12
+7571	Turnpike	Search	Div1	L1	62.79
+7572	FrequentPairs	String Manipulation	Div1	L1	85
+7575	HittingPerfectTarget	Brute Force,  Geometry,  Math,  Simple Search,  Iteration	Div1	L3	83.33
+7576	Chessboard	Simple Math	Div2	L1	47.62
+7583	ImageTraders	Dynamic Programming,  Graph Theory	Div2	L3	19.76
+7584	FlightScheduler	Math,  Search	Div1	L2	35.5
+7585	ChangingString	Brute Force,  String Manipulation	Div2	L1	78.54
+7587	BagsQuiz	Graph Theory,  Simulation,  String Parsing	Div2	L3	56.1
+7591	NumberFormatter	String Manipulation	Div1	L2	65.45
+7593	StarsInGraphs	Dynamic Programming,  Graph Theory,  Math,  Search	Div1	L2	44.44
+7594	QuoteContest	Simple Search,  Iteration,  String Parsing	Div1	L1	98.41
+7600	TournamentsAmbiguityNumber	Brute Force,  String Parsing	Div1	L1	97.06
+7601	DiceGames	Dynamic Programming,  Math	Div1	L2	84.82
+7602	BooksNumbering	Simple Math,  Simple Search,  Iteration	Div1	L2	93.33
+7606	DistanceBetweenStrings	Simple Math,  String Manipulation	Div2	L1	60.24
+7607	Kings	Simple Search,  Iteration,  String Manipulation	Div1	L1	92.5
+7609	DividingRectangle	Brute Force	Div1	L2	77.78
+7612	CandyBoxes	Simple Search,  Iteration,  Simulation	Div1	L1	100
+7613	SumsOfPerfectPowers	Simple Math,  Simple Search,  Iteration	Div2	L2	38.26
+7614	BusyTime	Greedy,  Simple Search,  Iteration	Div1	L1	58.33
+7615	Defects	Math,  Simple Search,  Iteration	Div1	L1	60.5
+7619	Bigital	Brute Force,  String Parsing	Div1	L2	89.89
+7620	MinimumTours	Graph Theory,  Search	Div1	L3	0
+7621	ToolingUp	Math,  Search	Div1	L2	16.67
+7622	Candles	Math	Div1	L2	49.27
+7625	SimpleRotationDecoder	Brute Force,  Encryption/Compression,  String Manipulation	Div2	L2	57.92
+7627	BuildATeam	Simple Search,  Iteration	Div1	L1	94.93
+7633	TaxiManager	Dynamic Programming,  Search	Div2	L3	22.22
+7634	Snaky	Simple Search,  Iteration	Div1	L1	75.47
+7636	BalancingGame	Dynamic Programming,  Math	Div1	L3	38.89
+7641	BuildTheBestTeam	Dynamic Programming	Div1	L3	33.91
+7642	PacketRepack	Simple Math	Div1	L1	88.35
+7643	CableDonation	Graph Theory,  Greedy	Div1	L2	62.89
+7648	SafeDrive	Greedy,  Search,  Simulation	Div1	L3	22.58
+7649	Pathfinding	Geometry,  Simple Math	Div2	L2	23.21
+7650	Trekking	Simple Search,  Iteration,  String Manipulation	Div2	L1	88.85
+7652	CarBuyer	Simple Math,  Sorting	Div2	L1	80.73
+7654	DateFormat	Simulation,  String Parsing	Div2	L2	29.86
+7657	SchoolTrip	Dynamic Programming,  Math,  Recursion	Div1	L2	60.83
+7658	RooksPlacement	Dynamic Programming	Div1	L3	80.15
+7659	Library	Brute Force,  String Manipulation,  String Parsing	Div1	L2	60
+7660	SumoTournament	Dynamic Programming,  Simple Math,  Simple Search,  Iteration	Div1	L3	24
+7668	FourSubstrings	Simple Search,  Iteration	Div1	L3	62.9
+7670	RaceTrack	Greedy,  Search	Div1	L2	51.19
+7671	AntiPalindrome	Simple Math,  Simple Search,  Iteration,  String Manipulation	Div1	L1	40.79
+7672	AmbiguousWatch	Advanced Math,  Geometry	Div1	L3	29.46
+7681	DiamondHunt	Simulation,  String Manipulation	Div2	L1	82.01
+7682	HeightRound	Dynamic Programming	Div1	L2	30.19
+7683	Meteorites	Geometry	Div1	L3	35.85
+7684	FastPostman	Dynamic Programming	Div2	L3	7.84
+7692	SquareCypher	Simulation	Div1	L1	91.18
+7694	CyclicWords	Simple Search,  Iteration,  String Manipulation	Div2	L1	78.9
+7701	CropCircles	Brute Force,  Geometry	Div1	L2	36.73
+7702	DriveFailures	Brute Force	Div2	L2	89.63
+7703	RaceOrdering	Dynamic Programming,  Graph Theory,  Simple Math	Div1	L3	39.35
+7705	SameDigits	Dynamic Programming	Div2	L3	0
+7707	CricketScores	Simple Search,  Iteration	Div2	L1	94.64
+7708	Factorer	Math,  Search	Div1	L2	66.67
+7716	BrokenButtons	Brute Force,  Simple Math	Div2	L2	8.43
+7721	DayTrader	Simple Math	Div1	L1	100
+7726	ChessMatchup	Sorting	Div1	L2	79.72
+7731	TeamSelection	Brute Force	Div1	L1	89.29
+7733	PolishNotation	Dynamic Programming,  Math,  String Manipulation	Div1	L1	91.67
+7735	MaximizeSquares	Geometry,  Greedy,  Math	Div2	L2	69.15
+7738	SimilarPairs	Brute Force,  Search	Div1	L3	13.33
+7741	Aircraft	Geometry,  Simple Math,  Simulation	Div2	L2	11.51
+7743	SortingInIterations	Simple Math,  Simple Search,  Iteration	Div1	L2	62.5
+7744	NotationLength	Math	Div1	L2	78.48
+7746	TransposeMyMusic	Simple Search,  Iteration	Div1	L2	70
+7747	GuitarConcert	Search	Div1	L2	62.44
+7748	BrokenStrings	Greedy	Div1	L1	75.71
+7751	NormalizingTrees	Graph Theory,  Greedy,  Recursion	Div1	L3	21.82
+7752	OptimalList	Greedy,  Simulation	Div2	L1	90.1
+7753	IncreasingSubsequences	Dynamic Programming	Div2	L3	44.68
+7754	LostParentheses	Greedy	Div2	L2	71.22
+7756	PowerGame	Dynamic Programming	Div1	L3	25
+7759	NoEights	Simple Math	Div2	L2	28.43
+7760	RailwayTickets	Search,  Sorting	Div1	L2	49
+7761	BeautifulHexagonalTilings	Brute Force,  Search	Div1	L3	46.67
+7763	DocumentSearch	Simple Search,  Iteration,  String Manipulation	Div2	L1	70.75
+7766	RadarFinder	Geometry,  Math	Div2	L2	8.97
+7768	WorstCaseQuicksort	Dynamic Programming,  Greedy	Div1	L3	0
+7769	DifferentPokerHands	Brute Force	Div1	L2	55.56
+7770	SoccerCommentator	Simple Math	Div1	L2	70.21
+7772	BoxesArrangement	Dynamic Programming	Div1	L2	71.43
+7773	CoinsExchange	Simulation	Div2	L2	17.87
+7774	Thimbles	Simulation	Div2	L1	96.31
+7777	AttendanceShort	Simple Search,  Iteration	Div2	L1	84.2
+7783	FreeGuitars	Graph Theory	Div1	L3	83.33
+7787	PointsOnCircle	Math,  Simple Search,  Iteration	Div1	L2	41.18
+7788	PlaneDivision	Advanced Math,  Geometry,  Graph Theory	Div1	L3	62
+7791	Shapes	Brute Force,  Recursion,  String Parsing	Div1	L3	11.11
+7794	GirlsAndBoys	Greedy	Div1	L1	93.08
+7803	SortInsideNumber	Sorting	Div1	L1	95.74
+7805	SimpleTextProcessor	String Manipulation	Div1	L1	96.77
+7806	ZeroesAndOnesGrid	Greedy	Div1	L2	93.33
+7808	RoadsReorganization	Dynamic Programming	Div1	L3	13.04
+7810	DeviceProgramming	Dynamic Programming,  Simple Math	Div1	L2	60.7
+7811	MutateTree	Recursion	Div1	L2	66.17
+7814	LineOfDice	Math	Div1	L2	90.91
+7816	WSNParentsAssignment	Graph Theory	Div1	L3	21.67
+7817	NestedDiamonds	Math,  Search	Div1	L3	24.24
+7822	RaceManagement	Math,  Recursion	Div2	L3	29.53
+7827	LateForConcert	Graph Theory	Div1	L3	54.44
+7828	BigWheels	Dynamic Programming,  Math	Div1	L2	41.67
+7831	ExploringHoneycombs	Graph Theory	Div1	L3	37.5
+7832	WallClimbing	Geometry,  Graph Theory	Div1	L3	26.32
+7833	RandomShuffle	Brute Force,  Search	Div1	L3	53.85
+7834	SharksDinner	Graph Theory	Div1	L3	36.96
+7838	Glossary	String Parsing	Div2	L2	61.09
+7839	EllipseCoverage	Geometry,  Simple Math	Div2	L1	81.15
+7843	FurnitureRobbery	Dynamic Programming	Div1	L3	0
+7845	BalanceScale	Brute Force,  Math	Div1	L2	44.02
+7846	MarbleTop	Search,  Sorting	Div1	L3	20.59
+7847	PlatformJumper	Dynamic Programming,  Search,  Simple Math	Div2	L3	26.73
+7848	Rafting	Brute Force,  Geometry	Div1	L2	0
+7849	RepeatingFreeStrings	Advanced Math	Div1	L3	0
+7850	BestHotel	Sorting	Div1	L1	75.44
+7854	BubbleSortIterations	Sorting	Div1	L3	85.47
+7855	TwoWords	Brute Force,  String Manipulation	Div1	L2	43.66
+7856	ArithmeticProgressions	Math,  Search	Div1	L2	47.37
+7858	AuctionHouse	Simple Search,  Iteration,  String Parsing	Div1	L2	80.43
+7860	RelabelingOfGraph	Graph Theory	Div1	L3	13.9
+7862	UTF8Decode	Encryption/Compression,  Simple Search,  Iteration	Div2	L3	20
+7863	NumberOfDivisors	Dynamic Programming,  Math	Div1	L3	39.13
+7867	AlmostPrime	Math,  Simple Search,  Iteration	Div1	L3	26.67
+7868	HandsShaking	Advanced Math,  Dynamic Programming	Div2	L2	52.22
+7869	MirrorNumber	Recursion,  Search,  Simple Math	Div1	L2	46.18
+7875	SumOfSelectedCells	Math	Div2	L2	9.87
+7876	PrinceOfPersia	Graph Theory,  Search	Div1	L2	45.14
+7877	ConvexArray	Geometry,  Search	Div1	L3	53.57
+7880	Inc	Dynamic Programming	Div1	L3	66.67
+7881	CostMatrix	Graph Theory,  Greedy	Div1	L1	93.75
+7883	SkipList	Dynamic Programming	Div1	L3	0
+7884	CrazyComponents	Dynamic Programming,  Math,  String Parsing	Div2	L3	31.25
+7886	MixingLiquids	Sorting	Div2	L3	19.54
+7888	FancyGUI	Brute Force,  Geometry,  Simple Search,  Iteration	Div1	L1	88.1
+7891	NowhereLand	Graph Theory	Div1	L3	70.71
+7894	ValueAddedTax	Simple Math	Div2	L1	95.74
+7901	AverageProblem	Brute Force,  Simple Math,  Simple Search,  Iteration	Div2	L2	2.46
+7902	TrianglesBoard	Search,  String Manipulation	Div1	L3	38.24
+7920	MissingDigits	Brute Force,  Math	Div1	L1	75.41
+7921	RoadReconstruction	Graph Theory,  Sorting,  String Parsing	Div2	L3	42.86
+7927	PackageDelivery	Dynamic Programming	Div1	L3	45.83
+7929	SMSLanguage	String Parsing	Div2	L1	62.44
+7952	SortingWithPermutation	Sorting	Div1	L1	93.57
+7953	EscapeArtist	Brute Force,  Dynamic Programming,  Graph Theory,  Math,  Recursion,  Search	Div1	L3	9.09
+7955	NumbersGame	Sorting	Div1	L2	88.14
+7967	JohnnysPhone	Dynamic Programming,  String Manipulation	Div1	L3	30
+7968	DogAndRabbit	Math	Div1	L2	1.96
+7973	ChangingSounds	Dynamic Programming	Div1	L2	87.5
+7992	BattleDice	Math,  String Parsing	Div1	L2	70
+7994	CoolNumber	Brute Force,  Recursion,  Simple Search,  Iteration	Div1	L3	81.82
+7995	GameOfEight	Graph Theory,  Simple Search,  Iteration	Div1	L3	68.32
+8000	GreedyGlob	Search,  Simulation	Div1	L3	18.18
+8002	DecreasingNumbers	Brute Force,  Sorting	Div1	L3	61.76
+8004	SquareFreeNumbers	Math	Div1	L2	55.44
+8005	RoundOfEleven	Dynamic Programming	Div1	L2	76.12
+8009	ReverseDistance	Greedy,  Math,  Search	Div1	L2	15.45
+8010	WhiteHats	Brute Force,  Simple Math,  Simple Search,  Iteration	Div2	L2	42.51
+8012	GridColoring	Math	Div1	L3	87.14
+8014	Election	Greedy,  Sorting	Div2	L3	46.88
+8015	CoolRectangles	Geometry,  Graph Theory,  Greedy,  Math	Div1	L3	66.67
+8016	DrawingMarbles	Math	Div1	L2	71.15
+8017	CastleGuards	Simple Search,  Iteration	Div1	L1	83.02
+8018	EvenOnes	Simple Math	Div1	L3	69.32
+8019	SearchBox	Simple Search,  Iteration,  String Manipulation	Div2	L1	25.15
+8020	MonkeyTreeDistance	Greedy,  Math,  Search	Div1	L3	5.88
+8023	VectorMatching	Brute Force,  Geometry	Div1	L3	69.84
+8025	WeighingScale	Graph Theory,  Search	Div1	L3	36
+8026	TakeSubstringGame	Dynamic Programming,  Simple Math	Div2	L3	35.19
+8027	AzimuthMonitoring	Simple Math,  String Manipulation	Div2	L1	72.24
+8030	BinaryPowerBishop	Brute Force,  Greedy	Div1	L3	66.67
+8036	PaperGame	Dynamic Programming,  Simple Search,  Iteration	Div1	L2	62.96
+8037	NamesList	Brute Force,  Simple Search,  Iteration	Div1	L1	71.43
+8039	PaperScraps	Brute Force	Div1	L3	0
+8041	MountainMap	Brute Force,  Dynamic Programming,  Simple Math	Div1	L3	14.29
+8043	IsoscelesTriangles	Brute Force,  Simple Math	Div1	L2	83.33
+8045	MarbleMachine	Math,  Simulation	Div1	L2	21.85
+8047	Caketown	Simulation	Div1	L1	63.86
+8048	PartialSeries	Dynamic Programming,  Search	Div1	L2	18.75
+8049	SongsList	Greedy,  Simple Search,  Iteration	Div1	L1	100
+8051	RectangleCrossings	Brute Force,  Geometry,  String Parsing	Div1	L3	33.33
+8054	LibraryWorker	Greedy,  Simulation	Div1	L2	76.74
+8055	Secretary	Sorting,  String Manipulation	Div1	L1	91.04
+8056	SignificanceArithmetic	Search,  Simple Math,  Simulation	Div2	L3	8.33
+8058	MirroredClock	Simple Math,  String Parsing	Div2	L1	68.1
+8059	VegetableField	Brute Force,  Simple Search,  Iteration	Div1	L1	84.62
+8060	Paintball	Sorting,  String Parsing	Div2	L2	80.43
+8062	PowerPlants	Dynamic Programming,  Search	Div2	L3	42.86
+8064	CrazySequence	Math,  Search	Div1	L2	41.94
+8065	RainyDay	Greedy	Div1	L3	73.53
+8066	CatchTheMice	Brute Force,  Geometry,  Math,  Search	Div1	L2	44.24
+8070	JoshSum	Brute Force,  Math	Div1	L2	90
+8077	ThrowTheBall	Simulation	Div2	L1	91.74
+8084	IntervalSubsets	Dynamic Programming	Div1	L2	76.58
+8086	StrangeArray	Math,  Recursion	Div1	L3	69.49
+8087	StringFragmentation	String Manipulation	Div1	L2	56.52
+8088	PaperUnfolding	Recursion	Div1	L3	63.38
+8094	JoshString	Brute Force,  Simple Math,  String Parsing	Div1	L1	65.96
+8096	DecreasingNumber	Dynamic Programming,  Search	Div1	L2	78.95
+8098	SquareConstruction	Simulation	Div1	L1	95.66
+8099	ColorApproximation	Simple Math,  String Manipulation	Div1	L2	76.32
+8101	OptimalGroupMovement	Simple Math,  Simple Search,  Iteration	Div1	L2	74.72
+8108	Pawns	Brute Force,  Simple Search,  Iteration	Div1	L1	89.39
+8109	KingsTour	Brute Force,  Dynamic Programming,  Simple Search,  Iteration	Div1	L3	55.17
+8110	LetterInterchange	Search,  String Manipulation	Div1	L1	60
+8111	RLESum	Math	Div1	L2	38.16
+8114	ComplementaryDNAChains	Simple Math	Div1	L1	99.55
+8118	MovieRating	Simple Math,  Sorting	Div1	L1	99
+8120	RangeFixer	Search	Div1	L3	0
+8121	WebBrowser	Simulation	Div1	L1	89.66
+8136	GrandpaField	Dynamic Programming	Div1	L3	52.94
+8137	MajorityElement	Brute Force	Div1	L1	74.71
+8140	CommonFactors	Brute Force,  Simple Math	Div1	L2	45.36
+8141	SolvingEquation	Simple Search,  Iteration	Div1	L1	78.5
+8142	BlackWhiteRectangles	Geometry,  Simple Math	Div1	L3	41.89
+8143	RadarGuns	Dynamic Programming,  Search	Div1	L3	46.22
+8144	MyFriends	Graph Theory,  Greedy,  Math	Div1	L3	20.17
+8146	ConstructionFromMatches	Dynamic Programming	Div1	L3	76.96
+8148	LazyCat	Greedy	Div1	L1	46.42
+8149	FrabonacciTree	Recursion	Div1	L1	55.47
+8150	TristripeBacteria	Search	Div1	L2	33.19
+8151	CommonSubsequence	Simple Search,  Iteration	Div1	L3	85.71
+8152	MorselikeCode	Encryption/Compression	Div2	L1	94.15
+8154	KSubstring	Greedy,  Simple Math,  Sorting	Div1	L2	36.24
+8155	SoftwareCompanies	Graph Theory	Div1	L3	50
+8157	CountExpressions	Brute Force,  Simple Math	Div2	L2	90.89
+8158	CountPaths	Dynamic Programming	Div1	L2	73.35
+8159	DogField	Brute Force,  Graph Theory	Div1	L3	57.69
+8160	MatchString	Greedy,  Simple Search,  Iteration,  String Manipulation	Div2	L3	46.02
+8161	MinDifference	Simple Search,  Iteration,  Sorting	Div2	L1	83.24
+8162	KSlopePermutation	Dynamic Programming	Div1	L3	60.87
+8169	FlashFlood	Geometry,  Math	Div1	L2	80
+8171	SerialNumbers	Sorting,  String Parsing	Div1	L1	57.14
+8174	TVGame	Advanced Math	Div1	L3	30.56
+8175	IsomorphicWords	Simple Search,  Iteration,  String Manipulation	Div2	L2	84.21
+8177	PickGuitars	Recursion,  Search	Div1	L3	50
+8178	AbsSequence	Math,  Simple Search,  Iteration	Div1	L2	23.21
+8179	IsoscelesTriangulations	Dynamic Programming	Div1	L3	46.67
+8180	CoolFunction	Simple Math	Div1	L1	44.44
+8181	ObtainingDigitK	Greedy	Div1	L2	41.3
+8183	LameKnight	Greedy	Div1	L2	43.16
+8185	ConnectTheCities	Dynamic Programming,  Search	Div1	L2	58.2
+8186	Containers	Simulation	Div1	L1	76.32
+8187	LinearCity	Graph Theory	Div1	L2	70
+8192	ChainOfRectangles	Simple Math	Div1	L1	89.66
+8193	BeautifulString	Simple Math,  Simple Search,  Iteration	Div1	L2	38
+8195	StudentEnrollment	Brute Force,  String Manipulation	Div1	L1	97.27
+8197	TaliluluCoffee	Greedy	Div1	L2	95.16
+8199	Prank	Simple Math	Div1	L1	47.06
+8202	KeysInBoxes	Simple Math	Div1	L2	71.43
+8204	WhiteCells	Simple Search,  Iteration	Div1	L1	98
+8205	SausagesProductionScheduler	Dynamic Programming,  Search	Div1	L2	37.5
+8211	Barracks	Math,  Simple Search,  Iteration,  Simulation	Div1	L3	23.26
+8212	ProgrammingDevice	Greedy	Div1	L3	27.59
+8213	DecorationDay	Dynamic Programming	Div1	L3	66.23
+8215	RevealTriangle	Simple Math	Div2	L2	81.96
+8216	ReadingBooks	Greedy,  Simple Search,  Iteration	Div2	L1	56.89
+8221	ArithmeticalMean	Brute Force,  Search,  Simple Math	Div1	L3	37.5
+8222	DietPlan	String Parsing	Div1	L1	96.43
+8223	RoadConstruction	Simulation	Div1	L2	80.7
+8224	HockeyFault	Geometry	Div1	L1	86.67
+8225	PlayerExtraction	Sorting,  String Manipulation	Div1	L3	100
+8228	CompilingDecksWithJokers	Greedy,  Search	Div1	L3	3.51
+8238	PointsOnACircle	Greedy,  Search,  Sorting	Div1	L2	24.07
+8239	FoodCollecting	Simple Math,  Simple Search,  Iteration	Div1	L2	38.24
+8240	CondorcetVoting	Simple Search,  Iteration	Div1	L1	47.73
+8241	PirateTreasure	Geometry,  Simulation	Div1	L1	82.46
+8242	RandomWalks	Simple Search,  Iteration,  Simulation	Div1	L1	100
+8243	FloodRelief	Graph Theory,  Recursion	Div1	L3	91.67
+8244	TurningLightOn	Greedy,  Simulation	Div1	L2	72.22
+8245	JumpingBoard	Graph Theory,  Recursion,  Search	Div1	L3	45.83
+8246	UnfriendlyMultiPermutation	Dynamic Programming	Div1	L2	75
+8247	BinaryCodes	Graph Theory,  Search,  String Manipulation	Div1	L3	5.56
+8248	AncientLanguage	Graph Theory,  String Manipulation	Div1	L3	37.5
+8249	PolylineUnion	Brute Force,  Geometry	Div1	L2	32.03
+8250	DriveCar	Dynamic Programming,  Graph Theory	Div1	L2	66.1
+8252	YoungBrother	Simple Search,  Iteration,  String Manipulation	Div1	L1	78.57
+8253	Police	Graph Theory,  Greedy	Div1	L1	87.5
+8254	Polygon	Geometry,  Search	Div1	L3	50
+8256	CardsAndSlots	Search	Div1	L1	75
+8260	TraditionalMarriage	Dynamic Programming	Div1	L2	39.58
+8261	JollyJumpers	Math,  Simulation	Div1	L3	20
+8262	SpiralRoute	Simple Math	Div1	L2	82.14
+8265	ThreeWatchtowers	Brute Force,  Geometry	Div1	L3	6.67
+8266	OddGraph	Advanced Math,  Graph Theory	Div1	L2	71.43
+8267	DateFieldCorrection	Graph Theory,  Simple Search,  Iteration	Div1	L2	56.62
+8268	DukeOnChessBoard	Greedy,  Search	Div1	L2	90.91
+8269	MixtureDensity	Simple Math,  String Manipulation	Div1	L1	79.31
+8273	SolvePolynomial	Advanced Math	Div1	L2	13.61
+8275	PyramidPuzzle	Geometry,  Simulation	Div1	L3	50
+8277	RandomRide	Simulation	Div1	L1	85.71
+8279	TransformingArray	Simple Math,  Simple Search,  Iteration	Div1	L2	70.65
+8282	TwistyPassages	Graph Theory	Div1	L3	12.9
+8284	CommercialPlanner	Search	Div1	L3	7.8
+8288	Unjumpers	Greedy	Div1	L3	56.86
+8291	Transformation	Math	Div1	L3	32.91
+8292	FactoryEmulation	Brute Force,  Simulation	Div1	L3	25
+8295	CardsShuffle	Simple Math	Div1	L1	97.37
+8300	FingerCounting	Brute Force,  Simple Math,  Simple Search,  Iteration,  Simulation	Div2	L1	84.73
+8302	ConsecutiveNumbers	Brute Force,  Simple Search,  Iteration,  Sorting	Div2	L2	24.75
+8303	HanoiState	Recursion,  Simulation	Div1	L3	69.23
+8304	TwoRotationCypher	Simulation,  String Manipulation	Div1	L1	94.29
+8306	ReliefMeasuring	Dynamic Programming	Div1	L3	50
+8307	SetOfPatterns	Advanced Math,  Dynamic Programming,  String Manipulation	Div2	L3	0.79
+8310	WordAbbreviation	Simple Search,  Iteration,  String Manipulation	Div2	L1	82.8
+8312	TowersAttack	Geometry,  Search	Div1	L3	69.09
+8313	DepositProfit	Math	Div1	L1	70.93
+8314	DreamingAboutCarrots	Geometry,  Simple Math	Div2	L1	36.2
+8315	ParticleCollision	Geometry,  Math,  String Parsing	Div1	L2	29.51
+8316	CharmingTickets	Dynamic Programming,  Math	Div1	L3	72.73
+8317	DukeOnLargeChessBoard	Greedy	Div1	L3	44.44
+8318	DivisibleByDigits	Simple Math,  Simple Search,  Iteration	Div1	L3	54.55
+8319	CollectingRiders	Graph Theory	Div1	L2	75
+8320	NCool	Geometry,  Search,  Simple Math	Div1	L3	45.45
+8321	RunningLetters	Encryption/Compression,  Search,  String Manipulation,  String Parsing	Div2	L3	0
+8374	SyllableSorting	Sorting	Div1	L2	20
+8376	CreateGroups	Greedy,  Simple Math	Div2	L1	73.01
+8378	PunctuationCleaner	String Manipulation	Div1	L1	72.73
+8383	HillWalker	Graph Theory	Div1	L3	69.57
+8390	TrueStatements	Brute Force	Div1	L2	80.65
+8391	PowerAdapters	Dynamic Programming,  Graph Theory	Div2	L3	0
+8394	Shape3D	Brute Force,  Geometry	Div2	L3	0
+8395	LuckyTicketSubstring	Simple Search,  Iteration	Div1	L1	71.43
+8396	Planks	Brute Force,  Simple Search,  Iteration	Div1	L2	64
+8397	FloorBoards	Dynamic Programming	Div1	L2	47.95
+8398	FloorLayout	String Parsing	Div1	L1	98.28
+8400	DownloadingFiles	Simulation,  String Manipulation,  String Parsing	Div1	L1	84.09
+8401	TVGameWinnings	Brute Force,  Simple Search,  Iteration	Div1	L3	58.82
+8402	GraphClique	Brute Force	Div1	L2	81.43
+8404	WarTransportation	Graph Theory	Div1	L3	50
+8413	TheBestName	String Manipulation	Div1	L1	69.23
+8414	TheDiceGame	Simple Math	Div1	L2	91.67
+8415	TheHomework	Greedy	Div1	L2	30.33
+8418	TheSquares	Dynamic Programming	Div1	L3	3.75
+8419	TheNumbersLord	Sorting	Div1	L3	50
+8427	FactoVisors	Math	Div2	L2	24.09
+8440	SellingProducts	Simple Search,  Iteration	Div1	L2	66.67
+8442	FillBox	Greedy,  Simple Math	Div1	L2	39.82
+8444	CandidateKeys	Brute Force,  Simple Search,  Iteration	Div2	L2	45.14
+8445	OneTwoThree	Brute Force,  Math,  Simple Search,  Iteration	Div1	L2	95.51
+8447	RectanglesArrangement	Dynamic Programming	Div1	L3	67.57
+8448	GoodHours	Brute Force,  Simple Math	Div1	L2	74.48
+8454	ContiguousSubsequences	Simple Search,  Iteration	Div1	L1	70.59
+8456	SendingCards	Brute Force,  Simple Search,  Iteration	Div1	L1	89.44
+8458	InfiniteAddition	Math,  Sorting,  String Manipulation	Div1	L3	0
+8461	TreeMaps	Simulation	Div1	L3	69.05
+8462	CandyGame	Dynamic Programming,  Graph Theory,  Greedy	Div1	L2	37.43
+8463	TriviaGame	Dynamic Programming	Div2	L3	45.07
+8464	StreetWalking	Greedy,  Simple Math	Div2	L2	67.16
+8467	OlympicCandles	Greedy	Div2	L2	68.87
+8469	SquareDigitNumbers	Brute Force,  Simple Math	Div2	L1	89.95
+8470	CharmingTicketsEasy	Dynamic Programming	Div1	L3	66.67
+8471	TurningMaze	Search	Div1	L2	67.8
+8473	InformFriends	Dynamic Programming,  Graph Theory	Div1	L2	62.66
+8474	SummingArithmeticProgressions	Simple Math	Div1	L3	66.67
+8477	TrueSpace	Simple Math	Div2	L1	81.85
+8478	StringsAndTabs	Brute Force,  Simulation,  Sorting,  String Manipulation,  String Parsing	Div2	L3	43.75
+8479	ErrantKnight	Dynamic Programming	Div1	L3	33.33
+8480	ForbiddenStrings	Dynamic Programming,  Math	Div1	L1	85.74
+8481	BirthdayReminders	Simple Math,  Simple Search,  Iteration	Div2	L2	26.82
+8482	UnderscoreJustification	Greedy,  String Manipulation	Div1	L2	83.33
+8483	RussianSpeedLimits	Simulation	Div1	L1	92.31
+8486	LittleTree	Dynamic Programming,  Greedy,  Recursion	Div2	L3	20
+8488	MarbleCollectionGame	Dynamic Programming,  Graph Theory	Div2	L3	0
+8495	AirlineInternet	Geometry,  Graph Theory,  Search	Div1	L3	37.5
+8496	NSegmentDisplay	Brute Force,  Greedy	Div1	L2	73.21
+8504	IncreasingSequence	Dynamic Programming	Div1	L3	5.26
+8508	LargestGap	Brute Force,  Greedy,  String Manipulation	Div1	L2	38.99
+8510	BuildCircuit	Brute Force,  Math	Div1	L3	38.46
+8516	PaintingBoards	Dynamic Programming	Div1	L2	12.35
+8518	TelephoneNumbers	Simulation	Div1	L3	21.74
+8519	SmoothNumbers	Brute Force,  Simple Math	Div1	L1	91.9
+8520	VoteRigging	Brute Force	Div2	L2	68.61
+8525	SuperWatch	Graph Theory	Div1	L3	76.6
+8527	MarblesRegroupingEasy	Greedy,  Simple Search,  Iteration	Div2	L2	32.42
+8536	EquiDigitNumbers	Search,  Simple Math	Div1	L3	42.98
+8538	MarblesRegroupingHard	Dynamic Programming	Div2	L3	50
+8539	GuessingNextElement	Simple Search,  Iteration	Div2	L1	86.87
+8540	PolygonCover	Dynamic Programming,  Geometry,  Graph Theory	Div1	L2	62.9
+8541	TrophyShelf	Simple Search,  Iteration	Div2	L1	87.01
+8543	LittleSquares	Dynamic Programming	Div1	L3	61.64
+8545	GuitarChords	Simple Search,  Iteration	Div2	L3	25.86
+8546	CentersOfSymmetry	Geometry,  Math	Div1	L2	62.34
+8547	ProperDivisors	Math,  Simple Search,  Iteration	Div2	L3	6.9
+8553	UnfixedArrangements	Dynamic Programming,  Math	Div1	L3	86.76
+8554	QueryFilter	Brute Force,  String Manipulation	Div1	L1	85.71
+8559	BoxesOfBooks	Greedy,  Simple Math	Div2	L1	86.65
+8560	SpecificPolyominoCovering	Search	Div1	L3	19.77
+8561	QuasiLatinSquares	Search	Div2	L3	56.52
+8563	SimilarWords	Brute Force,  Simple Search,  Iteration	Div1	L1	98.96
+8564	MonotoneSequence	Simple Search,  Iteration	Div2	L1	57.1
+8565	SmoothNumbersHard	Math	Div2	L3	40.67
+8567	TheLargestLuckyNumber	Simulation	Div1	L1	90.2
+8568	TheLuckyNumbers	Brute Force	Div1	L2	60.87
+8569	TheLuckySequence	Recursion	Div1	L2	53.77
+8570	CreatureTraining	Dynamic Programming	Div1	L2	61.53
+8571	TheSumOfLuckyNumbers	Dynamic Programming	Div1	L3	37.04
+8572	TheLuckySum	Dynamic Programming	Div1	L3	25.64
+8576	NextNumber	Simple Math	Div2	L2	26.78
+8580	TriangularSubsequence	Simple Math,  Simple Search,  Iteration	Div1	L2	77.3
+8582	Skyscrapers	Dynamic Programming	Div1	L2	70.92
+8584	DNAString	Greedy,  Simple Search,  Iteration	Div2	L2	63.99
+8587	MoreNim	Greedy,  Math	Div1	L3	62.9
+8589	ConcatenateNumber	Brute Force,  Math,  Simple Math	Div2	L2	37.42
+8590	RandomSort	Dynamic Programming,  Simple Math	Div2	L3	40.56
+8593	PseudoRandomKingdom	Dynamic Programming,  Simple Math	Div1	L3	72.97
+8594	RoughStrings	Greedy	Div2	L2	23.61
+8595	MonstersAndBunnies	Dynamic Programming,  Simple Math	Div1	L1	32.88
+8596	PrimeSums	Dynamic Programming,  Simple Math	Div1	L2	42.18
+8598	BoxFilling	Brute Force,  Recursion,  Simple Math,  Simple Search,  Iteration,  Simulation	Div1	L3	20
+8599	OneWayStreets	Graph Theory	Div1	L1	73.08
+8600	MagicFingerprint	Brute Force,  Recursion,  Search	Div1	L3	49.28
+8603	SnakesOnAPlane	Dynamic Programming	Div1	L3	100
+8605	PreciousStones	Greedy,  Math,  Search	Div1	L3	51.91
+8607	InstantRunoffVoting	Simulation	Div2	L2	56.27
+8608	BusAwaiting	Simple Search,  Iteration,  String Parsing	Div1	L1	82.49
+8609	PhoneNumbers	Brute Force	Div1	L2	62.69
+8610	OlympicGames	Dynamic Programming	Div1	L2	42.86
+8615	FixImage	Graph Theory,  Greedy,  Search	Div1	L2	73.55
+8616	Collect	Dynamic Programming	Div1	L3	0
+8620	SnowyWinter	Brute Force,  Sorting	Div2	L1	84.58
+8641	DiscountCombination	Greedy,  Simple Math,  Simple Search,  Iteration	Div1	L1	42.11
+8673	KPlanetaryAlignment	Math,  Search	Div1	L3	4.55
+8676	MagicLabeling	Graph Theory,  Simple Math	Div1	L1	75.71
+8681	MakeSquare	Dynamic Programming,  String Manipulation	Div2	L3	21.11
+8692	SentenceDecomposition	Dynamic Programming,  String Manipulation	Div2	L2	42.03
+8693	PrettyPrintASpiral	Brute Force,  Simple Math	Div1	L2	71.65
+8702	CompanyRestructuring	Graph Theory,  Greedy	Div1	L3	57.14
+8704	JohnnysCannon	Math	Div1	L1	75.29
+8705	RoundAboutCircle	Graph Theory,  Simple Search,  Iteration	Div1	L2	80.18
+8706	TwoStringMasks	String Manipulation	Div2	L2	18
+8707	AverageCandyLifetime	Simple Math	Div2	L1	96.73
+8711	BinarySum	Dynamic Programming	Div1	L2	48.13
+8712	PredictionCardGame	Dynamic Programming,  Math	Div1	L3	22.22
+8713	ReversingPrefixes	Dynamic Programming,  Math,  String Manipulation	Div1	L2	43.9
+8721	RemovingDigits	Greedy,  Search,  String Manipulation	Div2	L3	4.19
+8723	LangfordSequence	Brute Force,  Recursion	Div1	L1	86.36
+8725	SumOfPowers	Advanced Math	Div1	L2	62.03
+8728	CircularCells	Brute Force	Div1	L1	95.45
+8729	IngredientProportions	Graph Theory,  Simple Math,  String Parsing	Div2	L3	36.36
+8730	VariableSpeedLimit	Search,  Simple Math,  Simulation	Div2	L1	92.62
+8731	RollingLetters	Math,  Simulation	Div1	L3	25
+8734	MountainWalk	Simulation	Div2	L1	90.48
+8736	PubTrivia	Dynamic Programming	Div1	L3	26.14
+8738	BSTConstruction	Recursion	Div1	L2	100
+8740	VerifyCreditCard	Simple Search,  Iteration,  String Parsing	Div2	L1	87.45
+8741	ModuleSequence	Brute Force,  Math	Div1	L3	21.43
+8743	BreakingTheCode	Simulation	Div2	L1	85.71
+8744	KnightsOut	Math	Div1	L3	50
+8745	SortingGame	Graph Theory,  Simple Search,  Iteration,  Sorting	Div2	L2	63.01
+8746	CollectingMarbles	Dynamic Programming	Div2	L3	16.41
+8753	GrabbingTaxi	Simple Search,  Iteration	Div2	L1	84.91
+8754	DancingParty	Graph Theory	Div1	L3	25.27
+8758	AvoidingProduct	Math,  Search	Div2	L3	11.34
+8760	MaximalProduct	Math	Div2	L2	68.49
+8761	CircularLine	Simple Search,  Iteration	Div2	L1	92.51
+8762	HouseProtection	Geometry,  Graph Theory,  Search,  Simple Math	Div1	L3	55.43
+8763	StrongPrimePower	Simple Math,  Simple Search,  Iteration	Div2	L2	14.39
+8764	CollectingBonuses	Math	Div1	L3	1.33
+8765	ReversalChain	Dynamic Programming	Div1	L2	20.32
+8766	ShadowArea	Geometry	Div1	L3	100
+8767	IncompatibleMice	Search	Div1	L2	40
+8768	AlmostConvexPolygons	Brute Force,  Geometry	Div1	L3	100
+8769	FairDiceGame	Greedy,  Simple Math	Div1	L1	72.73
+8770	RepresentNumber	Greedy	Div1	L3	87.5
+8772	StringInterspersal	Greedy,  String Manipulation	Div1	L2	68.35
+8774	PerfectPowers	Search,  Simple Math,  Sorting	Div1	L1	83.33
+8775	CraneSort	Brute Force	Div1	L2	25
+8776	FIELDDiagrams	Simple Math	Div2	L2	67.82
+8777	DiamondGame	Brute Force,  Search	Div1	L2	70.59
+8778	LightedPanels	Greedy,  Simple Search,  Iteration	Div2	L3	14.29
+8779	CssRules	Dynamic Programming	Div1	L2	46.61
+8780	MultiplayerBattleships	Dynamic Programming	Div1	L2	28.57
+8781	BinaryMatrix	Search	Div1	L3	25
+8782	ColorfulBalls	Dynamic Programming,  Math	Div1	L3	66.67
+8784	SymmetricPie	Brute Force	Div1	L1	81.2
+8785	PSequence	Dynamic Programming,  Recursion	Div1	L3	57.14
+8786	RestaurantManager	Simulation	Div2	L1	84.25
+8787	DividingIntoTeams	Simulation	Div1	L1	66.4
+8789	BestResult	Geometry,  Simple Math,  Simulation,  Sorting,  String Parsing	Div1	L3	19.67
+8790	TimeToSay	Dynamic Programming,  Recursion,  Search,  Simulation	Div1	L2	58.12
+8791	ShortPaths	Dynamic Programming,  Graph Theory,  Math,  Search	Div1	L3	0
+8801	PolygonColors	Dynamic Programming,  Math	Div2	L3	0
+8813	FoldThePaper	Brute Force,  Dynamic Programming	Div1	L2	18.29
+8814	MilitaryBase	Search	Div1	L3	41.96
+8817	AddElectricalWires	Brute Force,  Graph Theory,  Recursion	Div2	L2	18.22
+8818	SequentialT	Dynamic Programming,  Simple Math	Div1	L3	-1
+8819	WhackAMole	Brute Force,  Simple Search,  Iteration	Div1	L1	100
+8820	OptimalPlay	Math	Div1	L1	90.91
+8821	EvilRobot	Greedy,  Simple Math	Div1	L2	37.93
+9715	WaterEqualizer	Simulation	Div1	L1	66.27
+9716	ConductorWalk	Simulation	Div1	L1	67.29
+9717	CharSwaps	Search	Div1	L2	57.89
+9718	SubgridsCounter	Search	Div1	L2	58.33
+9721	RoadReform	Graph Theory	Div1	L3	21.74
+9727	ClosestRegex	Dynamic Programming,  String Manipulation	Div2	L3	9.09
+9728	ContiguousCache	Dynamic Programming	Div1	L2	64.86
+9729	ContiguousCacheEasy	Brute Force,  Simulation	Div2	L1	81.45
+9730	RRSchedule	Simulation	Div1	L2	48.94
+9731	TextBoard	String Manipulation	Div1	L1	73.68
+9733	WifiPlanet	Geometry,  Math	Div1	L3	0
+9744	ReasonableOdds	Math,  Simulation	Div1	L3	5.26
+9748	SegmentDisplay	Dynamic Programming	Div1	L2	64.29
+9750	NumberPartition	Dynamic Programming,  Math,  Search	Div1	L3	86.67
+9751	WorkersOnPlane	Graph Theory,  Search,  String Parsing	Div1	L3	34.83
+9752	HoleCakeCuts	Geometry,  Simple Math	Div2	L3	22.83
+9753	MaximumScoredNumber	Simple Search,  Iteration	Div2	L1	66.9
+9754	MarblesInABag	Dynamic Programming	Div2	L3	17.11
+9755	GetToTheTop	Dynamic Programming,  Geometry,  Simple Math	Div2	L3	11.76
+9757	IdealString	Greedy,  Simple Math,  String Manipulation	Div2	L3	17.43
+9759	UnknownNames	Brute Force,  Simple Search,  Iteration,  Sorting,  String Manipulation	Div1	L2	58.26
+9760	RelativePath	String Manipulation	Div2	L2	46.1
+9761	FallingFactorialPower	Simple Math	Div2	L1	92.58
+9764	AllCycleLengths	Graph Theory,  String Manipulation	Div1	L2	28.47
+9769	FunnyBirds	Simple Search,  Iteration	Div1	L1	96.3
+9770	HappyCells	Simple Search,  Iteration	Div2	L1	79.44
+9771	PositiveArray	Brute Force,  Simple Math	Div1	L3	52.17
+9772	SquareCovering	Simple Math	Div1	L2	22.92
+9790	TransformMatrix	Graph Theory	Div1	L3	20
+9791	PointsGame	Dynamic Programming	Div1	L2	70.85
+9793	SpiralWalking	Simulation	Div2	L1	85.64
+9794	CheapestRoute	Dynamic Programming	Div2	L3	10.53
+9800	DigitPrime	Brute Force,  Simple Math,  Simple Search,  Iteration	Div1	L1	93.56
+9802	TournamentSeeding	Greedy	Div1	L3	40
+9803	LockedDoors	Graph Theory,  Search	Div1	L3	76.19
+9804	AnomalousCancellation	Brute Force,  Simple Math,  String Manipulation	Div1	L2	22.22
+9810	Stick	Simple Math,  Simulation	Div2	L1	79.66
+9818	DNAConstruction	Simple Math	Div1	L1	94.2
+9821	WordFindPuzzle	String Manipulation,  String Parsing	Div1	L1	76.84
+9822	TournamentJudging	Simple Math	Div2	L1	96.18
+9823	OrderedSuperString	Greedy,  String Manipulation	Div2	L2	33.66
+9824	CorporationSalary	Graph Theory	Div2	L2	46.9
+9828	MagicalSpheres	Brute Force,  Math	Div1	L2	71.04
+9830	TeleportsNetwork	Brute Force,  Graph Theory	Div2	L3	5.88
+9834	RoadsOfKingdom	Graph Theory,  Math	Div1	L3	13.33
+9837	InfiniteSequence	Dynamic Programming	Div2	L3	51.74
+9839	ArithmeticProgression	Math	Div2	L2	19.14
+9840	Subway2	Simple Math	Div2	L1	86.89
+9844	TreeCount	Dynamic Programming	Div1	L3	64.71
+9857	RussianCheckers	Recursion,  Simulation	Div1	L3	20
+9858	ColoringRectangles	Geometry,  Greedy,  Simple Math	Div1	L3	71.43
+9864	TurnOnTheLights	Brute Force,  Simple Search,  Iteration	Div1	L2	68.75
+9868	Auxanometer	Search	Div1	L3	48.78
+9871	FloorIndicator	Simple Math,  Simple Search,  Iteration,  String Parsing	Div2	L3	37.04
+9873	TreesDivision	Geometry,  Search	Div2	L3	37.74
+9877	AlienDictionary	Dynamic Programming	Div1	L3	37.5
+9886	StampsCollection	Dynamic Programming,  Graph Theory	Div1	L2	34.25
+9887	PickingUp	Brute Force,  Search	Div1	L3	24.19
+9894	LongStraightRoad	Geometry,  Graph Theory	Div1	L3	7.32
+9895	Embassy	Brute Force,  Search,  Simulation	Div2	L2	40.13
+9902	DancingCouples	Dynamic Programming,  Graph Theory	Div2	L3	21.49
+9904	CustomDice	Dynamic Programming	Div1	L2	80.95
+9905	MostCommonLetters	String Manipulation	Div2	L1	87.13
+9914	DeckRearranging	Simple Search,  Iteration,  String Manipulation	Div2	L1	95.91
+9915	RedIsGood	Dynamic Programming,  Math	Div1	L2	79.78
+9916	PrettyPrintingProduct	Math	Div2	L3	7.04
+9917	SolitaireSimulation	Simple Search,  Iteration,  Simulation	Div1	L1	94.96
+9921	BitwiseEquations	Simple Math	Div2	L2	46.18
+9922	InfiniteSequence2	Dynamic Programming	Div1	L2	17.88
+9924	WalkingDistance	Geometry,  Graph Theory,  Math	Div1	L3	11.01
+9925	ReversedSum	Simple Math	Div2	L1	89.93
+9926	CyclicSequence	Brute Force,  String Manipulation	Div1	L1	88.05
+9928	TournamentWinner	Math,  Simulation	Div1	L2	97.02
+9929	BankLoans	Math,  String Parsing	Div1	L2	92.86
+9933	ShipLoading	Greedy,  Sorting	Div1	L1	78.82
+9934	CardsCheating	Simulation	Div2	L3	56.45
+9942	CubeNets	Math,  Simulation	Div1	L2	54.17
+9943	TemplateMatching	Brute Force,  String Parsing	Div2	L2	60.59
+9944	TripleJump	Math	Div2	L3	10.71
+9945	Towers	Simulation	Div2	L1	59.18
+9946	ProblemSetter	Simple Search,  Iteration	Div1	L1	91.43
+9954	ThreePhotos	Simple Search,  Iteration	Div2	L2	67.66
+9955	VeryInterestingMovie	Simple Math	Div1	L1	88.24
+9957	MagicStones	Dynamic Programming	Div1	L2	64.71
+9958	CollectingPostmarks	Brute Force	Div1	L2	26.67
+9963	ChangeOMatic	Dynamic Programming,  Greedy,  Simple Math	Div1	L3	35.37
+9966	TheSimpleGame	Simple Math	Div2	L1	91.09
+9975	TheBeautifulBoard	Math	Div1	L3	14.81
+9976	TheTower	Search	Div2	L2	9.58
+9977	TheEasyChase	Dynamic Programming	Div2	L3	0
+9978	CollectingUsualPostmarks	Sorting	Div2	L1	76.18
+9984	LocateTreasure	Dynamic Programming,  Math	Div1	L2	46.01
+9985	Playlist	Simple Search,  Iteration,  Simulation	Div1	L2	37.5
+9987	BestJob	Brute Force,  Dynamic Programming,  Simple Search,  Iteration,  Simulation	Div1	L3	33.33
+9991	NumberGrid	Dynamic Programming,  Math,  String Parsing	Div1	L2	100
+9995	Polygons2	Dynamic Programming,  Simple Math	Div2	L3	5.43
+10004	MazeReconstruction	Simulation	Div1	L3	92.41
+10005	MazeWandering	Graph Theory,  Math,  Recursion	Div1	L2	42.02
+10006	BaronsAndCoins	Dynamic Programming,  Search	Div1	L2	36.11
+10007	RoyalTreasurer	Simple Search,  Iteration,  Sorting	Div2	L1	94.79
+10009	MakingPotions	Greedy,  String Parsing	Div2	L3	19.05
+10010	StrangeComparator	Simple Search,  Iteration,  Simulation,  String Manipulation	Div1	L1	98.44
+10013	BarbarianInvasion	Graph Theory	Div1	L3	45.83
+10027	FeudaliasWar	Graph Theory,  Search	Div1	L3	29.63
+10033	PrimeSoccer	Dynamic Programming,  Math	Div2	L2	90.62
+10036	BirthdayCake	Brute Force,  String Manipulation,  String Parsing	Div2	L3	14.29
+10042	WordsPuzzle	Simple Search,  Iteration,  String Manipulation	Div1	L1	56.52
+10044	Teaching	Brute Force,  Simulation,  String Manipulation	Div2	L3	17
+10046	LoveCalculator	Simple Search,  Iteration,  String Manipulation	Div2	L1	84.48
+10054	Undo	Simulation,  String Manipulation,  String Parsing	Div2	L2	42.53
+10055	CactusAutomorphisms	Graph Theory,  Math	Div1	L3	25
+10057	Digsaw	Brute Force,  Search	Div1	L3	0
+10058	YearProgressbar	Simple Math,  Simple Search,  Iteration,  String Manipulation,  String Parsing	Div2	L2	72.25
+10064	LostSortingAlgorithm	Graph Theory,  Sorting,  String Manipulation	Div1	L3	54.29
+10070	EnemyTowers	Search,  Simulation	Div2	L3	9.46
+10071	TwoLotteryGames	Math,  Simple Math	Div2	L2	75.51
+10072	MultiNumber	Math	Div2	L1	59.49
+10073	BarracksEasy	Dynamic Programming,  Greedy,  Simulation	Div2	L3	12.26
+10074	CakesEqualization	Greedy	Div1	L2	42.29
+10077	CactusCount	Graph Theory,  String Parsing	Div2	L3	14.71
+10078	ColumnDiagramPerimeter	Simple Search,  Iteration	Div2	L1	80.27
+10085	NimForK	Search	Div1	L2	23.53
+10095	CrazyBot	Brute Force,  Simple Search,  Iteration	Div2	L2	74.07
+10103	ExtendableTriangles	Brute Force,  Geometry,  Greedy	Div1	L2	32.79
+10104	EquilibriumPoints	Search,  Simple Math	Div2	L2	37.6
+10105	GymTraining	Simulation	Div2	L1	84.53
+10107	TeamManagement	Dynamic Programming	Div1	L3	30
+10111	CorruptMages	Greedy	Div1	L1	85.84
+10117	PiecesMover	Brute Force,  Search	Div2	L3	34.78
+10118	InverseFactoring	Simple Math	Div2	L1	51.9
+10123	CavePassage	Graph Theory,  Search,  Simple Math	Div1	L2	25
+10138	TwinTowns	Brute Force,  Dynamic Programming	Div1	L2	19.69
+10146	KnockoutTourney	Math	Div2	L1	73.13
+10152	Xosceles	Brute Force,  String Manipulation	Div2	L1	86.26
+10153	GroupedWord	Greedy,  String Manipulation	Div1	L2	25.22
+10154	LampsGrid	Search	Div2	L2	44.03
+10155	DesignCalendar	Math	Div2	L2	43.56
+10170	ProductOfPrices	Geometry,  Search,  Simple Math	Div1	L3	43.95
+10171	PerfectRectangles	Search	Div1	L3	36.67
+10172	BestRoads	Graph Theory,  Greedy	Div2	L3	18.87
+10173	ProgrammingRobots	Search	Div1	L3	66.67
+10174	StrengthOrIntellect	Dynamic Programming	Div1	L2	44.35
+10176	MagicSpell	Simple Search,  Iteration	Div2	L1	89.73
+10177	ProductOfDigits	Simple Math	Div2	L2	66.97
+10178	BuildersCountry	Graph Theory	Div1	L3	50
+10180	TheLuckyString	Simple Search,  Iteration	Div2	L2	63.17
+10182	ThePalindrome	Dynamic Programming	Div2	L1	71.84
+10183	TheDictionary	Dynamic Programming	Div2	L3	19.13
+10184	TheLongPalindrome	Dynamic Programming,  Recursion	Div1	L2	69.16
+10185	TheStringGame	Encryption/Compression,  String Parsing	Div1	L3	28.57
+10186	DistinctDigits	Brute Force,  Math,  Search	Div2	L3	0
+10187	PrimePairs	Dynamic Programming	Div1	L3	50.54
+10188	CampaignTrail	Dynamic Programming,  Simple Math	Div1	L2	86.61
+10190	OrderedNim	Simple Math	Div2	L2	34.64
+10191	SettingTents	Geometry,  Simple Search,  Iteration	Div1	L2	75.21
+10195	MagicWords	Brute Force,  String Manipulation	Div2	L2	25.72
+10196	ShufflingMachine	Brute Force,  Simple Math,  Simulation	Div2	L2	83.11
+10197	CommanderIdol	Graph Theory,  Simple Math	Div1	L3	71.58
+10198	PaternityScandal	Simple Search,  Iteration	Div1	L1	82.71
+10199	ThirtyRocks	Greedy,  Math,  Simple Search,  Iteration	Div1	L2	74.38
+10205	Telltale	Dynamic Programming,  Graph Theory,  Search,  Simple Search,  Iteration,  Simulation	Div1	L2	64.86
+10206	SoccerFan	Brute Force,  Simple Math,  Simple Search,  Iteration,  Simulation	Div1	L3	72.73
+10207	SimpleCardGame	Search,  Simulation	Div1	L1	86.96
+10229	DNADeletion	Dynamic Programming,  Simulation	Div1	L2	77.86
+10231	TheInteger	Dynamic Programming	Div1	L2	39.02
+10232	TheSum	Dynamic Programming	Div1	L3	25
+10233	TheBeauty	Simulation	Div2	L1	97.82
+10235	ThePower	Search	Div2	L3	2.22
+10238	AvoidFour	Advanced Math,  Dynamic Programming	Div1	L3	53.33
+10239	SuperSum	Advanced Math	Div1	L2	86.36
+10240	ShorterSuperSum	Dynamic Programming,  Math	Div2	L1	95.07
+10241	SequenceSums	Math,  Simple Search,  Iteration	Div1	L1	87.79
+10243	BirdsCounting	Dynamic Programming,  Math	Div2	L3	66.67
+10246	SubrectanglesOfTable	Simple Math,  Simple Search,  Iteration	Div2	L2	60.11
+10251	LinearPolyominoCovering	Greedy	Div2	L1	82.08
+10254	SubwayTrip	Math	Div1	L1	93.2
+10255	WizardsAppointments	Math	Div1	L3	57.14
+10256	YetAnotherStonesGame	Dynamic Programming,  Graph Theory	Div1	L3	21.43
+10257	SumAndProduct	Math	Div2	L3	17.58
+10258	LaserShooting	Brute Force	Div1	L1	97.84
+10259	MegaCoolNumbers	Dynamic Programming	Div1	L2	75
+10261	FallingPoints	Simple Math	Div2	L2	39.92
+10265	IncreasingLists	Dynamic Programming,  String Manipulation	Div1	L3	25.81
+10266	HexatridecimalSum	Simple Math,  Sorting,  String Manipulation	Div2	L3	23.81
+10267	LeastMajorityMultiple	Search,  Simple Math	Div2	L1	77.57
+10268	FindingSquareInTable	Search,  Simple Math	Div2	L2	30.42
+10274	Underprimes	Math,  Simple Search,  Iteration	Div2	L2	60.51
+10275	CellRemoval	Graph Theory,  Simple Search,  Iteration	Div2	L2	83.81
+10279	ThePresents	Simple Search,  Iteration	Div1	L1	46.81
+10280	TheLongWay	Dynamic Programming	Div1	L2	76.25
+10281	MegaCoolNumbersEasy	Simple Search,  Iteration	Div2	L1	86.98
+10282	TheGarland	Dynamic Programming	Div1	L3	75
+10284	Parallelograms	Geometry,  Simple Math	Div1	L1	73.61
+10285	AnotherCoinProblem	Brute Force,  Dynamic Programming,  Greedy,  Recursion	Div1	L2	23.08
+10286	DiamondMining	Dynamic Programming	Div1	L3	47.66
+10288	MazeWanderingEasy	Graph Theory	Div2	L2	62.44
+10289	WickedTeacher	Dynamic Programming,  Math	Div2	L3	4.76
+10294	SkiFriction	Simulation	Div2	L1	95.4
+10295	GroupedWordChecker	Simple Search,  Iteration,  String Manipulation	Div2	L1	95.22
+10297	CirclesCountry	Geometry,  Graph Theory	Div2	L2	64.17
+10298	TheSquareDivOne	Graph Theory	Div1	L3	0
+10299	TheSquareDivTwo	Greedy	Div2	L1	98.05
+10308	Deposit	Geometry,  Search	Div1	L3	60
+10309	IncredibleMachineEasy	Math	Div2	L1	89.31
+10310	IncredibleMachine	Math,  Search	Div1	L1	70.71
+10314	PawnsAndKings	Dynamic Programming	Div1	L1	86.49
+10316	CubeOfDice	Greedy,  Math,  Sorting	Div1	L1	66.38
+10317	Unicorn	Dynamic Programming	Div1	L3	45.19
+10319	NumberGraph	Graph Theory,  Math	Div1	L3	100
+10324	DigitalCounter	Dynamic Programming,  Greedy,  Search	Div1	L3	45.67
+10325	ConnectingAirports	Graph Theory,  Greedy	Div1	L3	26.95
+10326	MismatchedStrings	Dynamic Programming	Div1	L3	45.95
+10329	PageNumbers	Brute Force,  Recursion,  Simple Math,  Simple Search,  Iteration	Div1	L2	64.63
+10330	RepaintTheChessboard	Brute Force,  Simple Search,  Iteration	Div1	L1	95.58
+10331	BidirectionalQueue	Simulation	Div1	L1	88.86
+10333	PlaneFractal	Brute Force,  Simple Math	Div1	L1	92.94
+10335	KthProbableElement	Dynamic Programming,  Math	Div1	L2	89.97
+10336	CircularShifts	Math	Div1	L3	27.94
+10337	DoNotTurn	Graph Theory	Div1	L2	52.23
+10341	BestView	Math	Div2	L2	63.16
+10342	DigitsSwap	Simple Math,  Simple Search,  Iteration	Div2	L3	9.09
+10343	FriendScore	Graph Theory	Div2	L1	61.02
+10355	EndlessStringMachine	Recursion,  Simulation,  String Parsing	Div2	L3	0
+10356	UnluckyIntervals	Greedy,  Search	Div1	L1	25.76
+10360	FeudaliasBattle	Brute Force,  Simulation	Div2	L2	23.08
+10361	SaveTheTrees	Brute Force,  Geometry,  Greedy	Div1	L1	79.2
+10369	TheSwap	Recursion,  Simple Search,  Iteration	Div2	L2	7.25
+10370	ChuckContest	Dynamic Programming	Div1	L2	25
+10375	StrangeCountry	Graph Theory,  Greedy	Div1	L2	50
+10376	DifferentStrings	Brute Force,  Greedy,  Simulation,  String Manipulation	Div2	L1	82.07
+10377	ErdosNumber	Graph Theory,  String Manipulation,  String Parsing	Div2	L2	48.42
+10380	PalindromeFactory	Dynamic Programming,  Simple Search,  Iteration	Div2	L3	34.69
+10382	PalindromePhrases	Dynamic Programming	Div1	L2	65.59
+10384	KingdomMap	Dynamic Programming,  Graph Theory	Div1	L3	20
+10386	SquareFreeSets	Dynamic Programming,  Math	Div1	L3	43.75
+10387	BinaryFlips	Greedy,  Simple Math	Div1	L2	23.31
+10389	StrongEconomy	Greedy,  Simulation	Div1	L2	18.39
+10391	RotatingTriangles	Dynamic Programming,  String Manipulation	Div2	L3	0
+10395	SquareOfDigits	Brute Force	Div2	L1	65.87
+10396	UnluckyNumbers	Math,  Simple Search,  Iteration,  Sorting	Div2	L1	30.33
+10401	Automaton	Math,  String Manipulation	Div1	L2	75
+10408	PouringWater	Brute Force,  Math,  Search	Div2	L2	59.22
+10412	PlanarGraphShop	Dynamic Programming,  Graph Theory	Div1	L2	65.54
+10413	SequenceSum	Dynamic Programming,  Search,  String Manipulation	Div1	L3	33.33
+10418	CantorDust	Simple Math,  String Manipulation	Div1	L2	32.56
+10419	PrefixFreeCode	Greedy,  Simulation	Div1	L3	30.88
+10420	TheAlmostLuckyNumbers	Recursion	Div1	L3	25.35
+10421	TheProduct	Greedy,  Simple Math,  Sorting	Div2	L3	20.43
+10422	TheBoredJohn	Dynamic Programming,  Simple Math	Div1	L3	75
+10428	ArrayTransformations	Greedy,  Search	Div1	L2	33.33
+10429	WeirdTimes	Dynamic Programming	Div2	L3	22.58
+10430	FractalWheels	Graph Theory,  Recursion	Div1	L1	25
+10451	MazeMaker	Search	Div2	L2	66.59
+10456	BoredPhilosophers	Simple Search,  Iteration,  Simulation,  String Parsing	Div2	L2	49.2
+10457	NumericalPerfectionLevel	Math	Div2	L2	19.06
+10459	PaperAndPaint	Geometry,  Sorting	Div1	L3	54.9
+10461	ToolsBox	Search	Div2	L1	88.54
+10463	PerfectPermutation	Brute Force,  Greedy,  Simple Math	Div1	L1	92.39
+10465	SimpleWordGame	Simple Search,  Iteration,  String Manipulation	Div2	L1	95.12
+10466	EqualTowers	Dynamic Programming	Div2	L3	12.9
+10468	PaperAndPaintEasy	Brute Force,  Simple Math	Div2	L2	15.71
+10469	PerfectPermutationHard	Greedy,  Simple Math,  Simple Search,  Iteration	Div2	L3	13.64
+10477	OverlappingConcatenation	Dynamic Programming,  Math	Div1	L3	0
+10478	FoldingMaze	Graph Theory	Div1	L2	55.17
+10484	UnfoldingTriangles	Brute Force,  Simulation,  String Manipulation	Div1	L1	75.38
+10486	ShuffledPlaylist	Dynamic Programming,  Math	Div1	L3	50
+10487	FourBlocks	Dynamic Programming	Div1	L2	55.69
+10489	FourBlocksEasy	Simple Search,  Iteration,  String Parsing	Div2	L1	94.28
+10505	SoccerLeagues	Simple Search,  Iteration	Div2	L1	98.04
+10508	CubePainting	Dynamic Programming,  Graph Theory	Div1	L3	100
+10509	TheEncryptionDivTwo	Greedy,  Sorting	Div2	L1	88.85
+10510	TheEncryptionDivOne	Dynamic Programming	Div1	L3	35.48
+10511	TheNewHouseDivTwo	Geometry,  Simple Search,  Iteration	Div2	L2	80.57
+10512	TheNewHouseDivOne	Geometry,  Simple Search,  Iteration	Div1	L1	64.24
+10513	TheLockDivTwo	Math,  Simulation	Div2	L3	79.07
+10514	TheLockDivOne	Math,  Recursion	Div1	L2	57.26
+10515	CubeWalking	Simulation	Div2	L2	73.51
+10516	AntOnGraph	Graph Theory,  Recursion	Div1	L2	46.99
+10524	BrickPuzzle	Dynamic Programming,  Math,  Search	Div1	L3	0
+10537	StrangeComputer	Greedy	Div2	L1	92.91
+10546	MountainRoad	Simple Math,  Simple Search,  Iteration	Div2	L1	68.27
+10547	OddDivisors	Recursion,  Simple Math	Div2	L2	33.4
+10548	MaxTriangle	Geometry,  Simple Search,  Iteration	Div1	L1	75.04
+10549	HexagonalBattlefield	Dynamic Programming	Div1	L2	73.77
+10550	HexagonalBattlefieldEasy	Brute Force,  Dynamic Programming	Div2	L3	37.5
+10551	StairsColoring	Advanced Math,  Simple Search,  Iteration	Div1	L3	31.71
+10561	NotTwo	Math	Div2	L2	67.2
+10562	RandomAppleEasy	Dynamic Programming	Div2	L3	17.39
+10563	CutSticks	Greedy,  Math	Div2	L3	16.67
+10564	IOIString	Math	Div1	L2	29.23
+10566	IncreasingNumber	Dynamic Programming,  Math	Div1	L3	0
+10569	NewCoins	Dynamic Programming	Div1	L2	51.72
+10570	FunctionalEquation	Graph Theory,  Math	Div1	L3	50
+10571	ModuloFourDivisor	Math	Div1	L3	37.18
+10572	HamiltonPath	Graph Theory,  Math	Div2	L3	28.33
+10573	HanoiTower	Brute Force,  Search	Div2	L3	10.71
+10574	SoldierLabeling	Math	Div2	L1	80.37
+10577	KnightsTour	Geometry,  Simulation	Div2	L2	86.17
+10578	ImportantTasks	Greedy	Div2	L1	88.16
+10579	ImportsList	Graph Theory,  Greedy	Div2	L3	71.23
+10580	PeopleYouMayKnow	Graph Theory	Div1	L2	51.17
+10581	CellScores	Math,  Search	Div1	L3	25
+10582	EggCartons	Brute Force	Div2	L1	72.41
+10584	TextFrames	String Manipulation	Div1	L1	79.69
+10586	Archery	Geometry,  Simple Math	Div2	L1	95.06
+10587	TriFibonacci	Brute Force,  Math,  Simple Search,  Iteration	Div2	L1	51.58
+10588	CantorDustEasy	Simple Math,  String Manipulation	Div2	L3	0
+10589	AgeEncoding	Search,  Simple Math	Div2	L2	3.67
+10594	SteeplechaseTrack	Graph Theory	Div2	L3	63.16
+10615	TheBlackJackDivOne	Recursion,  Search	Div1	L1	88.59
+10616	TheBlackJackDivTwo	Simple Search,  Iteration	Div2	L1	97.66
+10617	TheCardShufflingDivOne	Search	Div1	L2	65.18
+10618	TheCardShufflingDivTwo	Simple Search,  Iteration	Div2	L2	26.52
+10619	TheCardLineDivOne	Dynamic Programming	Div1	L3	16.67
+10620	TheCardLineDivTwo	Dynamic Programming	Div2	L3	19.51
+10634	PizzaDelivery	Brute Force,  Graph Theory	Div2	L3	36
+10635	MagicalSource	Math,  Simple Math,  Simple Search,  Iteration	Div1	L1	77.78
+10638	TwistedMatrix	Brute Force,  Simulation,  String Manipulation	Div2	L2	42.11
+10654	TransportationNetwork	Graph Theory,  Greedy,  Sorting	Div2	L3	8
+10664	RowGame	Dynamic Programming,  Greedy,  Search	Div1	L3	8
+10674	ReverseMagicalSource	Simple Search,  Iteration	Div2	L1	85.31
+10678	LongJourney	Dynamic Programming,  Graph Theory,  Search	Div1	L2	37.93
+10681	RecursiveFigures	Geometry,  Simple Search,  Iteration	Div2	L1	84
+10682	Inequalities	Simple Math,  Simple Search,  Iteration	Div2	L2	59.49
+10683	NumberPyramids	Dynamic Programming,  Math	Div1	L2	77.03
+10685	TheTournamentDivOne	Simple Math,  Simple Search,  Iteration	Div1	L2	19.15
+10686	TheTournamentDivTwo	Simple Math,  Simple Search,  Iteration	Div2	L1	94.94
+10687	TheBasketballDivOne	Search	Div1	L1	87.02
+10688	TheBasketballDivTwo	Search	Div2	L2	37.61
+10689	TheSoccerDivOne	Dynamic Programming	Div1	L3	0
+10690	TheSoccerDivTwo	Greedy	Div2	L3	22.22
+10694	TheHexagonsDivTwo	Brute Force,  Math	Div2	L3	69.57
+10695	MazeOnFire	Graph Theory,  Search,  Simulation	Div2	L3	12.2
+10696	TheTriangleBothDivs	Simple Search,  Iteration,  String Manipulation,  String Parsing	Div2	L2	20.54
+10697	RabbitNumbering	Math	Div2	L2	89.21
+10698	ProductTriplet	Brute Force,  Math	Div2	L3	11.11
+10699	SilverDistance	Math	Div2	L2	50.42
+10700	EllysString	Dynamic Programming,  String Manipulation	Div1	L3	19.18
+10701	SkewedPerspective	Dynamic Programming	Div1	L3	12.5
+10702	TheHexagonsDivOne	Graph Theory,  Simulation	Div1	L2	95.33
+10705	MinimalDifference	Brute Force	Div2	L1	84.55
+10706	DoubleXor	Simulation	Div1	L1	75.04
+10708	WordsGame	Brute Force	Div2	L2	68.78
+10709	NumbersAndMatches	Dynamic Programming	Div2	L3	25
+10710	MegaSum	Math	Div1	L3	18.75
+10711	AppleWord	Simple Search,  Iteration	Div2	L1	83.46
+10714	SpidersOnTheGrid	Simple Search,  Iteration	Div2	L1	77.07
+10715	ConvexHexagons	Dynamic Programming,  Math	Div1	L2	71.88
+10716	EasySequence	Search	Div2	L2	30.02
+10717	DonutsOnTheGrid	Dynamic Programming,  Simple Search,  Iteration	Div2	L3	10.53
+10719	DonutsOnTheGridEasy	Dynamic Programming,  Simple Search,  Iteration	Div1	L1	53.86
+10720	ActivateTree	Dynamic Programming,  Graph Theory	Div1	L3	64.29
+10721	ManhattanPatrol	Geometry,  Search,  Sorting	Div1	L1	99.19
+10723	ParkAmusement	Dynamic Programming,  Graph Theory,  Math	Div2	L3	40.68
+10724	ColorfulStrings	Brute Force,  Search	Div2	L2	20.11
+10725	Desertification	Simple Search,  Iteration	Div2	L1	63.39
+10726	BouncingBalls	Math	Div2	L2	89.05
+10727	RabbitPuzzle	Dynamic Programming,  Graph Theory,  Math	Div1	L3	16.67
+10731	ColoringRectangle	Greedy,  Sorting	Div2	L2	32.91
+10732	BuildingCities	Graph Theory,  Search	Div1	L2	44.86
+10733	FencingGarden	Search,  Simple Math	Div1	L3	36.11
+10735	DrawingLines	Math	Div1	L2	69.81
+10736	NetworkSecurity	Graph Theory,  Greedy	Div1	L2	49.03
+10737	BuildingRoads	Dynamic Programming,  Graph Theory	Div1	L3	0
+10738	TheContest	Graph Theory	Div1	L3	0
+10739	ColorfulDecoration	Graph Theory	Div1	L2	68.1
+10740	BunnyPuzzle	Simple Search,  Iteration	Div2	L1	81.36
+10741	ColorfulMaze	Dynamic Programming,  Graph Theory	Div1	L3	12.5
+10742	ColorfulMazeTwo	Dynamic Programming,  Graph Theory	Div2	L3	25.42
+10743	ColorfulBoxesAndBalls	Simple Math,  Simple Search,  Iteration	Div2	L1	85.33
+10744	CandyBox	Dynamic Programming,  Math	Div1	L2	76
+10746	BunnyConverter	Simple Search,  Iteration	Div2	L3	48.94
+10747	NameInput	Dynamic Programming	Div2	L3	1.61
+10748	StringDecryption	Dynamic Programming,  Encryption/Compression	Div1	L3	100
+10749	TrappingRabbit	Simple Search,  Iteration	Div2	L1	90.96
+10750	ActivateGame	Graph Theory,  Greedy	Div2	L3	61.39
+10758	ColorfulTiles	Dynamic Programming,  Math	Div1	L3	60
+10759	PotatoGame	Math	Div2	L2	23.11
+10760	Nisoku	Greedy,  Math	Div2	L3	2.25
+10761	BunnySequence	Dynamic Programming	Div1	L3	68.18
+10762	T9	Simulation,  String Manipulation	Div2	L2	54.55
+10763	SimpleGuess	Simple Math,  Simple Search,  Iteration	Div2	L1	76.2
+10764	RoadOrFlightEasy	Sorting	Div2	L1	74.64
+10765	RoadOrFlightHard	Dynamic Programming,  Greedy	Div1	L2	69.67
+10766	PythTriplets	Graph Theory,  Simple Math	Div1	L2	40.12
+10767	Gifts	Dynamic Programming,  Graph Theory	Div2	L3	6.67
+10768	TheQuestionsAndAnswersDivOne	Dynamic Programming	Div1	L1	73.47
+10769	TheQuestionsAndAnswersDivTwo	Simple Math	Div2	L1	90.84
+10771	TheFansAndMeetingsDivOne	Dynamic Programming,  Simple Math	Div1	L2	76.92
+10772	TheFansAndMeetingsDivTwo	Simulation	Div2	L2	87.52
+10773	TheCitiesAndRoadsDivOne	Dynamic Programming	Div1	L3	33.33
+10774	TheCitiesAndRoadsDivTwo	Recursion	Div2	L3	0
+10780	BouncingDiceGame	Dynamic Programming,  Math,  Simulation	Div1	L3	19.05
+10782	TimeTravellingTour	Dynamic Programming,  Graph Theory	Div1	L2	55.36
+10788	GogoXReimuHakurai	Graph Theory,  Greedy	Div2	L3	0
+10790	FlatCatsBreeding	Brute Force	Div1	L1	97.25
+10792	GreenWarfare	Graph Theory	Div1	L2	68.35
+10794	DistanceOnCube	Geometry,  Search	Div1	L2	77.62
+10796	CornersDecoding	Encryption/Compression,  Math	Div1	L3	43.55
+10797	Badgers	Greedy,  Simple Search,  Iteration,  Sorting	Div2	L2	51.23
+10798	SubAnagrams	Dynamic Programming	Div2	L3	12.26
+10799	BuildingWalls	Math,  Simple Search,  Iteration	Div1	L3	45
+10800	GameWithGraphAndTree	Dynamic Programming	Div1	L3	51.52
+10801	AmoebaCode	Dynamic Programming	Div1	L2	35.87
+10803	PalindromesCount	Brute Force,  Simple Search,  Iteration	Div2	L1	92.05
+10804	RouteIntersection	Dynamic Programming,  Encryption/Compression	Div2	L2	62.99
+10805	TreesCount	Dynamic Programming,  Graph Theory	Div1	L2	74.54
+10806	FriendTour	Dynamic Programming,  Greedy,  Math	Div1	L2	58.89
+10808	BatchSystem	Greedy	Div2	L3	9.32
+10810	MatrixShiftings	Simple Search,  Iteration	Div2	L1	84
+10814	Cryptography	Encryption/Compression,  Math,  Sorting	Div2	L1	95.06
+10815	SequencePermutation	Dynamic Programming	Div1	L1	100
+10816	TheSequencesLevelOne	Brute Force	Div1	L1	94.59
+10817	TheSequencesLevelThree	Dynamic Programming	Div1	L3	56.15
+10818	TheSequencesLevelTwo	Greedy,  Sorting	Div1	L2	89.95
+10821	NumberNeighbours	Simple Math,  Simple Search,  Iteration	Div2	L1	86.83
+10823	LateProfessor	Brute Force,  Math,  Simulation	Div2	L2	14.77
+10832	TheLuckyNumbersLevelOne	Brute Force	Div1	L1	73.49
+10833	TheLuckyNumbersLevelTwo	Recursion,  Sorting	Div1	L2	47.92
+10834	TheLuckyNumbersLevelThree	Dynamic Programming	Div1	L3	66.67
+10835	KingdomXCitiesandVillagesAnother	Graph Theory,  Greedy	Div2	L3	34.47
+10836	KingdomXEmergencyStaircase	Dynamic Programming	Div1	L3	0
+10837	LexSmallestTour	Graph Theory	Div1	L3	12.77
+10840	TurretPlacement	Simple Math,  Simple Search,  Iteration	Div2	L2	71.69
+10846	NetworkXOneTimePad	Brute Force,  Encryption/Compression,  Greedy	Div2	L2	32.27
+10848	NextHomogeneousStrings	Dynamic Programming	Div1	L3	60
+10849	GogoXBallsAndBins	Dynamic Programming	Div1	L3	50
+10854	DrawingBlackCrosses	Dynamic Programming,  String Manipulation	Div1	L3	62.16
+10855	BalancingAct	Dynamic Programming,  Search	Div1	L3	22.22
+10856	BaseConfusion	Math,  Recursion	Div2	L3	5
+10858	HanoiGoodAndBad	Recursion,  Simple Math,  Simulation	Div1	L2	72.3
+10860	LotteryTicket	Brute Force,  Recursion	Div2	L1	75.8
+10861	MatrixGame	Brute Force,  Sorting,  String Manipulation	Div2	L3	46
+10862	LotteryCheating	Brute Force,  Simple Math,  String Manipulation	Div2	L2	29.52
+10863	LotteryPyaterochka	Dynamic Programming,  Simple Math	Div1	L2	90.55
+10864	HandlesSpelling	Dynamic Programming	Div1	L3	39.64
+10874	Islands	Simple Math,  Simple Search,  Iteration	Div2	L2	90.29
+10875	CarelessSecretary	Dynamic Programming,  Math	Div2	L3	45.16
+10877	MallSecurity	Brute Force,  Graph Theory,  Math	Div1	L3	34.38
+10878	RabbitStepping	Simple Math	Div2	L2	87.04
+10879	RabbitIncreasing	Math	Div1	L2	40.48
+10880	RabbitProgramming	Dynamic Programming,  Math	Div1	L3	77.78
+10881	RabbitVoting	Simple Search,  Iteration	Div2	L1	83.65
+10882	RabbitJumping	Graph Theory	Div2	L3	5.26
+10884	VacationTime	Simple Search,  Iteration	Div2	L1	72.43
+10886	BatmanAndRobin	Geometry	Div1	L3	42.39
+10887	SequenceMerger	Math,  Search,  Sorting	Div1	L3	39.25
+10896	JingleRingle	Greedy,  Simple Math	Div1	L1	93.59
+10897	VacationTours	Graph Theory	Div1	L3	80.69
+10898	TheMoviesLevelOneDivOne	Simple Math	Div1	L1	72.45
+10899	TheMoviesLevelOneDivTwo	Simple Search,  Iteration	Div2	L1	94.03
+10900	TheMoviesLevelTwoDivOne	Dynamic Programming	Div1	L2	30.77
+10901	TheMoviesLevelTwoDivTwo	Simple Search,  Iteration	Div2	L2	46.07
+10902	TheMoviesLevelThreeDivOne	Dynamic Programming	Div1	L3	16.67
+10903	TheMoviesLevelThreeDivTwo	Simple Search,  Iteration,  Simulation	Div2	L3	44.44
+10911	FuzzyLife	Greedy,  Simulation	Div1	L2	58.82
+10915	DoorsGame	Greedy,  Simulation	Div2	L2	47.58
+10917	LinearTravellingSalesman	Simple Search,  Iteration	Div2	L1	84.4
+10920	Sheep	Greedy,  Search,  Simulation	Div1	L3	2.46
+10921	RobotSimulation	Simple Math,  Simulation	Div1	L2	82.26
+10926	CrazyLine	Greedy,  Math,  Sorting	Div2	L3	15.66
+10927	WhatsThisChord	Brute Force,  Simple Search,  Iteration	Div1	L2	84.53
+10929	CuttingGlass	Geometry,  Graph Theory,  Simulation	Div1	L3	53.07
+10930	BreakingChocolate	Dynamic Programming	Div1	L3	5.81
+10931	SieveOfEratosthenes	Math,  Search	Div1	L1	38.54
+10933	EqualizeStrings	Greedy	Div1	L1	96.64
+10934	Passwords	Dynamic Programming,  Math	Div1	L3	66.67
+10937	TwoRegisters	Math,  Search	Div1	L2	60.71
+10938	DiscreteConvexHull	Geometry,  Greedy	Div1	L3	33.33
+10940	ColorfulTilesEasy	Greedy	Div2	L1	88.63
+10941	PuyoPuyo	Dynamic Programming	Div1	L2	72.41
+10943	MissingParentheses	Greedy	Div2	L2	67.67
+10945	RectangularIsland	Dynamic Programming	Div2	L3	0
+10946	SnowPlow	Graph Theory,  Simple Math	Div1	L1	85.38
+10947	TwoSidedCards	Graph Theory,  Math	Div1	L2	82.05
+10948	SumRectangle	Simple Math,  Simple Search,  Iteration	Div1	L1	90.87
+10949	LineSegments	Geometry	Div1	L3	100
+10957	CountingSeries	Math	Div2	L2	13.46
+10960	SquaresCovering	Dynamic Programming,  Geometry,  Search	Div2	L3	11.43
+10974	OnTheFarmDivTwo	Brute Force,  Simple Math	Div2	L1	71.04
+10976	RightTriangle	Math,  Search	Div1	L2	51.57
+10978	ChildlessNumbers	Brute Force,  Math,  Simple Search,  Iteration	Div2	L3	26.7
+10979	SequenceOfCommands	Brute Force,  Simple Math,  Simulation	Div2	L2	51.38
+10980	RooksParty	Dynamic Programming	Div1	L3	40.82
+10982	LinearKingdomParkingLot	Dynamic Programming	Div1	L1	73.17
+10988	BankLottery	Dynamic Programming,  Simple Math	Div1	L1	98.52
+10990	TheChroniclesOfAmber	Math,  Search	Div1	L2	47.86
+10992	OneRegister	Greedy,  Simple Math	Div2	L2	16.18
+10993	SpaceshipEvacuation	Dynamic Programming,  Graph Theory	Div1	L3	27.27
+10994	RepresentableNumbers	Math	Div1	L2	74.86
+10996	QuickSort	Dynamic Programming,  Math,  Recursion	Div1	L2	75.43
+10998	Reflections	Search,  Simple Math,  Sorting	Div1	L3	27.08
+11003	KingdomTour	Dynamic Programming,  Graph Theory	Div1	L3	66.67
+11004	ChickenOracle	Simple Math,  Simple Search,  Iteration	Div2	L2	11.75
+11007	OneDigitDifference	Simple Math	Div2	L1	88.79
+11008	BottlesOnShelf	Math,  Simple Search,  Iteration	Div2	L3	5.88
+11009	PrefixTree	Dynamic Programming,  String Manipulation	Div1	L2	31.31
+11011	BunnyExam	Brute Force,  Graph Theory,  Simple Math	Div1	L2	16.48
+11012	BunnyExamAfter	Simple Search,  Iteration	Div2	L1	96.03
+11014	YetAnotherRobotSimulation	Brute Force,  Dynamic Programming,  Math	Div1	L1	80
+11015	ProductsOfDigits	Dynamic Programming,  Simple Math	Div1	L2	35.62
+11019	KiwiJuice	Dynamic Programming,  Math	Div1	L2	64.96
+11020	KiwiJuiceEasy	Simulation	Div2	L1	97.04
+11022	CarrotJumping	Math	Div2	L2	61.24
+11023	BestApproximationDiv1	Simple Search,  Iteration	Div1	L1	64.53
+11026	RandomApple	Dynamic Programming,  Math	Div1	L3	34.78
+11028	TheCoffeeTimeDivOne	Greedy,  Simple Math,  Simulation,  Sorting	Div1	L1	60.21
+11029	TheCoffeeTimeDivTwo	Simulation	Div2	L2	72.26
+11030	TheAirTripDivOne	Graph Theory,  Simple Math	Div1	L2	67.09
+11031	TheAirTripDivTwo	Graph Theory,  Simple Search,  Iteration	Div2	L1	91.72
+11032	TheBoardingDivOne	Dynamic Programming	Div1	L3	0
+11033	TheBoardingDivTwo	Brute Force,  Simulation	Div2	L3	47.83
+11035	MovieSeating	Simple Math	Div2	L2	8.7
+11037	Bribes	Dynamic Programming	Div1	L2	30.67
+11040	CalculationCards	Dynamic Programming,  Math	Div1	L2	50
+11041	AliceInWanderland	Dynamic Programming	Div1	L2	33.33
+11042	SemifinalAssignment	Dynamic Programming	Div1	L3	-1
+11044	EnclosingSquare	Math	Div1	L2	87.5
+11049	TimeTravellingSalesman	Graph Theory	Div2	L3	49.06
+11054	RabbitWorking	Graph Theory	Div1	L3	10
+11056	P8XMatrixTransformation	Simple Math	Div2	L1	95.06
+11059	SignalIntelligence	Encryption/Compression,  Greedy,  Math,  Sorting	Div2	L3	9.3
+11060	TimeTravellingGardener	Brute Force,  Geometry,  Greedy	Div2	L2	39.16
+11061	ColorfulJewelry	Math	Div1	L3	50
+11063	KingdomXCitiesandVillages	Math,  Sorting	Div1	L2	63.48
+11064	InternetSecurity	Brute Force,  Simulation,  String Parsing	Div2	L2	36.92
+11072	ShrooksOnTheBoard	Dynamic Programming,  Math	Div1	L3	-1
+11073	BestApproximationDiv2	Search,  Simple Math	Div2	L3	18.75
+11077	DistantPoints	Geometry,  Math,  Simple Search,  Iteration	Div1	L1	100
+11095	CircleMarket	Simulation	Div2	L1	73.92
+11096	TheNumbersWithLuckyLastDigit	Simple Math,  Simple Search,  Iteration	Div2	L2	51.81
+11097	TheJackpotDivOne	Simple Search,  Iteration	Div1	L2	26.11
+11098	TheTicketsDivOne	Dynamic Programming	Div1	L3	82.95
+11100	CoinMachinesGame	Math	Div1	L2	75.73
+11101	TxMsg	String Manipulation	Div2	L1	86.97
+11107	TicketPrinters	Brute Force,  Graph Theory,  Search	Div1	L3	46.67
+11110	LockersDivOne	Brute Force,  Simulation	Div1	L1	76.73
+11111	LockersDivTwo	Brute Force,  Simulation	Div2	L2	61.08
+11114	RowsOrdering	Greedy,  Sorting	Div1	L2	36.51
+11115	PermutationSignature	Greedy,  Simple Math	Div2	L2	52.04
+11117	TimeTravellingGogo	Graph Theory	Div1	L3	10
+11118	TimeTravellingCellar	Brute Force,  Simulation	Div2	L1	63.78
+11119	BatchSystemRoulette	Greedy,  Math	Div1	L2	56.67
+11120	FunnyGames	Recursion,  Search,  Sorting	Div1	L3	75
+11121	AverageAverage	Brute Force,  Simple Math,  Simple Search,  Iteration	Div2	L1	92.22
+11124	EvaluatingElections	Greedy,  Simple Math	Div1	L1	57.14
+11125	SellingGold	Dynamic Programming	Div1	L2	83.33
+11127	DigitHoles	Simple Search,  Iteration	Div2	L1	93.68
+11129	NumberMagicEasy	Simple Search,  Iteration	Div2	L1	91.24
+11130	CubeColoring	Brute Force,  Graph Theory	Div2	L3	3.57
+11131	RabbitNumber	Brute Force,  Math	Div2	L2	31.52
+11133	NumberMagic	Greedy,  Math	Div1	L3	6.06
+11135	FractionInDifferentBases	Math	Div2	L3	30
+11137	NumberLabyrinthDiv2	Graph Theory	Div2	L3	20.79
+11138	LuckyRemainder	Simple Math	Div2	L2	52.94
+11146	AfraidOfEven	Simple Math	Div2	L2	53.54
+11147	YetAnotherHamiltonianPath	Graph Theory,  Greedy,  String Manipulation	Div1	L3	19.59
+11148	RectangleAvoidingColoringEasy	Brute Force	Div2	L3	50
+11149	RectangleAvoidingColoring	Brute Force,  Simple Math	Div1	L2	61.11
+11150	MicrowaveSelling	Simple Search,  Iteration	Div2	L1	54.56
+11151	ToastXRaspberry	Greedy,  Simple Math,  Simulation	Div2	L1	82.86
+11154	SlimeXSlimesCity	Greedy	Div2	L2	59.14
+11155	P8XCoinChange	Dynamic Programming,  Math	Div1	L3	50
+11157	BunnyComputer	Simple Math,  Simple Search,  Iteration	Div2	L2	24.14
+11161	GuessTheNumberGame	Math,  Search	Div1	L1	97.26
+11174	BarbarianInvasion2	Geometry,  Graph Theory,  Search	Div1	L3	40
+11176	P8XMatrixRecovery	Graph Theory	Div1	L2	66.45
+11178	AmoebaDivTwo	Brute Force,  Simple Search,  Iteration	Div2	L1	83.59
+11179	AmoebaDivOne	Dynamic Programming	Div1	L3	50
+11189	SolitaireChess	Dynamic Programming,  Graph Theory	Div2	L3	0
+11190	BadVocabulary	Simple Search,  Iteration	Div2	L1	43.29
+11191	BuyingFlowers	Brute Force,  Search,  Simple Math	Div2	L2	57.69
+11193	TheBoredomDivOne	Simple Math,  Simple Search,  Iteration	Div1	L1	80.25
+11194	TheBoredomDivTwo	Advanced Math,  Encryption/Compression	Div2	L1	95.28
+11196	TheBoringStoreDivOne	Dynamic Programming,  String Manipulation	Div1	L2	28
+11197	TheBoringStoreDivTwo	Geometry,  Graph Theory,  String Manipulation	Div2	L2	9.09
+11204	ToastXToast	Greedy	Div2	L2	52.36
+11205	TheBoringGameDivOne	Advanced Math,  Brute Force,  Dynamic Programming,  Encryption/Compression,  Geometry,  Graph Theory,  Greedy,  Math,  Recursion,  Search,  Simple Math,  Simple Search,  Iteration,  Simulation,  Sorting,  String Manipulation,  String Parsing	Div1	L3	40
+11206	TheBoringGameDivTwo	Simple Search,  Iteration,  Simulation	Div2	L3	0
+11211	BallsConverter	Math,  Simple Search,  Iteration	Div1	L1	91.53
+11212	DiceRotation	Math	Div1	L2	57.18
+11213	AppleTrees	Dynamic Programming,  Math	Div1	L3	44.44
+11214	CrouchingAmoebas	Geometry,  Search	Div2	L3	4.55
+11219	FoxSequence	Simple Search,  Iteration	Div2	L2	38.27
+11222	P8XCoinChangeAnother	Brute Force,  Greedy	Div2	L3	20
+11223	FoxJumping	Dynamic Programming,  Math	Div1	L3	75
+11225	NinePuzzle	Greedy,  Search	Div2	L3	85.44
+11227	Starport	Simple Math	Div2	L2	19.86
+11228	QuickT9	Dynamic Programming,  String Manipulation	Div1	L2	37.74
+11229	LuckyCounter	String Parsing	Div2	L1	93.06
+11230	Hieroglyphs	Simple Search,  Iteration	Div2	L3	6.25
+11231	InfiniteLab	Search	Div1	L3	22.22
+11232	MonsterFarm	Graph Theory,  Simple Math,  Simple Search,  Iteration	Div1	L2	28.57
+11234	FoxMakingDice	Simple Math,  Simple Search,  Iteration	Div1	L1	98.41
+11235	FoxMakingDiceEasy	Brute Force,  Simple Search,  Iteration	Div2	L2	88.49
+11236	FoxCardGame	Graph Theory,  Greedy,  Simple Search,  Iteration	Div1	L3	1.57
+11239	NetworkXMessageRecovery	Greedy	Div2	L3	33.33
+11264	CubeBuilding	Dynamic Programming	Div1	L3	28.57
+11266	CubePacking	Greedy,  Math	Div1	L2	27.21
+11267	GogoXMarisaKirisima	Graph Theory,  Greedy	Div1	L2	34.57
+11268	SlimeXResidentSlime	Brute Force,  Graph Theory,  Search	Div2	L3	8.7
+11274	GogoXCake	Greedy,  Simulation	Div2	L2	43.57
+11278	UnsortedSequence	Sorting	Div2	L1	90.07
+11279	SlimeXSlimeRancher2	Brute Force,  Greedy	Div2	L1	95.42
+11282	KingdomReorganization	Graph Theory,  Greedy	Div2	L3	80.36
+11283	FoxProgression	Simple Search,  Iteration	Div2	L1	47.49
+11284	FoxPlayingGame	Dynamic Programming,  Greedy,  Simple Math	Div2	L2	17.44
+11286	FoxSearchingRuins	Dynamic Programming	Div1	L3	14.29
+11287	MarbleDecoration	Brute Force,  Simple Math,  Simple Search,  Iteration	Div2	L1	89.6
+11288	SubFibonacci	Brute Force,  Math,  Search	Div1	L2	36.61
+11289	DoubleRoshambo	Greedy	Div2	L3	48.11
+11290	PickAndDelete	Dynamic Programming	Div1	L3	60.71
+11292	StonesGame	Greedy,  Simple Math	Div2	L2	8.13
+11293	AnagramFree	Simple Search,  Iteration,  Sorting,  String Manipulation	Div2	L1	89.64
+11295	MysteriousRestaurant	Brute Force,  Greedy	Div2	L2	47.5
+11296	PalindromfulString	Brute Force,  Recursion,  Simple Math	Div2	L3	21.43
+11302	ColorfulCards	Greedy	Div2	L2	66.21
+11303	HexagonPuzzle	Math	Div2	L3	14.29
+11304	CarrotBoxes	Graph Theory	Div1	L2	33.33
+11305	StrangeElevator	Dynamic Programming,  Math	Div1	L3	71.43
+11306	ColoredStrokes	Greedy,  String Manipulation	Div2	L2	69.15
+11307	CarrotBoxesEasy	Simulation	Div2	L1	95.64
+11308	P8XGraphBuilder	Dynamic Programming,  Graph Theory	Div2	L2	29.69
+11309	AlternatingLane	Dynamic Programming,  Math	Div2	L3	0
+11310	Painting	Greedy,  Simple Search,  Iteration,  Simulation	Div2	L2	33.12
+11312	InterestingParty	Greedy,  Simple Search,  Iteration	Div2	L1	88.26
+11315	CubeStickers	Simple Search,  Iteration	Div2	L2	62.56
+11316	FoxStones	Math	Div1	L2	80.11
+11317	AdditionGame	Greedy,  Simple Math,  Simple Search,  Iteration	Div2	L1	92.35
+11318	OneDimensionalBalls	Graph Theory,  Simple Math,  Simple Search,  Iteration	Div1	L2	56.88
+11320	FoxBomb	Dynamic Programming,  Graph Theory,  Greedy	Div1	L3	19.05
+11322	CubeRoll	Math,  Search	Div2	L3	1.11
+11323	Filtering	Simple Search,  Iteration	Div2	L1	78.05
+11326	ImpossibleGame	Graph Theory	Div1	L3	52
+11327	ColorfulRabbits	Simple Math	Div2	L2	74.6
+11328	WhiteSpaceEditing	Dynamic Programming,  Greedy	Div1	L2	45.38
+11329	RotatedClock	Brute Force,  Simple Math	Div2	L2	64.44
+11331	PalindromeGame	Greedy,  Simple Search,  Iteration	Div2	L3	15.78
+11334	SlimeXGrandSlimeAuto	Graph Theory	Div1	L2	54.82
+11336	GogoXBallsAndBinsEasy	Brute Force,  Greedy	Div2	L1	96.96
+11340	FoxAverageSequence	Dynamic Programming	Div2	L3	38.89
+11341	SRMCards	Dynamic Programming,  Greedy	Div2	L1	89.21
+11342	MafiaGame	Greedy,  Simulation	Div2	L2	51.19
+11343	GeometricProgressions	Math,  Simulation	Div2	L3	3.85
+11344	FractalPicture	Brute Force,  Geometry,  Recursion,  Simple Math,  Simulation	Div1	L2	47.13
+11345	ProductAndSum	Brute Force,  Dynamic Programming,  Math	Div1	L3	38.89
+11351	TheCowDivOne	Dynamic Programming,  Math	Div1	L3	20
+11352	TheCowDivTwo	Dynamic Programming	Div2	L3	60
+11357	TheProgrammingContestDivOne	Dynamic Programming,  Greedy	Div1	L2	29.86
+11358	TheProgrammingContestDivTwo	Greedy,  Simple Search,  Iteration	Div2	L1	93.06
+11359	TheLotteryBothDivs	Math,  String Manipulation	Div2	L2	58.29
+11360	SlimeXSlimeRancher	Dynamic Programming,  Greedy	Div1	L3	0
+11363	PrefixFreeSuperset	Greedy,  Math,  Search	Div1	L2	42.33
+11364	FoxAndGCDLCM	Simple Math	Div2	L2	27.8
+11369	CircuitDesign	Graph Theory,  Recursion	Div1	L3	40.74
+11372	FoxIntegerLevelThree	Math	Div1	L3	71.43
+11374	TripleStrings	Simple Search,  Iteration,  String Manipulation	Div1	L1	83.39
+11377	MonochromePuzzle	Graph Theory,  Search	Div1	L3	44.44
+11378	IPv444	Recursion,  String Parsing	Div1	L3	50.31
+11379	YetAnotherORProblem	Dynamic Programming,  Math	Div1	L2	84.26
+11380	SRMRoomAssignmentPhase	Simulation,  Sorting	Div2	L1	86.11
+11381	SRMCodingPhase	Brute Force,  Greedy,  Search	Div2	L2	60.92
+11388	ComplementMachine2D	Graph Theory,  Search	Div1	L3	78.49
+11395	SetMultiples	Math,  Sorting	Div1	L2	37.38
+11397	PerfectSequences	Math,  Simple Search,  Iteration	Div2	L2	12.03
+11399	SentenceCapitalizerInator	String Manipulation	Div2	L1	96.04
+11400	RectangleArea	Graph Theory,  Simple Math	Div2	L3	26.6
+11404	SkewedPerspectives	Greedy	Div2	L3	22.73
+11405	PerfectSequences2	Brute Force,  Math,  Sorting	Div1	L3	33.33
+11415	AllButOneDivisor	Simple Math,  Simple Search,  Iteration	Div1	L1	87.85
+11418	BlackWhiteMagic	Greedy,  Simple Search,  Iteration	Div1	L1	91.89
+11419	CubeAnts	Simple Math	Div2	L1	85.45
+11420	MuddyRoad	Dynamic Programming	Div1	L2	95.71
+11423	STable	Recursion,  String Manipulation	Div1	L2	87.4
+11424	KindAndCruel	Graph Theory,  Search	Div1	L2	44.27
+11430	NumberLabyrinthDiv1	Dynamic Programming,  Math	Div1	L3	50
+11432	TheJackpotDivTwo	Simulation	Div2	L1	74.02
+11433	TheTicketsDivTwo	Dynamic Programming	Div2	L3	71.27
+11434	DivideAndShift	Simple Math,  Simple Search,  Iteration	Div2	L2	31.84
+11435	YetAnotherORProblem2	Dynamic Programming	Div2	L3	18.18
+11438	SquaredSubsets	Geometry,  Sorting	Div2	L3	30.3
+11439	CandyShop	Simple Search,  Iteration	Div2	L1	50.45
+11440	ArtShift	Brute Force,  Math	Div1	L1	51.27
+11443	PalindromizationDiv1	Dynamic Programming,  Graph Theory	Div1	L2	7.8
+11445	PalindromizationDiv2	Brute Force,  Simple Search,  Iteration	Div2	L1	77.34
+11454	FoxAndBusiness	Simple Math,  Simple Search,  Iteration	Div1	L2	23.1
+11459	RowOfColors	Dynamic Programming	Div1	L3	66.67
+11461	TheAlmostLuckyNumbersDivOne	Simple Search,  Iteration	Div1	L1	66.84
+11462	TheAlmostLuckyNumbersDivTwo	Simple Search,  Iteration	Div2	L1	91.6
+11463	TheLuckyGameDivOne	Search,  Simple Math	Div1	L2	28.32
+11464	TheLuckyGameDivTwo	Simple Search,  Iteration	Div2	L2	33.41
+11465	TheLuckyBasesDivOne	Search,  Simple Math	Div1	L3	0
+11466	TheLuckyBasesDivTwo	Search	Div2	L3	13.08
+11469	Nim	Dynamic Programming	Div1	L3	42.86
+11471	LargestSubsequence	Greedy,  String Manipulation	Div2	L2	93.2
+11473	CoinReversing	Dynamic Programming,  Simple Math	Div2	L3	88.54
+11474	ConvexSequence	Greedy	Div1	L2	92.11
+11475	MagicalGirlLevelOneDivTwo	Simple Math	Div2	L1	82.25
+11476	MagicalGirlLevelOneDivOne	Simple Math,  Simple Search,  Iteration	Div1	L1	58.24
+11477	MagicalGirlLevelTwoDivTwo	Simple Math,  Simple Search,  Iteration	Div2	L2	59.57
+11478	MagicalGirlLevelThreeDivOne	Recursion,  Simple Math,  Simple Search,  Iteration	Div1	L3	63.64
+11479	MagicalGirlLevelThreeDivTwo	Simple Math,  Simple Search,  Iteration	Div2	L3	16.67
+11480	TwiceString	String Manipulation	Div2	L1	83.88
+11482	MagicalGirlLevelTwoDivOne	Dynamic Programming	Div1	L2	66.1
+11483	GameOfLifeDivTwo	Simulation	Div2	L1	91.05
+11484	FiveHundredEleven	Dynamic Programming	Div2	L3	1.38
+11485	Zoo	Math,  Recursion	Div2	L2	32.97
+11486	GameOfLifeDivOne	Dynamic Programming,  Math	Div1	L3	66.67
+11487	RemoveGame	Dynamic Programming,  Greedy,  Math	Div1	L3	0
+11493	RadarSabotage	Geometry,  Graph Theory	Div1	L3	0
+11494	TopView	Graph Theory,  String Manipulation	Div2	L3	21.43
+11495	SRMChallengePhase	Dynamic Programming	Div1	L3	33.33
+11496	SRMIntermissionPhase	Dynamic Programming	Div1	L2	77.62
+11497	YetAnotherBingoProblem	Brute Force,  Recursion,  String Parsing	Div1	L2	40
+11499	TrainingCamp	Simple Search,  Iteration	Div2	L1	93.79
+11500	PerfectMemory	Dynamic Programming,  Math	Div1	L2	81.12
+11501	CutTheNumbers	Brute Force	Div2	L3	26.51
+11502	YetAnotherIncredibleMachine	Simple Math,  Simple Search,  Iteration,  Sorting	Div2	L2	64.07
+11504	SistersErasingLetters	Dynamic Programming,  Greedy,  Simulation	Div1	L1	87.5
+11505	PlaylistShuffler	Brute Force,  Math	Div1	L2	52.5
+11506	PrimeCompositeGame	Dynamic Programming,  Math	Div1	L2	50
+11507	MeetInTheMaze	Graph Theory,  Search	Div1	L3	46.15
+11508	NewItemShop	Dynamic Programming,  Simple Math	Div1	L2	64.77
+11509	FortunateNumbers	Simple Search,  Iteration	Div2	L1	90.61
+11510	NewItemShopTwo	Search,  Simple Math	Div2	L3	18.18
+11511	SRMSystemTestPhase	Dynamic Programming	Div2	L3	55.1
+11512	Chimney	Advanced Math,  Recursion	Div1	L3	86
+11513	OrthogonalAnagram	Greedy,  String Manipulation	Div1	L1	83.33
+11514	RequiredSubstrings	Dynamic Programming,  String Manipulation	Div1	L2	66.18
+11515	EventOrder	Dynamic Programming	Div1	L1	100
+11519	EllysFractions	Simple Math	Div1	L2	86.72
+11522	EllysFiveFriends	Dynamic Programming	Div2	L3	0
+11524	NetworkXZeroOne	Simple Search,  Iteration	Div2	L1	77.38
+11526	GuessTheSubstring	Dynamic Programming,  Greedy,  Math,  Search,  String Manipulation	Div1	L2	77.78
+11527	DecodeDigits	Encryption/Compression,  Greedy,  String Manipulation	Div1	L2	66.67
+11529	EllysDirectoryListing	Simulation	Div2	L1	80.61
+11530	PerfectlyFairGame	Dynamic Programming,  Simple Math	Div1	L1	71.43
+11534	MonochromaticBoard	Simple Search,  Iteration	Div2	L1	82.5
+11535	CompositeSmash	Math	Div2	L2	31.82
+11536	CuttingGrass	Dynamic Programming,  Sorting	Div2	L3	9.38
+11537	AdjacentSwaps	Dynamic Programming,  Math	Div1	L2	66.14
+11538	ColorfulBoard	Graph Theory,  Math	Div1	L3	27.66
+11540	TheCoins	Math,  Simple Search,  Iteration	Div1	L2	40
+11543	TheCards	Recursion,  Search,  Sorting	Div1	L3	50
+11545	PermutationBias	Advanced Math,  Search	Div1	L3	-1
+11549	SmallBricks31	Dynamic Programming	Div2	L3	50
+11552	BinaryCards	Simple Math	Div2	L3	45.45
+11553	WhichDay	Simple Search,  Iteration,  String Manipulation	Div2	L1	97.23
+11554	ThreeTeleports	Brute Force,  Graph Theory,  Simple Search,  Iteration,  String Parsing	Div2	L2	63.38
+11555	VerySmoothDecompositions	Dynamic Programming,  Math,  Simple Search,  Iteration	Div1	L3	0
+11557	MatrixPower	Math	Div1	L3	100
+11559	RGBGame	Simple Math	Div1	L1	90.91
+11564	Cut	Greedy,  Simulation	Div2	L2	33.41
+11566	RowAndCoins	Dynamic Programming,  Greedy	Div1	L1	97.71
+11567	RedAndGreen	Greedy	Div2	L1	38.37
+11572	FoxAndSorting	Dynamic Programming,  Simple Search,  Iteration	Div2	L3	0
+11575	FoxAndIntegers	Simple Math	Div2	L1	81.91
+11577	RangeSquaredSubsets	Geometry,  Search	Div1	L2	36.14
+11580	LongestSequence	Graph Theory,  Search	Div1	L2	61.54
+11581	PointErasing	Dynamic Programming	Div1	L3	28.57
+11582	PointErasingTwo	Simple Search,  Iteration	Div2	L1	93.88
+11594	MagicalSquare	Brute Force	Div2	L3	10.81
+11595	ColorfulCookie	Advanced Math,  Dynamic Programming	Div1	L3	26.67
+11604	CorrectMultiplication	Brute Force,  Simple Math	Div1	L2	43.45
+11605	RowAndManyCoins	Greedy	Div2	L2	88.29
+11607	MagicDiamonds	Advanced Math	Div2	L2	49.64
+11608	AxonometricProjection	Dynamic Programming,  Math,  Sorting	Div1	L3	50
+11609	CorrectMultiplicationTwo	Brute Force,  Simple Math	Div2	L3	28.34
+11615	AlphabetPath	Search,  String Manipulation	Div2	L1	83.17
+11616	BricksN	Dynamic Programming,  Math	Div1	L2	84.16
+11626	SumOfLuckiness	Search,  Simple Math	Div2	L3	19.05
+11628	CheatingQuiz	Simulation	Div2	L1	95.32
+11629	MultiplesWithLimit	Graph Theory,  Math	Div2	L3	11.34
+11630	ShippingCubes	Simple Search,  Iteration	Div2	L1	84.61
+11631	DengklekTryingToSleep	Greedy,  Simple Math	Div2	L1	97.37
+11634	SPartition	Search,  String Manipulation	Div1	L2	62.97
+11635	RainyRoad	Simple Search,  Iteration	Div2	L1	91.62
+11644	AlphabetPaths	Brute Force,  Simple Search,  Iteration	Div1	L3	11.63
+11654	Mosquitoes	Geometry,  Math	Div2	L3	8.57
+11664	Rumor	Brute Force,  Graph Theory	Div1	L2	51.59
+11665	DropCoins	Simple Math,  Simple Search,  Iteration	Div2	L2	57.1
+11667	DucksAlignment	Brute Force,  Greedy	Div2	L2	55.24
+11674	MagicNaming	Dynamic Programming,  Greedy,  Sorting	Div2	L3	9.38
+11676	MagicMatchesGame	Advanced Math,  Greedy,  Sorting	Div1	L3	0
+11690	MagicBlizzard	Math,  Sorting	Div1	L2	84.91
+11704	TurtleSpy	Geometry	Div1	L2	64.39
+11706	MagicCandy	Math,  Search	Div2	L2	68.27
+11714	DengklekMessage	Dynamic Programming,  Simple Math,  String Manipulation	Div1	L3	33.33
+11724	MagicStonesStore	Advanced Math	Div2	L1	82.52
+11727	MinCostPalindrome	Greedy,  Simple Search,  Iteration	Div2	L1	87.08
+11738	LeftOrRight	Simple Search,  Iteration,  Simulation	Div2	L1	60.12
+11739	MinskyMystery	Math,  Simple Search,  Iteration,  Simulation	Div1	L2	12.41
+11740	KingSort	Simple Math,  Sorting,  String Manipulation,  String Parsing	Div2	L2	65.97
+11741	PairingPawns	Brute Force,  Simple Math,  Simple Search,  Iteration,  Simulation	Div2	L1	95.54
+11742	BigAndSmallAirports	Math	Div1	L3	14.71
+11746	MinskyMysteryDiv2	Simple Math,  Simulation	Div2	L3	20
+11754	DengklekMakingChains	Greedy	Div2	L2	15.43
+11765	DengklekPaintingSquares	Dynamic Programming	Div2	L3	20
+11766	DengklekCountingFormations	Dynamic Programming,  Graph Theory,  Math	Div1	L3	75
+11767	DengklekBuildingRoads	Dynamic Programming,  Graph Theory	Div1	L2	78.01
+11774	NoRepeatPlaylist	Dynamic Programming,  Simple Math	Div2	L2	41.27
+11777	BuildingReorganization	Simple Math,  Simple Search,  Iteration	Div1	L3	16.67
+11778	FoxAndGreed	Dynamic Programming	Div1	L3	37.5
+11779	Pikachu	Dynamic Programming,  Greedy,  Math,  Sorting	Div1	L3	50
+11780	MagicBoard	Graph Theory,  Search	Div1	L2	30.69
+11781	CasketOfStar	Dynamic Programming	Div1	L1	57.22
+11783	PikachuEasy	String Parsing	Div2	L1	69.07
+11784	MagicalGirl	Dynamic Programming	Div2	L3	10.26
+11787	EllysNumbers	Dynamic Programming,  Simple Math	Div1	L2	24.31
+11788	CasketOfStarEasy	Brute Force,  Search	Div2	L2	61.19
+11791	EllysCheckers	Dynamic Programming,  Simple Search,  Iteration	Div2	L2	69.37
+11797	RollingDiceDivOne	Math	Div1	L2	26.6
+11798	BinaryPolynomialDivOne	Dynamic Programming,  Simple Math	Div1	L3	74.29
+11799	MergersDivOne	Greedy,  Sorting	Div1	L1	95.08
+11800	BinaryPolynomialDivTwo	Simple Math,  Simple Search,  Iteration	Div2	L1	95.04
+11801	RollingDiceDivTwo	Greedy,  Sorting,  String Parsing	Div2	L2	97.01
+11802	MergersDivTwo	Dynamic Programming,  Sorting	Div2	L3	20.81
+11805	SafeReturn	Graph Theory	Div1	L2	45.49
+11808	EvenRoute	Dynamic Programming,  Math,  Simple Search,  Iteration	Div2	L2	39.58
+11809	FoxAndKgram	Simple Search,  Iteration	Div1	L1	59.38
+11840	RandomColoring	Dynamic Programming,  Math	Div1	L2	55.42
+11842	ImportantSequence	Simple Search,  Iteration	Div2	L2	6.88
+11843	EllysJuice	Simple Search,  Iteration	Div1	L1	75.53
+11845	EllysLights	Graph Theory	Div1	L3	37.25
+11847	FlattenOut	Simulation	Div1	L3	34.01
+11848	CaptureFish	Math	Div2	L3	5.13
+11849	FoxAndPhotography	Dynamic Programming,  Search	Div1	L3	62.03
+11855	Over9000Rocks	Brute Force,  Search,  Sorting	Div2	L2	28.22
+11858	PlatypusPaternity	Simple Search,  Iteration	Div2	L1	72.28
+11860	FoxAndDoraemon	Dynamic Programming,  Math,  Search	Div1	L2	78.56
+11861	SplittingFoxes	Advanced Math	Div1	L3	86.96
+11865	AliceBobShuffle	Dynamic Programming,  Simulation	Div2	L3	47.62
+11867	PasswordXGuessing	Brute Force	Div1	L1	78.22
+11868	PasswordXPalindrome	Graph Theory	Div1	L3	50.83
+11869	KingdomAndPassword	Dynamic Programming	Div2	L3	3.57
+11870	ProductQuery	Dynamic Programming,  Math	Div1	L3	55.56
+11872	RandomColoringDiv2	Brute Force	Div2	L1	92.83
+11873	PasswordXGrid	Graph Theory,  Math	Div1	L2	85.36
+11886	XorLife	Search,  Simulation	Div1	L3	25
+11887	AntsMeet	Simulation	Div2	L2	16.6
+11888	AkariDaisukiDiv1	Simple Math,  String Manipulation	Div1	L2	60.65
+11889	AkariDaisukiDiv2	String Manipulation	Div2	L1	82.82
+11890	NonXorLife	Simulation	Div2	L3	18.18
+11894	SwitchesAndLamps	Math,  Simple Search,  Iteration	Div1	L1	38.91
+11895	EvenPaths	Brute Force,  Dynamic Programming,  Graph Theory,  Math	Div1	L3	33.33
+11896	CrossingTheRiver	Dynamic Programming	Div1	L1	50
+11899	CucumberWatering	Dynamic Programming,  Math	Div1	L2	58.62
+11904	EllysDeathStars	Geometry,  Graph Theory	Div1	L3	20
+11907	EllysTSP	Simple Search,  Iteration	Div2	L1	72.85
+11910	EllysXors	Brute Force,  Simple Math	Div2	L2	38.2
+11911	EllysThreeRivers	Search	Div2	L3	45.45
+11912	EllysRivers	Dynamic Programming,  Search	Div1	L2	44.4
+11929	StrangeDictionary	Simple Math	Div2	L3	25
+11934	PatrolRoute	Simple Math	Div2	L2	54.55
+11935	StrangeDictionary2	Dynamic Programming,  Simple Math	Div1	L2	48.1
+11936	WorkingRabbits	Simple Search,  Iteration	Div2	L1	96.36
+11937	Spacetsk	Dynamic Programming	Div1	L2	76.76
+11939	HeavyBooks	Dynamic Programming,  Greedy	Div1	L2	57.73
+11940	SequenceTransmission	Dynamic Programming,  Encryption/Compression,  Math	Div1	L3	50
+11944	BlurredDartboard	Math,  Simple Search,  Iteration	Div1	L1	71.17
+11945	ElectionFraudDiv1	Simple Math,  Simple Search,  Iteration,  Simulation	Div1	L1	33.83
+11946	ElectionFraudDiv2	Simple Math	Div2	L1	19.1
+11951	BoardSplitting	Greedy,  Simple Math,  Simulation	Div2	L2	52.41
+11952	GreedyTravelingSalesman	Brute Force,  Graph Theory	Div1	L1	77.76
+11955	OrderOfTheHats	Dynamic Programming	Div2	L3	16.67
+11964	BallAndHats	Simple Math	Div2	L1	77.78
+11965	PointyWizardHats	Geometry,  Greedy,  Sorting	Div2	L2	29.7
+11966	MagicalHats	Brute Force,  Dynamic Programming	Div1	L2	47.37
+11967	KingdomAndTrees	Greedy,  Search	Div2	L2	31.44
+11974	FlipGame	Greedy,  Math	Div1	L2	89.7
+11985	KingdomAndDucks	Simple Math,  Simple Search,  Iteration	Div2	L1	91.6
+11986	KingdomAndDice	Dynamic Programming,  Simulation	Div1	L2	31.09
+11987	ThreePoints	Math,  Search	Div1	L2	85.71
+11995	CheckerExpansion	Recursion,  String Manipulation	Div1	L2	86.4
+12004	SetAndSet	Dynamic Programming,  Math,  Search	Div1	L3	15.38
+12025	StrIIRec	Dynamic Programming,  Greedy,  Search	Div2	L2	32.41
+12029	ANDEquation	Simple Math	Div2	L1	74.84
+12030	SpacetskE	Brute Force,  Math,  Search	Div2	L3	42.11
+12033	RotatingBot	Simulation	Div2	L2	13.68
+12034	CosmicBlocks	Brute Force,  Dynamic Programming,  Graph Theory,  Recursion	Div1	L3	66.67
+12044	FleaCircus	Dynamic Programming,  Math	Div1	L3	70
+12045	FavouriteDigits	Brute Force,  Greedy,  Simple Math,  Simple Search,  Iteration	Div2	L3	10.61
+12046	TwoRectangles	Geometry,  Simple Math	Div2	L2	47.01
+12048	ContestWinner	Simple Search,  Iteration,  Simulation,  Sorting	Div2	L1	80.92
+12049	KleofasTail	Simple Math	Div1	L1	52.35
+12054	MaximalTriangle	Dynamic Programming	Div1	L3	0
+12055	Pillars	Simple Math	Div1	L1	65.25
+12056	MinimalTriangle	Geometry	Div2	L1	92.13
+12074	RelativelyPrimeSubset	Dynamic Programming,  Recursion	Div2	L3	12.03
+12075	PillarsDivTwo	Dynamic Programming	Div2	L2	37.92
+12077	RectangularSum	Math,  Simple Search,  Iteration	Div1	L2	34.87
+12081	FoxAndCake	Graph Theory	Div1	L2	45.12
+12082	ChromaticNumber	Graph Theory	Div1	L1	46.72
+12083	CowsMooing	Brute Force,  Dynamic Programming,  Math	Div1	L3	66.67
+12104	KingdomAndCities	Dynamic Programming	Div1	L3	40
+12109	ElevenMultiples	Dynamic Programming,  Math	Div1	L2	50
+12110	PQHulls	Geometry,  Math,  Sorting	Div1	L3	-1
+12118	ConversionMachine	Dynamic Programming,  Math	Div1	L3	58.33
+12125	EasyConversionMachine	Simple Math	Div2	L1	79.14

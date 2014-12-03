@@ -1,0 +1,72 @@
+<html>
+<head>
+<title> Problem Statement for BusinessTasks</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for BusinessTasks</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>A busy businessman has a number of equally important tasks which he must accomplish.  To decide which of the tasks to perform first, he performs the following operation.</p>
+
+<p>He writes down all his tasks in the form of a circular list, so the first task is adjacent to the last task. He then thinks of a positive number. This number is the random seed, which he calls <b>n</b>. Starting with the first task, he moves clockwise (from element 1 in the list to element 2 in the list and so on), counting from 1 to n. When his count reaches n, he removes that task from the list and starts counting from the next available task. He repeats this procedure until one task remains. It is this last task that he chooses to execute.</p>
+
+<p>Given a String[] <b>list</b> representing the tasks and an int <b>n</b>, return the task which the businessman chooses to execute.</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">BusinessTasks</td></tr><tr><td class="statText">Method:</td><td class="statText">getTask</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String getTask(String[] list, int n)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>list</b> will contain between 2 and 50 elements inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element in <b>list</b> will contain between 1 and 50 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element in <b>list</b> will contain only characters 'a'-'z'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>n</b> will be between 1 and 10000000 inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;}</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We start counting from a. So a is 1, b is 2. We remove b, so <b>list</b> is now {a,c,d}. We continue from c. So c is 1, d is 2. We remove d, so <b>list</b> is now {a,c}. We continue from a. So a is 1, c is 2. We remove c, and now we are left with the last task a.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;}</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;d&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We start counting from a. So a is 1, b is 2, c is 3. We remove c, now list = {a,b,d,e}. We continue from d. So d is 1, e is 2, a is 3. We remove a, now list = {b,d,e}. We continue from b. So b is 1, d is 2, e is 3. We remove e, now list = {b,d}. We continue from b. So b is 1, d is 2 and finally b is 3. We remove b, and now we are left with just one task d.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;alpha&quot;,&quot;beta&quot;,&quot;gamma&quot;,&quot;delta&quot;,&quot;epsilon&quot;}</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;epsilon&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;,&quot;b&quot;}</pre></td></tr><tr><td class="statText"><pre>1000</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,
+&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;}</pre></td></tr><tr><td class="statText"><pre>17</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;n&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;zlqamum&quot;,&quot;yjsrpybmq&quot;,&quot;tjllfea&quot;,&quot;fxjqzznvg&quot;,&quot;nvhekxr&quot;,&quot;am&quot;,&quot;skmazcey&quot;,&quot;piklp&quot;,
+&quot;olcqvhg&quot;,&quot;dnpo&quot;,&quot;bhcfc&quot;,&quot;y&quot;,&quot;h&quot;,&quot;fj&quot;,&quot;bjeoaxglt&quot;,&quot;oafduixsz&quot;,&quot;kmtbaxu&quot;,
+&quot;qgcxjbfx&quot;,&quot;my&quot;,&quot;mlhy&quot;,&quot;bt&quot;,&quot;bo&quot;,&quot;q&quot;}</pre></td></tr><tr><td class="statText"><pre>9000000</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;fxjqzznvg&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6535&pm=1585">Single Round Match 236 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6535&pm=1585">Single Round Match 236 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

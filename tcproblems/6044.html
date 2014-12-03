@@ -1,0 +1,99 @@
+<html>
+<head>
+<title> Problem Statement for BlindMazeSolve</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for BlindMazeSolve</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Each character in <b>maze</b> will be '.' or 'X' denoting a free
+square or an obstacle, respectively.  Starting on some free square, and moving
+exclusively through free squares, your goal is to leave the confines
+of the <b>maze</b> through its left edge.  Each move you make is either 'U', 'D', 'L', or
+'R' denoting up, down, left, and right respectively.  Moving upward
+decreases which element of <b>maze</b> you are in, while moving
+leftward decreases which character you are at in a particular
+element.  Nothing happens (your position does not change) if you move into an
+obstacle, or try to leave the maze other than leftward.  Similarly, nothing happens if you issue a move
+and you have already left the maze (you already won).
+<br><br>
+Your friend has decided to challenge you by trying to solve the
+<b>maze</b> with the monitor off.  This means you do not know which
+position you have started in or if you have won.  
+Return the shortest sequence of moves that will solve
+the <b>maze</b> regardless of your initial position.  If there are multiple shortest solutions, return the one that occurs first lexicographically.
+If there is no solution, return an empty string.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">BlindMazeSolve</td></tr><tr><td class="statText">Method:</td><td class="statText">getSolution</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String getSolution(String[] maze)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>maze</b> contains between 1 and 5 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>maze</b> will contain between 1 and 4 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>maze</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>maze</b> will be '.' or 'X'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>maze</b> will contain at least one '.'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.X&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;L&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Left will win immediately, so we return &quot;L&quot;.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{
+&quot;..&quot;,
+&quot;..&quot;
+}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;LL&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Regardless of your initial position, moving left twice will result in winning.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{
+&quot;X..&quot;,
+&quot;X..&quot;,
+&quot;XXX&quot;
+}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">No way to win here.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{
+&quot;X...&quot;,
+&quot;XXX.&quot;,
+&quot;X...&quot;,
+&quot;X.XX&quot;,
+&quot;..XX&quot;
+}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;RRDDLLDDLL&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.XX.&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">If you happen to be in the rightmost position, you cannot win.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{
+&quot;XXX.&quot;,
+&quot;..X.&quot;,
+&quot;X...&quot;,
+&quot;XX..&quot;,
+&quot;X...&quot;
+}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;DDDRULULULL&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9891&pm=6044">TCO 06 Online Round 2 - Division I, Level Three</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9923&pm=6044">TCO 06 Sponsor Track Round 2 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

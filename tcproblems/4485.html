@@ -1,0 +1,72 @@
+<html>
+<head>
+<title> Problem Statement for ReportAccess</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for ReportAccess</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>You are working on a large database that holds information about several different aspects of your company, such as customers, partners, prospects, employees, products, etc.  Every user in the system has access to one or more types of data.  For instance, a human resources worker might only have access to employee records, while a sales person might have access to prospects, customers, and products.</p>
+
+<p>You are in charge of writing reports that summarize large volumes of this information.  However, since the reports may contain more than one type of data, you need to be determine which users should be allowed to view that report.  In this case, assume that a user has permission to view a report if and only if they have permission to view all of the types of data contained in that report.</p>
+
+<p>You are given a list of usernames in String[] <b>userNames</b>.  You are given a list of what data types each user can access in String[] <b>allowedData</b>, where each element of <b>allowedData</b> is a space-delimited list of the permitted data types for that user.  Finally, you are given a String[] <b>reportData</b>, where each element of <b>report</b> indicates a type of data included in the report.</p>
+
+<p>You are to return a String[] indicating the user names of those users who should be able to access the report.  The list should be returned in alphabetical order.</p>
+
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">ReportAccess</td></tr><tr><td class="statText">Method:</td><td class="statText">whoCanSee</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] whoCanSee(String[] userNames, String[] allowedData, String[] reportData)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>userNames</b> will have between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>userNames</b> will contain between 1 and 50 'a'-'z' characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>allowedData</b> will contain the same number of elements as <b>userNames</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>allowedData</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>allowedData</b> will contain the characters 'a'-'z' or ' '.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>reportData</b> will contain between 1 and 5 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>reportData</b> will contain between 1 and 50 'a'-'z' characters, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;joe&quot;, &quot;nick&quot;, &quot;ted&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;clients products&quot;, &quot;products orders&quot;, &quot;clients orders&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;clients&quot;, &quot;products&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;joe&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here, only joe has access to both required data types.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;kathy&quot;, &quot;john&quot;, &quot;dan&quot;, &quot;steve&quot;, &quot;cheryl&quot;, &quot;tony&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;users data&quot;, &quot;data orders&quot;, &quot;users permissions&quot;, &quot;system users controls&quot;, &quot;default&quot;, &quot;admin users&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;users&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;dan&quot;, &quot;kathy&quot;, &quot;steve&quot;, &quot;tony&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here, we only need one type of permission to view the report.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;jim&quot;, &quot;scott&quot;, &quot;barbara&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;users order products&quot;, &quot;products shipping&quot;, &quot;tracking products orders&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;admin&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Everyone has a variety of permissions, but nobody has the proper permission.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7216&pm=4485">Single Round Match 241 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7216&pm=4485">Single Round Match 241 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

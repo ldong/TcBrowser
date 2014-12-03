@@ -1,0 +1,78 @@
+<html>
+<head>
+<title> Problem Statement for WebBrowser</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for WebBrowser</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>You and your team are programming a web browser for internal use by your employer.  The team leader has assigned you the task of programming the logic of the address toolbar and the back/forward navigation buttons.</p><br>
+
+<p>The web browser always stores two sequences of web pages - the back pages sequence and the forward pages sequence. It also stores the single current page (unless there is no page currently loaded). The browser should respond the user actions encoded as follows (all quotes for clarity only):</p>
+
+<ul>
+<li><tt>"x"</tt>: If the web page <tt>x</tt> is the current page, this command is completely ignored. Otherwise, add the current page (if any) to the end of the back pages sequence. Then, load <tt>x</tt> as the current page and remove all pages from the forward pages sequence.</li>
+
+<li><tt>"BACK"</tt>: If the back pages sequence is empty, this command is completely ignored. Otherwise, add the current page (if any) to the beginning of the forward pages sequence. Remove the last page from the back pages sequence and load it as the current page.</li>
+
+<li><tt>"FORWARD"</tt>: If the forward pages sequence is empty, this command is completely ignored. Otherwise, add the current page (if any) to the end of the back pages sequence. Remove the first page from the forward pages sequence and load it as the current page.</li>
+</ul>
+
+<p>To test the component, you must make a function that takes a String[] containing a sequence of user actions, and returns the sequence of pages the browser should load. At the beginning of the test, the back and forward sequences are empty and there is no page currently loaded.</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">WebBrowser</td></tr><tr><td class="statText">Method:</td><td class="statText">getSequence</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] getSequence(String[] actions)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>actions</b> will contain between <tt>1</tt> and <tt>50</tt> elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element in <b>actions</b> will be either <tt>"BACK"</tt>, <tt>"FORWARD"</tt> or <tt>"x"</tt>, where <tt>x</tt> is the name of a page to visit.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each web page name will contain between <tt>1</tt> and <tt>50</tt> characters, inclusive, and will be composed only from lowercase letters (<tt>'a'-'z'</tt>) and dot characters (<tt>'.'</tt>).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BACK&quot;, &quot;BACK&quot;, &quot;FORWARD&quot;, &quot;FORWARD&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">No page needs to be loaded, because no page visit command is issued.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a.com&quot;, &quot;b.com&quot;, &quot;c.com&quot;, &quot;BACK&quot;, &quot;BACK&quot;, &quot;BACK&quot;,
+ &quot;FORWARD&quot;, &quot;FORWARD&quot;, &quot;FORWARD&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;a.com&quot;, &quot;b.com&quot;, &quot;c.com&quot;, &quot;b.com&quot;, &quot;a.com&quot;, &quot;b.com&quot;, &quot;c.com&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There may be more <tt>BACK</tt> or <tt>FORWARD</tt> commands than those that can be executed.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a.com&quot;, &quot;b.com&quot;, &quot;BACK&quot;, &quot;c.com&quot;, &quot;BACK&quot;, &quot;FORWARD&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;a.com&quot;, &quot;b.com&quot;, &quot;a.com&quot;, &quot;c.com&quot;, &quot;a.com&quot;, &quot;c.com&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">When <tt>"c.com"</tt> is loaded, the browser forgets <tt>"b.com"</tt> as a forward page.
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a.com&quot;, &quot;b.com&quot;, &quot;b.com&quot;, &quot;BACK&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;a.com&quot;, &quot;b.com&quot;, &quot;a.com&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The second <tt>"b.com"</tt> command is ignored, so the <tt>"BACK"</tt> command goes to <tt>"a.com"</tt>.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a.com&quot;, &quot;b.com&quot;, &quot;BACK&quot;, &quot;a.com&quot;, &quot;FORWARD&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;a.com&quot;, &quot;b.com&quot;, &quot;a.com&quot;, &quot;b.com&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The second <tt>"a.com"</tt> command is ignored, so <tt>b.com</tt> is not ignored as a forward page.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ag&quot;, &quot;BACK&quot;, &quot;bh&quot;, &quot;BACK&quot;, &quot;af&quot;, &quot;bp&quot;, &quot;BACK&quot;, &quot;FORWARD&quot;,
+ &quot;ao&quot;, &quot;BACK&quot;, &quot;bo&quot;, &quot;FORWARD&quot;, &quot;BACK&quot;, &quot;BACK&quot;, &quot;ah&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;ag&quot;, &quot;bh&quot;, &quot;ag&quot;, &quot;af&quot;, &quot;bp&quot;, &quot;af&quot;, &quot;bp&quot;, &quot;ao&quot;, &quot;bp&quot;, &quot;bo&quot;, &quot;bp&quot;, &quot;af&quot;, &quot;ah&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10782&pm=8121">TCHS Single Round Match 39 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<html>
+<head>
+<title> Problem Statement for WordGrid</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for WordGrid</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+You have an old &quot;word search&quot; puzzle which consists of a rectangular
+grid of letters in which several words are hidden. Each word may begin
+anywhere in the puzzle, and may be oriented in any straight line
+horizontally, vertically, or diagonally (forwards or backwards oriented).
+The puzzle is so old that some of the letters have been washed out and
+you can not recognize them anymore. Your task is to recover the
+washed out letters so that the puzzle is solvable - i.e., all given
+words can be found in the letter grid.
+</p>
+<p>
+You will be given <b>grid</b>, representing the letter grid, with each
+washed out letter replaced by a period ('.'). Further, you will be given
+<b>words</b>, the list of words that can be found in the grid. You are
+to return the letter grid with the washed out letters replaced by the
+original letters in those positions. There will be one unique way to
+replace the washed out letters such that all the words can be found
+in the grid.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">WordGrid</td></tr><tr><td class="statText">Method:</td><td class="statText">fillSpaces</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] fillSpaces(String[] grid, String[] words)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Although the solution to this problem will be unique, the solution of the resulting &quot;word search&quot; puzzle need not be unique - i.e., a word can be located in more than one position in the final grid (see example 1).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>grid</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>grid</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>grid</b> will have the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All characters of all elements of <b>grid</b> will be uppercase letters ('A'-'Z') or periods ('.').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>grid</b> will contain no more than 3 periods.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>words</b> will have between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>words</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>words</b> will be unique.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All characters of all elements of <b>words</b> will be uppercase letters ('A'-'Z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will be one unique way to replace the washed out letters such that all the words can be found in the grid.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ABCD&quot;,
+ &quot;E..H&quot;,
+ &quot;I.KL&quot;,
+ &quot;MNOP&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;AFK&quot;, &quot;DGJM&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;ABCD&quot;, &quot;EFGH&quot;, &quot;IJKL&quot;, &quot;MNOP&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAAA&quot;,
+ &quot;ABBBA&quot;,
+ &quot;AB.BA&quot;,
+ &quot;ABBBA&quot;,
+ &quot;AAAAA&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;ABC&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;AAAAA&quot;, &quot;ABBBA&quot;, &quot;ABCBA&quot;, &quot;ABBBA&quot;, &quot;AAAAA&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We must fill the center square with a 'C' in order to be able to find &quot;ABC&quot; in the grid. Note that in that case &quot;ABC&quot; can be located at 8 different positions in the grid.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+ &quot;AAAAAAAAAFAAAGAAAAAAAAAA&quot;,
+ &quot;AAAAAAAAAA...AAAAAAAAAAA&quot;,
+ &quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+ &quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+ &quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;AB&quot;, &quot;AC&quot;, &quot;AD&quot;, &quot;BA&quot;, &quot;CA&quot;, &quot;DA&quot;,
+ &quot;AAB&quot;, &quot;AAC&quot;, &quot;AAD&quot;, &quot;BAA&quot;, &quot;CAA&quot;, &quot;DAA&quot;, &quot;AAAB&quot;,
+ &quot;AAAC&quot;, &quot;AAAD&quot;, &quot;BAAA&quot;, &quot;CAAA&quot;, &quot;DAAA&quot;, &quot;AAAAB&quot;,
+ &quot;BAAAA&quot;, &quot;AAAAAB&quot;, &quot;BAAAAA&quot;, &quot;AAAAAAB&quot;, &quot;BAAAAAA&quot;,
+ &quot;AAAAAAAB&quot;, &quot;BAAAAAAA&quot;, &quot;AAAAAAAAB&quot;, &quot;BAAAAAAAA&quot;,
+ &quot;AAAAAAAAAB&quot;, &quot;BAAAAAAAAA&quot;, &quot;AAAAAAAAAAB&quot;, &quot;BAAAAAAAAAA&quot;,
+ &quot;AAAAD&quot;, &quot;DAAAA&quot;, &quot;AAAAAD&quot;, &quot;DAAAAA&quot;, &quot;AAAAAAD&quot;,
+ &quot;DAAAAAA&quot;, &quot;AAAAAAAD&quot;, &quot;DAAAAAAA&quot;, &quot;AAAAAAAAD&quot;,
+ &quot;DAAAAAAAA&quot;, &quot;AAAAAAAAAD&quot;, &quot;DAAAAAAAAA&quot;, &quot;AAAAAAAAAAD&quot;,
+ &quot;DAAAAAAAAAA&quot;, &quot;AAAAAAAAAAAD&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+&quot;AAAAAAAAAFAAAGAAAAAAAAAA&quot;,
+&quot;AAAAAAAAAABCDAAAAAAAAAAA&quot;,
+&quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+&quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+&quot;AAAAAAAAAAAAAAAAAAAAAAAA&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Beware of timeout!</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ABCD&quot;,
+ &quot;EFGH&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;AF&quot;, &quot;HD&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;ABCD&quot;, &quot;EFGH&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Nothing to do here (all letters of the grid are known in advance, so the same grid is returned).</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8098&pm=4833">2005 TCO Semifinal Room 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

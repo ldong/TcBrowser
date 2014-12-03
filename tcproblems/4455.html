@@ -1,0 +1,76 @@
+<html>
+<head>
+<title> Problem Statement for TravellingByTrain</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for TravellingByTrain</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You want to travel by train from one station to another. Unfortunately there is no direct train, so you have to transfer a number of times. Transferring happens instantaneously. We'll number the stations as follows: 0 is the departure station, 1 ... N-1 are the transfer stations (in that order) and N is the destination station.
+
+<br><br>
+
+You know the timetable of the trains travelling from station i to station i+1. It is given as a String[] <b>timeTable</b>. The i-th element (indexed from 0) of <b>timeTable</b> describes the trains from station i to station i+1 and contains one or more parts of the form &quot;hh:mm-HH:MM&quot; separated by single spaces. Here &quot;hh:mm&quot; and &quot;HH:MM&quot; are times in 24 hour notation. &quot;hh:mm&quot; is valid 24 hour notation if both &quot;hh&quot; and &quot;mm&quot; contain exactly 2 digits and 00&lt;=hh&lt;24 and 00&lt;=mm&lt;60.
+
+<br><br>
+
+If there is a part &quot;hh:mm-HH:MM&quot; in the i-th element of <b>timeTable</b>, this means that every day a train leaves from station i at time &quot;hh:mm&quot; and arrives at station i+1 at time &quot;HH:MM&quot;. If &quot;HH:MM&quot; is later than &quot;hh:mm&quot; the train arrives on the same day; if it is earlier it arrives on the next day. If the two times are equal, the train takes exactly 24 hours and arrives the next day. No train will take more than 24 hours.
+
+<br><br>
+
+On day 1 you are at station 0 at 09:00. What is the earliest time you can get to station N? Return the time in the following format &quot;hh:mm, day d&quot;, with &quot;hh:mm&quot; the time in 24 hour notation and &quot;d&quot; the day, with no leading zeroes. </td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">TravellingByTrain</td></tr><tr><td class="statText">Method:</td><td class="statText">earliestArrival</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String earliestArrival(String[] timeTable)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>timeTable</b> contains between 1 and 50 elements, inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>timeTable</b> has length between 1 and 50, inclusive, and is formatted as described in the statement.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;10:00-13:00 12:00-15:00&quot;,&quot;11:00-16:00 14:00-19:00&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;19:00, day 1&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You're at station 0 at 09:00, at station 1 at 13:00 and finally at station 2 at 19:00.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;09:00-13:57&quot;,&quot;13:56-17:00&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;17:00, day 2&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You just catch the train at station 0, but miss the train at station 1, so you have to wait until the next day to catch the next train.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;10:00-08:00&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;08:00, day 2&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">If the arrival time is earlier than the departure time, the train arrives at that time the next day.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;09:10-11:00 09:05-10:05&quot;,&quot;10:10-12:00 11:00-11:05&quot;,&quot;17:00-08:00&quot;,&quot;09:00-08:00&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;08:00, day 3&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6539&pm=4455">Single Round Match 240 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6539&pm=4455">Single Round Match 240 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

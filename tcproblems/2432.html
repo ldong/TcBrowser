@@ -1,0 +1,70 @@
+<html>
+<head>
+<title> Problem Statement for MnemonicMemory</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for MnemonicMemory</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+It is often helpful to have a mnemonic phrase handy for a math test.  For example, the number 25735 can be remembered as &quot;is there anybody out there&quot;.  If we count the number of characters in every word, we would get the sequence 2, 5, 7, 3, 5, which represents the original number!
+</p>
+<p>
+Unfortunately for you, your professor likes to make the students memorize random numbers and then test them.  To beat the system, your plan is to come up with mnemonic phrases that will represent the numbers you must memorize.
+</p>
+<p>
+You are given a String <b>number</b> and a String[] <b>dictionary</b>.  Return a single space delimited list of words, where each word is an element of <b>dictionary</b>, and no element of dictionary is used more than once. The phrase must contain exactly n words, where n is the number of digits in the <b>number</b>, and the length of the i-th word must be equal to the i-th digit of the <b>number</b> for all i.  If more than one phrase is possible, return the one that comes first alphabetically (in other words, if you have several words of the same length, you should use them in alphabetical order).
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">MnemonicMemory</td></tr><tr><td class="statText">Method:</td><td class="statText">getPhrase</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String getPhrase(String number, String[] dictionary)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>dictionary</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>dictionary</b> will contain between 1 and 9 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>dictionary</b> will contain only lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>number</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>number</b> will contain only digits between '1' and '9', inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will always be a possible solution with the given dictionary.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;25735&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;is&quot;, &quot;there&quot;, &quot;anybody&quot;, &quot;out&quot;, &quot;there&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;is there anybody out there&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;31415926&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;may&quot;, &quot;i&quot;, &quot;have&quot;, &quot;a&quot;, &quot;large&quot;, &quot;container&quot;, &quot;of&quot;, &quot;coffee&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;may a have i large container of coffee&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Make sure you use words of the same length in alphabetical order.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;1212&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;a&quot;, &quot;aa&quot;, &quot;a&quot;, &quot;aa&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a aa a aa&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;11111111122&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;a&quot;, &quot;b&quot;, &quot;d&quot;, &quot;c&quot;, &quot;a&quot;, &quot;e&quot;, &quot;f&quot;, &quot;z&quot;, &quot;zz&quot;, &quot;za&quot;, &quot;az&quot;, &quot;e&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;a a b c d e e f z az za&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;2222&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;, &quot;a&quot;, &quot;b&quot;, &quot;ab&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ab ab cd ef&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10766&pm=2432">Single Round Match 357 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

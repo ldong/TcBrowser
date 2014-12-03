@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Problem Statement for BallBouncing</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for BallBouncing</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>A ball is moving diagonally on a rectangular board composed of unit squares in <b>rows</b> rows and <b>columns</b> columns. Each square is identified by its row and column number. The lowermost row is marked row 0 and the leftmost column is column 0.</p>
+
+<p>The ball is initially located in the middle of a starting square given by two integers, <b>startrow</b> and <b>startcol</b>, and is moving diagonally up-right at an angle of 45 degrees. Whenever it reaches a wall, it bounces off it at a right angle (an angle of 90 degrees) and continues moving. If the ball runs into a corner, it bounces back in the opposite direction from which it came..</p>
+
+<p><img src="http://www.topcoder.com/contest/problem/BallBouncing/BallBouncing.png"></p>
+
+<p>A number of holes have been drilled in the board and the ball will fall in upon reaching a square with a hole. Given the board size, starting location and locations of holes, return the number of times the ball will bounce off a wall before falling into a hole, or -1 if the ball will continue bouncing indefinitely.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">BallBouncing</td></tr><tr><td class="statText">Method:</td><td class="statText">bounces</td></tr><tr><td class="statText">Parameters:</td><td class="statText">int, int, int, int, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int bounces(int rows, int columns, int startrow, int startcol, String[] holes)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Bouncing back from a corner counts as only one bounce.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>rows</b> and <b>columns</b> will be between 1 and 1000000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>startrow</b> will be between 0 and <b>rows</b>-1, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>startcol</b> will be between 0 and <b>columns</b>-1, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>holes</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>holes</b> will be formatted as &quot;row column&quot; (quotes for clarity), where row and column will be integers with no leading zeros representing a square inside the board.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will be no holes at the starting position of the ball.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">No two holes will occupy the same position on the board.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>8</pre></td></tr><tr><td class="statText"><pre>11</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>{ &quot;1 5&quot;, &quot;5 3&quot;, &quot;4 4&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This example corresponds to the image in the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>6</pre></td></tr><tr><td class="statText"><pre>5</pre></td></tr><tr><td class="statText"><pre>5</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>{ &quot;1 3&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 7</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Bouncing back from a corner counts as only one bounce.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>6</pre></td></tr><tr><td class="statText"><pre>7</pre></td></tr><tr><td class="statText"><pre>4</pre></td></tr><tr><td class="statText"><pre>4</pre></td></tr><tr><td class="statText"><pre>{ }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">With no holes, the ball is bound to bounce around for quite a while.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>{ &quot;2 2&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>6</pre></td></tr><tr><td class="statText"><pre>6</pre></td></tr><tr><td class="statText"><pre>0</pre></td></tr><tr><td class="statText"><pre>5</pre></td></tr><tr><td class="statText"><pre>{ &quot;4 1&quot;, &quot;3 2&quot;, &quot;4 3&quot;, &quot;2 1&quot;, &quot;3 0&quot;, &quot;5 2&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>1000000</pre></td></tr><tr><td class="statText"><pre>999999</pre></td></tr><tr><td class="statText"><pre>66246</pre></td></tr><tr><td class="statText"><pre>84332</pre></td></tr><tr><td class="statText"><pre>{ &quot;854350 4982&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1662562</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>5</pre></td></tr><tr><td class="statText"><pre>7</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>4</pre></td></tr><tr><td class="statText"><pre>{ &quot;0 6&quot;, &quot;2 3&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 5</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">7)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>5</pre></td></tr><tr><td class="statText"><pre>0</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>{ &quot;0 3&quot; }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=8078&pm=5919">Single Round Match 281 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

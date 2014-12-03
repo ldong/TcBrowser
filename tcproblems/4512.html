@@ -1,0 +1,131 @@
+<html>
+<head>
+<title> Problem Statement for Abacus</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Abacus</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">An abacus can be used to do arithmetic. The version that we have has 6 horizontal
+threads, each with nine beads on it.  The beads on each thread are always arranged
+with just one gap, possibly at one of the ends.  However many beads are adjacent
+and at the right end of the thread is the digit value of the thread.  The value
+on the abacus is read by taking the digits in order from top thread to bottom
+thread and arranging them from left to right (so the top thread is the one that
+contains the most significant digit).
+<p>
+Create a class Abacus that contains a method add that is given a String[] <b>original</b>
+and a number <b>val</b> and that returns a String[] showing the abacus after <b>val</b> has
+been added to the original abacus.
+</p><p>
+Both in <b>original</b> and in the return, the String[] will contain exactly 6 elements
+representing the 6 threads in order from top thread to bottom thread.  Each
+element will contain a lowercase 'o' to represent each bead and three consecutive
+hyphens '-' to indicate the empty part of the thread. Each element will thus
+contain exactly 12 characters.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Abacus</td></tr><tr><td class="statText">Method:</td><td class="statText">add</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] add(String[] original, int val)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>original</b> will contain exactly 6 elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>original</b> will contain exactly 12 characters, 9  lowercase 'o's and 3 consecutive '-'s.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>val</b> will be between 0 and 999,999 inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>val</b> added to the original abacus will result in a value that can be shown on the abacus.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ooo---oooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;oo---ooooooo&quot;,
+ &quot;---ooooooooo&quot;}</pre></td></tr><tr><td class="statText"><pre>5</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;ooo---oooooo&quot;,
+&quot;---ooooooooo&quot;,
+&quot;---ooooooooo&quot;,
+&quot;---ooooooooo&quot;,
+&quot;o---oooooooo&quot;,
+&quot;ooooo---oooo&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+
+When we add 5 to the original, it is necessary to &quot;carry&quot; 1 to the next thread up.
+This shows the arithmetic 699979 + 5 = 699984
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ooo---oooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;oo---ooooooo&quot;,
+ &quot;---ooooooooo&quot;}</pre></td></tr><tr><td class="statText"><pre>21</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;oo---ooooooo&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This shows 699979 + 21 = 700000</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ooooooooo---&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;ooooooooo---&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;oo---ooooooo&quot;,
+ &quot;---ooooooooo&quot;}</pre></td></tr><tr><td class="statText"><pre>100000</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;oooooooo---o&quot;,
+&quot;---ooooooooo&quot;,
+&quot;ooooooooo---&quot;,
+&quot;---ooooooooo&quot;,
+&quot;oo---ooooooo&quot;,
+&quot;---ooooooooo&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;o---oooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;,
+ &quot;---ooooooooo&quot;
+}</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;---ooooooooo&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot;,
+&quot;ooooooooo---&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9813&pm=4512">Single Round Match 292 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9813&pm=4512">Single Round Match 292 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

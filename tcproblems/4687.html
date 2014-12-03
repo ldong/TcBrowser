@@ -1,0 +1,86 @@
+<html>
+<head>
+<title> Problem Statement for CliqueCount</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for CliqueCount</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">An undirected graph is defined as a set of vertices with undirected edges connecting some of the pairs of vertices.  A clique in an undirected graph is a non-empty subset of vertices where there is a direct connection between every pair of vertices in the subset.  A maximal clique is a clique that is not a proper subset of any other clique.  You will be given a graph as a String[] where the jth character of the ith element is a '1' if and only if vertices i and j are connected.  Your method should return the number of maximal cliques in the graph.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">CliqueCount</td></tr><tr><td class="statText">Method:</td><td class="statText">countCliques</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int countCliques(String[] graph)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>graph</b> will contain between 1 and 20 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>graph</b> will contain as many characters as <b>graph</b> has elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>graph</b> will be '0' or '1'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Character j of element i of <b>graph</b> will be the same as character i of element j for all i and j.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Character i of element i of <b>graph</b> will be '0' for all i.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;010&quot;,
+ &quot;100&quot;,
+ &quot;000&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">If the vertices are 0, 1, and 2, corresonding to the elements of the input, then the two maximal cliques are {0,1} and {2}.  </td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;011&quot;,
+ &quot;101&quot;,
+ &quot;110&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">All nodes are connected so there is just one big clique.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;00010000000000100000&quot;,
+ &quot;00110000000000000000&quot;,
+ &quot;01011001000000011000&quot;,
+ &quot;11101000000100010110&quot;,
+ &quot;00110000001100000000&quot;,
+ &quot;00000000010000000001&quot;,
+ &quot;00000000000000011001&quot;,
+ &quot;00100000000010000001&quot;,
+ &quot;00000000000100011000&quot;,
+ &quot;00000100000010000010&quot;,
+ &quot;00001000000000000010&quot;,
+ &quot;00011000100001000101&quot;,
+ &quot;00000001010000000000&quot;,
+ &quot;00000000000100000010&quot;,
+ &quot;10000000000000000010&quot;,
+ &quot;00110010100000000000&quot;,
+ &quot;00100010100000000000&quot;,
+ &quot;00010000000100000000&quot;,
+ &quot;00010000011001100000&quot;,
+ &quot;00000111000100000000&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 28</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;00&quot;,
+ &quot;00&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7992&pm=4687">Single Round Match 256 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

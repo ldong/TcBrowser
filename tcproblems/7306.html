@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> Problem Statement for TooManyBugs</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for TooManyBugs</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+There are a lot of bugs in the TooManyBugs project. Each bug is described by two values: <i>priority</i> and <i>fixTime</i>.
+There are only a few days left before the deadline. Each day has a corresponding <i>workTime</i>, and a bug can be fixed on that day if the bug's <i>fixTime</i> is less than or equal to <i>workTime</i>.  No more than one bug can be fixed in a single day, and no bug fix can span more than a single day.
+</p>
+<p>
+You are given a String[] <b>info</b>, each element of which describes either a single bug or a single day.  Each element can be in one of the following two formats:
+<br>
+<ul>
+<li>"PRIORITY FIX_TIME", which means that there is a bug with  
+	<i>priority</i> equal to PRIORITY and <i>fixTime</i> equal to FIX_TIME;</li>
+<li>"WORK_TIME", which means that there is a day with <i>workTime</i> equal to WORK_TIME.</li>
+</ul>
+</p>
+<p>
+Determine a strategy that maximizes the sum of the priorities of the bugs you fix, and return this sum.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">TooManyBugs</td></tr><tr><td class="statText">Method:</td><td class="statText">bestBugFixing</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int bestBugFixing(String[] info)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">You can fix any of the bugs on any day (as long as the bug's <i>fixTime</i> is less than or equal to the day's <i>workTime</i>).  The order of the elements in <b>info</b> is irrelevant.  See example 2.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>info</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>info</b> will contain between 1 and 9 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>info</b> will be formatted as "PRIORITY FIX_TIME" or "WORK_TIME" (quotes for clarity).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>info</b>, PRIORITY, FIX_TIME and WORK_TIME will each be an integer between 1 and 1000, inclusive, without leading zeroes.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;5 3&quot;, &quot;20 20&quot;, &quot;125&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 20</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We only have one day so we can only choose a single bug. Choose the second bug because it has a higher priority.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;5 3&quot;, &quot;20 20&quot;, &quot;15&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 5</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Fix the first bug.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;5 3&quot;, &quot;20 20&quot;, &quot;25&quot;, &quot;15&quot;, &quot;6 15&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 26</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Do not fix the first bug.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;5 3&quot;, &quot;20 20&quot;, &quot;7 2&quot;, 
+	&quot;25&quot;, &quot;3&quot;, &quot;15&quot;, &quot;6 15&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 33</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;5 3&quot;, &quot;20 20&quot;, &quot;125&quot;, &quot;125&quot;, &quot;125&quot;, &quot;125&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 25</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;2 4&quot;, &quot;5 1&quot;, &quot;5 1&quot;, &quot;9 1&quot;, &quot;3 10&quot;, &quot;4 8&quot;, &quot;4 7&quot;, 
+	&quot;9&quot;, &quot;8&quot;, &quot;4&quot;, &quot;2&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 23</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13675&pm=7306">2008 TopCoder China Tournament Round 1C - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head>
+<title> Problem Statement for ServiceNames</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for ServiceNames</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">I want a list of BioServices that are associated with each KindOfInput (such
+as "gene", "DNAFragment", "genome", etc.). What 
+is available from my service provider is a list of strings, each
+containing the name of a service followed by all the KindsOfInput it requires.
+<p>
+Given a String[] <b>services</b>, return a String[] in which each element contains a
+KindOfInput followed by the names of all the services that use that kind of
+input.  
+</p><p>
+Each KindOfInput should appear exactly once in the return. Within 
+each element of the return, the service names should be in alphabetical order,
+and should be separated by the 2 characters ", " (comma space). The KindOfInput should be
+separated from the first service name by the 5 characters " ==> " (space eq eq gt space). The returned
+list should be in alphabetical order.
+</p><p>
+Note that all names are case-sensitive, and that "alphabetical order" refers to
+the ASCII ordering, where, for example, 'Z' precedes 'a'.
+</p>
+
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">ServiceNames</td></tr><tr><td class="statText">Method:</td><td class="statText">makeList</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] makeList(String[] services)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>services</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>services</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>services</b> will contain tokens separated by a single space (' ').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each token will consist of 1 or more letters ('A'-'Z' or 'a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The first tokens of the elements in <b>services</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Within each element of <b>services</b> the KindsOfInput will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BLAST Genome Annotation Sensitivity&quot;,&quot;PING&quot;,&quot;X Annotation&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;Annotation ==&gt; BLAST, X&quot;, &quot;Genome ==&gt; BLAST&quot;, &quot;Sensitivity ==&gt; BLAST&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;PING&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+
+   There are no KindsOfInput so the return has 0 elements.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BLAST Genome annotation Sensitivity&quot;,&quot;PING&quot;,&quot;X Annotation&quot;,&quot;Apple X ample&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;Annotation ==&gt; X&quot;,
+&quot;Genome ==&gt; BLAST&quot;,
+&quot;Sensitivity ==&gt; BLAST&quot;,
+&quot;X ==&gt; Apple&quot;,
+&quot;ample ==&gt; Apple&quot;,
+&quot;annotation ==&gt; BLAST&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">annotation and Annotation are distinct kinds of input. annotation comes later alphabetically than any name that starts with an uppercase letter.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10660&pm=7313">Single Round Match 336 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10660&pm=7313">Single Round Match 336 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

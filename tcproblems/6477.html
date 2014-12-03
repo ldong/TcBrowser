@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> Problem Statement for HuffmanDecoding</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for HuffmanDecoding</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>When text is encoded using Huffman codes, each symbol is replaced by a string of 0s and 1s called a bit string representation.  The replacement is done in such a way that the bit string representation of a symbol is never the prefix of the bit string representation of any other symbol.  This property allows us to unambiguously decode the encoded text.</p>
+<p>You will be given a String <b>archive</b> and a String[] <b>dictionary</b>. The i-th element of <b>dictionary</b> will be the bit string representation of the i-th uppercase letter. Decode <b>archive</b> using <b>dictionary</b> and return the result as a single String.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">HuffmanDecoding</td></tr><tr><td class="statText">Method:</td><td class="statText">decode</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String decode(String archive, String[] dictionary)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>archive</b> will contain between 1 and 50 characters, inclusive. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>archive</b> will contain only the characters '0' (zero) and '1' (one).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>dictionary</b> will contain between 1 and 26 elements, inclusive. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>dictionary</b> will contain between 1 and 50 characters, inclusive. </td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>dictionary</b> will contain only the characters '0' (zero) and '1' (one).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">No element of <b>dictionary</b> will be a prefix of any other element of <b>dictionary</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>archive</b> will be decodable using <b>dictionary</b></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;101101&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;00&quot;,&quot;10&quot;,&quot;01&quot;,&quot;11&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BDC&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Because there are no elements in dictionary that are prefixes of other elements, only one element of dictionary will be a prefix of <b>archive</b>.  In this case, it is the second element (&quot;10&quot;) which represents 'B'.  The rest of the text can be decoded using the same logic.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;10111010&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;0&quot;,&quot;111&quot;,&quot;10&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;CBAC&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Note that elements of <b>dictionary</b> can be of different lengths.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;0001001100100111001&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;1&quot;,&quot;0&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;BBBABBAABBABBAAABBA&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">'1' is replaced by 'A', '0' is replaced by 'B'.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;111011011000100110&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;010&quot;,&quot;00&quot;,&quot;0110&quot;,&quot;0111&quot;,&quot;11&quot;,&quot;100&quot;,&quot;101&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;EGGFAC&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;001101100101100110111101011001011001010&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;110&quot;,&quot;011&quot;,&quot;10&quot;,&quot;0011&quot;,&quot;00011&quot;,&quot;111&quot;,&quot;00010&quot;,&quot;0010&quot;,&quot;010&quot;,&quot;0000&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;DBHABBACAIAIC&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9988&pm=6477">Single Round Match 308 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=9988&pm=6477">Single Round Match 308 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

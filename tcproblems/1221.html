@@ -1,0 +1,108 @@
+<html>
+<head>
+<title> Problem Statement for DecodeMoveToFront</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for DecodeMoveToFront</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+Consider a simple encryption algorithm based on the move-to-front heuristic.
+Both the unencrypted (plaintext) and encrypted (ciphertext) messages are Strings
+composed of uppercase letters ('A'-'Z') and spaces (' ').  The encryption algorithm
+maintains a state which is a permutation of the 27 possible characters.  The key used
+to encrypt and decrypt messages is the initial permutation.
+</p>
+
+<p>
+Encryption processes the plaintext from left to right, outputting one character of
+the ciphertext for each character of the plaintext.  At each position of the plaintext,
+the encryption algorithm performs the following steps:
+<ul>
+<li> Find the (zero-based) position of the plaintext character in the current permutation. </li>
+<li> If the position is 0-25, output 'A'-'Z', respectively.  If the position is 26, output a space. </li>
+<li> Move the plaintext character to the front of the permutation (ie, delete it from its
+     current position in the permutation and re-insert it at the front). </li>
+</ul>
+For example, starting with a key <tt>&quot;ZYXWVUTSRQPON MLKJIHGFEDCBA&quot;</tt> and a plaintext
+<tt>&quot;TPCDR&quot;</tt> (all quotes for clarity only), encryption would proceed as follows:
+<ol>
+<li> State = <tt>&quot;ZYXWVU<b>T</b>SRQPON MLKJIHGFEDCBA&quot;</tt>. 'T' is in position 6, output 'G'.</li>
+<li> State = <tt>&quot;TZYXWVUSRQ<b>P</b>ON MLKJIHGFEDCBA&quot;</tt>. 'P' is in position 10, output 'K'.</li>
+<li> State = <tt>&quot;PTZYXWVUSRQON MLKJIHGFED<b>C</b>BA&quot;</tt>. 'C' is in position 24, output 'Y'.</li>
+<li> State = <tt>&quot;CPTZYXWVUSRQON MLKJIHGFE<b>D</b>BA&quot;</tt>. 'D' is in position 24, output 'Y'.</li>
+<li> State = <tt>&quot;DCPTZYXWVUS<b>R</b>QON MLKJIHGFEBA&quot;</tt>. 'R' is in position 11, output 'L'.</li>
+</ol>
+The final ciphertext is <tt>&quot;GKYYL&quot;</tt>.  (The final state is
+<tt>&quot;RDCPTZYXWVUSQON MLKJIHGFEBA&quot;</tt>, but that is discarded by the
+algorithm.)
+</p>
+
+<p>
+You will be given both the <b>plaintexts</b> and the <b>ciphertexts</b> of several messages, where the <i>i</i>-th ciphertext
+is believed to be the encrypted form of the <i>i</i>-th plaintext, and all the messages are believed
+to have been encrypted using the same key.  Your task is to recover and return that key (as a String).
+If the messages do not contain enough information to fully determine the key, the output
+of your method should summarize the set of possible keys by
+placing a <tt>'-'</tt> character at any position of the permutation that has not 
+been narrowed down to a single possible character.  If no key exists that could have been used
+to encrypt all the messages, output <tt>&quot;ERROR&quot;</tt>.
+</p>
+
+<p>
+Notice that, when encrypting multiple messages, the state is <i>not</i> carried over from one message to the next, but rather is re-initialized for each message.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">DecodeMoveToFront</td></tr><tr><td class="statText">Method:</td><td class="statText">findKey</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String findKey(String[] plaintexts, String[] ciphertexts)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>plaintexts</b> and <b>ciphertexts</b> contain the same number of elements (between 1 and 20, inclusive).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Element <i>i</i> of <b>plaintexts</b> has the same length as element <i>i</i> of <b>ciphertexts</b> (between 1 and 50 characters, inclusive).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Elements of <b>plaintexts</b> and <b>ciphertexts</b> contain uppercase letters ('A'-'Z') and spaces only.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;TPCDR&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;GKYYL&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;------T-R-P------------DC--&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The example above, but the characters that were not used could have been anywhere in the initial permutation.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A&quot;,&quot;B&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;X&quot;,&quot;X&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ERROR&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">A and B cannot both be in position 23 of the key.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;HELLO&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;HOWDY&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ERROR&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The second 'L' should be encoded as an 'A'. </td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;FOUR SCORE AND&quot;,&quot;SEVEN YEARS AGO&quot;,&quot;OUR FOREFATHERS&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;ABCDEFGFEHFIJK&quot;,&quot;FHLBKIMDLKHFDNK&quot;,&quot;BCDEEEDHDIOPEFJ&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;FOUR SCEANDVYGTH-----------&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;LIZARD&quot;,&quot;JACKAL&quot;,&quot;HOWLER MONKEY&quot;,&quot;BLOWFISH&quot;,&quot;LYNX&quot;,&quot;GIRAFFE&quot;,&quot;VULTURE&quot;,&quot;QUAIL&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;LG GLM&quot;,&quot;ZEQWCO&quot;,&quot;GFNMFLGRGLVGS&quot;,&quot;UMGOTJML&quot;,&quot;LQJY&quot;,&quot;OGKGSAG&quot;,&quot;WNNFCMG&quot;,&quot;XNFHN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot; ETAOIHNSRDLUWGCYMFPBKVQXJZ&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;HI&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;AA&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ERROR&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The 'I' cannot be encoded as 'A' because 'H' is guaranteed to be in that position.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4494&pm=1221">TopCoder Collegiate Challenge Semifinal Round 4 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

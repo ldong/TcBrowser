@@ -1,0 +1,77 @@
+<html>
+<head>
+<title> Problem Statement for TrafficReport</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for TrafficReport</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+As you are sitting eating your breakfast, rushing to get to work, you hear the traffic report playing on the radio.  You listen to the radio and copy down what the report says.  Now, you want to figure out how long it will take you to get to work today (and ideally do this before your hot oatmeal gets cold).
+</p><p>
+You will be given your <b>route</b>.  Each element of <b>route</b> will be formatted as "TIME STREET" (quotes for clarity); this indicates that it normally takes you TIME minutes to travel down the given STREET.  You also have access to the <b>report</b>, which is formatted similarly.  The time listed in <b>report</b> is the additional amount of time needed to travel on that road.  For example, if "10 NJTPK" is in your route and <b>report</b> contains "12 NJTPK", it will take you 22 minutes to travel on that street.
+</p><p>
+With this information, you are to calculate the time needed to travel to work today.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">TrafficReport</td></tr><tr><td class="statText">Method:</td><td class="statText">bestRoute</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int bestRoute(String[] route, String[] report)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>route</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>route</b> will be formatted as "TIME STREET" (quotes for clarity).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>route</b>, TIME will be an integer between 1 and 200, inclusive, with no leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of <b>route</b>, STREET will contain between 1 and 6 uppercase letters ('A'-'Z'), inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will be no duplicate streets in <b>route</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>report</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>report</b> will be formatted in the same manner as <b>route</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will be no duplicate streets in <b>report</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 A&quot;,&quot;2 B&quot;, &quot;3 C&quot;}</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There is no traffic on the road this morning!  This means that it takes you 1 + 2 + 3 = 6 minutes to get to work.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 A&quot;, &quot;2 B&quot;, &quot;3 C&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;5 A&quot;, &quot;2 B&quot;, &quot;1 C&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 14</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">In this report, there's a lot of traffic.  Now it takes you (1+5) + (2+2) + (3+1) = 14 minutes to get to work.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 NJTPK&quot;,&quot;2 B&quot;,&quot;3 C&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;1 NJTPK&quot;, &quot;2 GSP&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 7</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Sometimes there will be extra information in the report.  We can just ignore it.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 A&quot;,&quot;2 B&quot;, &quot;3 C&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;4 D&quot;, &quot;5 E&quot;, &quot;6 F&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;55 RTNONE&quot;,
+ &quot;64 RTNFVE&quot;,
+ &quot;8 CBRONX&quot;,
+ &quot;5 GWB&quot;,
+ &quot;44 NJTPK&quot;, 
+ &quot;30 RTONE&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;23 RTNFVE&quot;,&quot;57 GSP&quot;,
+&quot;24 GWB&quot;,&quot;12 BRUCK&quot;,
+&quot;94 NJTPK&quot;,&quot;12 RTONE&quot;,
+&quot;39 TAPPAN&quot;,&quot;24 LIE&quot;,
+&quot;30 HTUNL&quot;,&quot;5 LTUNL&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 359</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10655&pm=7425">TCHS Single Round Match 31 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

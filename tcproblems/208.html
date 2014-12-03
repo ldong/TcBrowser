@@ -1,0 +1,288 @@
+<html>
+<head>
+<title> Problem Statement for NTicTacToe</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for NTicTacToe</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><pre>PROBLEM STATEMENT
+
+The game of 3-D Tic-Tac-Toe has n levels of n by n Tic-Tac-Toe boards placed
+one above the other (an n * n * n cube of spaces).  Like Tic-Tac-Toe, there are
+two players: the first player uses an X to represent himself, while the second
+player uses a O.  The object of the game for the first player is to get n X's
+in a line. The object of the game for the second player is to get n O's in a
+line. 
+
+The game begins with the first player placing an X somewhere on the board, then
+the second player places a O on the board.  The two players alternate turns
+until one of three things happens, the first player gets n X's in a line, the
+second player gets n O's in a line or there are no more spots on the board that
+are available. 
+
+Here are *some* of the ways someone can win: (X is just used as an example, the
+same rules apply for O, n=3 for these examples)  
+
+____________         ____________         ____________
+____________
+2 /_X_/_X_/_X_/      2 /_X_/___/___/      2 /___/___/_X_/      2
+/___/_X_/___/
+level 0   1 /___/___/___/      1 /___/___/___/      1 /___/___/___/      1
+/___/_X_/___/
+0 /___/___/___/      0 /___/___/___/      0 /___/___/___/      0
+/___/_X_/___/
+0   1   2            0   1   2            0   1   2            0
+1   2
+____________         ____________         ____________
+____________
+2 /___/___/___/      2 /___/___/___/      2 /___/_X_/___/      2
+/___/___/___/
+level 1   1 /___/___/___/      1 /___/_X_/___/      1 /___/___/___/      1
+/___/___/___/
+0 /___/___/___/      0 /___/___/___/      0 /___/___/___/      0
+/___/___/___/
+0   1   2            0   1   2            0   1   2            0
+1   2
+____________         ____________         ____________
+____________
+2 /___/___/___/      2 /___/___/___/      2 /_X_/___/___/      2
+/___/___/___/
+level 2   1 /___/___/___/      1 /___/___/___/      1 /___/___/___/      1
+/___/___/___/
+0 /___/___/___/      0 /___/___/_X_/      0 /___/___/___/      0
+/___/___/___/ 
+0   1   2            0   1   2            0   1   2            0
+1   2
+
+
+____________         ____________         ____________
+____________
+2 /_X_/___/___/      2 /___/___/___/      2 /___/___/___/      2
+/___/___/___/
+level 0   1 /___/___/___/      1 /___/___/___/      1 /___/___/___/      1
+/_X_/___/___/
+0 /___/___/___/      0 /___/___/___/      0 /___/___/_X_/      0
+/___/___/___/
+0   1   2            0   1   2            0   1   2            0
+1   2
+____________         ____________         ____________
+____________
+2 /_X_/___/___/      2 /___/___/___/      2 /___/___/___/      2
+/___/___/___/
+level 1   1 /___/___/___/      1 /___/___/___/      1 /___/___/_X_/      1
+/___/_X_/___/
+0 /___/___/___/      0 /___/___/___/      0 /___/___/___/      0
+/___/___/___/
+0   1   2            0   1   2            0   1   2            0
+1   2
+____________         ____________         ____________
+____________
+2 /_X_/___/___/      2 /_X_/___/___/      2 /___/___/_X_/      2
+/___/___/___/
+level 2   1 /___/___/___/      1 /___/_X_/___/      1 /___/___/___/      1
+/___/___/_X_/
+0 /___/___/___/      0 /___/___/_X_/      0 /___/___/___/      0
+/___/___/___/
+0   1   2            0   1   2            0   1   2            0
+1   2 
+
+
+Implement a class NTicTacToe with a method compute.  compute should return a
+String holding the first winner and the number of moves it took that player to
+win.  If the first player (X) won in 3 moves compute, would return &quot;X,3&quot;.  If,
+after processing the input, there is no winner, compute should return &quot;NO
+WINNER&quot;.
+
+The String[] elements will be of the form &quot;LEVEL,ROW,COLUMN&quot; and represent the
+space a player moves during a move.  &quot;0,0,0&quot; is the space in the
+upper-front-left and &quot;&lt;n-1&gt;,&lt;n-1&gt;,&lt;n-1&gt;&quot; is the space in the lower-back-right.
+The first move of the game is the first element in xMoves, the second move of
+the game is the first element in oMoves, the third is the second element in
+xMoves, etc.   The int input represents the dimension of the game board.
+
+DEFINITION 
+Class Name: NTicTacToe
+Method Name: compute
+Parameters: String[], String[], int
+Returns: String
+Method signature (be sure your method is public):  String compute(String[]
+xMoves, String[] oMoves, int n);   
+
+TopCoder will ensure the validity of the inputs.  Inputs are valid if all of
+the following criteria are met:
+-  the total number of moves will not be greater than n^3. (there are only n^3
+spaces on the board)  
+-  all moves in xMoves, oMoves and the union of xMoves and oMoves will be
+unique. 
+-  all moves will be on the board (coordinates will all be between 0 and n-1
+inclusive).
+-  all moves will be formatted correctly &quot;LEVEL,ROW,COLUMN&quot; (no spaces and a
+comma separating the coordinates). 
+-  the size of the first String[] is either equal to or one greater than the
+size of the second String[].
+-  in the return string the winner X or O should be depicted with a captial
+letter.
+-  n is an integer between 3 and 9, inclusive.
+
+EXAMPLES 
+1. 
+Fig. 1                 Fig. 2                   Fig. 3
+  Fig. 4
+________________         ________________         ________________
+________________ 
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+________________         ________________         ________________
+________________ 
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/_X_/___/___/        /___/_X_/_O_/___/        /___/_X_/_O_/___/
+/___/_X_/_O_/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+________________         ________________         ________________
+________________ 
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/_O_/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/_X_/___/
+/___/___/_X_/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+________________         ________________         ________________
+________________ 
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/
+ 
+
+
+         Fig. 5                 Fig. 6                   Fig. 7
+    ________________         ________________         ________________
+   /___/___/___/___/        /___/___/___/___/        /_X_/___/___/___/
+  /___/___/___/___/        /___/___/___/_0_/        /___/___/___/_O_/
+ /___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+    ________________         ________________         ________________
+   /___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+  /___/_X_/_O_/___/        /___/_X_/_O_/___/        /___/_X_/_O_/___/
+ /___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+    ________________         ________________         ________________
+   /___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+  /___/___/_O_/___/        /___/___/_O_/___/        /___/___/_O_/___/
+ /___/___/_X_/___/        /___/___/_X_/___/        /___/___/_X_/___/
+/___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+    ________________         ________________         ________________
+   /___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+  /___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+ /___/___/___/___/        /___/___/___/___/        /___/___/___/___/
+/___/___/___/_X_/        /___/___/___/_X_/        /___/___/___/_X_/
+
+
+
+  xMoves = {&quot;1,2,1&quot;,&quot;2,1,2&quot;,&quot;3,0,3&quot;,&quot;0,3,0&quot;};
+  oMoves = {&quot;1,2,2&quot;,&quot;2,2,2&quot;,&quot;0,2,3&quot;}; 
+
+  Fig. 1: X makes the first move on level 1, row 2, column 1
+  Fig. 2: O makes the next move on level 1, row 2, column 2
+  Fig. 3: X makes the next move on level 2, row 1, column 2
+  Fig. 4: O makes the next move on level 2, row 2, column 2
+  Fig. 5: X makes the next move on level 3, row 0, column 3
+  Fig. 6: O makes the next move on level 0, row 2, column 3
+  Fig. 7: X makes the next move on level 0, row 3, column 0 
+
+  n = 4;
+  The output is: &quot;X,4&quot;
+  Because X won, and it took 4 moves. 
+
+2.
+xMoves =
+{&quot;1,5,1&quot;,&quot;2,5,2&quot;,&quot;0,5,0&quot;,&quot;4,5,4&quot;,&quot;7,5,7&quot;,&quot;3,5,3&quot;,&quot;6,5,6&quot;,&quot;5,5,5&quot;,&quot;3,3,3&quot;};
+oMoves =
+{&quot;3,4,3&quot;,&quot;7,7,7&quot;,&quot;6,6,6&quot;,&quot;5,6,5&quot;,&quot;4,3,2&quot;,&quot;1,2,3&quot;,&quot;1,1,1&quot;,&quot;4,2,2&quot;,&quot;7,7,6&quot;};
+  n = 8;
+  The output is: &quot;X,8&quot;
+  Because X won, and it took 8 moves. 
+
+3.
+  xMoves = {&quot;0,2,2&quot;,&quot;1,2,2&quot;,&quot;2,2,2&quot;,&quot;1,0,0&quot;};
+  oMoves = {&quot;2,2,1&quot;,&quot;1,2,1&quot;,&quot;1,1,1&quot;};
+  n = 4;
+  The output is: &quot;NO WINNER&quot; 
+
+4.
+  xMoves = {&quot;2,1,0&quot;,&quot;0,0,0&quot;,&quot;2,2,2&quot;};
+  oMoves = {&quot;1,1,1&quot;,&quot;1,1,0&quot;,&quot;1,1,2&quot;};
+  n = 3;
+  The output is: &quot;O,3&quot;
+  Because O won, and it took 3 moves.
+ </pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">NTicTacToe</td></tr><tr><td class="statText">Method:</td><td class="statText">compute</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[], int</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String compute(String[] param0, String[] param1, int param2)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=57&pm=208">2001 Invitational Finals - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

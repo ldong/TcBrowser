@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> Problem Statement for Wizarding</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Wizarding</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">A spell is defined by its incantation, the word spoken when the spell is being cast. If you know the incantation of a spell, you can create counterspells in the following manner. First, you can optionally delete any number of characters from the original incantation. Note that empty incantations are not valid so you cannot delete all characters. Then, you can replace any number of the remaining characters according to a set of replacement rules. The replacement rules tell you which letters can be replaced, and the letters with which they can be replaced. For example, if the original incantation is &quot;AA&quot; and the allowed replacement is 'A' to 'Z', the following counterspells are possible: &quot;AA&quot;, &quot;A&quot;, &quot;Z&quot;, &quot;ZZ&quot;, &quot;AZ&quot;, &quot;ZA&quot;.<br>
+<br>
+The best counterspell is the one with the greatest power. The power of a spell is the product of all its character values modulo 77077, where the value for a character is its position in the alphabet (character 'A' has value 1, character 'B' value 2, character 'C' value 3, and so on). The best possible counterspell for &quot;AA&quot; in the example above is &quot;ZZ&quot;, which has a power of 676.
+<br>
+<br>
+Please note that if the allowed replacements are 'A' to 'B' and 'B' to 'C', the counterspell for &quot;AB&quot; is &quot;BC&quot; not &quot;CC&quot;. <i>You cannot change a character that has already been changed, even if it would lead to a more powerful spell.</i>
+<br>
+<br>
+You will be given a String <b>spell</b>, the incantation of the spell you are going to counter, and a String <b>rules</b>, the allowed replacements for letters. The first character in <b>rules</b> is the allowed replacement for the letter 'A', the second for 'B' and so on. The character '-' is used to denote a letter that cannot be replaced. Your program must return a String, the most powerful counterspell available. If multiple return values are possible, return the shortest among them. If a tie still exists return the lexicographically earliest.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Wizarding</td></tr><tr><td class="statText">Method:</td><td class="statText">counterspell</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String counterspell(String spell, String rules)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>spell</b> will contain between 1 and 13 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>spell</b> will contain only uppercase letters ('A'-'Z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>rules</b> will contain exactly 26 characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>rules</b> will contain only uppercase letters ('A'-'Z') and dashes ('-').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;AA&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;Z-------------------------&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ZZ&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;AB&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;ZS------------------------&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ZS&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The possible counterspells are &quot;AB&quot;, &quot;A&quot;, &quot;B&quot;, &quot;Z&quot;, &quot;S&quot;, &quot;ZB&quot;, &quot;AS&quot; and &quot;ZS&quot;.<br>
+&quot;ZS&quot; is the most powerful.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;ZZZZ&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;-------------------------Z&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ZZZZ&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;ABCDE&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;ZYXXYXZZXYXXZZXZYYXZZZX---&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ZXXE&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;ABCDEABCDEABC&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;ACBDESKADSLOEDDDASDBADEDAE&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;CCDECCECC&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10024&pm=6250">TCHS Single Round Match 2 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

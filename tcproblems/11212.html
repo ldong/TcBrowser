@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> Problem Statement for DiceRotation</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for DiceRotation</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Cat Taro likes dice. He has a die which is a 1 x 1 x 1 cube where each face contains a number between 1 and 6. Each number appears on exactly one face, and the sum of the numbers on opposite faces is always 7.
+<br>
+<br>
+There is an infinitely large board which is divided into 1 x 1 cells. The board has a coordinate system in which the x-coordinate (the first coordinate) increases from left to right, while the y-coordinate (the second coordinate) increases from bottom to top.  Taro initially places the die on the cell with coordinates (0, 0). The die shows '1' on the top face, '2' on the front face, and '3' on the left face (so the bottom face shows '6', the back face shows '5', and the right face shows '4').
+<br>
+<br>
+Taro wants to move this die to cell (<b>goalx</b>, <b>goaly</b>) by performing a sequence of rotations. There are two ways to rotate the die:
+<ul>
+<li>Rotate toward the right. This operation moves the die from cell (x, y) to cell (x+1, y).</li>
+<li>Rotate toward the top. This operation moves the die from cell (x, y) to cell (x, y+1).</li>
+</ul>
+For example, if Taro's first rotation is toward the right, then the die will move to cell (1, 0) and the top face will show '3'.
+<br>
+<br>
+<img src="http://www.topcoder.com/contest/problem/DiceRotation/DiceRotation2.gif">
+<br>
+<br>
+Return the number of sequences of rotations which move the die to cell (<b>goalx</b>, <b>goaly</b>), such that the following conditions are satisfied:
+<ul>
+<li>The die must show '1' again on the top face when it reaches (<b>goalx</b>, <b>goaly</b>).</li>
+<li>The die must not show '1' on the top face before it reaches (<b>goalx</b>, <b>goaly</b>).</li>
+</ul>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">DiceRotation</td></tr><tr><td class="statText">Method:</td><td class="statText">theCount</td></tr><tr><td class="statText">Parameters:</td><td class="statText">int, int</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int theCount(int goalx, int goaly)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The answer will always fit in a signed 32-bit integer.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>goalx</b> will be between 1 and 1,000,000,000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>goaly</b> will be between 1 and 1,000,000,000, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>2</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are two ways to move the die to cell (2,2) that satisfy the conditions:
+<ul>
+<li>right -> right -> up -> up</li>
+<li>up -> up -> right -> right</li>
+</ul></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>5</pre></td></tr><tr><td class="statText"><pre>8</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>47</pre></td></tr><tr><td class="statText"><pre>58</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>489</pre></td></tr><tr><td class="statText"><pre>489</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>1000000000</pre></td></tr><tr><td class="statText"><pre>1000000000</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14242&pm=11212">Member Single Round Match 489 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

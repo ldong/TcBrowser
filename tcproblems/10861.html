@@ -1,0 +1,95 @@
+<html>
+<head>
+<title> Problem Statement for MatrixGame</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for MatrixGame</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Alex likes to play the following strange game. He starts with a rectangular NxM grid where each cell contains a '0' (zero) or '1' (one). Rows of the grid are numbered 0 to N-1, inclusive, and columns are numbered 0 to M-1, inclusive. On each move, he chooses two columns in the grid and entirely swaps their content or he chooses two rows in the grid and entirely swaps their content. He can perform an arbitrary large number of moves and there are no restrictions on the order in which he performs moves.
+<br>
+<br>
+Each NxM grid can be described as a String[] containing N elements. The j-th character in the i-th element of this String[] is the same as the character in row i, column j of the grid. Alex's goal is to achieve such a grid that the corresponding String[] is lexicographically minimal (see notes for exact definition). Since he is always unsure whether the goal has been achieved, you are to write a program that checks it for him. Given a String[] <b>matrix</b> describing the grid that Alex initially has, return the lexicographically smallest String[] that he can produce.
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">MatrixGame</td></tr><tr><td class="statText">Method:</td><td class="statText">getMinimal</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] getMinimal(String[] matrix)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A String[] <b>A</b> is lexicographically smaller than a String[] <b>B</b> of the same length if it contains a lexicographically smaller String at the first position where they differ.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A String <b>A</b> is lexicographically smaller than a String <b>B</b> of the same length if it contains a smaller character at the first position where they differ ('0' is smaller than '1').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>matrix</b> will contain between 1 and 8 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>matrix</b> will contain between 1 and 8 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>matrix</b> will have the same length.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>matrix</b> will be either '0' or '1'.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;000&quot;,
+ &quot;000&quot;,
+ &quot;000&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;000&quot;, &quot;000&quot;, &quot;000&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Any move has no effect.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;010&quot;,
+ &quot;000&quot;,
+ &quot;110&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;000&quot;, &quot;001&quot;, &quot;011&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The following sequence of moves can be used:
+<pre>
+010      000      000      000
+000  ->  010  ->  001  ->  001
+110      110      101      011
+</pre></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;111&quot;,
+ &quot;111&quot;,
+ &quot;111&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;111&quot;, &quot;111&quot;, &quot;111&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;01010&quot;,
+ &quot;10101&quot;,
+ &quot;01010&quot;,
+ &quot;10101&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: {&quot;00011&quot;, &quot;00011&quot;, &quot;11100&quot;, &quot;11100&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;11010100&quot;,
+ &quot;11110001&quot;,
+ &quot;00011101&quot;,
+ &quot;11111111&quot;,
+ &quot;01110100&quot;,
+ &quot;10000110&quot;,
+ &quot;00001001&quot;,
+ &quot;11010111&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{&quot;00000011&quot;,
+&quot;00001111&quot;,
+&quot;00110100&quot;,
+&quot;01011100&quot;,
+&quot;01111101&quot;,
+&quot;11001100&quot;,
+&quot;11011001&quot;,
+&quot;11111111&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14150&pm=10861">Single Round Match 466 Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

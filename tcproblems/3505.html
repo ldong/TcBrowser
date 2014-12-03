@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> Problem Statement for DictionarySorter</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for DictionarySorter</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">In some languages (like Old English), the character set is very similar to the standard a-z set, but contains a few other characters.  In this problem, you will write a sorter for a dictionary which contains the <i>ash</i> and <i>thorn</i> characters in addition to a-z.  Ash will be represented in the input as &quot;/ae&quot; and should be treated as a single character which comes after 'a' but before 'b'.  Thorn will be represented by &quot;/th&quot; and should be treated similarly, but sorted after 't' and before 'u'.  Given a String[], <b>words</b>, sort the Strings, and return the result.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">DictionarySorter</td></tr><tr><td class="statText">Method:</td><td class="statText">sort</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] sort(String[] words)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">You should use the standard sorting rules.  Find the first character for which two Strings differ, and return the one with the lower character in that position.  If one String is a prefix of another, the shorter String should come first.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>words</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>words</b> will contain between 1 and 50 lowercase letters ('a'-'z') and slashes ('/').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each '/' will be followed by &quot;ae&quot; or &quot;th&quot;.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;,&quot;b&quot;,&quot;/ae&quot;,&quot;t&quot;,&quot;u&quot;,&quot;/th&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;a&quot;,  &quot;/ae&quot;,  &quot;b&quot;,  &quot;t&quot;,  &quot;/th&quot;,  &quot;u&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;aeleric&quot;,&quot;/aeleric&quot;,&quot;aelfred&quot;,&quot;alfred&quot;,&quot;/aelfred&quot;,&quot;/ae/th&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;aeleric&quot;,  &quot;aelfred&quot;,  &quot;alfred&quot;,  &quot;/aeleric&quot;,  &quot;/aelfred&quot;,  &quot;/ae/th&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;/the&quot;,&quot;quick&quot;,&quot;brown&quot;,&quot;fox&quot;,&quot;jumps&quot;,&quot;over&quot;,&quot;/ae&quot;,&quot;lazy&quot;,&quot;dog&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;/ae&quot;,
+ &quot;brown&quot;,
+ &quot;dog&quot;,
+ &quot;fox&quot;,
+ &quot;jumps&quot;,
+ &quot;lazy&quot;,
+ &quot;over&quot;,
+ &quot;quick&quot;,
+ &quot;/the&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;/ae&quot;,&quot;/ae/ae&quot;,&quot;t&quot;,&quot;t/th&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;/ae&quot;,  &quot;/ae/ae&quot;,  &quot;t&quot;,  &quot;t/th&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6525&pm=3505">2005 TCCC Qualification Set 3 &amp; 8 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

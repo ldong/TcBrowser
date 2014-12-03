@@ -1,0 +1,94 @@
+<html>
+<head>
+<title> Problem Statement for NetworkSecurity</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for NetworkSecurity</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><i>NOTE: This problem statement contains images that may not display properly if viewed outside of the applet. </i>
+<br>
+<br>
+TopCoder Security Agency (TSA) has been hired to secure a network system. In this network, there are several client computers and server computers which for the sake of conciseness will be called clients and servers, respectively. There are several one directional data cables in the network: between clients and from clients to servers. A data path in the network is defined as a series of 2 or more computers C1, C2, C3, ..., CN such that for each i between 1 and N-1, there exists a data cable from Ci to C(i+1). To avoid infinite data loops, the network is acyclic, that is, there does not exist a data path that originates and ends at the same computer. A client C is connected to a server S if there exists a data path originating at C and ending at S.
+<br>
+<br>
+TSA is going to secure the network by installing data gates on some of the cables. The network is said to be secure if for every pair of connected client and server, there exists at least one data path between them which uses at least one cable on which a data gate is installed.
+<br>
+<br>
+There are N clients numbered 0 through N-1 and M servers numbered 0 through M-1. The data cables are given as String[] <b>clientCable</b> and String[] <b>serverCable</b>. The j-th character of the i-th element of <b>clientCable</b> is 'Y' if there exists a data cable from client i to client j, or 'N' otherwise. The j-th character of the i-th element of <b>serverCable</b> is 'Y' if there exists a data cable from client i to server j, or 'N' otherwise.
+<br>
+<br>
+Return the minimum number of data gates that needs to be installed to make the network secure.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">NetworkSecurity</td></tr><tr><td class="statText">Method:</td><td class="statText">secureNetwork</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int secureNetwork(String[] clientCable, String[] serverCable)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>clientCable</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>clientCable</b> will contain exactly N characters, where N is the number of elements in <b>clientCable</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>clientCable</b> will be 'Y' or 'N'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The i-th character of the i-th element of <b>clientCable</b> will be 'N'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>serverCable</b> will contain the same number of elements as <b>clientCable</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>serverCable</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>serverCable</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>serverCable</b> will be 'Y' or 'N'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The network will be acyclic as described in the problem statement.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NYN&quot;
+,&quot;NNN&quot;
+,&quot;NYN&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;YN&quot;
+,&quot;YN&quot;
+,&quot;NY&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"><img src="http://www.topcoder.com/contest/problem/NetworkSecurity/networksecurity.png">
+<br>
+All three clients are connected to server 0 and only client 2 is connected to server 1. If the data gates are installed on the two cables as shown in the picture above, then each of the following data paths between a client and server will contain at least one cable on which a data gate is installed: 
+<ul>
+<li>C0->C1->S0</li>
+<li>C1->S0</li>
+<li>C2->C1->S0</li>
+<li>C2->S1</li>
+</ul></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NN&quot;
+,&quot;NN&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;NNN&quot;
+,&quot;NNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">No client is connected to any server and hence the network is secure.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;NYNN&quot;
+,&quot;NNNN&quot;
+,&quot;NNNY&quot;
+,&quot;NNNN&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;YYN&quot;
+,&quot;NNN&quot;
+,&quot;NNY&quot;
+,&quot;NNN&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14159&pm=10736">Single Round Match 480 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

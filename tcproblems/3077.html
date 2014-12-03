@@ -1,0 +1,73 @@
+<html>
+<head>
+<title> Problem Statement for SignatureDecorator</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for SignatureDecorator</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>Some people like to have a particular custom signature following their emails or posts on online message boards.  These signatures usually contain the handle by which they are known, but then are decorated by various punctuation marks to make them look more interesting.  You, as administrator of a popular message board, would like to allow such decorations in people's signatures while enforcing a rule that the signature they use contains their name.  In order to do this, you allow people to set up a series of rules to apply to their handles to automatically generate their signatures.</p>
+
+<p>You will be given a user's handle as a String, which will be made up of upper- and lower-case letters, numbers or underscores ('_').  You will also be given two String[]s representing a series of formatting commands.  Each element in <b>commands</b> is <tt>&quot;prepend&quot;</tt>, <tt>&quot;append&quot;</tt> or <tt>&quot;surround&quot;</tt>.  Each element of <b>decorations</b> is a series of punctuation characters (out of <tt>,./;'&lt;&gt;?:&quot;\|[]{}-=_+!@#$%^&amp;*()~`</tt> ) to use.  The i<sup>th</sup> element of <b>commands</b> corresponds to the i<sup>th</sup> element of <b>decorations</b>.</p>
+
+<p>Each instruction should be executed as follows:</p>
+<ul>
+	<li>For a &quot;prepend&quot; command, put the decoration at the beginning of the name.</li>
+	<li>For an &quot;append&quot; command, put the decoration at the end of the name.</li>
+	<li>For a &quot;surround&quot; command, put the decoration at the beginning of the name and backwards at the end of the name.</li>
+</ul>
+
+<p>The instructions should be executed in the order in which they appear, so if <b>name</b> is <tt>&quot;Bob&quot;</tt>, <b>commands</b> is <tt>{&quot;surround&quot;, &quot;append&quot;, &quot;prepend&quot;}</tt>, and <b>decorations</b> is <tt>{&quot;-=&quot;, &quot;(&quot;, &quot;)&quot;}</tt> name would progressively go from <tt>&quot;Bob&quot;</tt> to <tt>&quot;-=Bob=-&quot;</tt> to <tt>&quot;-=Bob=-(&quot;</tt> to <tt>&quot;)-=Bob=-(&quot;</tt>.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">SignatureDecorator</td></tr><tr><td class="statText">Method:</td><td class="statText">applyDecoration</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String applyDecoration(String name, String[] commands, String[] decorations)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>name</b> will be between 1 and 50 characters long, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>commands</b> and <b>decorations</b> and will have between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>commands</b> and <b>decorations</b> will have the same number of elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>decorations</b> will have between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>decorations</b> will contain only the following characters: <tt>,./;'&lt;&gt;?:&quot;\|[]{}-=_+!@#$%^&amp;*()~`</tt></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>commands</b> will be either <tt>&quot;prepend&quot;</tt>, <tt>&quot;append&quot;</tt>, or <tt>&quot;surround&quot;</tt>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>name</b> will be made up of only upper- or lower-case letters, numbers, and underscores ('_').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;Bob&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;surround&quot;, &quot;append&quot;, &quot;prepend&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;-=&quot;, &quot;(&quot;, &quot;)&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;)-=Bob=-(&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;Super_Man_01&quot;</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Super_Man_01&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;4BcD3FgHIjklMN0pqrS7uVWxYZ_&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;append&quot;, &quot;prepend&quot;, &quot;surround&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;`{[(&quot;, &quot;)]}'&quot;, &quot;,.;&lt;&gt;?:|-=_+!@#$%^&amp;*~&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;,.;&lt;&gt;?:|-=_+!@#$%^&amp;*~)]}'4BcD3FgHIjklMN0pqrS7uVWxYZ_`{[(~*&amp;^%$#@!+_=-|:?&gt;&lt;;.,&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;RacEcaR&quot;</pre></td></tr><tr><td class="statText"><pre>{&quot;surround&quot;}</pre></td></tr><tr><td class="statText"><pre>{&quot;([{/&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;([{/RacEcaR/{[(&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Turning the punctuation around backwards doesn't mean flipping individual characters.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5871&pm=3077">Single Round Match 225 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

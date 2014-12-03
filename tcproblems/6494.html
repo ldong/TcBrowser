@@ -1,0 +1,76 @@
+<html>
+<head>
+<title> Problem Statement for RiverCrossing</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for RiverCrossing</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+A carrier boat is initially on the left bank of a river.  Cargo becomes available at either side of the river at various times.  Each cargo unit must be loaded onto the boat, carried across the river to the opposite side, and unloaded.  It takes <b>T</b> units of time to cross the river, and the boat can carry at most <b>units</b> units of cargo at a time.  Loading and unloading cargo is instantaneous.  The boat can wait at either side of the river and depart at any time.  After all the cargo has been transported, it does not matter which side of the river the boat ends up at.</p> Each element of <b>cargo</b> represents one or more cargo units, ordered in non-decreasing order by the time at which they become available.
+<p>
+The waiting time of a cargo unit is the difference between the time at which it becomes available and the time at which it is loaded onto the boat.  The time spent by a cargo unit while it's inside the boat does not count toward its waiting time.  For example, if a cargo unit becomes available at time 0 and is loaded onto the boat at time 5, its waiting time is 5 regardless of how much longer the boat waits before departing.  Determine a schedule for the boat that minimizes the sum of all the waiting times.  Return this minimal sum. </p>
+<p>You are given a String[] <b>cargo</b> where each element is formatted as "units time bank" (quotes for clarity only).  
+<ul><li><b>units</b> is the number of cargo units that become available.</li><li> <b>time</b> is the time at which they become available.</li><li>  <b>bank</b> is the side of the river at which they become available - either "left" or "right" (quotes for clarity only). </li>
+</ul> Even though multiple units of cargo may become available at the same time, they do not need to remain together or be loaded onto the boat at the same time.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">RiverCrossing</td></tr><tr><td class="statText">Method:</td><td class="statText">minimalWait</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int, int</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int minimalWait(String[] cargo, int units, int T)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>cargo</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>units</b> will be between  1 and 50, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>T</b> will be between 1 and 100, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>cargo</b> will be formatted as "units time bank" (quotes for clarity only).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Elements of <b>cargo</b> will be ordered in non-decreasing order of <i>time</i>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of cargo, <i>units</i> will be an integer between 1 and 50, inclusive, with no leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of cargo, <i>time</i> will be an integer between 1 and 100, inclusive, with no leading zeroes.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In each element of cargo, <i>bank</i> will be either "left" or "right" (quotes for clarity only).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The total units of cargo to be transported will be less than or equal to 200.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;5 1 right&quot;}</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 22</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The boat moves as follows:<ul>
+<li>Time 0: The boat departs from the left bank.</li>
+<li>Time 3: The boat arrives at the right bank, loads 3 units of cargo, and departs.  The total waiting time for those 3 units is 3*(3-1)=6.</li>
+<li>Time 6: The boat arrives at the left bank, unloads its cargo, and departs.</li>
+<li>Time 9: The boat arrives at the right bank, loads the remaining 2 units of cargo, and departs.  The total waiting time for those 2 units is 2*(9-1)=16.</li>
+<li>Time 12: The boat arrives at the left bank and unloads its cargo.  The total waiting time was 6+16=22.</li></ul></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;5 5 right&quot;}</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 12</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 left&quot;, &quot;1 1 right&quot;, &quot;2 4 left&quot;}</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;20 1 left&quot;, &quot;20 2 left&quot;, &quot;20 3 left&quot;, &quot;20 4 left&quot;, &quot;20 5 left&quot;, 
+&quot;20 6 left&quot;, &quot;20 7 left&quot;, &quot;20 8 left&quot;, &quot;20 9 left&quot;, &quot;20 10 left&quot;}</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>100</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3979100</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You always go from right to left with an empty boat.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;20 1 right&quot;, &quot;20 2 left&quot;, &quot;20 3 right&quot;, &quot;20 4 left&quot;, &quot;20 5 right&quot;,
+ &quot;20 6 left&quot;, &quot;20 7 right&quot;, &quot;20 8 left&quot;, &quot;20 9 right&quot;, &quot;20 10 left&quot;}</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>100</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1989300</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Coming back with a filled boat reduces the waiting time.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;4 15 left&quot;, &quot;10 24 left&quot;,  &quot;3 35 left&quot;, &quot;10 47 right&quot;,
+ &quot;4 51 right&quot;, &quot;10 56 right&quot;, &quot;9 65 left&quot;}</pre></td></tr><tr><td class="statText"><pre>12</pre></td></tr><tr><td class="statText"><pre>34</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1660</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10074&pm=6494">TCHS Single Round Match 22 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

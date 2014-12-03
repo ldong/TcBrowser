@@ -1,0 +1,80 @@
+<html>
+<head>
+<title> Problem Statement for Optimizer</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Optimizer</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>Compilers often optimize source code to make programs run faster.  One common optimization is to evaluate constant expressions while compiling.  For example, when compiling the expression &quot;a * 4 * 3&quot;, you can first reduce it to &quot;a * 12&quot; before compiling it to machine code.  You are to write a class Optimizer with a method reduce that takes a String, <b>expression</b>, and determines the minimum cost of evaluating the expression after it has been fully reduced.  For this problem, we will only be considering add and multiply operations on a machine that takes 1 cycle to perform an add operation, and 10 cycles to perform a multiply operation.  You should reduce the expression according to the following specifications:</p>
+<ul>
+<li>- Multiplication and addition are both commutative, e.g. &quot;a * b&quot; = &quot;b * a&quot; and &quot;a + b&quot; = &quot;b + a&quot;.</li>
+<li>- Multiplication and addition are both associative, e.g. &quot;(a * b) * c&quot; = &quot;a * (b * c)&quot; and &quot;(a + b) + c&quot; = &quot;a + (b + c)&quot;.</li>
+<li>- We have no guarantees that the values of the variables will stay the same throughout the computations, so an expression such as &quot;3 * a + 4 * a&quot; can not be reduced to &quot;7 * a&quot;.  In other words, you should treat each occurrence of a variable as if it was a unique variable.</li>
+<li>- &quot;&lt;expression&gt; + 0&quot; is always &quot;&lt;expression&gt;&quot;, and &quot;&lt;expression&gt; * 1&quot; is always &quot;&lt;expression&gt;&quot;.  Similarly, &quot;&lt;expression&gt; * 0&quot; is always 0.</li>
+<li>- Any reductions that you make must follow directly from commutativity, associativity, the above rule, or from evaluating part of an expression that does not contain any variables.  Thus, you may not reduce &quot;a * 2&quot; into &quot;a + a&quot; or vice versa, but you may reduce &quot;(3 + 4) * a&quot; to &quot;7 * a&quot; because you are evaluating a part of the expression that does not contain any variables.</li>
+</ul>
+<p>Your method should reduce the expression as much as possible, following the above rules, and return the number of cycles required to evaluate the reduced expression, given that each addition takes 1 cycle, and each multiplication takes 10 cycles.  When performing reductions, you must follow standard operator precedence rules: terms in parentheses are evaluated first, then multiplication, then addition.</p>
+<p>The input string will be a well-formed &lt;expression&gt; conforming to the following grammar:</p>
+<pre>
+&lt;expression&gt; ::= &lt;expression&gt;&lt;op&gt;&lt;expression&gt; |
+                       &lt;sp&gt;&lt;expression&gt;&lt;sp&gt; | 
+                       (&lt;expression&gt;) | &lt;var&gt; | &lt;num&gt;
+&lt;var&gt; ::= a sequence of one or more lowercase letters ('a'-'z')
+&lt;num&gt; ::= a sequence of one or more digits ('0'-'9')
+&lt;op&gt; ::= '*' | '+'
+&lt;sp&gt; ::= zero or more spaces (' ')
+</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Optimizer</td></tr><tr><td class="statText">Method:</td><td class="statText">reduce</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int reduce(String expression)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Be sure to only apply the reductions mentioned in the problem statement.  In particular, note that we are <i>not</i> applying the distrubutive property of addition and multiplication.  See example 7.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A common way to represent the structure of the expression is to build a tree, where each internal node represents an operation ('+' or '*') and each leaf represents a variable or number.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>expression</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>expression</b> will conform to the grammar defined above.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;num&gt; will represent an integer between 0 and 2^32-1, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The numbers in fully reduced expressions will not exceed 2^32-1.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;  alpha*beta+5*006  &quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 11</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This can be reduced to &quot;alpha * beta + 30&quot;, which has one multiplication and one addition.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;a * b * 00 + 1 * 5&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This can simply be reduced to &quot;5&quot; which requires no evaluation.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;dx + a * b * 0 + 1 * c&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;5 * (3 + 4 + c) + (a + c) * (c + d)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 24</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This can be reduced to &quot;5 * (7 + c) + (a + c) * (c + d)&quot; which has 4 additions and 2 multiplications.  Note that we can not reduce &quot;5 * (7 + c)&quot; to &quot;35 + 5 * c&quot; because that reduction is a property of distributivity, and is not one of the allowed reductions.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;9 * ((4 + 4)) * (7) * (3 + 1) + 504&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There are no variables here, so the compiler can evaluate the whole expression and reduce it to &quot;2520&quot;</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;((((aa))))&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;(1 + 0 * a) * c + (0 + 0 * b) * d&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">7)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;5 * d + 5 * b&quot; </pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 21</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Remember that we are not applying the distributive property, so we cannot reduce this to &quot;5 * (d + b)&quot;.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">8)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;(a*5)*4+((a+4)+5)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 12</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Note that we can first change this to &quot;a*(5*4)+(a+(4+5))&quot; and then to &quot;a*20+a+9&quot;.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">9)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;(a*5)*(b*6)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 20</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">10)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;(1)+0+1*(w+6)*1&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We can reduce this to &quot;w + 7&quot;</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4482&pm=1574">TopCoder Collegiate Challenge Round 4 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

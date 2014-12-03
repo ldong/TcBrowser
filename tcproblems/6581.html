@@ -1,0 +1,79 @@
+<html>
+<head>
+<title> Problem Statement for DessertMaker</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for DessertMaker</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You have a number of tasty <b>ingredients</b> and you want to know how many different banana split desserts you could make using those ingredients.  In order for something to count as a banana split, it must have at least one &quot;banana&quot;, at least one &quot;ice cream&quot;, and at least one other ingredient (i.e., at least one ingredient that is not a "banana" or an "ice cream").  Ingredients with the same name are not distinguishable, and it doesn't matter what order the items are added to the dessert.  For example, suppose you had the following 5 <b>ingredients</b>:
+<br>
+<ul><li>&quot;ice cream&quot;,&quot;banana&quot;,&quot;chocolate&quot;,&quot;chocolate&quot;,&quot;peanuts&quot;</li></ul>
+You could make a total of 5 different banana splits, as shown below:<br>
+<ul>
+<li>&quot;ice cream&quot;,&quot;banana&quot;,&quot;chocolate&quot;,&quot;chocolate&quot;,&quot;peanuts&quot;</li>
+<li>&quot;ice cream&quot;,&quot;banana&quot;,&quot;chocolate&quot;,&quot;peanuts&quot;</li>
+<li>&quot;ice cream&quot;,&quot;banana&quot;,&quot;chocolate&quot;,&quot;chocolate&quot;</li>
+<li>&quot;ice cream&quot;,&quot;banana&quot;,&quot;chocolate&quot;</li>
+<li>&quot;ice cream&quot;,&quot;banana&quot;,&quot;peanuts&quot;</li>
+</ul>
+Note that if you would have had 2 bananas, you would have had 10 possibilities - as adding a banana to each combination above makes a new dessert.  Return the number of distinct banana splits you could create using the items given in <b>ingredients</b>.  </td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">DessertMaker</td></tr><tr><td class="statText">Method:</td><td class="statText">countBananaSplits</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int countBananaSplits(String[] ingredients)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>ingredients</b> will contain between 1 and 30 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>ingredients</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>ingredients</b> will contain only lowercase letters and spaces ('a'-'z',' ').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ice cream&quot;,&quot;banana&quot;,&quot;chocolate&quot;,&quot;chocolate&quot;,&quot;peanuts&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 5</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The example from the problem statement.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;banana&quot;, &quot;banana&quot;, &quot;chocolate&quot;, &quot;strawberries&quot;, 
+&quot;pineapple&quot;, &quot;pineapple&quot;, &quot;rice cream&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">To make a banana split, you need "ice cream", "banana", and at least one other ingredient.  We have a "banana" and plenty of other ingredients, but we don't have an "ice cream" so we have zero possibilities.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ice cream&quot;, &quot;ice cream&quot;, &quot;banana&quot;, &quot;banana&quot;, &quot;chocolate&quot;,
+ &quot;chocolate&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 8</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">To see the 8 possibilities, note that you can pick either one or two "ice cream"s, one or two "banana"s and one or two "chocolate"s (and 2*2*2=8).  You cannot have no ice cream or no bananas - and we need to have at least one other ingredient so we need at least one chocolate.  Note that {"ice cream","banana","chocolate"} counts as a different dessert than {"ice cream","ice cream","banana","banana","chocolate","chocolate"} because the ingredient list is not identical.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;foam&quot;, &quot;apple&quot;, &quot;whipped cream&quot;, &quot;apple&quot;, &quot;mushroom&quot;, 
+&quot;apple core&quot;, &quot;ice cream&quot;, &quot;ice cream&quot;, &quot;banana&quot;, &quot;giraffe&quot;, 
+&quot;mushroom&quot;, &quot;spare tire&quot;, &quot;ice cream&quot;, &quot;banana&quot;, &quot;foam&quot;, 
+&quot;wrench&quot;, &quot;paper&quot;, &quot;cherry&quot;, &quot;alarm clock&quot;, &quot;football&quot; ,&quot;apple&quot;, 
+&quot;apple&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 138234</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">You don't know if it'll be good until you try it.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10065&pm=6581">TCHS Single Round Match 13 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Problem Statement for GeneralChess</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for GeneralChess</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You have decided that too many people do not know how to play chess.  So, in an effort to teach the rules you must write some software that helps to understand how chess-pieces affect one another.  Your current project involves the knight and its ability to threaten one or more pieces at once.  The knight has an unusual style of &quot;jumping&quot; around the board.  One move consists of traveling two squares in one of the four cardinal directions, followed by one square perpendicular to the original direction.  For example, if a knight is on (0,0), it may move to (2,1), (2,-1), (1,2), (1,-2), (-2, 1), (-2,-1), (-1,2), or (-1,-2).  In addition, if a piece is on any of those locations, it is threatened by the knight on (0,0).
+<pre></pre>
+You will be given a String[] <b>pieces</b>, where each element is a comma delimited set of coordinates.  Every element in pieces is formatted as &quot;&lt;x-coordinate&gt;,&lt;y-coordinate&gt;&quot; (quotes and angle brackets for clarity).  Calculate and return a String[] where each element represents a position from which a knight threatens every piece in <b>pieces</b>.  Your return String[] must be in the same format as <b>pieces</b> and sorted in increasing order by the x-coordinate.  If two sets of coordinates have the same x-coordinate, the one with the smaller y-coordinate must come first.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">GeneralChess</td></tr><tr><td class="statText">Method:</td><td class="statText">attackPositions</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] attackPositions(String[] pieces)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>pieces</b> will contain between 1 and 8 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element in <b>pieces</b> will be formatted as &quot;&lt;x-coordinate&gt;,&lt;y-coordinate&gt;&quot; (quotes and angle brackets for clarity).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;x-coordinate&gt; will be an integer between -10000 and 10000, inclusive and will not contain leading zeros.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;y-coordinate&gt; will be an integer between -10000 and 10000, inclusive and will not contain leading zeros.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element in <b>pieces</b> will be unique.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0,0&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;-2,-1&quot;,  &quot;-2,1&quot;,  &quot;-1,-2&quot;,  &quot;-1,2&quot;,  &quot;1,-2&quot;,  &quot;1,2&quot;,  &quot;2,-1&quot;,  &quot;2,1&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This location is threatened from eight different places.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;2,1&quot;, &quot;-1,-2&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;0,0&quot;,  &quot;1,-1&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">A knight may be in two places such that both pieces are threatened.  In chess, placing your pieces in such positions is usually undesirable when your opponent has a knight.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0,0&quot;, &quot;2,1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;-1000,1000&quot;, &quot;-999,999&quot;, &quot;-999,997&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;-1001,998&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">No three pieces can ever be threatened by a knight from more than one position.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5072&pm=2430">Single Round Match 197 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5072&pm=2430">Single Round Match 197 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

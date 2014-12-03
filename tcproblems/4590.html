@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Problem Statement for OneMoreRectangle</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for OneMoreRectangle</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">There are some rectangles on a plane, with sides parallel to the axes. They may intersect and overlap.
+You are to place a rectangle q on this plane (its sides must also be parallel to axes) and want to cover the maximum possible number of rectangles.
+<br><br>
+You are given a String[] <b>rectangles</b>, each element of which is formatted as &quot;X1 Y1 X2 Y2&quot;, where X1 and Y1 are the coordinates of the lower left corner of a rectangle, and X2 and Y2 are the coordinates of the upper right corner. You are given the lengths of the sides of q - <b>qa</b> and <b>qb</b>. You are to return the maximum number of rectangles that can be covered by q. A rectangle is covered by q if it lies fully inside q (for example, &quot;1 1 2 2&quot; is covered by &quot;-1 1 2 100&quot;).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">OneMoreRectangle</td></tr><tr><td class="statText">Method:</td><td class="statText">maxCover</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int, int</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int maxCover(String[] rectangles, int qa, int qb)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The rectangle you place may be oriented in either of the two possible ways.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>rectangles</b> will contain between 0 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>rectangles</b> will be formatted as &quot;X1 Y1 X2 Y2&quot;.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">X1, Y1, X2, and Y2 will each be an integer between -1000000000 and 1000000000, inclusive, with no extra leading zeros.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">X2 will be greater than X1, and Y2 will be greater than Y1.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>qa</b> and <b>qb</b> will be between 1 and 1000000000 inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 2 2&quot;,&quot;2 2 3 3&quot;,&quot;3 3 4 4&quot;}</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">q is 2x2, so it may cover the first and second rectangles, or the second and third ones - answer is 2.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 5 5&quot;,&quot;1 1 4 2&quot;,&quot;1 1 2 4&quot;, &quot;2 3 5 5&quot;}</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">q may cover &quot;1 1 4 2&quot; and &quot;1 1 2 4&quot;.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 4 2&quot;,&quot;1 2 2 5&quot;,&quot;4 1 5 4&quot;,&quot;2 4 5 5&quot;}</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 4 2&quot;,&quot;1 2 2 5&quot;,&quot;4 1 5 4&quot;,&quot;2 4 5 5&quot;}</pre></td></tr><tr><td class="statText"><pre>4</pre></td></tr><tr><td class="statText"><pre>4</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 4 6573 345&quot;,&quot;23 4366 23545 366783&quot;,&quot;54 7895 2565 23567&quot;,&quot;3456 345 475457 45767654&quot;,
+&quot;-234 -654885 0 0&quot;,&quot;-32654 -43256 -34 -5463&quot;,&quot;-10000 -10000 10000 10000&quot;}</pre></td></tr><tr><td class="statText"><pre>100000</pre></td></tr><tr><td class="statText"><pre>100000</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=7226&pm=4590">Single Round Match 251 Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

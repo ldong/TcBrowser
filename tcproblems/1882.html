@@ -1,0 +1,121 @@
+<html>
+<head>
+<title> Problem Statement for BitmapToGraph</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for BitmapToGraph</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Graphs are relatively common data structures in computer science.  To visualize a graph, we often display it as a bitmap like this one:<br>
+<img src="http://www.topcoder.com/contest/problem/BitmapToGraph/graph.gif">
+<br><br>
+However, an image is not very easy to work with for most purposes.  It is usually much easier to perform common tasks (like finding a shortest path) if the graph is represented as a set of nodes and edges.  In this problem, you will be given a graph as a bitmap, and are to convert it to a set of nodes and edges.
+<br><br>
+You have some information about the bitmap to make this task easier.  First, you know that all nodes in the graph are represented by a single pixel of a certain color, which will be represented by an 'N' in the input.  Furthermore, each edge will be a single color, represented by an 'E' in the input.  The rest of the pixels will be represented by '.'s.  After examining the images, you've come up with the following sketch for an algorithm to find and follow edges:
+<ol><li>First, find an 'N' that is adjacent to an 'E' (either orthogonally, or diagonally).</li>
+<li>Start following the edge in the same direction as you went to get from the 'N' to the 'E'.</li>
+<li>Then, as long as the edge has not terminated at an 'N', follow the edge ('E' pixels) by either continuing in the same direction, or if you cannot continue straight, by turning 45 degrees and continuing.  You should always go straight when possible, but if you cannot go straight, you will be able to go either 45 degrees left, or 45 degrees right, though not both.  In other words, if you cannot go straight, it will be unambiguous which way to turn (this is ensured by the constraints).</li>
+<li>If, at any point, there is an 'N' straight ahead, or there is not an edge straight ahead and there is an 'N' 45 degrees off from straight ahead, then the edge you are following terminates at that node.  Again, this will not be ambiguous, so if there is neither an 'E' nor an 'N' straight ahead, then exactly one of the pixels 45 degrees off from straight will be 'N' or 'E'.</li>
+</ol>
+
+Your task is to write a method parse, which takes a String[], <b>bitmap</b>, each of whose elements represents a row in the bitmap, and returns a String[], each of whose elements represents a single node.  To do this, you should first number all of the nodes, starting with the most upper most nodes, and breaking ties by doing the left most first.  Your numbering should start at 0.  Then, the i<sup>th</sup> element of the return should be a comma delimited list of all the &lt;edge&gt;s coming out of the i<sup>th</sup> node.  Each &lt;edge&gt; should be formatted as &lt;dest&gt;:&lt;length&gt;, where &lt;dest&gt; is the number of the node to which this edge connects, and &lt;length&gt; is the number of 'E's in the edge.  The list of edges in each element should be sorted in ascending order by the index of the element they connect to.  Ties should be broken by sorting the edges in ascending order by length.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">BitmapToGraph</td></tr><tr><td class="statText">Method:</td><td class="statText">parse</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] parse(String[] bitmap)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Only list individual loops (edges from a node to itself) once.  See example 4.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>bitmap</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>bitmap</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>bitmap</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character of <b>bitmap</b> will be an 'E', an 'N', or a '.'.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">If you follow each edge as described in the problem statement, each edge will terminate at a node.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will not be two adjacent 'N's.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All of the edges will be traversed in the same manner in both directions.  In other words, if there is an edge from node i to node j, there will also be an edge from node j to node i which uses all of the same pixels.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">There will be no ambiguity as to which way to go when a 45 turn must be made.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>   {&quot;NEEE.....N&quot;,
+    &quot;....EEEEE.&quot;,
+    &quot;..........&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;1:8&quot;,  &quot;0:8&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The upper left 'N' is node 0, and the upper right 'N' is node 1.  There is an edge with 8 'E's connecting them, so element 0 of the return is &quot;1:8&quot; since the edge from 0 to 1 is of length 8.  Similarly, element 1 of the return is &quot;0:8&quot;</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>    {&quot;N.N&quot;,
+     &quot;.E.&quot;,
+     &quot;N.N&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;3:1&quot;,  &quot;2:1&quot;,  &quot;1:1&quot;,  &quot;0:1&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The numbers of the nodes are as follows:
+<pre>
+    0.1
+    ...
+    2.3
+</pre>
+Thus, 0 is connected to 3, and 1 is connected to 2.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>   {&quot;N..N..N&quot;,
+    &quot;.E.E.E.&quot;,
+    &quot;..EEE..&quot;,
+    &quot;NEEEEEN&quot;,
+    &quot;..EEE..&quot;,
+    &quot;.E.E.E.&quot;,
+    &quot;N..N..N&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;7:5&quot;,  &quot;6:5&quot;,  &quot;5:5&quot;,  &quot;4:5&quot;,  &quot;3:5&quot;,  &quot;2:5&quot;,  &quot;1:5&quot;,  &quot;0:5&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>   {&quot;.NE....NE..N&quot;,
+    &quot;E..E...E.E..&quot;,
+    &quot;E..E...E.E.E&quot;,
+    &quot;.EE....NE..E&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;0:7&quot;,  &quot;3:2,3:4&quot;,  &quot;&quot;,  &quot;1:2,1:4&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Notice that the loop from node 0 to itself is only listed once.  Also note that when there are multiple edges from one node to another, they are sorted by length.  Finally, note that there may be edge pixels that are not part of any edge.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.EE....&quot;,
+ &quot;E..E...&quot;,
+ &quot;E..E...&quot;,
+ &quot;NEEEEE.&quot;,
+ &quot;...E..E&quot;,
+ &quot;...E..E&quot;,
+ &quot;...E..E&quot;,
+ &quot;....EE.&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;0:20&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;.EE.&quot;,
+ &quot;N..N&quot;,
+ &quot;.EE.&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;1:2,1:2&quot;,  &quot;0:2,0:2&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>   {&quot;N..N.........&quot;,
+    &quot;.E.E.........&quot;,
+    &quot;..EE....EN...&quot;,
+    &quot;...E.N.E.....&quot;,
+    &quot;...NEEEEEN...&quot;,
+    &quot;...E.N.E.....&quot;,
+    &quot;..EE....EN...&quot;,
+    &quot;.E.E.........&quot;,
+    &quot;N..N.........&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;6:4&quot;,
+ &quot;4:3&quot;,
+ &quot;6:3&quot;,
+ &quot;6:1,7:3,8:4&quot;,
+ &quot;1:3,5:5,9:3&quot;,
+ &quot;4:5&quot;,
+ &quot;0:4,2:3,3:1&quot;,
+ &quot;3:3&quot;,
+ &quot;3:4&quot;,
+ &quot;4:3&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4701&pm=1882">2003 TCO Qualification Round 2 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

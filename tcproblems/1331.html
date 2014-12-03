@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> Problem Statement for MessageMess</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for MessageMess</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">It is a common practice in cryptography to remove the spaces from a message 
+before encoding it to help to disguise its structure. 
+Even after it is then decoded, we are left with the
+problem of putting the spaces back in the message.
+<p>
+Create a class MessageMess that contains a method restore that 
+takes a String[] <b>dictionary</b> of possible words and
+a String <b>message</b> as inputs. It returns the message with single spaces inserted to divide the <b>message</b> into words from the <b>dictionary</b>.  If there is more than one way to insert spaces, it returns &quot;AMBIGUOUS!&quot;  If there is no way to insert spaces, it returns &quot;IMPOSSIBLE!&quot; The return should never
+have any leading or trailing spaces.
+</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">MessageMess</td></tr><tr><td class="statText">Method:</td><td class="statText">restore</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String restore(String[] dictionary, String message)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Don't forget the '!' at the end of the two special returns</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A proper message may require 0 spaces to be inserted</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>dictionary</b> will contain between 1 and 50 elements inclusive</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">the elements of <b>dictionary</b> will be distinct</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">each element of <b>dictionary</b> will contain between 1 and 50 characters</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>message</b> will contain between 1 and 50 characters</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">every character in <b>message</b> and in each element of <b>dictionary</b> will be an uppercase letter 'A'-'Z'</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;HI&quot;, &quot;YOU&quot;, &quot;SAY&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;HIYOUSAYHI&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;HI YOU SAY HI&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">
+A word from <b>dictionary</b> may appear multiple times in the <b>message</b>.
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ABC&quot;, &quot;BCD&quot;, &quot;CD&quot;, &quot;ABCB&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;ABCBCD&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;AMBIGUOUS!&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">&quot;ABC BCD&quot; and &quot;ABCB CD&quot; are both possible interpretations of <b>message</b>.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;IMPOSS&quot;, &quot;SIBLE&quot;, &quot;S&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;IMPOSSIBLE&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;IMPOSSIBLE!&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There is no way to concatenate words from this <b>dictionary</b> 
+to form &quot;IMPOSSIBLE&quot;</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;IMPOSS&quot;, &quot;SIBLE&quot;, &quot;S&quot;, &quot;IMPOSSIBLE&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;IMPOSSIBLE&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;IMPOSSIBLE&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This <b>message</b> can be decoded without ambiguity. This requires the insertion of no spaces since the entire <b>message</b> appears as a word in the <b>dictionary</b>.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4550&pm=1331">Single Round Match 149 Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<html>
+<head>
+<title> Problem Statement for RuleEngine</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for RuleEngine</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><pre>PROBLEM STATEMENT:
+
+A rule engine is simply a warehouse of tests.  Based on the result of these
+tests, actions are taken.  When a set of rules causes an action to be taken,
+the rule set is said to &quot;fire&quot;.
+
+EXAMPLE Rule Sets:
+
+Example 1:
+If the monkey is hungry and the monkey has a banana in it's hand, then the
+monkey eats the banana.  The rule set has two rules:
+IF:
+	(RULE) monkey is hungry
+	(RULE) monkey has banana
+THEN:
+	(ACTION) monkey eats banana.
+
+Example 2:
+If X = 2, and Y is between 10 and 15, and Z = 5, then Z = 4.  The rule set has
+three rules:
+IF:
+	(RULE) X = 2
+	(RULE) Y between 10 and 15
+	(RULE) Z = 5
+THEN:
+	(ACTION) set Z = 4
+
+DEFINITION:
+
+It is often very important to know when a given state will cause two different
+rule sets to fire.  You will be given two rule sets.  Determine whether there
+are any data sets that will cause both rule sets to fire. If so, return the
+number of such sets within a set of given bounds.  If not, return &quot;0&quot;.
+The elements of the rule sets are of the form &quot;&lt;X&gt;&lt;comparison&gt;data1,data2&quot; or
+&quot;&lt;X&gt;&lt;comparison&gt;data1&quot; where &lt;comparison&gt; can be &quot;==&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;,
+&quot;!=&quot;, or &quot;B&quot;. &lt;X&gt; is a variable name, a single capital letter 'A'-'Z'. The
+element would be TRUE if the comparison of the value in &lt;X&gt; to data1 (or data1
+and data2) was true. If all elements of the rule set are TRUE, then the rule
+set fires (Double-quotes and angle-brackets are for clarity only).
+
+&lt;comparison&gt; legend:
+==	X == data1
+&lt;	X &lt; data1
+&lt;=	X &lt;= data1
+&gt;	X &gt; data1
+&gt;=	X &gt;= data1
+!=	X != data1
+B	X is between data1 and data2, inclusive
+
+X represents an integer variable whose range of possible values are specified
+by the below rules.
+
+Method signature: String countSets(String[] ruleSet1, String[] ruleSet2)
+Be sure your method is public.
+
+TopCoder will enforce the validity of the inputs.  Inputs are considered valid
+if all of the following criteria are met:
+  *ruleSet1 and ruleSet2 each have between 1 and 7 elements, inclusive.
+*each element of ruleSet1 and ruleSet2 is either of the form
+&quot;&lt;X&gt;&lt;comparison&gt;&lt;data1&gt;&quot; where &lt;comparison&gt; is not the letter &quot;B&quot;, or of the
+form &quot;&lt;X&gt;B&lt;data1&gt;,&lt;data2&gt;&quot; (quotes and angle-brackets are shown for clarity,
+they do not appear in the input).
+  *&lt;X&gt; is a letter between 'A' and 'Z', inclusive (upper-case only).
+*&lt;data1&gt; and &lt;data2&gt; are integers between -9 and 9, inclusive.  Leading zeros
+are possible.
+  *&lt;comparison&gt; is one of the following: &quot;==&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;, &quot;!=&quot;, &quot;B&quot;.
+*If the &lt;comparison&gt; code is 'B', then &lt;data1&gt; will be less than or equal to
+&lt;data2&gt;.
+
+Return the number of distinct data sets made up of values between -10 and 10,
+inclusive that will cause both rules to fire.
+Format the return value as a String.
+
+WORKED EXAMPLES:
+
+ruleSet1 = { &quot;A&lt;1&quot;, &quot;B&gt;2&quot; }, ruleSet2 = { &quot;A&gt;1&quot;, &quot;BB1,2&quot; }.
+Here ruleSet1 will fire if the value in A is less than 1, and the value in B is
+greater than 2.  ruleSet2 will fire if the value in A is greater than 1, and
+the value in B is between 1 and 2.  The rule sets are mutually exclusive, for A
+cannot be both greater than and less than 1 so return &quot;0&quot;.
+
+ruleSet1 = { &quot;A&lt;0&quot; }, ruleSet2 = { &quot;A&lt;0&quot; }.
+Both rulesets will fire for any value of A between -10 and -1, inclusive.
+There are 10 such values, so return &quot;10&quot;.
+
+ruleSet1 = { &quot;A==1&quot;, &quot;X&gt;=4&quot;, &quot;F&lt;1&quot; }, ruleSet2 = { &quot;X&gt;=5&quot;, &quot;ZB2,9&quot; }.
+ruleSet1 will fire when A is 1, X is greater or equal to 4, and F is less than
+1.  ruleSet2 will fire when X is greater than or equal to 5, and Z is between 2
+and 9, inclusive.  Both rule sets will fire when:
+A is 1.
+X is greater than or equal to 5.
+F is less than or equal to 0.
+Z is between 2 and 9, inclusive.
+
+Hence, the rule sets are not mutually exclusive, so calculate the number of
+distinct data sets that can cause the rule set to fire, in which the values are
+between -10 and 10, inclusive:
+
+A can only be 1 (1 possible element).
+X can be between 5, and 10 inclusive (6 possible elements).
+F can be between -10 and 0 inclusive (11 possible elements). 
+Z can be between 2 and 9 inclusive (8 possible elements).
+
+The number of distinct data sets that can cause both rule sets to fire within
+the given bounds is: 1 * 6 * 11 * 8 = 528.  Return &quot;528&quot;.
+
+TEST CASES:
+
+{ &quot;A&lt;1&quot;, &quot;B==2&quot;, &quot;C&gt;4&quot;, &quot;D&gt;=6&quot;, &quot;E&lt;=9&quot;, &quot;FB1,2&quot;, &quot;J!=6&quot; }, { &quot;E&gt;9&quot; } returns &quot;0&quot;.
+{ &quot;A&lt;01&quot;, &quot;B==2&quot;, &quot;C&gt;4&quot;, &quot;D&gt;=2&quot;, &quot;E&lt;=9&quot;, &quot;FB1,2&quot;, &quot;J!=6&quot; }, { &quot;A&lt;9&quot;, &quot;B&gt;=2&quot; }
+returns &quot;475200&quot;.
+{ &quot;A&lt;=9&quot;, &quot;B&lt;=9&quot;, &quot;C&lt;=9&quot;, &quot;D&lt;=9&quot;, &quot;E&lt;=9&quot;, &quot;F&lt;=9&quot;, &quot;G&lt;=9&quot; }, { &quot;H&lt;=9&quot;, &quot;I&lt;=9&quot;,
+&quot;J&lt;=9&quot;, &quot;K&lt;=9&quot;, &quot;L&lt;=9&quot;, &quot;M&lt;=9&quot;, &quot;N&lt;=9&quot; } returns &quot;1638400000000000000&quot;.
+{ &quot;KB-09,5&quot;, &quot;K&lt;3&quot; }, { &quot;Y&gt;4&quot; } returns &quot;72&quot;.</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">RuleEngine</td></tr><tr><td class="statText">Method:</td><td class="statText">countSets</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String countSets(String[] param0, String[] param1)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=62&pm=352">Sun Microsystems / TopCoder Collegiate Challenge Regional Semifinal - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

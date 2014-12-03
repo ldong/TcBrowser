@@ -1,0 +1,138 @@
+<html>
+<head>
+<title> Problem Statement for Comment</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Comment</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>
+Comments are an important part of most code, however, in some circumstances, they
+end up just taking up space, and bandwidth.  Your task is to write a class
+Comment with a method strip, which removes all the comments from a
+piece of code.  For this problem, we will consider only two type of comments:
+comments starting with &quot;//&quot; and comments starting with &quot;/*&quot; and ending with
+&quot;*/&quot;.  The first type of comments removes everything starting from &quot;//&quot; until
+the end of the line.  The second type of comment removes everything, starting
+at &quot;/*&quot;, until the sequence &quot;*/&quot; is found.  In addition comments may not be
+nested in any way.  So, as soon as a &quot;/*&quot; comment is opened, everything is
+commented, until a &quot;*/&quot; is found.  Thus the String &quot;/*//*/code&quot;, without
+comments, is &quot;code&quot;.  Note that even though &quot;//&quot; is present, it does not
+comment out code, because it is commented out itself, by the comment starting
+with &quot;/*&quot;.  Similarly, the neither &quot;//*&quot; nor &quot;///*&quot; open a &quot;/*&quot; comment, because everything after the &quot;//&quot; is already commented out, and thus can not
+start a comment.
+</p><p>
+However, it is not enough to simple search for the sequence &quot;//&quot; and &quot;/*&quot;,
+because these could be surrounded by quotes, and thus not a comment.  For
+example, in the code:
+</p><p>
+String s = &quot;//&quot;;
+</p><p>
+&quot;//&quot; does not start a comment, because it is part of a String.  A String begins
+at a '&quot;', which is not commented.  A String ends at the first non-escaped '&quot;'.
+An escaped quote is one that is preceded by a '\'.  Any time a backslash is
+found, within a string, the next character is escaped, and the two of them
+together make one character.  For example, in java, c++, and c# &quot;\n&quot; represents
+a new line, &quot;\&quot;&quot; represents a quote, and &quot;\\&quot; represents a single '\'
+(not two, because the first one escapes the second, and together they make one
+'\').
+
+Your method must take all of this into consideration when removing comments.
+It must remove the rest of the line, when a &quot;//&quot; comment is found, and remove
+characters starting with &quot;/*&quot; up to &quot;*/&quot; whenever a &quot;/*&quot; comment is found.  <br>In
+addition, it must take into account that characters which are part of a String,
+cannot begin a comment (though they may end a comment which was previously
+begun by &quot;/*&quot;).  You will be given an input String[], code, where each element
+represents a line of code.  Your method should remove all of the commented
+parts of the code, and return the result.  If, after removing commented text,
+any of the lines have been entirely removed, your return should not contain
+elements for those lines.
+</p><p>
+To summarize:
+<br>Upon finding &quot;//&quot; (not in a String) - remove the entire rest of the line.
+<br>Upon finding &quot;/*&quot; (not in a String) - remove all character until &quot;*/&quot;
+<br>Upon finding '&quot;' (not in a comment) - all characters until the next unescaped
+quote are part of a String, and can not start a comment.
+<br>Upon finding '\' (in a String) - the next character is escaped, and can not
+close the String.
+</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Comment</td></tr><tr><td class="statText">Method:</td><td class="statText">strip</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] strip(String[] code)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">code will not neccessarily be syntactically correct.  Your method should remove based simply on the rules above.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">When removing characters after finding &quot;/*&quot;, remove until &quot;*/&quot; is found.  Do not worry about the */ being part of a String, as everything between &quot;/*&quot; and &quot;*/&quot; is part of a comment, and thus can not be a String.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">For the purposes of this problem, characters may only by escaped by '\' when they are within a String.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The beginning of a comment must be on one line.  Thus if one element ends with '/' and the next element starts with '*', this will not start a comment.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">&quot;/*&quot; comments may not be nested.  After removing comments, &quot;/*/**/*/&quot; becomes &quot;*/&quot;</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">In reality, you would have to deal with code like &quot;char c = '&quot;';//comment&quot; (single quote, double quote, single quote). However, for the purposes of this problem, you should treat such sequences as described above, in which case there are no comments here because the quote starts a String.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">code will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of code will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character of each element of code will be a letter ('a' to 'z' or 'A' to 'Z'), a number ('0' to '9'), a space, or a character from: ;:&quot;',&lt;.&gt;/?[{]}\|`~!@#$%^&amp;*()-_=+</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All &quot;/*&quot; comments will be closed by the end of the last element of code.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All Strings (uncommented code starting with '&quot;') will be closed before the end of the line they were started on.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;public class Comment{&quot;
+,&quot; public String[] strip(String[] code){&quot;
+,&quot;//this isn't right!&quot;
+,&quot;  return code;&quot;
+,&quot; }&quot;
+,&quot;}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;public class Comment{&quot;,
+ &quot; public String[] strip(String[] code){&quot;,
+ &quot;  return code;&quot;,
+ &quot; }&quot;,
+ &quot;}&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We remove the one commented line.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;/*public class Comment{&quot;
+,&quot; public String[] strip(String[] code){&quot;
+,&quot;//this isn't right!&quot;
+,&quot;  return code;&quot;
+,&quot; }&quot;
+,&quot;}*/&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here, everything is commented out.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;String s = \&quot;\\\&quot;/**/\\\&quot;\&quot;&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;String s = \&quot;\\\&quot;/**/\\\&quot;\&quot;&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The strings above are doubly escaped so that you can use the {} button in the arena.  The actual input and output string are the same and are:<br>
+String s = &quot;\&quot;/**/\&quot;&quot;</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;public class Comment{&quot;
+,&quot; public String[] strip(String[] code){&quot;
+,&quot; //this isn't right!&quot;
+,&quot;  return code;&quot;
+,&quot; }&quot;
+,&quot;}&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 
+{ &quot;public class Comment{&quot;,
+ &quot; public String[] strip(String[] code){&quot;,
+ &quot; &quot;,
+ &quot;  return code;&quot;,
+ &quot; }&quot;,
+ &quot;}&quot; }</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;char c = '\&quot;'//\&quot;&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: { &quot;char c = '\&quot;'//\&quot;&quot; }</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">note again that there are extra escape characters.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4375&pm=1018">2002 TopCoder Invitational Championship Round 1 - Division I, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

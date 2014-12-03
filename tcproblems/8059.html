@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> Problem Statement for VegetableField</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for VegetableField</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">We want to buy a rectangular plot on a rectangular vegetable field. We want our plot to be as big as possible, but we only have the resources to grow a maximum of 2 different kinds of vegetables on it. You are given a String[] <b>field</b>, where each character represents a square in the field. All squares are of equal size. The j-th character of the i-th element of <b>field</b> denotes the kind of vegetable that grows in the square at row i, column j - it's an uppercase letter ('A' - 'Z'), where each letter denotes a different kind of vegetable. Return the area of the biggest plot we can buy.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">VegetableField</td></tr><tr><td class="statText">Method:</td><td class="statText">biggestPlot</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int biggestPlot(String[] field)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>field</b> will contain between 2 and 20 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>field</b> will contain between 2 and 20 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>field</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in each element of <b>field</b> will be an uppercase letter ('A' - 'Z').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;AAA&quot;,
+  &quot;AAA&quot;,
+  &quot;AAA&quot;  }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 9</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Only one type of vegetable grows here so we can buy the whole field.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;ABCDEFGH&quot;,
+  &quot;IJKLMNOP&quot;,
+  &quot;QRSTUVWX&quot;  }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We can buy only 2 adjacent squares and nothing more.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;AAAA&quot;,
+  &quot;ABBC&quot;,
+  &quot;BBCA&quot;,
+  &quot;DCAA&quot;  }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;AUFLKNCSLKX&quot;,
+  &quot;OWVGWXGHKFB&quot;,
+  &quot;MUFZEELAWOR&quot;,
+  &quot;CZCGHXVGWDW&quot;,
+  &quot;EPNSDSJSKWT&quot;,
+  &quot;APULZGHXMEK&quot;,
+  &quot;UVMQQUFMYYQ&quot;,
+  &quot;XWLMVXKSENF&quot;,
+  &quot;KGZJUDQOAXA&quot;,
+  &quot;UKIBGOSXSZL&quot;  }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{ &quot;BDCDCCCCBED&quot;,
+  &quot;ECEAADCEACA&quot;,
+  &quot;AABEABBACBB&quot;,
+  &quot;CEBEDDDDBDE&quot;,
+  &quot;DBCACCABBDE&quot;,
+  &quot;CCEECDCECBB&quot;,
+  &quot;CCADACEDDCE&quot;,
+  &quot;DDCEAACAEBB&quot;,
+  &quot;CACCEEAACCA&quot;,
+  &quot;DBAACCEEACD&quot;,
+  &quot;DDBAACBEEAE&quot;  }</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 8</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10774&pm=8059">TCHS Single Round Match 36 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

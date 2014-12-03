@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> Problem Statement for Genetics</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Genetics</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">In genetics, most large animals have two copies of every gene - one from each parent.  In the simplest genetic model, each of the genes takes on one of two forms, usually represented by an uppercase and lowercase letter of the same value ('A' and 'a', for example).  The pair of genes typically contributes to the external qualities of the animal in one of two ways.  If both genes are uppercase, they contribute in one way, while if both genes are lowercase, they contribute in another way.  If one gene is uppercase and the other is lowercase, then the pair acts like either a pair of uppercase genes or a pair of lowercase genes depending on whether the gene represented by the uppercase letter is <i>dominant</i> or <i>recessive</i>, respectively.  <br><br>
+In this problem, you will be given two Strings, <b>g1</b> and <b>g2</b>, each representing the genes from one parent.    Hence, two characters from <b>g1</b> and <b>g2</b> with the same index make up a single gene.  You will also be given a String, <b>dom</b>, telling you whether an uppercase gene is dominant or recessive, represented by 'D' and 'R', respectively (characters of <b>dom</b> correspond to characters of <b>g1</b> and <b>g2</b> with the same index).  You are to return a String representing the external qualities of each pair of genes.  If a pair of genes has the quality of two uppercase letters, the return should have an uppercase letter, and if not the return should have a lowercase letter.  In either case, each letter should have the same value as the corresponding letters of <b>g1</b> and <b>g2</b>.
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Genetics</td></tr><tr><td class="statText">Method:</td><td class="statText">getOffspring</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String, String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String getOffspring(String g1, String g2, String dom)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>g1</b> and <b>g2</b> will contain only letters ('a'-'z' and 'A'-'Z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>dom</b> will contain only 'D's and 'R's.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>dom</b>, <b>g1</b> and <b>g2</b> will each contain the same number of characters.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>dom</b>, <b>g1</b> and <b>g2</b> will each contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Corresponding letters in <b>g1</b> and <b>g2</b> will have the same value, though potentially different cases.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;AAAA&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;AAaa&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;DRDR&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;AAAa&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Whenever there are two 'A's, the return character is an 'A', and when there is one 'A' and one 'a', the return character is an 'A' only if the corresponding character in <b>dom</b> is a 'D'.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;ABCDEFG&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;abcdefg&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;DDRRRDR&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;ABcdeFg&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;Z&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;z&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;D&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Z&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>&quot;MGskgzTFQoclnDjZu&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;mgSKGzTFQoClnDJzU&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;DDDDDRDDDDRDDDDDD&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;MGSKGzTFQoclnDJZU&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5876&pm=2973">2004 TCO Qualification Round Set 4 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

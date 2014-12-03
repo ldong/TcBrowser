@@ -1,0 +1,67 @@
+<html>
+<head>
+<title> Problem Statement for AnswerEvaluation</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for AnswerEvaluation</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>Your teacher proposes the following quick method of evaluating the correctness of the answer to an exam question.  She writes down several distinct keywords she expects to find in a correct answer.  Each keyword has a score associated with it.  She then searches for each keyword in the student?s answer.  If she finds it, she adds the score of the keyword to the student's score.  If she finds the keyword multiple times, she only adds its score once.</p>
+
+<p>You are given a String[] <b>keywords</b> and a int[] <b>scores</b>.  The ith element of <b>keywords</b> contains the ith keyword.  The ith element of <b>scores</b> gives the score associated with the ith keyword.  You are also given a String <b>answer</b> with the student's answer.  <b>answer</b> will be a single-space delimited list of words.  Return the final score the student will receive for his answer.</p>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">AnswerEvaluation</td></tr><tr><td class="statText">Method:</td><td class="statText">getScore</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int getScore(String[] keywords, int[] scores, String answer)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>keywords</b> will contain between 1 and 25 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>keywords</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>keywords</b> will contain only lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The strings in <b>keywords</b> will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>scores</b> will contain the same number of elements as <b>keywords</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>scores</b> will be between 1 and 1000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>answer</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>answer</b> will contain only lowercase letters ('a'-'z') and spaces, and will not contain leading/trailing spaces or double spaces.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;red&quot;, &quot;fox&quot;, &quot;lazy&quot;, &quot;dogs&quot;}</pre></td></tr><tr><td class="statText"><pre>{25, 25, 25, 25}</pre></td></tr><tr><td class="statText"><pre>&quot;the quick brown fox jumped over the lazy dog&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 50</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We can find the words "fox" and "lazy" in the student's answer, but not the other two words.  The final score will be 25 + 25 = 50.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;red&quot;, &quot;fox&quot;, &quot;lazy&quot;, &quot;dogs&quot;}</pre></td></tr><tr><td class="statText"><pre>{25, 25, 25, 25}</pre></td></tr><tr><td class="statText"><pre>&quot;highschool matches are nice&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This answer is totally unrelated with the question.  We can not find any of the keywords in it.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;red&quot;, &quot;fox&quot;, &quot;lazy&quot;, &quot;dogs&quot;}</pre></td></tr><tr><td class="statText"><pre>{1, 2, 3, 4}</pre></td></tr><tr><td class="statText"><pre>&quot;lazy lazy lazy lazy&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 3</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The word "lazy" is present in the answer multiple times, but we should count its contribution to the final score once.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;, &quot;i&quot;, &quot;j&quot;, &quot;k&quot;, &quot;l&quot;, &quot;m&quot;,
+ &quot;n&quot;, &quot;o&quot;, &quot;p&quot;, &quot;q&quot;, &quot;r&quot;, &quot;s&quot;, &quot;t&quot;, &quot;u&quot;, &quot;v&quot;, &quot;x&quot;, &quot;y&quot;, &quot;z&quot;}</pre></td></tr><tr><td class="statText"><pre>{1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,
+ 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000}</pre></td></tr><tr><td class="statText"><pre>&quot;a b c d e f g h i j k l m n o p q r s t u v x y z&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 25000</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10076&pm=7272">TCHS Single Round Match 24 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

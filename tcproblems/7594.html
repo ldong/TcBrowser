@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Problem Statement for QuoteContest</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for QuoteContest</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Your company held a competition to see who could come up with the best quote.  The votes are in, and you must now determine the winner.
+<br><br>
+The voting was held within two groups of voters. Each quote has two numbers of votes - one from each group. The quote with the most total votes is the winner of the competition. There will be no tie for the best quote, i.e., all quotes will receive a distinct number of total votes.
+<br><br>
+You are given a String[] <b>quotes</b>, each element of which represents a single quote and is formatted as "VOTES_1 VOTES_2 QUOTE" (quotes for clarity).  VOTES_1 and VOTES_2 are integers representing the number of votes from the first and second groups, respectively, received by the quote.  QUOTE is the text of the quote.  Return the text of the best quote.
+<br><br>
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">QuoteContest</td></tr><tr><td class="statText">Method:</td><td class="statText">bestQuote</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String bestQuote(String[] quotes)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>quotes</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>quotes</b> will contain between 5 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>quotes</b> will be formatted as "<i>VOTES_1 VOTES_2 QUOTE</i>" (quotes for clarity only), where <i>VOTES_1</i> and <i>VOTES_2</i> are integers between 1 and 99, inclusive, with no leading zeroes, and <i>QUOTE</i> is a non-empty sequence of lowercase letters ('a'-'z').</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All <i>QUOTE</i>s will be distinct.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All sums of <i>VOTES_1</i> and <i>VOTES_2</i> will be distinct.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;4 1 firstquote&quot;,&quot;10 2 secondquote&quot;,&quot;1 5 thirdquote&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;secondquote&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The first quote has 5 votes, the second has 12, and the third has 6, so the second quote is the best.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;13 5 nocodecanbreakme&quot;,&quot;10 6 iamthebest&quot;,&quot;13 2 trytochallengeme&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;nocodecanbreakme&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 justdoit&quot;,&quot;1 2 thewinnertakeitall&quot;,&quot;1 4 aboutthechallenge&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;aboutthechallenge&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;1 1 theworstquoteintheworld&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;theworstquoteintheworld&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10769&pm=7594">TCHS Single Round Match 34 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

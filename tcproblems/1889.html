@@ -1,0 +1,74 @@
+<html>
+<head>
+<title> Problem Statement for AvoidRoads</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for AvoidRoads</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><i>Problem contains images.  Plugin users can view them in the applet.</i><br>
+In the city, roads are arranged in a grid pattern.  Each point on the grid represents a corner where two blocks meet.  The points are connected by line segments which represent the various street blocks.  Using the cartesian coordinate system, we can assign a pair of integers to each corner as shown below. <br>
+<br>
+<img src="http://www.topcoder.com/contest/problem/AvoidRoads/AvoidPic1.GIF">
+<br>
+You are standing at the corner with coordinates 0,0.  Your destination is at corner <b>width</b>,<b>height</b>.  You will return the number of distinct paths that lead to your destination.  Each path must use exactly <b>width+height</b> blocks.  In addition, the city has declared certain street blocks untraversable.  These blocks may not be a part of any path.  You will be given a String[] <b>bad</b> describing which blocks are bad.  If (quotes for clarity) &quot;a b c d&quot; is an element of <b>bad</b>, it means the block from corner a,b to corner c,d is untraversable.  For example, let's say <pre>
+<b>width</b>  = 6
+<b>length</b> = 6
+<b>bad</b> = {&quot;0 0 0 1&quot;,&quot;6 6 5 6&quot;}</pre>
+The picture below shows the grid, with untraversable blocks darkened in black.  A sample path has been highlighted in red.<br>
+<br>
+<img src="http://www.topcoder.com/contest/problem/AvoidRoads/AvoidPic2.GIF">
+<br></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">AvoidRoads</td></tr><tr><td class="statText">Method:</td><td class="statText">numWays</td></tr><tr><td class="statText">Parameters:</td><td class="statText">int, int, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">long</td></tr><tr><td class="statText">Method signature:</td><td class="statText">long numWays(int width, int height, String[] bad)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>width</b> will be between 1 and 100 inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>height</b> will be between 1 and 100 inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>bad</b> will contain between 0 and 50 elements inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>bad</b> will contain between 7 and 14 characters inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of the bad will be in the format &quot;a b c d&quot; where, <ul><li> a,b,c,d are integers with no extra leading zeros,</li><li> a and c are between 0 and <b>width</b> inclusive,</li><li> b and d are between 0 and <b>height</b> inclusive,</li><li>and  a,b is one block away from c,d.</li></ul></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The return value will be between 0 and 2^63-1 inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>6</pre></td></tr><tr><td class="statText"><pre>6</pre></td></tr><tr><td class="statText"><pre>{&quot;0 0 0 1&quot;,&quot;6 6 5 6&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 252</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Example from above.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>1</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Four blocks aranged in a square.  Only 2 paths allowed.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>35</pre></td></tr><tr><td class="statText"><pre>31</pre></td></tr><tr><td class="statText"><pre>{}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6406484391866534976</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Big number.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>2</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr><tr><td class="statText"><pre>{&quot;0 0 1 0&quot;, &quot;1 2 2 2&quot;, &quot;1 1 2 1&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=4709&pm=1889">2003 TCO Semifinal Round 4 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<html>
+<head>
+<title> Problem Statement for FindingSquareInTable</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for FindingSquareInTable</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><p>You are given a String[] <b>table</b> representing a rectangular grid where each cell contains a digit.  The j-th character of the i-th element of <b>table</b> is the digit in the cell at row i, column j of the grid.</p>
+
+<p>Consider a sequence of distinct cells in this table where the row numbers of the cells (in the order they appear in the sequence) form an arithmetic progression, and the column numbers also form an arithmetic progression.  Concatenate the digits in the cells of this sequence to obtain a number.</p>
+
+<p>Among all numbers that can be obtained in this manner, find and return the largest perfect square (a square of an integer).  If there are no perfect squares, return -1 instead.</p></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">FindingSquareInTable</td></tr><tr><td class="statText">Method:</td><td class="statText">findMaximalSquare</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int findMaximalSquare(String[] table)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">An arithmetic progression is a sequence of numbers where the difference between each number and the previous number is constant.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>table</b> will contain between 1 and 9 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>table</b> will contain between 1 and 9 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">All elements of <b>table</b> will be of the same length.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>table</b> will contain only digits ('0'-'9').</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;123&quot;,
+ &quot;456&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 64</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Several three-digit numbers can be obtained: 123, 321, 456, and 654, but none of them is a perfect square.
+The largest obtainable perfect square is 64.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;00000&quot;,
+ &quot;00000&quot;,
+ &quot;00200&quot;,
+ &quot;00000&quot;,
+ &quot;00000&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">0 is a perfect square. It is the largest one that can be obtained in this table.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;3791178&quot;,
+ &quot;1283252&quot;,
+ &quot;4103617&quot;,
+ &quot;8233494&quot;,
+ &quot;8725572&quot;,
+ &quot;2937261&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 320356</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Take the i-th digit of each row i, and you'll get 320356 = 566 &times; 566.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;135791357&quot;,
+ &quot;357913579&quot;,
+ &quot;579135791&quot;,
+ &quot;791357913&quot;,
+ &quot;913579135&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 9</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">It is known that a perfect square can't end with two odd digits. Therefore, the largest perfect square that contains only odd digits is 9.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;553333733&quot;,
+ &quot;775337775&quot;,
+ &quot;777537775&quot;,
+ &quot;777357333&quot;,
+ &quot;755553557&quot;,
+ &quot;355533335&quot;,
+ &quot;373773573&quot;,
+ &quot;337373777&quot;,
+ &quot;775557777&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: -1</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">There exists no perfect square that contains only digits 3, 5, and 7.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;257240281&quot;,
+ &quot;197510846&quot;,
+ &quot;014345401&quot;,
+ &quot;035562575&quot;,
+ &quot;974935632&quot;,
+ &quot;865865933&quot;,
+ &quot;684684987&quot;,
+ &quot;768934659&quot;,
+ &quot;287493867&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 95481</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The sequence of digits that forms 95481 is shown in <b>bold</b>:
+<pre>25724028<b>1</b>
+197510<b>8</b>46
+0143<b>4</b>5401
+03<b>5</b>562575
+<b>9</b>74935632
+865865933
+684684987
+768934659
+287493867</pre></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13696&pm=10268">Single Round Match 434 Round 1 - Division I, Level One</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=13696&pm=10268">Single Round Match 434 Round 1 - Division II, Level Two</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

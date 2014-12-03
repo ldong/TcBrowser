@@ -1,0 +1,160 @@
+<html>
+<head>
+<title> Problem Statement for TextEditorNavigation</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for TextEditorNavigation</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">When programming, I don't like to take my fingers off the keyboard, and hence, I don't use the mouse.  So, when navigating my source, I like to do so in such a way as to minimize keystrokes.  My text editor supports the following keystrokes: left, right, up, down, home, end, top, bottom, word left and word right.  The word left and word right keystrokes position the cursor at a word beginning; a word beginning is the first letter of the word.  None of the keystrokes cause the cursor to wrap.  When moving the cursor vertically, my text editor does not change the cursor's horizontal position.  So, if the cursor is at column 50 and the up arrow is pressed, moving the cursor to a row with only 10 characters, only the row changes.  My text editor does not allow the cursor to be positioned left of the first column, above the first row or below the last row.  
+
+<br><br>The keys left, right, up, down, home, end, top, bottom, word left and word
+right behave as described below:
+
+<br><br>1.  left, right, up and down - move the cursor one position in the indicated direction (see notes).  
+<br>2.  home - causes the cursor to move to column 0 of the current row.
+<br>3.  end - causes the cursor to move to the last character of <b>source</b> in the current row.
+<br>4.  top - causes the cursor to move to the top row (row 0) retaining its column position.
+<br>5.  bottom - causes the cursor to move to the bottom row retaining its column position.
+<br>6. word left - causes the cursor to jump to the first word beginning that is strictly left of the cursor position, if one exists.  Otherwise does nothing. 
+<br>7. word right - causes the cursor to jump to the first word beginning that is strictly right of the cursor position, if one exists.  Otherwise does nothing.
+
+<br><br>You will be given a String[] <b>source</b> representing the source code, a int[] <b>start</b> representing the starting position of the cursor and a int[] <b>finish</b> representing the ending position of the cursor.  The first int in both <b>start</b> and <b>finish</b> specifies the 0-indexed row and the second int specifies the 0-indexed column.  You are to calculate and return the minimum number of keystrokes required to get from <b>start</b> to <b>finish</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">TextEditorNavigation</td></tr><tr><td class="statText">Method:</td><td class="statText">keystrokes</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int[], int[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int keystrokes(String[] source, int[] start, int[] finish)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">For the purposes of this problem, we use the convention that the cursor covers each character.  Some editors (normally in &quot;insert mode&quot;) have the cursor preceding each character.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">A keypress may not have any effect.  For example, pressing up in the top row does nothing, pressing left in the first column does nothing and pressing down in the bottom row does nothing.  Pressing right always has an effect.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>source</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>source</b> will contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character must be a letter ('a'-'z', 'A'-'Z') or ' '.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>start</b> and <b>finish</b> will each contain exactly 2 elements.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>start</b> and <b>finish</b> will each represent character positions that exist in <b>source</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAAA AAA AAAAAAAAAAAAA  AAAA&quot;,
+ &quot;AA   AAAAAAAAA AAAA     AAAA&quot;,
+ &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;,
+ &quot;BBBBBBB BBBBBBBBBB BBBBBBB&quot;,
+ &quot;CCC CCCC CCCCCC      CCCC&quot;,
+ &quot;DDDDDDDDDDDDDDDDDDD&quot;}</pre></td></tr><tr><td class="statText"><pre>{5, 7}</pre></td></tr><tr><td class="statText"><pre>{2, 2}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This can be achieved by the following keystrokes in the given order: home, top, down, down, right, right.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB BB&quot;,
+ &quot;CCC CCC CCC CCC CCC CCC CCC CCC CCC CCC CCC CCC CC&quot;,
+ &quot;DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD DDDD &quot;,
+ &quot;EEEEE EEEEE EEEEE EEEEE EEEEE EEEEE EEEEE EEEEE EE&quot;,
+ &quot;FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF &quot;,
+ &quot;GGG GGG GGG GGG GGG GGG GGG GGG GGG GGG GGG GGG GG&quot;,
+ &quot;HHHHHHHHHHH HHHHHHHHHH HHHHHHHHHH HHHHHHHHHH HHHHH&quot;,
+ &quot;IIIIIIIIIIIIIII IIIIIIIIIIIIIII IIIIIIIIIIIIIII   &quot;,
+ &quot;JJJJJJJJ JJJJJJJJ JJJJJJJJ JJJJJJJJ JJJJJJJJ JJJJJ&quot;,
+ &quot;KKKKKKKKKKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKKKKKKKKK&quot;,
+ &quot;LLLLLLLLLL LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL&quot;,
+ &quot;MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM&quot;,
+ &quot;N N N N N N N N N N N N N N N N N N N N N N N N N &quot;,
+ &quot;OOOOO OOOO OOO OO O O OO OOO OOOO OOOOO OOOOOO OOO&quot;,
+ &quot;PPPPPPP PPPPPP PPPPP PPPP PPP PP P P PP PPP PPPP P&quot;,
+ &quot;QQQQQQ QQQQQ QQQQ QQQ QQ Q Q QQ QQQ QQQQ QQQQQ QQQ&quot;,
+ &quot;ZZZZ ZZ ZZZ ZZ ZZZZ ZZ ZZZ ZZ ZZZZ ZZ ZZZ ZZ ZZZZ &quot;,
+ &quot;SSS S SSS S SSS S SSS S SSS S SSS S SSS S SSS S SS&quot;,
+ &quot;TT TT TT TT TT TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT&quot;}</pre></td></tr><tr><td class="statText"><pre>{12, 20}</pre></td></tr><tr><td class="statText"><pre>{4, 36}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 8</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A A A A AAAAAAA A A A A A A A A A A&quot;,
+ &quot;B BBBBB B B B B BBBBB B B B B B B B B&quot;}</pre></td></tr><tr><td class="statText"><pre>{1, 0}</pre></td></tr><tr><td class="statText"><pre>{1, 22}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAAAAAAAAAAAA A A A A A A A A A A&quot;}</pre></td></tr><tr><td class="statText"><pre>{0, 2}</pre></td></tr><tr><td class="statText"><pre>{0, 15}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;N N N N N N N N N N N N N N N N N N N N N N N N N &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot;A A A A A A A A A A A A A A A A A A A A A A A A A &quot;,
+ &quot; O O O O O O O O O O O O OO O O O O O O O O O O O &quot;,
+ &quot; P P P P P P P P P P P P P PP P P P P P P P P P P &quot;,
+ &quot; Q Q Q Q Q Q Q Q Q Q Q Q Q Q QQ Q Q Q Q Q Q Q Q Q &quot;,
+ &quot; R R R R R R R R R R R R R R R RR R R R R R R R R &quot;,
+ &quot; S S S S S S S S S S S S S S S S SS S S S S S S S &quot;,
+ &quot; T T T T T T T T T T T T T T T T T TT T T T T T T &quot;,
+ &quot; U U U U U U U U U U U U U U U U U U UU U U U U U &quot;,
+ &quot; V V V V V V V V V V V V V V V V V V V VV V V V V &quot;,
+ &quot; W W W W W W W W W W W W W W W W W W W W WW W W W &quot;,
+ &quot; X X X X X X X X X X X X X X X X X X X X X XX X X &quot;,
+ &quot; Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y YY Y &quot;,
+ &quot; Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z ZZZ&quot;}</pre></td></tr><tr><td class="statText"><pre>{49, 49}</pre></td></tr><tr><td class="statText"><pre>{38, 26}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 23</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAA&quot;, &quot;BB&quot;, &quot;CCC&quot;}</pre></td></tr><tr><td class="statText"><pre>{1, 1}</pre></td></tr><tr><td class="statText"><pre>{1, 1}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">6)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAAA AAA AAAAAAAAAAAAA  AAAA&quot;,
+ &quot;AA   AAAAAAAAA AAAA     AAAA&quot;,
+ &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;,
+ &quot;BBBBBBB BBBBBBBBBB BBBBBBB&quot;,
+ &quot;CCC CCCC CCCCCC      CCCC&quot;,
+ &quot;DDDDDDDDDDDDDDDDDDD&quot;}</pre></td></tr><tr><td class="statText"><pre>{2, 17}</pre></td></tr><tr><td class="statText"><pre>{1, 2}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 4</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">7)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;A PC to do CAD huh  Sounds reasonable&quot;,
+ &quot;Aurthor go out and buy us five new PCs&quot;,
+ &quot;Dont you want to think about this for a minute&quot;,
+ &quot;No every second counts and we want to be ahead of&quot;,
+ &quot;the competition&quot;,
+ &quot;       OK Greate idea Please place lOOk worth of&quot;,
+ &quot;unmarked bills in my suitcase and Ill be on my way&quot;}</pre></td></tr><tr><td class="statText"><pre>{0, 11}</pre></td></tr><tr><td class="statText"><pre>{1, 15}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10057&pm=6571">TCHS Single Round Match 5 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

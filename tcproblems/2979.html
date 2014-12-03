@@ -1,0 +1,84 @@
+<html>
+<head>
+<title> Problem Statement for FewestTurns</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for FewestTurns</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You need to get home from work in an hour, but your car's steering is practically useless.  So, you've decided that you want to take the route with the fewest turns possible.  You've modeled the relevant streets as straight lines in a plane, each of which is parallel to the x or y axis, and now all that's left to do is figure out the best path.<br><br>
+You will be given a String[], <b>roads</b>, each element of which represents a single road in the format &quot;X1 Y1 X2 Y2&quot;, where (X1,Y1) and (X2,Y2) are the two end points of the road.  You may assume that any two roads that cross paths have an intersection where you can switch from one road to the other.  You will also be given two Strings, <b>start</b> and <b>end</b>, representing the starting and ending points of your trip in the form &quot;X Y&quot;.  Both <b>start</b> and <b>end</b> will be along roads, and you may start facing in any direction you like.  You are to return an int representing the minimum number of turns required to get home (the constraints ensure that there will be at least one path home).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">FewestTurns</td></tr><tr><td class="statText">Method:</td><td class="statText">numTurns</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String, String</td></tr><tr><td class="statText">Returns:</td><td class="statText">int</td></tr><tr><td class="statText">Method signature:</td><td class="statText">int numTurns(String[] roads, String start, String end)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>roads</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>roads</b> will be formatted as &quot;X1 Y1 X2 Y2&quot;.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">X1, Y1, X2, and Y2 will each be between 0 and 100, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">X1 will be less than or equal to X2.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Y1 will be less than or equal to Y2.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Either X1 will equal X2 or Y1 will equal Y2, but not both.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>start</b> and <b>end</b> will each be formatted as &quot;X Y&quot;, where X,Y will be on some road.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">None of the inputs will have extra leading zeros, or extra spaces.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">No two roads will overlap (though they may cross).</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">It will be possible to get from <b>start</b> to <b>end</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 10 0&quot;,&quot;10 0 10 10&quot;,&quot;10 10 20 10&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;0 0&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;20 10&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We can start by driving from (0,0) to (10,0).  From there, we can turn left, and go to (10,10).  A right turn and a little more driving will bring us to (20,10).</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 40 0&quot;,&quot;30 0 30 10&quot;,&quot;0 10 50 10&quot;,
+ &quot;5 0 5 5&quot;,&quot;5 5 10 5&quot;,&quot;10 5 10 10&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;1 0&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;19 10&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 2</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">We can go from (1,0) to (30,0). Then, we turn left and go to (30,10), followed by another left turn, and a drive to (19,10).  Note that this is not the shortest path.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 1 0&quot;,
+ &quot;1 0 2 0&quot;,
+ &quot;2 0 3 0&quot;,
+ &quot;3 0 4 0&quot;,
+ &quot;4 0 5 0&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;0 0&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;5 0&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 0</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;0 0 0 100&quot;,&quot;1 0 1 100&quot;,&quot;2 0 2 100&quot;,&quot;3 0 3 100&quot;,&quot;4 0 4 100&quot;,&quot;5 0 5 100&quot;,
+ &quot;6 0 6 100&quot;,&quot;7 0 7 100&quot;,&quot;8 0 8 100&quot;,&quot;9 0 9 100&quot;,&quot;10 0 10 100&quot;,&quot;11 0 11 100&quot;,
+ &quot;12 0 12 100&quot;,&quot;100 0 100 100&quot;,&quot;99 0 99 100&quot;,&quot;98 0 98 100&quot;,&quot;97 0 97 100&quot;,
+ &quot;96 0 96 100&quot;,&quot;95 0 95 100&quot;,&quot;94 0 94 100&quot;,&quot;93 0 93 100&quot;,&quot;92 0 92 100&quot;,
+ &quot;91 0 91 100&quot;,&quot;90 0 90 100&quot;,&quot;89 0 89 100&quot;,&quot;0 0 100 0&quot;,&quot;0 1 100 1&quot;,
+ &quot;0 2 100 2&quot;,&quot;0 3 100 3&quot;,&quot;0 4 100 4&quot;,&quot;0 5 100 5&quot;,&quot;0 6 100 6&quot;,&quot;0 7 100 7&quot;,
+ &quot;0 8 100 8&quot;,&quot;0 9 100 9&quot;,&quot;0 10 100 10&quot;,&quot;0 11 100 11&quot;,&quot;0 12 100 12&quot;,
+ &quot;0 100 100 100&quot;,&quot;0 99 100 99&quot;,&quot;0 98 100 98&quot;,&quot;0 97 100 97&quot;,&quot;0 96 100 96&quot;,
+ &quot;0 95 100 95&quot;,&quot;0 94 100 94&quot;,&quot;0 93 100 93&quot;,&quot;0 92 100 92&quot;,&quot;0 91 100 91&quot;,
+ &quot;0 90 100 90&quot;,&quot;0 89 100 89&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;0 0&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;100 100&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 1</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;9 93 43 93&quot;,&quot;9 53 9 93&quot;,&quot;9 53 96 53&quot;,&quot;96 53 96 71&quot;,&quot;17 71 96 71&quot;,&quot;17 18 17 71&quot;,
+ &quot;17 18 99 18&quot;,&quot;99 18 99 86&quot;,&quot;93 86 99 86&quot;,&quot;93 1 93 86&quot;,&quot;32 1 93 1&quot;,&quot;32 1 32 18&quot;,
+ &quot;32 18 32 49&quot;,&quot;32 49 68 49&quot;,&quot;68 40 68 49&quot;,&quot;54 40 68 40&quot;,&quot;54 40 54 54&quot;,&quot;54 54 54 90&quot;,
+ &quot;15 90 54 90&quot;,&quot;2 90 15 90&quot;,&quot;2 44 2 90&quot;,&quot;2 1 2 44&quot;,&quot;2 1 24 1&quot;,&quot;24 1 24 47&quot;,&quot;24 47 69 47&quot;,
+ &quot;69 47 69 68&quot;,&quot;28 68 69 68&quot;,&quot;28 68 28 98&quot;,&quot;16 98 28 98&quot;,&quot;16 84 16 98&quot;,&quot;16 84 38 84&quot;,
+ &quot;38 67 38 84&quot;,&quot;2 67 38 67&quot;,&quot;0 67 2 67&quot;,&quot;0 54 0 67&quot;,&quot;0 54 29 54&quot;,&quot;29 54 86 54&quot;,
+ &quot;86 52 86 54&quot;,&quot;86 27 86 52&quot;,&quot;86 13 86 27&quot;,&quot;52 13 86 13&quot;,&quot;52 13 52 97&quot;,&quot;52 97 70 97&quot;,
+ &quot;70 97 90 97&quot;,&quot;90 84 90 97&quot;,&quot;90 29 90 84&quot;,&quot;21 29 90 29&quot;,&quot;21 4 21 29&quot;,&quot;21 2 21 4&quot;,&quot;21 2 41 2&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;43 93&quot;</pre></td></tr><tr><td class="statText"><pre>&quot;41 2&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 6</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=5877&pm=2979">2004 TCO Qualification Round Set 5 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

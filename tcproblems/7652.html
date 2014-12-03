@@ -1,0 +1,66 @@
+<html>
+<head>
+<title> Problem Statement for CarBuyer</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for CarBuyer</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">You wish to buy a new car and would like to get the cheapest option available. However, you recognize that the initial purchase cost is only a part of what you will need to spend on the car and you want to factor tax and fuel costs into your decision. You will be given a String[] <b>cars</b> giving the specifications of various models of car and an int <b>annualDistance</b> containing the distance that you will drive each year. For the car that you choose, the purchase cost only has to be paid once, the tax cost specific to the model has to be paid once per year and the fuel cost should be calculated as <tt>FUEL PRICE * DISTANCE DRIVEN / FUEL EFFICIENCY</tt>, where the fuel efficiency is specific to the car. You should calculate which car model in <b>cars</b> has the lowest cost on aggregate after <b>years</b> amount of time and return a double containing this cost.<br><br>
+Each element of <b>cars</b> will be formatted "<i>&lt;PURCHASE COST&gt; &lt;TAX&gt; &lt;FUEL EFFICIENCY&gt;</i>" (quotes for clarity).</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">CarBuyer</td></tr><tr><td class="statText">Method:</td><td class="statText">lowestCost</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], int, int, int</td></tr><tr><td class="statText">Returns:</td><td class="statText">double</td></tr><tr><td class="statText">Method signature:</td><td class="statText">double lowestCost(String[] cars, int fuelPrice, int annualDistance, int years)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The return value must be accurate to within an absolute or relative tolerance of 1e-9.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>cars</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>cars</b> will contain between 5 and 15 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>cars</b> will be formatted "&lt;<i>PURCHASE COST</i>&gt; &lt;<i>TAX</i>&gt; &lt;<i>FUEL EFFICIENCY</i>&gt;".</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;<i>PURCHASE COST</i>&gt; will be an integer, without leading zeros, between 1 and 100000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;<i>TAX</i>&gt; will be an integer, without leading zeros, between 1 and 1000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each &lt;<i>FUEL EFFICIENCY</i>&gt; will be an integer, without leading zeros, between 1 and 100, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>fuelPrice</b> will be between 1 and 100, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>annualDistance</b> will be between 1 and 100000, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>years</b> will be between 1 and 100, inclusive.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;10000 50 50&quot;,&quot;12000 500 10&quot;,&quot;15000 100 65&quot;,&quot;20000 20 80&quot;,&quot;25000 10 90&quot;}</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr><tr><td class="statText"><pre>5000</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 10500.0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Here, fuel is cheap, you have a low annual mileage and you don't want to keep the car very long, so you go with the first model, which has the lowest purchase cost.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;10000 50 50&quot;,&quot;12000 500 10&quot;,&quot;15000 100 65&quot;,&quot;20000 20 80&quot;,&quot;25000 10 90&quot;}</pre></td></tr><tr><td class="statText"><pre>8</pre></td></tr><tr><td class="statText"><pre>25000</pre></td></tr><tr><td class="statText"><pre>10</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 45200.0</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">This is the same set of cars, but this time fuel is far more expensive and you're going to keep the car for longer and drive it further. Now the more fuel-efficient fourth model is the cheapest.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;8426 774 19&quot;,&quot;29709 325 31&quot;,&quot;30783 853 68&quot;,&quot;20796 781 3&quot;
+,&quot;27726 4 81&quot;,&quot;20788 369 69&quot;,&quot;17554 359 34&quot;,&quot;12039 502 24&quot;
+,&quot;6264 230 69&quot;,&quot;14151 420 65&quot;,&quot;25115 528 70&quot;,&quot;22234 719 55&quot;
+,&quot;2050 926 40&quot;,&quot;18618 714 29&quot;,&quot;173 358 57&quot;}</pre></td></tr><tr><td class="statText"><pre>33</pre></td></tr><tr><td class="statText"><pre>8673</pre></td></tr><tr><td class="statText"><pre>64</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: 254122.44444444444</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=10671&pm=7652">Single Round Match 347 Round 1 - Division II, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

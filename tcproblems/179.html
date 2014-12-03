@@ -1,0 +1,197 @@
+<html>
+<head>
+<title> Problem Statement for FSM</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for FSM</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><pre>Class Name: FSM
+Method Name: runFSM
+Paramaters: String String String[]
+Returns String[]
+
+Implement a class FSM, which contains a method runFSM.  The method runs an
+augmented finite state machine:
+
+The augmented finite state machine consists of a number of states.  Each state
+has a unique name of type String.  There are edges connecting the states.
+These edges are directional: they go in only one direction, their source state
+to their sink state (source and sink states are described below).  Each edge
+has a corresponding symbol and function that are both represented as Strings.
+
+Here is the method signature (be sure your method is public):
+String[] runFSM(String symbols, String states, String[] edges)
+
+Input:
+*symbols - The first parameter to runFSM is a String containing elements
+referred to as symbols that will be passed to the FSM.  The elements/symbols
+will contain letters only (A-Z and a-z, inclusive).  Each element of the
+symbols input parameter is separated by one or more spaces.
+
+*states - The second parameter to runFSM is a String containing elements that
+refer to the names of the states.  The names/states will contain letters (A-Z
+and a-z, inclusive) only.  The first state in this list is the starting state.
+Each element of the states input parameter is separated by one or more spaces.
+
+*edges[] - The third parameter is a String[].  Each element in the String[]
+describes an edge.  The Strings in the array will contain four sets of letters,
+where the sets are separated by one or more spaces.  Parsing the String from
+the left-most character moving right, the first set of letters is the source
+state - the state in which the edge starts.  The second set of letters is the
+sink state - the state in which the edge ends.  The third set of letters is the
+symbol corresponding to the edge.  The fourth set of letters is the function
+corresponding with the edge.
+
+Output:
+The output is a String[] containing a list of all the functions called with
+their associated symbols as parameters, in order.  There should be only one
+element in the output for each symbol in the first input String.
+
+The augmented finite state machine is passed a sequence of symbols.  Each
+symbol is processed as follows:
+1.  Use the first state (the first element of the states String) as the source
+state and let that equal the current state.
+2.  Determine the first symbol (i.e. the first element of the symbols String)
+let that equal the current symbol.
+3.  Find the edge of the current state that corresponds to the current symbol.
+4.  Add a String to the output array.  The String should consist of the
+function name of the edge found in step 3 with the current symbol enclosed in
+parentheses (i.e. if the function is &quot;open&quot; and the symbol is &quot;hi&quot;, the
+function call is &quot;open(hi)&quot;).
+5.  Move to the sink state that corresponds with the current symbol.
+6.  Let current state be equal to the sink state from step 5
+7.  Repeat steps 3 - 6 for the remaining symbols.
+
+Note:
+* If ever there is no edge leaving the current state with the current symbol,
+add the String &quot;ERROR&quot; to the output array, remain at the current state, and go
+on to the next symbol.
+* No two edges may contain the same source state and symbol.
+* All String comparisons are case sensitive.
+* The output is a list of the function calls created in step four (above) in
+order.
+* The sink state can be equal to the source state
+* There may be additional spaces at the beginning or end of any input String.
+
+TopCoder will ensure:
+- All the Strings and elements of arrays will contain letters (A-Z and a-z,
+inclusive) and spaces (' ') only.
+- The states mentioned in the edges array will be present in the states String.
+- symbols will contain at least one element.
+- states will contain at least one element.
+- symbols and states will have length between 1 and 50, inclusive.
+- edges will contain between 1 and 50 elements, inclusive, and each element
+will contain between 1 and 50 characters, inclusive.
+- No two edges will have the same source state and symbol
+- Elements of the edges array will be well formed.  That is, each element will
+be in the form: &quot;(source state) (sink) (state symbol) (function)&quot; (the
+parentheses are for clarity and should not be included in the String).  There
+will be exactly four elements separated by one or more spaces
+
+
+Examples:
+Example relating to a vending machine that releases candy every time 20 cents
+is put in, assume:
+states=&quot;Zerocents Fivecents Tencents Fifteencents Twentycents&quot;
+and
+edges={
+&quot;Zerocents  Fivecents  nickel needMoreOne&quot;,
+&quot;Zerocents  Tencents dime   needMoreTwo&quot;,
+&quot;Fivecents  Fifteencents dime   needMoreThree&quot;,
+&quot;Fivecents  Tencents nickel needMoreFour&quot;,
+&quot;Tencents Fifteencents nickel needMoreFive&quot;,
+&quot;Tencents Twentycents dime   releasingCandyOne&quot;,
+&quot;Fifteencents Twentycents nickel releasingCandyTwo&quot;,
+&quot;Fifteencents Twentycents dime   releasingCandyThree&quot;,
+&quot;Twentycents Fivecents  nickel needMoreSix&quot;,
+&quot;Twentycents Tencents dime   needMoreSeven&quot;
+}
+
+If symbols=&quot;nickel dime dime&quot;, the output should be:
+{&quot;needMoreOne(nickel)&quot;,
+ &quot;needMoreThree(dime)&quot;,
+ &quot;releasingCandyThree(dime)&quot;}
+
+If symbols=&quot;dime oops dime&quot; the output should be
+{&quot;needMoreTwo(dime)&quot;,
+ &quot;ERROR&quot;,
+ &quot;releasingCandyOne(dime)&quot;}
+
+If symbols=&quot;dime nickel dime dime dime nickel&quot; the output should be
+{&quot;needMoreTwo(dime)&quot;,
+ &quot;needMoreFive(nickel)&quot;,
+ &quot;releasingCandyThree(dime)&quot;,
+ &quot;needMoreSeven(dime)&quot;,
+ &quot;releasingCandyOne(dime),
+ &quot;needMoreSix(nickel)}
+
+More Examples:
+If symbols=&quot; a   a  a b  b   c&quot; and
+states=&quot; stateZero stateOne stateTwo&quot;
+and edges=
+{&quot;stateZero stateOne a doSomething&quot;,
+ &quot;stateOne stateTwo b doNothing&quot;,
+ &quot;stateTwo stateZero c doEverything&quot;}
+
+The output should be
+{&quot;doSomething(a)&quot;,
+ &quot;ERROR&quot;,
+ &quot;ERROR&quot;,
+ &quot;doNothing(b)&quot;,
+ &quot;ERROR&quot;,
+ &quot;doEverything(c)&quot;}
+</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">FSM</td></tr><tr><td class="statText">Method:</td><td class="statText">runFSM</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String, String, String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] runFSM(String param0, String param1, String[] param2)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=51&pm=179">2001 Invitational Round 2 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

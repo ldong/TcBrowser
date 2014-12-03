@@ -1,0 +1,70 @@
+<html>
+<head>
+<title> Problem Statement for TimeAnalysis</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for TimeAnalysis</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">An important part of any algorithm is its runtime.  This is usually specified as an equation with a number of variables.  For example, the runtime of many popular sorting algorithms is N*lg(N), meaning that the amount of time it takes to run the algorithm is proportional to N times the base 2 logarithm of N.<br><br>
+Your task is to write a method that approximates how long an algorithm will run, given its runtime and the values of the parameters involved.  For this approximation, you should assume that a computer can execute 1 billion (1E9) operations per second.  You will be given a String[], <b>variables</b>, each element of which is of the form &quot;VAR VALUE&quot;, where VAR is an uppercase letter, and VALUE is an integer greater than 0.  You will also be given a String, <b>equation</b>, conforming to the following grammar:
+<pre>
+  equation ::= TERM '*' equation | TERM '+' equation | TERM
+  TERM ::= VAR | 'lg(' VAR ')' | VAR^INT | INT^VAR
+  VAR ::= a VAR from <b>variables</b>
+  INT ::= an integer between 2 and 9, inclusive, with no leading zeros.
+</pre>
+You should calculate the time it takes to run the algorithm by evaluating <b>equation</b> with the given <b>variables</b> to obtain the total number of operations.  You should return a String in the form &quot;DURATION UNITS&quot;, where UNITS is either &quot;nanoseconds&quot;, &quot;microseconds&quot;, &quot;milliseconds&quot;, &quot;seconds&quot;, &quot;minutes&quot;, &quot;hours&quot;, &quot;days&quot;, or &quot;years&quot;.  You should use the largest unit for which DURATION is greater than or equal to 1.  You should truncate any fractional part of DURATION.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">TimeAnalysis</td></tr><tr><td class="statText">Method:</td><td class="statText">time</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[], String</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String time(String[] variables, String equation)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The base 2 logarithm of a number N, can be calculated as log(N)/log(2), where log computes a logarithm in some other base.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">'^' denotes exponentiation.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Use the standard order of operations.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Assume that every year has exactly 365 days.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>equation</b> will contain no spaces.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>variables</b> will contain between 1 and 26 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>variables</b> will be formatted as &quot;VAR VALUE&quot;, where VAR is an uppercase letter, and VALUE is an integer.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>variables</b> will have a unique VAR.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each VALUE will be between 2 and 1000000000 (1E9), inclusive, with no leading zeros.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>equation</b> will be contain between 1 and 50 characters, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>equation</b> will be formatted as specified in the statement.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each variable used in <b>equation</b> will be present in <b>variables</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">The return value will be less than 1000 years.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">When the correct units are chosen, the duration will not be within 1e-3 of an integer.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;N 1000&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;N*lg(N)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;9 microseconds&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">With N=1000, N*lg(N) = 1000 * 9.966 operations.  This takes a little under 10 microseconds, so you should return &quot;9 microseconds&quot;.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;N 1000000000&quot;,&quot;M 10&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;M*N*lg(N)&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;4 minutes&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;N 1000&quot;,&quot;M 205&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;N^2*M+M^3&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;213 milliseconds&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;N 30&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;2^N*N^2&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;16 minutes&quot;</pre></td></tr><tr><td class="statText"></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;N 29&quot;}</pre></td></tr><tr><td class="statText"><pre>&quot;3^N*N^2&quot;</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;1 years&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">Despite the bad grammar, you should return &quot;1 years&quot;, not &quot;1 year&quot;.</td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=6525&pm=3502">2005 TCCC Qualification Set 3 &amp; 8 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

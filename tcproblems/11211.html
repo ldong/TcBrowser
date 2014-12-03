@@ -1,0 +1,149 @@
+<html>
+<head>
+<title> Problem Statement for BallsConverter</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for BallsConverter</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText">Rabbit Hanako invented a machine called the <i>Balls Converter</i>.
+<br>
+<br>
+This machine accepts N types of balls. First, Hanako puts some balls into the machine. While the machine contains at least two balls, it chooses two different balls, throws them away, and creates a new ball. The types of the two balls that the machine throws away determine the type of the new ball. If it throws away a type-i ball and a type-j ball, the type of the new ball is described by <b>convert</b>[i][j]. If <b>convert</b>[i][j] is 'A', 'B', ..., 'Z', the type of the new ball is 0, 1, ..., 25, respectively. If <b>convert</b>[i][j] is 'a', 'b', ..., 'x', the type of the new ball is 26, 27, ..., 49, respectively.
+<br>
+<br>
+If the type of the last ball can be always determined uniquely from the initial configuration of the box (regardless of which balls the machine throws away at each step), it's called a good machine. If the machine is good, return "Good". Otherwise return "Bad".
+</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">BallsConverter</td></tr><tr><td class="statText">Method:</td><td class="statText">theGood</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String theGood(String[] convert)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>convert</b> will contain between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each element of <b>convert</b> will contain exactly N characters, where N is the number of elements in <b>convert</b>.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText"><b>convert</b>[i][j] will be equal to <b>convert</b>[j][i] for all valid i and j.</td></tr><tr><td align="center" valign="top" class="statText">-</td><td class="statText">Each character in <b>convert</b> will be a letter corresponding to an integer between 0 and N-1, inclusive, where N is the number of elements in <b>convert</b>.</td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true" class="statText">0)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AB&quot;, &quot;BA&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Good&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">The parity of the number of type-1 ball never changes. If the machine contains even number of type-1 balls at first, the last ball will be type-0. If the machine contains odd number of type-1 balls at first, the last ball will be type-1.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">1)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;BA&quot;, &quot;AA&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Bad&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText">For example, if the machine contains one type-0 ball and two type-1 balls, the type of the last ball can't be uniquely determined. If two type-1 balls are chosen in the first operation, the last ball will be type-1. If one type-0 ball and one type-1 ball are chosen in the first operation, the last ball will be type-0.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">2)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;ACB&quot;, &quot;CBA&quot;, &quot;BAC&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Bad&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">3)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAA&quot;, &quot;ABBB&quot;, &quot;ABCC&quot;, &quot;ABCD&quot;}</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Good&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">4)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;,
+&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcd&quot;,
+&quot;ACEGIKMOQSUWYacACEGIKMOQSUWYac&quot;,
+&quot;ADGJMPSVYbADGJMPSVYbADGJMPSVYb&quot;,
+&quot;AEIMQUYcCGKOSWaAEIMQUYcCGKOSWa&quot;,
+&quot;AFKPUZAFKPUZAFKPUZAFKPUZAFKPUZ&quot;,
+&quot;AGMSYAGMSYAGMSYAGMSYAGMSYAGMSY&quot;,
+&quot;AHOVcFMTaDKRYBIPWdGNUbELSZCJQX&quot;,
+&quot;AIQYCKSaEMUcGOWAIQYCKSaEMUcGOW&quot;,
+&quot;AJSbGPYDMVAJSbGPYDMVAJSbGPYDMV&quot;,
+&quot;AKUAKUAKUAKUAKUAKUAKUAKUAKUAKU&quot;,
+&quot;ALWDOZGRcJUBMXEPaHSdKVCNYFQbIT&quot;,
+&quot;AMYGSAMYGSAMYGSAMYGSAMYGSAMYGS&quot;,
+&quot;ANaJWFSBObKXGTCPcLYHUDQdMZIVER&quot;,
+&quot;AOcMaKYIWGUESCQAOcMaKYIWGUESCQ&quot;,
+&quot;APAPAPAPAPAPAPAPAPAPAPAPAPAPAP&quot;,
+&quot;AQCSEUGWIYKaMcOAQCSEUGWIYKaMcO&quot;,
+&quot;AREVIZMdQDUHYLcPCTGXKbOBSFWJaN&quot;,
+&quot;ASGYMASGYMASGYMASGYMASGYMASGYM&quot;,
+&quot;ATIbQFYNCVKdSHaPEXMBUJcRGZODWL&quot;,
+&quot;AUKAUKAUKAUKAUKAUKAUKAUKAUKAUK&quot;,
+&quot;AVMDYPGbSJAVMDYPGbSJAVMDYPGbSJ&quot;,
+&quot;AWOGcUMEaSKCYQIAWOGcUMEaSKCYQI&quot;,
+&quot;AXQJCZSLEbUNGdWPIBYRKDaTMFcVOH&quot;,
+&quot;AYSMGAYSMGAYSMGAYSMGAYSMGAYSMG&quot;,
+&quot;AZUPKFAZUPKFAZUPKFAZUPKFAZUPKF&quot;,
+&quot;AaWSOKGCcYUQMIEAaWSOKGCcYUQMIE&quot;,
+&quot;AbYVSPMJGDAbYVSPMJGDAbYVSPMJGD&quot;,
+&quot;AcaYWUSQOMKIGECAcaYWUSQOMKIGEC&quot;,
+&quot;AdcbaZYXWVUTSRQPONMLKJIHGFEDCB&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Good&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true" class="statText">5)</td><td class="statText"></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText"><table><tr><td class="statText"><pre>{&quot;AAAAAFAAAAAAAAAAAAAAAAAXAAAAcAAAAAAAAAAnAAAAAAAvAA&quot;,
+&quot;ABBBBFBBBBBLBBBBQBBBBBBXYBBBcBBBBBBBBBBnBBBBBBBvwB&quot;,
+&quot;ABCCCFCCCCCLMCOCQRCCCCCXYCCCcCCCCCCCCCCnCCCCsCCvwC&quot;,
+&quot;ABCDEFGHDDDLMDODQRSDUVWXYDDbcdDfghDDklDnopDrsDDvwx&quot;,
+&quot;ABCEEFEEEEELMEOEQRSEUVWXYEEbcEEfEhEEklEnEpEEsEEvwE&quot;,
+&quot;FFFFFFFFFFFFFFFFFFFFFFFXFFFFcFFFFFFFFFFFFFFFFFFvFF&quot;,
+&quot;ABCGEFGGGGGLMGOGQRSGUVWXYGGbcGGfGhGGklGnGpGGsGGvwG&quot;,
+&quot;ABCHEFGHHHHLMHOHQRSHUVWXYHHbcdHfHhHHklHnHpHHsHHvwH&quot;,
+&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx&quot;,
+&quot;ABCDEFGHJJJLMJOJQRSJUVWXYJJbcdJfghJJklJnopJrsJJvwx&quot;,
+&quot;ABCDEFGHKJKLMNOPQRSTUVWXYZKbcdefghijklmnopqrsKKvwx&quot;,
+&quot;ALLLLFLLLLLLLLLLLLLLLLLXLLLLcLLLLLLLLLLnLLLLLLLvwL&quot;,
+&quot;ABMMMFMMMMMLMMOMQMMMMMMXYMMMcMMMMMMMMMMnMMMMMMMvwM&quot;,
+&quot;ABCDEFGHNJNLMNOPQRSTUVWXYZNbcdefghijklmnopqrsNNvwx&quot;,
+&quot;ABOOOFOOOOOLOOOOQOOOOOOXYOOOcOOOOOOOOOOnOOOOOOOvwO&quot;,
+&quot;ABCDEFGHPJPLMPOPQRSTUVWXYZPbcdPfghiPklmnopPrsPPvwx&quot;,
+&quot;AQQQQFQQQQQLQQQQQQQQQQQXQQQQcQQQQQQQQQQnQQQQQQQvwQ&quot;,
+&quot;ABRRRFRRRRRLMRORQRRRRRRXYRRRcRRRRRRRRRRnRRRRRRRvwR&quot;,
+&quot;ABCSSFSSSSSLMSOSQRSSSSSXYSSScSSSSSSSSSSnSSSSsSSvwS&quot;,
+&quot;ABCDEFGHTJTLMTOTQRSTUVWXYTTbcdTfghiTklTnopTrsTTvwx&quot;,
+&quot;ABCUUFUUUUULMUOUQRSUUUWXYUUUcUUUUhUUklUnUUUUsUUvwU&quot;,
+&quot;ABCVVFVVVVVLMVOVQRSVUVWXYVVbcVVfVhVVklVnVVVVsVVvwV&quot;,
+&quot;ABCWWFWWWWWLMWOWQRSWWWWXYWWWcWWWWhWWkWWnWWWWsWWvwW&quot;,
+&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXvXX&quot;,
+&quot;AYYYYFYYYYYLYYYYQYYYYYYXYYYYcYYYYYYYYYYnYYYYYYYvwY&quot;,
+&quot;ABCDEFGHZJZLMZOZQRSTUVWXYZZbcdZfghiZklZnopZrsZZvwx&quot;,
+&quot;ABCDEFGHaJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx&quot;,
+&quot;ABCbbFbbbbbLMbObQRSbUbWXYbbbcbbfbhbbklbnbbbbsbbvwb&quot;,
+&quot;cccccccccccccccccccccccXcccccccccccccccccccccccvcc&quot;,
+&quot;ABCdEFGddddLMdOdQRSdUVWXYddbcddfdhddkldndpddsddvwd&quot;,
+&quot;ABCDEFGHeJeLMeOPQRSTUVWXYZebcdefghijklmnoperseevwx&quot;,
+&quot;ABCffFfffffLMfOfQRSfUfWXYfffcffffhffklfnffffsffvwf&quot;,
+&quot;ABCgEFGHgggLMgOgQRSgUVWXYggbcdgfghggklgngpggsggvwg&quot;,
+&quot;ABChhFhhhhhLMhOhQRShhhhXYhhhchhhhhhhkhhnhhhhshhvwh&quot;,
+&quot;ABCDEFGHiJiLMiOiQRSiUVWXYiibcdifghiiklinopirsiivwx&quot;,
+&quot;ABCDEFGHjJjLMjOPQRSTUVWXYZjbcdjfghijklmnopjrsjjvwx&quot;,
+&quot;ABCkkFkkkkkLMkOkQRSkkkkXYkkkckkkkkkkkkknkkkkskkvwk&quot;,
+&quot;ABCllFlllllLMlOlQRSlllWXYlllcllllhllkllnllllsllvwl&quot;,
+&quot;ABCDEFGHmJmLMmOmQRSTUVWXYZmbcdmfghimklmnopmrsmmvwx&quot;,
+&quot;nnnnnFnnnnnnnnnnnnnnnnnXnnnncnnnnnnnnnnnnnnnnnnvnn&quot;,
+&quot;ABCoEFGHoooLMoOoQRSoUVWXYoobcdofghooklonoporsoovwx&quot;,
+&quot;ABCppFpppppLMpOpQRSpUVWXYppbcppfphppklpnpppSsppvwp&quot;,
+&quot;ABCDEFGHqJqLMqOPQRSTUVWXYZqbcdefghijklmnopqrsqqvwx&quot;,
+&quot;ABCrEFGHrrrLMrOrQRSrUVWXYrrbcdrfghrrklrnrSrrsrrvwx&quot;,
+&quot;ABsssFsssssLMsOsQRsssssXYssscssssssssssnsssssssvws&quot;,
+&quot;ABCDEFGHtJKLMNOPQRSTUVWXYZtbcdefghijklmnopqrsttvwx&quot;,
+&quot;ABCDEFGHuJKLMNOPQRSTUVWXYZubcdefghijklmnopqrstuvwx&quot;,
+&quot;vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv&quot;,
+&quot;AwwwwFwwwwwwwwwwwwwwwwwXwwwwcwwwwwwwwwwnwwwwwwwvww&quot;,
+&quot;ABCxEFGHxxxLMxOxQRSxUVWXYxxbcdxfghxxklxnxpxxsxxvwx&quot;}
+</pre></td></tr></table></td></tr><tr><td class="statText"><pre>Returns: &quot;Bad&quot;</pre></td></tr><tr><td class="statText"><table><tr><td colspan="2" class="statText"></td></tr></table></td></tr></table></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=14242&pm=11211">Member Single Round Match 489 Round 1 - Division I, Level One</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>

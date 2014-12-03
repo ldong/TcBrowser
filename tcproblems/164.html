@@ -1,0 +1,164 @@
+<html>
+<head>
+<title> Problem Statement for Prerequisites</title>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+           <tr>
+             <td valign="top" width="100%"><img src="/i/clear.gif" alt="" width="240" height="1" border="0"><br>
+               <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td background="/i/steel_gray_bg.gif" class="statTextBig" colspan="7" height="18">&#160;Problem Statement for Prerequisites</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="1" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" valign="middle" align="left">
+                      
+              		<table><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><pre>
+***Note:  Please keep programs under 7000 characters in length.  Thank you
+
+
+Class Name: Prerequisites
+Mathod Name: orderClasses
+Parameters: String[]
+Returns: String[]
+
+You are a student at a college with the most unbelievably complex prerequisite
+structure ever. To help you schedule your classes, you decided to put together
+a program that returns the order in which the classes should be taken.  
+
+Implement a class Prerequisites which contains a method orderClasses.  The
+method takes a String[] that contains the classes you must take and returns a
+String[] of classes in the order the classes should be taken so that all
+prerequisites are met.
+
+String[] elements will be of the form (and TopCoder will ensure this):
+&quot;CLASS: PRE1 PRE2 ...&quot; where PRE1 and PRE2 are prerequisites of CLASS.  CLASS,
+PRE1, PRE2, ... consist of a department name (3 or 4 capital letters, A-Z
+inclusive) followed by a class number (an integer between 100 and 999,
+inclusive).  The department name should be immediately followed by the class
+number with no additional characters, numbers or spaces (i.e. MATH217).  It is
+not necessary for a class to have prerequisites.  In such a case, the colon is
+the last character in the String.  
+
+You can only take one class at a time, therefore, use the following rules to
+determine which class to take :
+1) Any prerequisite class(es) listed for a class must be taken before the class
+can be taken.
+2) If multiple classes can be taken at the same time, you take the one with the
+lowest number first, regardless of department.
+3) If multiple classes with the same number can be taken at the same time, you
+take the department name which comes first in alphabetical order.  
+4) If the inputted course schedule has errors, return a String[] of length 0.
+There is an error if it is impossible to return the classes in an order such
+that all prerequisites are met, or if a prerequisite is a course that does not
+have its own entry in the inputted String[].
+
+Examples of valid input Strings are:
+&quot;CSE111: CSE110 MATH101&quot;
+&quot;CSE110:&quot;
+
+Examples of invalid input Strings are:
+&quot;CS117:&quot; (department name must consist of 3 - 4 capital letters, inclusive)
+&quot;cs117:&quot; (department name must consist of 3 - 4 capital letters, inclusive)
+&quot;CS9E11:&quot; (department name must be letters only)
+&quot;CSE110: &quot; (no trailing spaces allowed)
+&quot;CSE110: CSE101 &quot; (no trailing spaces allowed)
+&quot;MATH211: MAM2222&quot; (class number to large)
+&quot;MATH211: MAM22&quot; (class number to small)
+&quot;ENGIN517: MATH211&quot; (department name to large)
+
+Here is the method signature (be sure your method is public):
+String[] orderClasses(String[] classSchedule);
+
+TopCoder will make sure classSchedule contains between 1 and 20 Strings,
+inclusive, all of the form above.  The Strings will have between 1 and 50
+characters, inclusive.  TopCoder will check that the syntax of the Strings are
+correct: The Strings will contain a valid class name, followed by a colon,
+possibly followed by a series of unique prerequisite classes separated by
+single spaces.  Also, TopCoder will ensure that each class has at most one
+entry in the String[]. 
+
+Examples:
+If classSchedule={
+&quot;CSE121: CSE110&quot;,
+&quot;CSE110:&quot;,
+&quot;MATH122:&quot;,
+}
+The method should return: {&quot;CSE110&quot;,&quot;CSE121&quot;,&quot;MATH122&quot;}
+
+If classSchedule={
+&quot;ENGL111: ENGL110&quot;,
+&quot;ENGL110: ENGL111&quot;
+}
+The method should return: {}
+
+If classSchedule=[
+&quot;ENGL111: ENGL110&quot;
+}
+The method should return: {}
+
+If classSchedule={
+&quot;CSE258: CSE244 CSE243 INTR100&quot;
+&quot;CSE221: CSE254 INTR100&quot;
+&quot;CSE254: CSE111 MATH210 INTR100&quot;
+&quot;CSE244: CSE243 MATH210 INTR100&quot;
+&quot;MATH210: INTR100&quot;
+&quot;CSE101: INTR100&quot;
+&quot;CSE111: INTR100&quot;
+&quot;ECE201: CSE111 INTR100&quot;
+&quot;ECE111: INTR100&quot;
+&quot;CSE243: CSE254&quot;
+&quot;INTR100:&quot;
+}
+The method should return:
+{&quot;INTR100&quot;,&quot;CSE101&quot;,&quot;CSE111&quot;,&quot;ECE111&quot;,&quot;ECE201&quot;,&quot;MATH210&quot;,&quot;CSE254&quot;,&quot;CSE221&quot;,&quot;CSE2
+43&quot;,&quot;CSE244&quot;,&quot;CSE258&quot;}
+</pre></td></tr><tr><td colspan="2" class="statText">&#160;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td><td class="statText"><table><tr><td class="statText">Class:</td><td class="statText">Prerequisites</td></tr><tr><td class="statText">Method:</td><td class="statText">orderClasses</td></tr><tr><td class="statText">Parameters:</td><td class="statText">String[]</td></tr><tr><td class="statText">Returns:</td><td class="statText">String[]</td></tr><tr><td class="statText">Method signature:</td><td class="statText">String[] orderClasses(String[] param0)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></table></td></tr><tr><td class="statText">&#160;&#160;&#160;&#160;</td></tr><tr><td class="statText"></td></tr></table><hr><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2010, TopCoder, Inc.  All rights reserved.  </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="/i/clear.gif" alt="" width="1" height="3" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td background="/i/steel_blue_bg.gif" class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="5" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="/i/clear.gif" alt="" width="1" height="16" border="0"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=50&pm=164">2001 Invitational Round 1 - Division I, Level Three</a>
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/tc?module=ProblemDetail&rd=50&pm=164">2001 Invitational Round 1 - Division II, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="/i/clear.gif" alt="" width="1" height="10" border="0"></td>
+           </tr>
+         </table>
+</body>
+</html>
